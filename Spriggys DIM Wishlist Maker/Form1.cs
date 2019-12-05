@@ -16,5 +16,34 @@ namespace Spriggys_DIM_Wishlist_Maker
         {
             InitializeComponent();
         }
+
+        private void comboBoxInputType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkedListBoxSettings_NoteOptions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMain_WeaponID_Click(object sender, EventArgs e)
+        {
+            if (comboBoxMain_Weapon.Visible == true)
+            {
+                textBoxMain_Weapon.Visible = true;
+                comboBoxMain_Weapon.Visible = false;
+            }
+            else
+            {
+                comboBoxMain_Weapon.Visible = true;
+                textBoxMain_Weapon.Visible = false;
+            }
+        }
     }
 }
