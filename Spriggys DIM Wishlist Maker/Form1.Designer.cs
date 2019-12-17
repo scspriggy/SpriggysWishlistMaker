@@ -38,14 +38,12 @@
             this.buttonGenerateText = new System.Windows.Forms.Button();
             this.textBoxRollInput = new System.Windows.Forms.TextBox();
             this.tabPageSettings = new System.Windows.Forms.TabPage();
+            this.checkBoxSettings_IncludeMasterwork = new System.Windows.Forms.CheckBox();
+            this.checkBoxSettings_IncludeRollInfo = new System.Windows.Forms.CheckBox();
+            this.checkBoxSettings_IncludeRating = new System.Windows.Forms.CheckBox();
             this.buttonSettings_Save = new System.Windows.Forms.Button();
             this.labelSettings_RollInput = new System.Windows.Forms.Label();
             this.textBoxSettings_RollInput = new System.Windows.Forms.ComboBox();
-            this.checkBoxSettings_IncludeMasterwork = new System.Windows.Forms.CheckBox();
-            this.checkBoxSettings_IncludeRating = new System.Windows.Forms.CheckBox();
-            this.textBoxSettings_OutputFile = new System.Windows.Forms.TextBox();
-            this.labelSettings_OutputFile = new System.Windows.Forms.Label();
-            this.checkBoxSettings_IncludeRollInfo = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPageForm.SuspendLayout();
             this.tabPageText.SuspendLayout();
@@ -129,6 +127,7 @@
             this.textBoxRollInput.Location = new System.Drawing.Point(6, 6);
             this.textBoxRollInput.Multiline = true;
             this.textBoxRollInput.Name = "textBoxRollInput";
+            this.textBoxRollInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxRollInput.Size = new System.Drawing.Size(1434, 804);
             this.textBoxRollInput.TabIndex = 0;
             // 
@@ -140,8 +139,6 @@
             this.tabPageSettings.Controls.Add(this.buttonSettings_Save);
             this.tabPageSettings.Controls.Add(this.labelSettings_RollInput);
             this.tabPageSettings.Controls.Add(this.textBoxSettings_RollInput);
-            this.tabPageSettings.Controls.Add(this.textBoxSettings_OutputFile);
-            this.tabPageSettings.Controls.Add(this.labelSettings_OutputFile);
             this.tabPageSettings.Location = new System.Drawing.Point(4, 29);
             this.tabPageSettings.Name = "tabPageSettings";
             this.tabPageSettings.Size = new System.Drawing.Size(1446, 887);
@@ -149,9 +146,39 @@
             this.tabPageSettings.Text = "Settings";
             this.tabPageSettings.UseVisualStyleBackColor = true;
             // 
+            // checkBoxSettings_IncludeMasterwork
+            // 
+            this.checkBoxSettings_IncludeMasterwork.AutoSize = true;
+            this.checkBoxSettings_IncludeMasterwork.Location = new System.Drawing.Point(23, 187);
+            this.checkBoxSettings_IncludeMasterwork.Name = "checkBoxSettings_IncludeMasterwork";
+            this.checkBoxSettings_IncludeMasterwork.Size = new System.Drawing.Size(235, 24);
+            this.checkBoxSettings_IncludeMasterwork.TabIndex = 1;
+            this.checkBoxSettings_IncludeMasterwork.Text = "Include Masterwork in Notes";
+            this.checkBoxSettings_IncludeMasterwork.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSettings_IncludeRollInfo
+            // 
+            this.checkBoxSettings_IncludeRollInfo.AutoSize = true;
+            this.checkBoxSettings_IncludeRollInfo.Location = new System.Drawing.Point(23, 91);
+            this.checkBoxSettings_IncludeRollInfo.Name = "checkBoxSettings_IncludeRollInfo";
+            this.checkBoxSettings_IncludeRollInfo.Size = new System.Drawing.Size(244, 24);
+            this.checkBoxSettings_IncludeRollInfo.TabIndex = 6;
+            this.checkBoxSettings_IncludeRollInfo.Text = "Include Roll Info as Comment";
+            this.checkBoxSettings_IncludeRollInfo.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSettings_IncludeRating
+            // 
+            this.checkBoxSettings_IncludeRating.AutoSize = true;
+            this.checkBoxSettings_IncludeRating.Location = new System.Drawing.Point(23, 138);
+            this.checkBoxSettings_IncludeRating.Name = "checkBoxSettings_IncludeRating";
+            this.checkBoxSettings_IncludeRating.Size = new System.Drawing.Size(200, 24);
+            this.checkBoxSettings_IncludeRating.TabIndex = 0;
+            this.checkBoxSettings_IncludeRating.Text = "Inlcude Rating in Notes";
+            this.checkBoxSettings_IncludeRating.UseVisualStyleBackColor = true;
+            // 
             // buttonSettings_Save
             // 
-            this.buttonSettings_Save.Location = new System.Drawing.Point(285, 458);
+            this.buttonSettings_Save.Location = new System.Drawing.Point(230, 282);
             this.buttonSettings_Save.Name = "buttonSettings_Save";
             this.buttonSettings_Save.Size = new System.Drawing.Size(173, 65);
             this.buttonSettings_Save.TabIndex = 5;
@@ -162,7 +189,7 @@
             // labelSettings_RollInput
             // 
             this.labelSettings_RollInput.AutoSize = true;
-            this.labelSettings_RollInput.Location = new System.Drawing.Point(82, 122);
+            this.labelSettings_RollInput.Location = new System.Drawing.Point(19, 40);
             this.labelSettings_RollInput.Name = "labelSettings_RollInput";
             this.labelSettings_RollInput.Size = new System.Drawing.Size(77, 20);
             this.labelSettings_RollInput.TabIndex = 4;
@@ -174,57 +201,10 @@
             this.textBoxSettings_RollInput.Items.AddRange(new object[] {
             "Picklist",
             "Text"});
-            this.textBoxSettings_RollInput.Location = new System.Drawing.Point(165, 122);
+            this.textBoxSettings_RollInput.Location = new System.Drawing.Point(106, 37);
             this.textBoxSettings_RollInput.Name = "textBoxSettings_RollInput";
             this.textBoxSettings_RollInput.Size = new System.Drawing.Size(161, 28);
             this.textBoxSettings_RollInput.TabIndex = 3;
-            // 
-            // checkBoxSettings_IncludeMasterwork
-            // 
-            this.checkBoxSettings_IncludeMasterwork.AutoSize = true;
-            this.checkBoxSettings_IncludeMasterwork.Location = new System.Drawing.Point(23, 292);
-            this.checkBoxSettings_IncludeMasterwork.Name = "checkBoxSettings_IncludeMasterwork";
-            this.checkBoxSettings_IncludeMasterwork.Size = new System.Drawing.Size(235, 24);
-            this.checkBoxSettings_IncludeMasterwork.TabIndex = 1;
-            this.checkBoxSettings_IncludeMasterwork.Text = "Include Masterwork in Notes";
-            this.checkBoxSettings_IncludeMasterwork.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSettings_IncludeRating
-            // 
-            this.checkBoxSettings_IncludeRating.AutoSize = true;
-            this.checkBoxSettings_IncludeRating.Location = new System.Drawing.Point(23, 244);
-            this.checkBoxSettings_IncludeRating.Name = "checkBoxSettings_IncludeRating";
-            this.checkBoxSettings_IncludeRating.Size = new System.Drawing.Size(200, 24);
-            this.checkBoxSettings_IncludeRating.TabIndex = 0;
-            this.checkBoxSettings_IncludeRating.Text = "Inlcude Rating in Notes";
-            this.checkBoxSettings_IncludeRating.UseVisualStyleBackColor = true;
-            // 
-            // textBoxSettings_OutputFile
-            // 
-            this.textBoxSettings_OutputFile.Location = new System.Drawing.Point(165, 61);
-            this.textBoxSettings_OutputFile.Name = "textBoxSettings_OutputFile";
-            this.textBoxSettings_OutputFile.Size = new System.Drawing.Size(293, 26);
-            this.textBoxSettings_OutputFile.TabIndex = 1;
-            this.textBoxSettings_OutputFile.TextChanged += new System.EventHandler(this.textBoxSettings_OutputFile_TextChanged);
-            // 
-            // labelSettings_OutputFile
-            // 
-            this.labelSettings_OutputFile.AutoSize = true;
-            this.labelSettings_OutputFile.Location = new System.Drawing.Point(3, 61);
-            this.labelSettings_OutputFile.Name = "labelSettings_OutputFile";
-            this.labelSettings_OutputFile.Size = new System.Drawing.Size(156, 20);
-            this.labelSettings_OutputFile.TabIndex = 0;
-            this.labelSettings_OutputFile.Text = "Output File Location:";
-            // 
-            // checkBoxSettings_IncludeRollInfo
-            // 
-            this.checkBoxSettings_IncludeRollInfo.AutoSize = true;
-            this.checkBoxSettings_IncludeRollInfo.Location = new System.Drawing.Point(23, 192);
-            this.checkBoxSettings_IncludeRollInfo.Name = "checkBoxSettings_IncludeRollInfo";
-            this.checkBoxSettings_IncludeRollInfo.Size = new System.Drawing.Size(244, 24);
-            this.checkBoxSettings_IncludeRollInfo.TabIndex = 6;
-            this.checkBoxSettings_IncludeRollInfo.Text = "Include Roll Info as Comment";
-            this.checkBoxSettings_IncludeRollInfo.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -254,8 +234,6 @@
         private System.Windows.Forms.Button buttonGenerateText;
         private System.Windows.Forms.TextBox textBoxRollInput;
         private System.Windows.Forms.TabPage tabPageSettings;
-        private System.Windows.Forms.TextBox textBoxSettings_OutputFile;
-        private System.Windows.Forms.Label labelSettings_OutputFile;
         private System.Windows.Forms.Label labelMain_WeaponID;
         private System.Windows.Forms.ComboBox comboBoxMain_Weapon;
         private System.Windows.Forms.CheckBox checkBoxSettings_IncludeMasterwork;

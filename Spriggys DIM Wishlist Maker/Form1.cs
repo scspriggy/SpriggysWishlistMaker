@@ -21,11 +21,6 @@ namespace Spriggys_DIM_Wishlist_Maker
 
         private void loadSettings()
         {
-            if (Properties.Settings.Default.OutputFilePath != null && Properties.Settings.Default.OutputFilePath != "")
-            {
-                this.textBoxSettings_OutputFile.Text = Properties.Settings.Default.OutputFilePath;
-            }
-
             string rollInput = Properties.Settings.Default.RollInput;
             int location = this.textBoxSettings_RollInput.FindStringExact(rollInput);
 
@@ -37,7 +32,7 @@ namespace Spriggys_DIM_Wishlist_Maker
 
             this.checkBoxSettings_IncludeRating.Checked = Properties.Settings.Default.NoteRatings;
             this.checkBoxSettings_IncludeMasterwork.Checked = Properties.Settings.Default.NoteMasterwork;
-            this.checkBoxSettings_IncludeRollInfo.Checked = Properties.Settings.Default.NoteRollInfo;
+            this.checkBoxSettings_IncludeRollInfo.Checked = Properties.Settings.Default.CommentedRollInfo;
 
         }
 
@@ -83,18 +78,18 @@ namespace Spriggys_DIM_Wishlist_Maker
 
         private void buttonSettings_Save_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.OutputFilePath = this.textBoxSettings_OutputFile.Text;
             Properties.Settings.Default.RollInput = this.textBoxSettings_RollInput.Text;
             Properties.Settings.Default.NoteRatings = this.checkBoxSettings_IncludeRating.Checked;
             Properties.Settings.Default.NoteMasterwork = this.checkBoxSettings_IncludeMasterwork.Checked;
-            Properties.Settings.Default.NoteRollInfo = this.checkBoxSettings_IncludeRollInfo.Checked;
+            Properties.Settings.Default.CommentedRollInfo = this.checkBoxSettings_IncludeRollInfo.Checked;
 
             Properties.Settings.Default.Save();
         }
 
         private void buttonGenerateText_Click(object sender, EventArgs e)
         {
-            //TODO: go through lines populate new list
+            WishlistDoc doc = new WishlistDoc(textBoxRollInput.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries));
+            textBoxRollInput.Text = doc.getOutput();
         }
     }
 }

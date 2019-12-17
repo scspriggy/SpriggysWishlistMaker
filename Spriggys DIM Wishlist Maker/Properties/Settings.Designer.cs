@@ -25,18 +25,6 @@ namespace Spriggys_DIM_Wishlist_Maker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string OutputFilePath {
-            get {
-                return ((string)(this["OutputFilePath"]));
-            }
-            set {
-                this["OutputFilePath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Picklist")]
         public string RollInput {
             get {
@@ -49,7 +37,7 @@ namespace Spriggys_DIM_Wishlist_Maker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool NoteRatings {
             get {
                 return ((bool)(this["NoteRatings"]));
@@ -61,7 +49,7 @@ namespace Spriggys_DIM_Wishlist_Maker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool NoteMasterwork {
             get {
                 return ((bool)(this["NoteMasterwork"]));
@@ -73,13 +61,13 @@ namespace Spriggys_DIM_Wishlist_Maker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool NoteRollInfo {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool CommentedRollInfo {
             get {
-                return ((bool)(this["NoteRollInfo"]));
+                return ((bool)(this["CommentedRollInfo"]));
             }
             set {
-                this["NoteRollInfo"] = value;
+                this["CommentedRollInfo"] = value;
             }
         }
         
@@ -116,6 +104,30 @@ namespace Spriggys_DIM_Wishlist_Maker.Properties {
             }
             set {
                 this["LetterSeparator"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public float MinRating {
+            get {
+                return ((float)(this["MinRating"]));
+            }
+            set {
+                this["MinRating"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool NameRating {
+            get {
+                return ((bool)(this["NameRating"]));
+            }
+            set {
+                this["NameRating"] = value;
             }
         }
     }
