@@ -20,28 +20,44 @@ namespace Spriggys_DIM_Wishlist_Maker
             List<string> list = new List<string>();
             output = "";
             
-            output += getIntro();
             output += getWishlistItems();
         }
 
         private void populateWishlistItems()
         {
-            List<string> weaponRating = new List<string>();
 
-            //clear out whitespace
-            while( lineNum < input.Length && String.IsNullOrWhiteSpace(input[lineNum]))
+            while (lineNum < input.Length)
+            {
+                List<string> weaponRating = new List<string>();
+
+                skipWhitespaces();
+
+                while (lineNum < input.Length && input[lineNum].StartsWith("//"))
+                {
+                    weaponRating.Add(input[lineNum]);
+                    lineNum++;
+                }
+
+                long weaponId = getWeaponId(input[lineNum]);
+                items.Add(new WishlistItem(weaponRating.ToArray(), weaponId));
+
+                while (lineNum < input.Length && input[lineNum].StartsWith("dimwishlist"))
+                {
+                    lineNum++;
+                }
+
+                skipWhitespaces();
+
+            }
+
+        }
+
+        private void skipWhitespaces()
+        {
+            while ((lineNum < input.Length && String.IsNullOrWhiteSpace(input[lineNum])) || (lineNum < input.Length && input[lineNum].StartsWith("//////")) || (lineNum < input.Length && input[lineNum].StartsWith("//=======================================================================")))
             {
                 lineNum++;
             }
-
-            while (lineNum < input.Length && input[lineNum].StartsWith("//"))
-            {
-                weaponRating.Add(input[lineNum]);
-                lineNum++;
-            }
-
-            long weaponId = getWeaponId(input[lineNum]);
-            items.Add(new WishlistItem(weaponRating.ToArray(), weaponId));
         }
 
         private long getWeaponId(string line)
@@ -63,18 +79,13 @@ namespace Spriggys_DIM_Wishlist_Maker
             return weaponId;
         }
 
-        private string getIntro()
-        {
-            //TODO: Intro
-            return "//Intro stuffs" + Environment.NewLine + Environment.NewLine + Environment.NewLine;
-        }
-
         private string getWishlistItems()
         {
             string output = "";
             foreach(WishlistItem item in items)
             {
-                output += item.toString() + Environment.NewLine; ;
+                //TODO: Check for Letter separators, maybe sort?
+                output += item.toString() + Environment.NewLine + Environment.NewLine;
             }
             return output;
         }

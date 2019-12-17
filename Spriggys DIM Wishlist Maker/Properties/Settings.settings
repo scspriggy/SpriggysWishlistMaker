@@ -27,7 +27,7 @@
       <Value Profile="(Default)">4</Value>
     </Setting>
     <Setting Name="NameRating" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

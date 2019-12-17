@@ -7,7 +7,7 @@
         private long id3;
         private long id4;
         private float rating;
-        private GameType type;
+        public GameType type;
 
         public Combo(string line, GameType type)
         {
@@ -23,19 +23,24 @@
 
         public float getComboRating(long id1, long id2, long id3, long id4, GameType t)
         {
-            if (id1 != 0 && id1 != this.id1)
+            if (this.id1 != 0 && id1 != this.id1)
                 return 0;
 
-            if (id2 != 0 && id2 != this.id2)
+            if (this.id2 != 0 && id2 != this.id2)
                 return 0;
 
-            if (id3 != 0 && id3 != this.id3)
+            if (this.id3 != 0 && id3 != this.id3)
                 return 0;
 
-            if (id4 != 0 && id4 != this.id4)
+            if (this.id4 != 0 && id4 != this.id4)
                 return 0;
 
             return rating;
+        }
+
+        public string toString()
+        {
+            return id1 + "," + id2 + "," + id3 + "," + id4 + ":" + rating;
         }
 
     }

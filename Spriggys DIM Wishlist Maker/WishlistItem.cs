@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Spriggys_DIM_Wishlist_Maker
 {
     enum WeaponTier { S, A, B, C, F, U }
-    enum GameType { PvE, PvP, Both }
+    enum GameType { Empty, PvE, PvP, Both }
 
     class WishlistItem
     {
@@ -24,6 +24,7 @@ namespace Spriggys_DIM_Wishlist_Maker
         private string pveMasterwork;
         private string pvpMasterwork;
         private WeaponTier weaponTier;
+        private string weaponTierString;
         private List<Combo> combos = new List<Combo>();
 
         public WishlistItem(string[] wishlistText, long weaponId)
@@ -69,24 +70,25 @@ namespace Spriggys_DIM_Wishlist_Maker
 
             if (titleString.Length > 1 && line.Contains(" - "))
             {
+                weaponTierString = titleString[titleString.Length - 1];
                 char tier = char.Parse(titleString[titleString.Length - 1].Substring(1, 1));
 
                 if (tier == 'S' || tier == 's')
-                    weaponTier = WeaponTier.S;
+                    t = WeaponTier.S;
                 else if (tier == 'A' || tier == 'a')
-                    weaponTier = WeaponTier.A;
+                    t = WeaponTier.A;
                 else if (tier == 'B' || tier == 'b')
-                    weaponTier = WeaponTier.B;
+                    t = WeaponTier.B;
                 else if (tier == 'C' || tier == 'c')
-                    weaponTier = WeaponTier.C;
+                    t = WeaponTier.C;
                 else if (tier == 'F' || tier == 'f')
-                    weaponTier = WeaponTier.F;
+                    t = WeaponTier.F;
                 else
-                    weaponTier = WeaponTier.U;
+                    t = WeaponTier.U;
             }
             else
             {
-                weaponTier = WeaponTier.U;
+                t = WeaponTier.U;
             }
 
             return t;
@@ -240,15 +242,18 @@ namespace Spriggys_DIM_Wishlist_Maker
         {
             string output = "";
 
-            if (Properties.Settings.Default.NameRating)
-                output += "//" + weaponName + " - " + weaponTier + Environment.NewLine;
+            if (Properties.Settings.Default.NameRating && weaponTierString != null)
+                output += "//" + weaponName + "-" + weaponTierString + Environment.NewLine;
+            else if(Properties.Settings.Default.NameRating)
+                output += "//" + weaponName + "-" + weaponTier + Environment.NewLine;
             else
                 output += "//" + weaponName + Environment.NewLine;
 
             if (Properties.Settings.Default.CommentedRollInfo)
             {
                 output += getRollInfo(gameType1);
-                output += getRollInfo(gameType2);
+                if(gameType2 != GameType.Empty)
+                    output += getRollInfo(gameType2);
             }
 
             output += getWishlistItems();
@@ -262,11 +267,29 @@ namespace Spriggys_DIM_Wishlist_Maker
 
             //Game Type
             if (t == GameType.PvP)
+            {
                 output += "//=================PvP=================" + Environment.NewLine;
+                perk1Rolls = perk1Rolls.OrderByDescending(o => o.pvpRating).ToList();
+                perk2Rolls = perk2Rolls.OrderByDescending(o => o.pvpRating).ToList();
+                perk3Rolls = perk3Rolls.OrderByDescending(o => o.pvpRating).ToList();
+                perk4Rolls = perk4Rolls.OrderByDescending(o => o.pvpRating).ToList();
+            }
             else if (t == GameType.PvE)
+            {
                 output += "//=================PvE=================" + Environment.NewLine;
+                perk1Rolls = perk1Rolls.OrderByDescending(o => o.pveRating).ToList();
+                perk2Rolls = perk2Rolls.OrderByDescending(o => o.pveRating).ToList();
+                perk3Rolls = perk3Rolls.OrderByDescending(o => o.pveRating).ToList();
+                perk4Rolls = perk4Rolls.OrderByDescending(o => o.pveRating).ToList();
+            }
             else
+            {
                 output += "//=================PvE/PvP=================" + Environment.NewLine;
+                perk1Rolls = perk1Rolls.OrderByDescending(o => o.pveRating).ToList();
+                perk2Rolls = perk2Rolls.OrderByDescending(o => o.pveRating).ToList();
+                perk3Rolls = perk3Rolls.OrderByDescending(o => o.pveRating).ToList();
+                perk4Rolls = perk4Rolls.OrderByDescending(o => o.pveRating).ToList();
+            }
 
             output += "//" + perk1Name + Environment.NewLine;
             foreach (RollRating r in perk1Rolls)
@@ -291,6 +314,27 @@ namespace Spriggys_DIM_Wishlist_Maker
             {
                 output += r.toString(t);
             }
+
+            //Combo Logic
+            string comboString = "";
+            foreach (Combo c in combos)
+            {
+                if (t == c.type)
+                    comboString += c.toString() + Environment.NewLine;
+            }
+
+            if(comboString != "")
+            {
+                output += "//Combos" + Environment.NewLine;
+                output += comboString;
+            }
+
+            //Masterwork Logic
+            if (t == GameType.PvP && pvpMasterwork != null)
+                output += "//MW " + pvpMasterwork + Environment.NewLine;
+            else if(pveMasterwork != null)
+                output += "//MW " + pveMasterwork + Environment.NewLine;
+
 
             return output;
         }
