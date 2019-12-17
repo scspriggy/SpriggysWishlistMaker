@@ -44,6 +44,11 @@
             this.buttonSettings_Save = new System.Windows.Forms.Button();
             this.labelSettings_RollInput = new System.Windows.Forms.Label();
             this.textBoxSettings_RollInput = new System.Windows.Forms.ComboBox();
+            this.checkBoxSettings_IncludeCharacterSeparator = new System.Windows.Forms.CheckBox();
+            this.labelSettings_minRating = new System.Windows.Forms.Label();
+            this.textBoxSettings_MinRating = new System.Windows.Forms.TextBox();
+            this.textBoxSettings_SampleOutput = new System.Windows.Forms.TextBox();
+            this.checkBoxSettings_IncludeNameRating = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPageForm.SuspendLayout();
             this.tabPageText.SuspendLayout();
@@ -52,6 +57,9 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPageForm);
             this.tabControl1.Controls.Add(this.tabPageText);
             this.tabControl1.Controls.Add(this.tabPageSettings);
@@ -133,6 +141,11 @@
             // 
             // tabPageSettings
             // 
+            this.tabPageSettings.Controls.Add(this.checkBoxSettings_IncludeNameRating);
+            this.tabPageSettings.Controls.Add(this.textBoxSettings_SampleOutput);
+            this.tabPageSettings.Controls.Add(this.textBoxSettings_MinRating);
+            this.tabPageSettings.Controls.Add(this.labelSettings_minRating);
+            this.tabPageSettings.Controls.Add(this.checkBoxSettings_IncludeCharacterSeparator);
             this.tabPageSettings.Controls.Add(this.checkBoxSettings_IncludeMasterwork);
             this.tabPageSettings.Controls.Add(this.checkBoxSettings_IncludeRollInfo);
             this.tabPageSettings.Controls.Add(this.checkBoxSettings_IncludeRating);
@@ -149,12 +162,13 @@
             // checkBoxSettings_IncludeMasterwork
             // 
             this.checkBoxSettings_IncludeMasterwork.AutoSize = true;
-            this.checkBoxSettings_IncludeMasterwork.Location = new System.Drawing.Point(23, 187);
+            this.checkBoxSettings_IncludeMasterwork.Location = new System.Drawing.Point(23, 222);
             this.checkBoxSettings_IncludeMasterwork.Name = "checkBoxSettings_IncludeMasterwork";
             this.checkBoxSettings_IncludeMasterwork.Size = new System.Drawing.Size(235, 24);
             this.checkBoxSettings_IncludeMasterwork.TabIndex = 1;
             this.checkBoxSettings_IncludeMasterwork.Text = "Include Masterwork in Notes";
             this.checkBoxSettings_IncludeMasterwork.UseVisualStyleBackColor = true;
+            this.checkBoxSettings_IncludeMasterwork.CheckedChanged += new System.EventHandler(this.checkBoxSettings_IncludeMasterwork_CheckedChanged);
             // 
             // checkBoxSettings_IncludeRollInfo
             // 
@@ -165,6 +179,7 @@
             this.checkBoxSettings_IncludeRollInfo.TabIndex = 6;
             this.checkBoxSettings_IncludeRollInfo.Text = "Include Roll Info as Comment";
             this.checkBoxSettings_IncludeRollInfo.UseVisualStyleBackColor = true;
+            this.checkBoxSettings_IncludeRollInfo.CheckedChanged += new System.EventHandler(this.checkBoxSettings_IncludeRollInfo_CheckedChanged);
             // 
             // checkBoxSettings_IncludeRating
             // 
@@ -175,10 +190,11 @@
             this.checkBoxSettings_IncludeRating.TabIndex = 0;
             this.checkBoxSettings_IncludeRating.Text = "Inlcude Rating in Notes";
             this.checkBoxSettings_IncludeRating.UseVisualStyleBackColor = true;
+            this.checkBoxSettings_IncludeRating.CheckedChanged += new System.EventHandler(this.checkBoxSettings_IncludeRating_CheckedChanged);
             // 
             // buttonSettings_Save
             // 
-            this.buttonSettings_Save.Location = new System.Drawing.Point(230, 282);
+            this.buttonSettings_Save.Location = new System.Drawing.Point(214, 434);
             this.buttonSettings_Save.Name = "buttonSettings_Save";
             this.buttonSettings_Save.Size = new System.Drawing.Size(173, 65);
             this.buttonSettings_Save.TabIndex = 5;
@@ -205,6 +221,57 @@
             this.textBoxSettings_RollInput.Name = "textBoxSettings_RollInput";
             this.textBoxSettings_RollInput.Size = new System.Drawing.Size(161, 28);
             this.textBoxSettings_RollInput.TabIndex = 3;
+            // 
+            // checkBoxSettings_IncludeCharacterSeparator
+            // 
+            this.checkBoxSettings_IncludeCharacterSeparator.AutoSize = true;
+            this.checkBoxSettings_IncludeCharacterSeparator.Location = new System.Drawing.Point(23, 268);
+            this.checkBoxSettings_IncludeCharacterSeparator.Name = "checkBoxSettings_IncludeCharacterSeparator";
+            this.checkBoxSettings_IncludeCharacterSeparator.Size = new System.Drawing.Size(296, 24);
+            this.checkBoxSettings_IncludeCharacterSeparator.TabIndex = 7;
+            this.checkBoxSettings_IncludeCharacterSeparator.Text = "Include Letter Separators (Bulk Only)";
+            this.checkBoxSettings_IncludeCharacterSeparator.UseVisualStyleBackColor = true;
+            this.checkBoxSettings_IncludeCharacterSeparator.CheckedChanged += new System.EventHandler(this.checkBoxSettings_IncludeCharacterSeparator_CheckedChanged);
+            // 
+            // labelSettings_minRating
+            // 
+            this.labelSettings_minRating.AutoSize = true;
+            this.labelSettings_minRating.Location = new System.Drawing.Point(79, 320);
+            this.labelSettings_minRating.Name = "labelSettings_minRating";
+            this.labelSettings_minRating.Size = new System.Drawing.Size(85, 20);
+            this.labelSettings_minRating.TabIndex = 8;
+            this.labelSettings_minRating.Text = "Min Rating";
+            // 
+            // textBoxSettings_MinRating
+            // 
+            this.textBoxSettings_MinRating.Location = new System.Drawing.Point(23, 317);
+            this.textBoxSettings_MinRating.Name = "textBoxSettings_MinRating";
+            this.textBoxSettings_MinRating.Size = new System.Drawing.Size(50, 26);
+            this.textBoxSettings_MinRating.TabIndex = 9;
+            // 
+            // textBoxSettings_SampleOutput
+            // 
+            this.textBoxSettings_SampleOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSettings_SampleOutput.Location = new System.Drawing.Point(450, 3);
+            this.textBoxSettings_SampleOutput.Multiline = true;
+            this.textBoxSettings_SampleOutput.Name = "textBoxSettings_SampleOutput";
+            this.textBoxSettings_SampleOutput.ReadOnly = true;
+            this.textBoxSettings_SampleOutput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxSettings_SampleOutput.Size = new System.Drawing.Size(993, 881);
+            this.textBoxSettings_SampleOutput.TabIndex = 10;
+            this.textBoxSettings_SampleOutput.WordWrap = false;
+            // 
+            // checkBoxSettings_IncludeNameRating
+            // 
+            this.checkBoxSettings_IncludeNameRating.AutoSize = true;
+            this.checkBoxSettings_IncludeNameRating.Location = new System.Drawing.Point(23, 181);
+            this.checkBoxSettings_IncludeNameRating.Name = "checkBoxSettings_IncludeNameRating";
+            this.checkBoxSettings_IncludeNameRating.Size = new System.Drawing.Size(200, 24);
+            this.checkBoxSettings_IncludeNameRating.TabIndex = 11;
+            this.checkBoxSettings_IncludeNameRating.Text = "Inlcude Rating in Name";
+            this.checkBoxSettings_IncludeNameRating.UseVisualStyleBackColor = true;
+            this.checkBoxSettings_IncludeNameRating.CheckedChanged += new System.EventHandler(this.checkBoxSettings_IncludeNameRating_CheckedChanged);
             // 
             // Form1
             // 
@@ -243,6 +310,11 @@
         private System.Windows.Forms.ComboBox textBoxSettings_RollInput;
         private System.Windows.Forms.Button buttonSettings_Save;
         private System.Windows.Forms.CheckBox checkBoxSettings_IncludeRollInfo;
+        private System.Windows.Forms.TextBox textBoxSettings_MinRating;
+        private System.Windows.Forms.Label labelSettings_minRating;
+        private System.Windows.Forms.CheckBox checkBoxSettings_IncludeCharacterSeparator;
+        private System.Windows.Forms.TextBox textBoxSettings_SampleOutput;
+        private System.Windows.Forms.CheckBox checkBoxSettings_IncludeNameRating;
     }
 }
 

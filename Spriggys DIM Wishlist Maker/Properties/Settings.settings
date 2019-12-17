@@ -14,20 +14,14 @@
     <Setting Name="CommentedRollInfo" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="WishListName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">MyWishlist</Value>
-    </Setting>
-    <Setting Name="WishListDesc" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Wishlist created by Srpiggy's DIM Wishlist Maker</Value>
-    </Setting>
     <Setting Name="LetterSeparator" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="MinRating" Type="System.Single" Scope="User">
       <Value Profile="(Default)">4</Value>
     </Setting>
     <Setting Name="NameRating" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

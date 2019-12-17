@@ -8,11 +8,13 @@ namespace Spriggys_DIM_Wishlist_Maker
 {
     enum WeaponTier { S, A, B, C, F, U }
     enum GameType { PvE, PvP, Both }
+    enum ItemType { None, Separator, Simple, Normal}
 
     class WishlistItem
     {
         private long weaponId;
         private string weaponName;
+        public string weaponNameSort;
         private GameType gameType1;
         private GameType gameType2;
         private string perk1Name;
@@ -25,11 +27,39 @@ namespace Spriggys_DIM_Wishlist_Maker
         private string pvpMasterwork;
         private WeaponTier weaponTier;
         private List<Combo> combos = new List<Combo>();
+        private string output = "";
 
         public WishlistItem(string[] wishlistText, long weaponId)
         {
             this.weaponId = weaponId;
             parseWishlistText(wishlistText);
+            populateWishlistOutput();
+        }
+
+      
+
+        public WishlistItem(string[] wishlistText, ItemType type)
+        {
+            if(type == ItemType.Separator)
+            {
+                output = wishlistText[0];
+                string temp = wishlistText[1].Replace("//","");
+                temp = temp.Replace("=======================================================================", "");
+                weaponNameSort = temp;
+                output = wishlistText[1];
+                output = wishlistText[2];
+            }
+
+            if (type == ItemType.Simple)
+            {
+                weaponName = getWeaponName(wishlistText[0]);
+                weaponNameSort = weaponName.Replace("The ", "").Replace("the ", "").Replace("THE ", "");
+
+                for(int i=0; i < wishlistText.Length; i++)
+                {
+                    output += wishlistText[i] + Environment.NewLine;
+                }
+            }
         }
 
         private void parseWishlistText(string[] text)
@@ -37,6 +67,7 @@ namespace Spriggys_DIM_Wishlist_Maker
             int lineNum = 0;
             weaponTier = getWeaponTier(text[lineNum]);
             weaponName = getWeaponName(text[lineNum]);
+            weaponNameSort = weaponName.Replace("The ", "").Replace("the ", "").Replace("THE ", "");
             lineNum++;
 
             if (text[lineNum].Contains("============"))
@@ -238,21 +269,6 @@ namespace Spriggys_DIM_Wishlist_Maker
 
         public string toString()
         {
-            string output = "";
-
-            if (Properties.Settings.Default.NameRating)
-                output += "//" + weaponName + " - " + weaponTier + Environment.NewLine;
-            else
-                output += "//" + weaponName + Environment.NewLine;
-
-            if (Properties.Settings.Default.CommentedRollInfo)
-            {
-                output += getRollInfo(gameType1);
-                output += getRollInfo(gameType2);
-            }
-
-            output += getWishlistItems();
-
             return output;
         }
 
@@ -329,6 +345,24 @@ namespace Spriggys_DIM_Wishlist_Maker
             
 
             return output;
+        }
+
+        private void populateWishlistOutput()
+        {
+            output = "";
+
+            if (Properties.Settings.Default.NameRating)
+                output += "//" + weaponName + " - " + weaponTier + Environment.NewLine;
+            else
+                output += "//" + weaponName + Environment.NewLine;
+
+            if (Properties.Settings.Default.CommentedRollInfo)
+            {
+                output += getRollInfo(gameType1);
+                output += getRollInfo(gameType2);
+            }
+
+            output += getWishlistItems();
         }
 
     }

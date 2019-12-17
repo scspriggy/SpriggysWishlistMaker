@@ -73,31 +73,7 @@ namespace Spriggys_DIM_Wishlist_Maker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("MyWishlist")]
-        public string WishListName {
-            get {
-                return ((string)(this["WishListName"]));
-            }
-            set {
-                this["WishListName"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Wishlist created by Srpiggy\'s DIM Wishlist Maker")]
-        public string WishListDesc {
-            get {
-                return ((string)(this["WishListDesc"]));
-            }
-            set {
-                this["WishListDesc"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool LetterSeparator {
             get {
                 return ((bool)(this["LetterSeparator"]));
@@ -121,7 +97,7 @@ namespace Spriggys_DIM_Wishlist_Maker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool NameRating {
             get {
                 return ((bool)(this["NameRating"]));
