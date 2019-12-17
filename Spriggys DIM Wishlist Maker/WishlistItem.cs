@@ -8,7 +8,6 @@ namespace Spriggys_DIM_Wishlist_Maker
 {
     enum WeaponTier { S, A, B, C, F, U }
     enum GameType { Empty, PvE, PvP, Both }
-    enum GameType { PvE, PvP, Both }
     enum ItemType { None, Separator, Simple, Normal}
 
     class WishlistItem
@@ -44,12 +43,12 @@ namespace Spriggys_DIM_Wishlist_Maker
         {
             if(type == ItemType.Separator)
             {
-                output = wishlistText[0];
+                output = wishlistText[0] + Environment.NewLine;
                 string temp = wishlistText[1].Replace("//","");
-                temp = temp.Replace("=======================================================================", "");
+                temp = temp.Replace("=", "");
                 weaponNameSort = temp;
-                output = wishlistText[1];
-                output = wishlistText[2];
+                output += wishlistText[1] + Environment.NewLine;
+                output += wishlistText[2] + Environment.NewLine;
             }
 
             if (type == ItemType.Simple)

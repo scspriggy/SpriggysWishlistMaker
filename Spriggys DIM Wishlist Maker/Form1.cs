@@ -194,7 +194,7 @@ namespace Spriggys_DIM_Wishlist_Maker
 
         private void buttonGenerateText_Click(object sender, EventArgs e)
         {
-            WishlistDoc doc = new WishlistDoc(textBoxRollInput.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries));
+            WishlistDoc doc = new WishlistDoc(textBoxRollInput.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None));
             textBoxRollInput.Text = doc.getOutput();
         }
 

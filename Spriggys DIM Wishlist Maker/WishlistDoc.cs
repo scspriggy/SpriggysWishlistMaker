@@ -32,18 +32,44 @@ namespace Spriggys_DIM_Wishlist_Maker
 
                 skipWhitespaces();
 
-                while (lineNum < input.Length && input[lineNum].StartsWith("//"))
+                //Check if character separator
+                if(input[lineNum].Contains("////////////////////////////////////////////"))
                 {
                     weaponRating.Add(input[lineNum]);
                     lineNum++;
-                }
-
-                long weaponId = getWeaponId(input[lineNum]);
-                items.Add(new WishlistItem(weaponRating.ToArray(), weaponId));
-
-                while (lineNum < input.Length && input[lineNum].StartsWith("dimwishlist"))
-                {
+                    weaponRating.Add(input[lineNum]);
                     lineNum++;
+                    weaponRating.Add(input[lineNum]);
+                    lineNum++;
+                    if(Properties.Settings.Default.LetterSeparator)
+                    {
+                        items.Add(new WishlistItem(weaponRating.ToArray(), ItemType.Separator));
+                    }
+                }
+                else if(lookForRating())
+                {
+                    while (lineNum < input.Length && input[lineNum].StartsWith("//"))
+                    {
+                        weaponRating.Add(input[lineNum]);
+                        lineNum++;
+                    }
+
+                    long weaponId = getWeaponId(input[lineNum]);
+                    items.Add(new WishlistItem(weaponRating.ToArray(), weaponId));
+
+                    while (lineNum < input.Length && input[lineNum].StartsWith("dimwishlist"))
+                    {
+                        lineNum++;
+                    }
+                }
+                else
+                {
+                    while (lineNum < input.Length && !String.IsNullOrWhiteSpace(input[lineNum]))
+                    {
+                        weaponRating.Add(input[lineNum]);
+                        lineNum++;
+                    }
+                    items.Add(new WishlistItem(weaponRating.ToArray(), ItemType.Simple));
                 }
 
                 skipWhitespaces();
@@ -52,9 +78,23 @@ namespace Spriggys_DIM_Wishlist_Maker
 
         }
 
+        private bool lookForRating()
+        {
+            int current = 1;
+            int max = 2;
+            while(lineNum + current < input.Length && current < max)
+            {
+                if (input[lineNum + current].StartsWith("//===") && (input[lineNum + current].ToLower().Contains("pve") || input[lineNum + current].ToLower().Contains("pve")))
+                    return true;
+                current++;
+            }
+            
+            return false;
+        }
+
         private void skipWhitespaces()
         {
-            while ((lineNum < input.Length && String.IsNullOrWhiteSpace(input[lineNum])) || (lineNum < input.Length && input[lineNum].StartsWith("//////")) || (lineNum < input.Length && input[lineNum].StartsWith("//=======================================================================")))
+            while (lineNum < input.Length && String.IsNullOrWhiteSpace(input[lineNum]) )
             {
                 lineNum++;
             }
@@ -82,7 +122,8 @@ namespace Spriggys_DIM_Wishlist_Maker
         private string getWishlistItems()
         {
             string output = "";
-            foreach(WishlistItem item in items)
+            items = items.OrderBy(o => o.weaponNameSort).ToList();
+            foreach (WishlistItem item in items)
             {
                 //TODO: Check for Letter separators, maybe sort?
                 output += item.toString() + Environment.NewLine + Environment.NewLine;

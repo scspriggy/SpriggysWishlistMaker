@@ -64,8 +64,10 @@ namespace Spriggys_DIM_Wishlist_Maker
                 {
                     if (pve >= Properties.Settings.Default.MinRating && pvp >= Properties.Settings.Default.MinRating )
                     {
-                        if (pveMasterwork != null && pvpMasterwork != null)
+                        if (pveMasterwork != null && pvpMasterwork != null && pveMasterwork != pvpMasterwork)
                             line += " MWpve " + pveMasterwork + ", MWpvp " + pvpMasterwork;
+                        else if(pveMasterwork != null && pvpMasterwork != null && pveMasterwork == pvpMasterwork)
+                            line += " MW " + pveMasterwork;
                         else if (pveMasterwork != null)
                             line += " MWpve " + pveMasterwork;
                         else if (pvpMasterwork != null)
