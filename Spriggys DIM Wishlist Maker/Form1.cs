@@ -30,6 +30,13 @@ namespace Spriggys_DIM_Wishlist_Maker
                 changeInputToText();
             }
 
+            string gameType = Properties.Settings.Default.GameType;
+            location = this.comboBoxSettings_GameType.FindStringExact(gameType);
+            this.comboBoxSettings_GameType.SelectedIndex = location;
+
+            this.comboBoxMain_GameType.SelectedIndex = location;
+            
+
             this.checkBoxSettings_IncludeRating.Checked = Properties.Settings.Default.NoteRatings;
             this.checkBoxSettings_IncludeNameRating.Checked = Properties.Settings.Default.NameRating;
             this.checkBoxSettings_IncludeMasterwork.Checked = Properties.Settings.Default.NoteMasterwork;
@@ -182,6 +189,7 @@ namespace Spriggys_DIM_Wishlist_Maker
         private void buttonSettings_Save_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.RollInput = this.textBoxSettings_RollInput.Text;
+            Properties.Settings.Default.GameType = this.comboBoxSettings_GameType.Text;
             Properties.Settings.Default.NoteRatings = this.checkBoxSettings_IncludeRating.Checked;
             Properties.Settings.Default.NameRating = this.checkBoxSettings_IncludeNameRating.Checked;
             Properties.Settings.Default.NoteMasterwork = this.checkBoxSettings_IncludeMasterwork.Checked;

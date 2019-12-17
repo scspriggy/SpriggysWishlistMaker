@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Spriggys_DIM_Wishlist_Maker
 {
-    enum WeaponTier { S, A, B, C, F, U }
+    enum WeaponTier { U, S, A, B, C, F }
     enum GameType { Empty, PvE, PvP, Both }
     enum ItemType { None, Separator, Simple, Normal}
 

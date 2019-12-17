@@ -49,6 +49,112 @@
             this.buttonSettings_Save = new System.Windows.Forms.Button();
             this.labelSettings_RollInput = new System.Windows.Forms.Label();
             this.textBoxSettings_RollInput = new System.Windows.Forms.ComboBox();
+            this.labelMain_GameType = new System.Windows.Forms.Label();
+            this.comboBoxMain_GameType = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxSettings_GameType = new System.Windows.Forms.ComboBox();
+            this.labelMain_WeaponTier = new System.Windows.Forms.Label();
+            this.comboBoxMain_WeaponTier = new System.Windows.Forms.ComboBox();
+            this.labelMain_PvEmw = new System.Windows.Forms.Label();
+            this.textBoxMain_PvEmw = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PvPmw = new System.Windows.Forms.TextBox();
+            this.labelMain_PvPmw = new System.Windows.Forms.Label();
+            this.labelMain_Barrel = new System.Windows.Forms.Label();
+            this.textBoxMain_Barrel1id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel1pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel1pvp = new System.Windows.Forms.TextBox();
+            this.labelMain_Barrelpve = new System.Windows.Forms.Label();
+            this.labelMain_Barrelpvp = new System.Windows.Forms.Label();
+            this.textBoxMain_Barrel2pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel2pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel2id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel3pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel3pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel3id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel4pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel4pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel4id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel5pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel5pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel5id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel6pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel6pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel6id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel7pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel7pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Barrel7id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag7pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag7pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag7id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag6pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag6pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag6id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag5pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag5pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag5id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag4pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag4pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag4id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag3pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag3pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag3id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag2pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag2pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag2id = new System.Windows.Forms.TextBox();
+            this.labelMain_Magpvp = new System.Windows.Forms.Label();
+            this.labelMain_Magpve = new System.Windows.Forms.Label();
+            this.textBoxMain_Mag1pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag1pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Mag1id = new System.Windows.Forms.TextBox();
+            this.labelMain_Mag = new System.Windows.Forms.Label();
+            this.textBoxMain_PerkOne7pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne7pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne7id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne6pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne6pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne6id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne5pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne5pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne5id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne4pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne4pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne4id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne3pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne3pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne3id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne2pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne2pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne2id = new System.Windows.Forms.TextBox();
+            this.labelMain_Perk1pvp = new System.Windows.Forms.Label();
+            this.labelMain_Perk1pve = new System.Windows.Forms.Label();
+            this.textBoxMain_PerkOne1pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne1pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkOne1id = new System.Windows.Forms.TextBox();
+            this.labelMain_Perk1 = new System.Windows.Forms.Label();
+            this.textBoxMain_PerkTwo7pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo7pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo7id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo6pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo6pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo6id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo5pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo5pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo5id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo4pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo4pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo4id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo3pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo3pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo3id = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo2pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo2pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo2id = new System.Windows.Forms.TextBox();
+            this.labelMain_Perk2pvp = new System.Windows.Forms.Label();
+            this.labelMain_Perk2pve = new System.Windows.Forms.Label();
+            this.textBoxMain_PerkTwo1pvp = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo1pve = new System.Windows.Forms.TextBox();
+            this.textBoxMain_PerkTwo1id = new System.Windows.Forms.TextBox();
+            this.labelMain_Perk2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageForm.SuspendLayout();
             this.tabPageText.SuspendLayout();
@@ -71,6 +177,110 @@
             // 
             // tabPageForm
             // 
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo7pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo7pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo7id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo6pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo6pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo6id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo5pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo5pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo5id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo4pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo4pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo4id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo3pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo3pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo3id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo2pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo2pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo2id);
+            this.tabPageForm.Controls.Add(this.labelMain_Perk2pvp);
+            this.tabPageForm.Controls.Add(this.labelMain_Perk2pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo1pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo1pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkTwo1id);
+            this.tabPageForm.Controls.Add(this.labelMain_Perk2);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne7pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne7pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne7id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne6pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne6pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne6id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne5pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne5pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne5id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne4pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne4pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne4id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne3pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne3pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne3id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne2pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne2pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne2id);
+            this.tabPageForm.Controls.Add(this.labelMain_Perk1pvp);
+            this.tabPageForm.Controls.Add(this.labelMain_Perk1pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne1pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne1pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PerkOne1id);
+            this.tabPageForm.Controls.Add(this.labelMain_Perk1);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag7pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag7pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag7id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag6pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag6pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag6id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag5pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag5pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag5id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag4pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag4pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag4id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag3pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag3pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag3id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag2pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag2pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag2id);
+            this.tabPageForm.Controls.Add(this.labelMain_Magpvp);
+            this.tabPageForm.Controls.Add(this.labelMain_Magpve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag1pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag1pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Mag1id);
+            this.tabPageForm.Controls.Add(this.labelMain_Mag);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel7pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel7pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel7id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel6pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel6pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel6id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel5pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel5pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel5id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel4pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel4pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel4id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel3pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel3pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel3id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel2pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel2pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel2id);
+            this.tabPageForm.Controls.Add(this.labelMain_Barrelpvp);
+            this.tabPageForm.Controls.Add(this.labelMain_Barrelpve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel1pvp);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel1pve);
+            this.tabPageForm.Controls.Add(this.textBoxMain_Barrel1id);
+            this.tabPageForm.Controls.Add(this.labelMain_Barrel);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PvPmw);
+            this.tabPageForm.Controls.Add(this.labelMain_PvPmw);
+            this.tabPageForm.Controls.Add(this.textBoxMain_PvEmw);
+            this.tabPageForm.Controls.Add(this.labelMain_PvEmw);
+            this.tabPageForm.Controls.Add(this.comboBoxMain_WeaponTier);
+            this.tabPageForm.Controls.Add(this.labelMain_WeaponTier);
+            this.tabPageForm.Controls.Add(this.comboBoxMain_GameType);
+            this.tabPageForm.Controls.Add(this.labelMain_GameType);
             this.tabPageForm.Controls.Add(this.textBoxMain_Weapon);
             this.tabPageForm.Controls.Add(this.labelMain_WeaponID);
             this.tabPageForm.Controls.Add(this.comboBoxMain_Weapon);
@@ -84,7 +294,7 @@
             // 
             // textBoxMain_Weapon
             // 
-            this.textBoxMain_Weapon.Location = new System.Drawing.Point(90, 24);
+            this.textBoxMain_Weapon.Location = new System.Drawing.Point(90, 30);
             this.textBoxMain_Weapon.Name = "textBoxMain_Weapon";
             this.textBoxMain_Weapon.Size = new System.Drawing.Size(200, 26);
             this.textBoxMain_Weapon.TabIndex = 2;
@@ -93,7 +303,7 @@
             // labelMain_WeaponID
             // 
             this.labelMain_WeaponID.AutoSize = true;
-            this.labelMain_WeaponID.Location = new System.Drawing.Point(15, 27);
+            this.labelMain_WeaponID.Location = new System.Drawing.Point(15, 30);
             this.labelMain_WeaponID.Name = "labelMain_WeaponID";
             this.labelMain_WeaponID.Size = new System.Drawing.Size(69, 20);
             this.labelMain_WeaponID.TabIndex = 1;
@@ -103,7 +313,7 @@
             // comboBoxMain_Weapon
             // 
             this.comboBoxMain_Weapon.FormattingEnabled = true;
-            this.comboBoxMain_Weapon.Location = new System.Drawing.Point(90, 24);
+            this.comboBoxMain_Weapon.Location = new System.Drawing.Point(90, 30);
             this.comboBoxMain_Weapon.Name = "comboBoxMain_Weapon";
             this.comboBoxMain_Weapon.Size = new System.Drawing.Size(200, 28);
             this.comboBoxMain_Weapon.TabIndex = 0;
@@ -142,6 +352,8 @@
             // 
             // tabPageSettings
             // 
+            this.tabPageSettings.Controls.Add(this.label1);
+            this.tabPageSettings.Controls.Add(this.comboBoxSettings_GameType);
             this.tabPageSettings.Controls.Add(this.checkBoxSettings_IncludeNameRating);
             this.tabPageSettings.Controls.Add(this.textBoxSettings_SampleOutput);
             this.tabPageSettings.Controls.Add(this.textBoxSettings_MinRating);
@@ -163,7 +375,7 @@
             // checkBoxSettings_IncludeNameRating
             // 
             this.checkBoxSettings_IncludeNameRating.AutoSize = true;
-            this.checkBoxSettings_IncludeNameRating.Location = new System.Drawing.Point(23, 190);
+            this.checkBoxSettings_IncludeNameRating.Location = new System.Drawing.Point(23, 240);
             this.checkBoxSettings_IncludeNameRating.Name = "checkBoxSettings_IncludeNameRating";
             this.checkBoxSettings_IncludeNameRating.Size = new System.Drawing.Size(200, 24);
             this.checkBoxSettings_IncludeNameRating.TabIndex = 11;
@@ -187,7 +399,7 @@
             // 
             // textBoxSettings_MinRating
             // 
-            this.textBoxSettings_MinRating.Location = new System.Drawing.Point(23, 340);
+            this.textBoxSettings_MinRating.Location = new System.Drawing.Point(23, 390);
             this.textBoxSettings_MinRating.Name = "textBoxSettings_MinRating";
             this.textBoxSettings_MinRating.Size = new System.Drawing.Size(50, 26);
             this.textBoxSettings_MinRating.TabIndex = 9;
@@ -195,7 +407,7 @@
             // labelSettings_minRating
             // 
             this.labelSettings_minRating.AutoSize = true;
-            this.labelSettings_minRating.Location = new System.Drawing.Point(79, 343);
+            this.labelSettings_minRating.Location = new System.Drawing.Point(79, 393);
             this.labelSettings_minRating.Name = "labelSettings_minRating";
             this.labelSettings_minRating.Size = new System.Drawing.Size(85, 20);
             this.labelSettings_minRating.TabIndex = 8;
@@ -204,7 +416,7 @@
             // checkBoxSettings_IncludeCharacterSeparator
             // 
             this.checkBoxSettings_IncludeCharacterSeparator.AutoSize = true;
-            this.checkBoxSettings_IncludeCharacterSeparator.Location = new System.Drawing.Point(23, 290);
+            this.checkBoxSettings_IncludeCharacterSeparator.Location = new System.Drawing.Point(23, 340);
             this.checkBoxSettings_IncludeCharacterSeparator.Name = "checkBoxSettings_IncludeCharacterSeparator";
             this.checkBoxSettings_IncludeCharacterSeparator.Size = new System.Drawing.Size(296, 24);
             this.checkBoxSettings_IncludeCharacterSeparator.TabIndex = 7;
@@ -215,7 +427,7 @@
             // checkBoxSettings_IncludeMasterwork
             // 
             this.checkBoxSettings_IncludeMasterwork.AutoSize = true;
-            this.checkBoxSettings_IncludeMasterwork.Location = new System.Drawing.Point(23, 240);
+            this.checkBoxSettings_IncludeMasterwork.Location = new System.Drawing.Point(23, 290);
             this.checkBoxSettings_IncludeMasterwork.Name = "checkBoxSettings_IncludeMasterwork";
             this.checkBoxSettings_IncludeMasterwork.Size = new System.Drawing.Size(235, 24);
             this.checkBoxSettings_IncludeMasterwork.TabIndex = 1;
@@ -226,7 +438,7 @@
             // checkBoxSettings_IncludeRollInfo
             // 
             this.checkBoxSettings_IncludeRollInfo.AutoSize = true;
-            this.checkBoxSettings_IncludeRollInfo.Location = new System.Drawing.Point(23, 90);
+            this.checkBoxSettings_IncludeRollInfo.Location = new System.Drawing.Point(23, 140);
             this.checkBoxSettings_IncludeRollInfo.Name = "checkBoxSettings_IncludeRollInfo";
             this.checkBoxSettings_IncludeRollInfo.Size = new System.Drawing.Size(244, 24);
             this.checkBoxSettings_IncludeRollInfo.TabIndex = 6;
@@ -237,7 +449,7 @@
             // checkBoxSettings_IncludeRating
             // 
             this.checkBoxSettings_IncludeRating.AutoSize = true;
-            this.checkBoxSettings_IncludeRating.Location = new System.Drawing.Point(23, 140);
+            this.checkBoxSettings_IncludeRating.Location = new System.Drawing.Point(23, 190);
             this.checkBoxSettings_IncludeRating.Name = "checkBoxSettings_IncludeRating";
             this.checkBoxSettings_IncludeRating.Size = new System.Drawing.Size(200, 24);
             this.checkBoxSettings_IncludeRating.TabIndex = 0;
@@ -247,7 +459,7 @@
             // 
             // buttonSettings_Save
             // 
-            this.buttonSettings_Save.Location = new System.Drawing.Point(214, 434);
+            this.buttonSettings_Save.Location = new System.Drawing.Point(214, 484);
             this.buttonSettings_Save.Name = "buttonSettings_Save";
             this.buttonSettings_Save.Size = new System.Drawing.Size(173, 65);
             this.buttonSettings_Save.TabIndex = 5;
@@ -274,6 +486,804 @@
             this.textBoxSettings_RollInput.Name = "textBoxSettings_RollInput";
             this.textBoxSettings_RollInput.Size = new System.Drawing.Size(161, 28);
             this.textBoxSettings_RollInput.TabIndex = 3;
+            // 
+            // labelMain_GameType
+            // 
+            this.labelMain_GameType.AutoSize = true;
+            this.labelMain_GameType.Location = new System.Drawing.Point(15, 90);
+            this.labelMain_GameType.Name = "labelMain_GameType";
+            this.labelMain_GameType.Size = new System.Drawing.Size(91, 20);
+            this.labelMain_GameType.TabIndex = 3;
+            this.labelMain_GameType.Text = "Game Type";
+            // 
+            // comboBoxMain_GameType
+            // 
+            this.comboBoxMain_GameType.AutoCompleteCustomSource.AddRange(new string[] {
+            "Both",
+            "PvE Only",
+            "PvP Only"});
+            this.comboBoxMain_GameType.FormattingEnabled = true;
+            this.comboBoxMain_GameType.Items.AddRange(new object[] {
+            "Both",
+            "PvE Only",
+            "PvP Only"});
+            this.comboBoxMain_GameType.Location = new System.Drawing.Point(112, 87);
+            this.comboBoxMain_GameType.Name = "comboBoxMain_GameType";
+            this.comboBoxMain_GameType.Size = new System.Drawing.Size(200, 28);
+            this.comboBoxMain_GameType.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Game Type";
+            // 
+            // comboBoxSettings_GameType
+            // 
+            this.comboBoxSettings_GameType.FormattingEnabled = true;
+            this.comboBoxSettings_GameType.Items.AddRange(new object[] {
+            "Both",
+            "PvE Only",
+            "PvP Only"});
+            this.comboBoxSettings_GameType.Location = new System.Drawing.Point(116, 87);
+            this.comboBoxSettings_GameType.Name = "comboBoxSettings_GameType";
+            this.comboBoxSettings_GameType.Size = new System.Drawing.Size(161, 28);
+            this.comboBoxSettings_GameType.TabIndex = 12;
+            // 
+            // labelMain_WeaponTier
+            // 
+            this.labelMain_WeaponTier.AutoSize = true;
+            this.labelMain_WeaponTier.Location = new System.Drawing.Point(421, 30);
+            this.labelMain_WeaponTier.Name = "labelMain_WeaponTier";
+            this.labelMain_WeaponTier.Size = new System.Drawing.Size(99, 20);
+            this.labelMain_WeaponTier.TabIndex = 5;
+            this.labelMain_WeaponTier.Text = "Weapon Tier";
+            // 
+            // comboBoxMain_WeaponTier
+            // 
+            this.comboBoxMain_WeaponTier.FormattingEnabled = true;
+            this.comboBoxMain_WeaponTier.Items.AddRange(new object[] {
+            "U",
+            "S",
+            "A",
+            "B",
+            "C",
+            "F"});
+            this.comboBoxMain_WeaponTier.Location = new System.Drawing.Point(526, 27);
+            this.comboBoxMain_WeaponTier.Name = "comboBoxMain_WeaponTier";
+            this.comboBoxMain_WeaponTier.Size = new System.Drawing.Size(73, 28);
+            this.comboBoxMain_WeaponTier.TabIndex = 6;
+            // 
+            // labelMain_PvEmw
+            // 
+            this.labelMain_PvEmw.AutoSize = true;
+            this.labelMain_PvEmw.Location = new System.Drawing.Point(749, 30);
+            this.labelMain_PvEmw.Name = "labelMain_PvEmw";
+            this.labelMain_PvEmw.Size = new System.Drawing.Size(123, 20);
+            this.labelMain_PvEmw.TabIndex = 7;
+            this.labelMain_PvEmw.Text = "PvE Masterwork";
+            // 
+            // textBoxMain_PvEmw
+            // 
+            this.textBoxMain_PvEmw.Location = new System.Drawing.Point(878, 27);
+            this.textBoxMain_PvEmw.Name = "textBoxMain_PvEmw";
+            this.textBoxMain_PvEmw.Size = new System.Drawing.Size(224, 26);
+            this.textBoxMain_PvEmw.TabIndex = 8;
+            // 
+            // textBoxMain_PvPmw
+            // 
+            this.textBoxMain_PvPmw.Location = new System.Drawing.Point(878, 84);
+            this.textBoxMain_PvPmw.Name = "textBoxMain_PvPmw";
+            this.textBoxMain_PvPmw.Size = new System.Drawing.Size(224, 26);
+            this.textBoxMain_PvPmw.TabIndex = 10;
+            // 
+            // labelMain_PvPmw
+            // 
+            this.labelMain_PvPmw.AutoSize = true;
+            this.labelMain_PvPmw.Location = new System.Drawing.Point(749, 87);
+            this.labelMain_PvPmw.Name = "labelMain_PvPmw";
+            this.labelMain_PvPmw.Size = new System.Drawing.Size(122, 20);
+            this.labelMain_PvPmw.TabIndex = 9;
+            this.labelMain_PvPmw.Text = "PvP Masterwork";
+            // 
+            // labelMain_Barrel
+            // 
+            this.labelMain_Barrel.AutoSize = true;
+            this.labelMain_Barrel.Location = new System.Drawing.Point(15, 150);
+            this.labelMain_Barrel.Name = "labelMain_Barrel";
+            this.labelMain_Barrel.Size = new System.Drawing.Size(51, 20);
+            this.labelMain_Barrel.TabIndex = 11;
+            this.labelMain_Barrel.Text = "Barrel";
+            // 
+            // textBoxMain_Barrel1id
+            // 
+            this.textBoxMain_Barrel1id.Location = new System.Drawing.Point(19, 180);
+            this.textBoxMain_Barrel1id.Name = "textBoxMain_Barrel1id";
+            this.textBoxMain_Barrel1id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Barrel1id.TabIndex = 12;
+            // 
+            // textBoxMain_Barrel1pve
+            // 
+            this.textBoxMain_Barrel1pve.Location = new System.Drawing.Point(220, 180);
+            this.textBoxMain_Barrel1pve.Name = "textBoxMain_Barrel1pve";
+            this.textBoxMain_Barrel1pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel1pve.TabIndex = 13;
+            // 
+            // textBoxMain_Barrel1pvp
+            // 
+            this.textBoxMain_Barrel1pvp.Location = new System.Drawing.Point(276, 180);
+            this.textBoxMain_Barrel1pvp.Name = "textBoxMain_Barrel1pvp";
+            this.textBoxMain_Barrel1pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel1pvp.TabIndex = 14;
+            // 
+            // labelMain_Barrelpve
+            // 
+            this.labelMain_Barrelpve.Location = new System.Drawing.Point(220, 150);
+            this.labelMain_Barrelpve.Name = "labelMain_Barrelpve";
+            this.labelMain_Barrelpve.Size = new System.Drawing.Size(50, 20);
+            this.labelMain_Barrelpve.TabIndex = 15;
+            this.labelMain_Barrelpve.Text = "PvE";
+            this.labelMain_Barrelpve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelMain_Barrelpvp
+            // 
+            this.labelMain_Barrelpvp.Location = new System.Drawing.Point(276, 150);
+            this.labelMain_Barrelpvp.Name = "labelMain_Barrelpvp";
+            this.labelMain_Barrelpvp.Size = new System.Drawing.Size(50, 20);
+            this.labelMain_Barrelpvp.TabIndex = 16;
+            this.labelMain_Barrelpvp.Text = "PvP";
+            this.labelMain_Barrelpvp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBoxMain_Barrel2pvp
+            // 
+            this.textBoxMain_Barrel2pvp.Location = new System.Drawing.Point(276, 212);
+            this.textBoxMain_Barrel2pvp.Name = "textBoxMain_Barrel2pvp";
+            this.textBoxMain_Barrel2pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel2pvp.TabIndex = 19;
+            // 
+            // textBoxMain_Barrel2pve
+            // 
+            this.textBoxMain_Barrel2pve.Location = new System.Drawing.Point(220, 212);
+            this.textBoxMain_Barrel2pve.Name = "textBoxMain_Barrel2pve";
+            this.textBoxMain_Barrel2pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel2pve.TabIndex = 18;
+            // 
+            // textBoxMain_Barrel2id
+            // 
+            this.textBoxMain_Barrel2id.Location = new System.Drawing.Point(19, 212);
+            this.textBoxMain_Barrel2id.Name = "textBoxMain_Barrel2id";
+            this.textBoxMain_Barrel2id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Barrel2id.TabIndex = 17;
+            // 
+            // textBoxMain_Barrel3pvp
+            // 
+            this.textBoxMain_Barrel3pvp.Location = new System.Drawing.Point(276, 244);
+            this.textBoxMain_Barrel3pvp.Name = "textBoxMain_Barrel3pvp";
+            this.textBoxMain_Barrel3pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel3pvp.TabIndex = 22;
+            // 
+            // textBoxMain_Barrel3pve
+            // 
+            this.textBoxMain_Barrel3pve.Location = new System.Drawing.Point(220, 244);
+            this.textBoxMain_Barrel3pve.Name = "textBoxMain_Barrel3pve";
+            this.textBoxMain_Barrel3pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel3pve.TabIndex = 21;
+            // 
+            // textBoxMain_Barrel3id
+            // 
+            this.textBoxMain_Barrel3id.Location = new System.Drawing.Point(19, 244);
+            this.textBoxMain_Barrel3id.Name = "textBoxMain_Barrel3id";
+            this.textBoxMain_Barrel3id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Barrel3id.TabIndex = 20;
+            // 
+            // textBoxMain_Barrel4pvp
+            // 
+            this.textBoxMain_Barrel4pvp.Location = new System.Drawing.Point(276, 276);
+            this.textBoxMain_Barrel4pvp.Name = "textBoxMain_Barrel4pvp";
+            this.textBoxMain_Barrel4pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel4pvp.TabIndex = 25;
+            // 
+            // textBoxMain_Barrel4pve
+            // 
+            this.textBoxMain_Barrel4pve.Location = new System.Drawing.Point(220, 276);
+            this.textBoxMain_Barrel4pve.Name = "textBoxMain_Barrel4pve";
+            this.textBoxMain_Barrel4pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel4pve.TabIndex = 24;
+            // 
+            // textBoxMain_Barrel4id
+            // 
+            this.textBoxMain_Barrel4id.Location = new System.Drawing.Point(19, 276);
+            this.textBoxMain_Barrel4id.Name = "textBoxMain_Barrel4id";
+            this.textBoxMain_Barrel4id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Barrel4id.TabIndex = 23;
+            // 
+            // textBoxMain_Barrel5pvp
+            // 
+            this.textBoxMain_Barrel5pvp.Location = new System.Drawing.Point(276, 308);
+            this.textBoxMain_Barrel5pvp.Name = "textBoxMain_Barrel5pvp";
+            this.textBoxMain_Barrel5pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel5pvp.TabIndex = 28;
+            // 
+            // textBoxMain_Barrel5pve
+            // 
+            this.textBoxMain_Barrel5pve.Location = new System.Drawing.Point(220, 308);
+            this.textBoxMain_Barrel5pve.Name = "textBoxMain_Barrel5pve";
+            this.textBoxMain_Barrel5pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel5pve.TabIndex = 27;
+            // 
+            // textBoxMain_Barrel5id
+            // 
+            this.textBoxMain_Barrel5id.Location = new System.Drawing.Point(19, 308);
+            this.textBoxMain_Barrel5id.Name = "textBoxMain_Barrel5id";
+            this.textBoxMain_Barrel5id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Barrel5id.TabIndex = 26;
+            // 
+            // textBoxMain_Barrel6pvp
+            // 
+            this.textBoxMain_Barrel6pvp.Location = new System.Drawing.Point(276, 340);
+            this.textBoxMain_Barrel6pvp.Name = "textBoxMain_Barrel6pvp";
+            this.textBoxMain_Barrel6pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel6pvp.TabIndex = 31;
+            // 
+            // textBoxMain_Barrel6pve
+            // 
+            this.textBoxMain_Barrel6pve.Location = new System.Drawing.Point(220, 340);
+            this.textBoxMain_Barrel6pve.Name = "textBoxMain_Barrel6pve";
+            this.textBoxMain_Barrel6pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel6pve.TabIndex = 30;
+            // 
+            // textBoxMain_Barrel6id
+            // 
+            this.textBoxMain_Barrel6id.Location = new System.Drawing.Point(19, 340);
+            this.textBoxMain_Barrel6id.Name = "textBoxMain_Barrel6id";
+            this.textBoxMain_Barrel6id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Barrel6id.TabIndex = 29;
+            // 
+            // textBoxMain_Barrel7pvp
+            // 
+            this.textBoxMain_Barrel7pvp.Location = new System.Drawing.Point(276, 372);
+            this.textBoxMain_Barrel7pvp.Name = "textBoxMain_Barrel7pvp";
+            this.textBoxMain_Barrel7pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel7pvp.TabIndex = 34;
+            // 
+            // textBoxMain_Barrel7pve
+            // 
+            this.textBoxMain_Barrel7pve.Location = new System.Drawing.Point(220, 372);
+            this.textBoxMain_Barrel7pve.Name = "textBoxMain_Barrel7pve";
+            this.textBoxMain_Barrel7pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Barrel7pve.TabIndex = 33;
+            // 
+            // textBoxMain_Barrel7id
+            // 
+            this.textBoxMain_Barrel7id.Location = new System.Drawing.Point(19, 372);
+            this.textBoxMain_Barrel7id.Name = "textBoxMain_Barrel7id";
+            this.textBoxMain_Barrel7id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Barrel7id.TabIndex = 32;
+            // 
+            // textBoxMain_Mag7pvp
+            // 
+            this.textBoxMain_Mag7pvp.Location = new System.Drawing.Point(626, 372);
+            this.textBoxMain_Mag7pvp.Name = "textBoxMain_Mag7pvp";
+            this.textBoxMain_Mag7pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag7pvp.TabIndex = 58;
+            // 
+            // textBoxMain_Mag7pve
+            // 
+            this.textBoxMain_Mag7pve.Location = new System.Drawing.Point(570, 372);
+            this.textBoxMain_Mag7pve.Name = "textBoxMain_Mag7pve";
+            this.textBoxMain_Mag7pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag7pve.TabIndex = 57;
+            // 
+            // textBoxMain_Mag7id
+            // 
+            this.textBoxMain_Mag7id.Location = new System.Drawing.Point(369, 372);
+            this.textBoxMain_Mag7id.Name = "textBoxMain_Mag7id";
+            this.textBoxMain_Mag7id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Mag7id.TabIndex = 56;
+            // 
+            // textBoxMain_Mag6pvp
+            // 
+            this.textBoxMain_Mag6pvp.Location = new System.Drawing.Point(626, 340);
+            this.textBoxMain_Mag6pvp.Name = "textBoxMain_Mag6pvp";
+            this.textBoxMain_Mag6pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag6pvp.TabIndex = 55;
+            // 
+            // textBoxMain_Mag6pve
+            // 
+            this.textBoxMain_Mag6pve.Location = new System.Drawing.Point(570, 340);
+            this.textBoxMain_Mag6pve.Name = "textBoxMain_Mag6pve";
+            this.textBoxMain_Mag6pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag6pve.TabIndex = 54;
+            // 
+            // textBoxMain_Mag6id
+            // 
+            this.textBoxMain_Mag6id.Location = new System.Drawing.Point(369, 340);
+            this.textBoxMain_Mag6id.Name = "textBoxMain_Mag6id";
+            this.textBoxMain_Mag6id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Mag6id.TabIndex = 53;
+            // 
+            // textBoxMain_Mag5pvp
+            // 
+            this.textBoxMain_Mag5pvp.Location = new System.Drawing.Point(626, 308);
+            this.textBoxMain_Mag5pvp.Name = "textBoxMain_Mag5pvp";
+            this.textBoxMain_Mag5pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag5pvp.TabIndex = 52;
+            // 
+            // textBoxMain_Mag5pve
+            // 
+            this.textBoxMain_Mag5pve.Location = new System.Drawing.Point(570, 308);
+            this.textBoxMain_Mag5pve.Name = "textBoxMain_Mag5pve";
+            this.textBoxMain_Mag5pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag5pve.TabIndex = 51;
+            // 
+            // textBoxMain_Mag5id
+            // 
+            this.textBoxMain_Mag5id.Location = new System.Drawing.Point(369, 308);
+            this.textBoxMain_Mag5id.Name = "textBoxMain_Mag5id";
+            this.textBoxMain_Mag5id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Mag5id.TabIndex = 50;
+            // 
+            // textBoxMain_Mag4pvp
+            // 
+            this.textBoxMain_Mag4pvp.Location = new System.Drawing.Point(626, 276);
+            this.textBoxMain_Mag4pvp.Name = "textBoxMain_Mag4pvp";
+            this.textBoxMain_Mag4pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag4pvp.TabIndex = 49;
+            // 
+            // textBoxMain_Mag4pve
+            // 
+            this.textBoxMain_Mag4pve.Location = new System.Drawing.Point(570, 276);
+            this.textBoxMain_Mag4pve.Name = "textBoxMain_Mag4pve";
+            this.textBoxMain_Mag4pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag4pve.TabIndex = 48;
+            // 
+            // textBoxMain_Mag4id
+            // 
+            this.textBoxMain_Mag4id.Location = new System.Drawing.Point(369, 276);
+            this.textBoxMain_Mag4id.Name = "textBoxMain_Mag4id";
+            this.textBoxMain_Mag4id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Mag4id.TabIndex = 47;
+            // 
+            // textBoxMain_Mag3pvp
+            // 
+            this.textBoxMain_Mag3pvp.Location = new System.Drawing.Point(626, 244);
+            this.textBoxMain_Mag3pvp.Name = "textBoxMain_Mag3pvp";
+            this.textBoxMain_Mag3pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag3pvp.TabIndex = 46;
+            // 
+            // textBoxMain_Mag3pve
+            // 
+            this.textBoxMain_Mag3pve.Location = new System.Drawing.Point(570, 244);
+            this.textBoxMain_Mag3pve.Name = "textBoxMain_Mag3pve";
+            this.textBoxMain_Mag3pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag3pve.TabIndex = 45;
+            // 
+            // textBoxMain_Mag3id
+            // 
+            this.textBoxMain_Mag3id.Location = new System.Drawing.Point(369, 244);
+            this.textBoxMain_Mag3id.Name = "textBoxMain_Mag3id";
+            this.textBoxMain_Mag3id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Mag3id.TabIndex = 44;
+            // 
+            // textBoxMain_Mag2pvp
+            // 
+            this.textBoxMain_Mag2pvp.Location = new System.Drawing.Point(626, 212);
+            this.textBoxMain_Mag2pvp.Name = "textBoxMain_Mag2pvp";
+            this.textBoxMain_Mag2pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag2pvp.TabIndex = 43;
+            // 
+            // textBoxMain_Mag2pve
+            // 
+            this.textBoxMain_Mag2pve.Location = new System.Drawing.Point(570, 212);
+            this.textBoxMain_Mag2pve.Name = "textBoxMain_Mag2pve";
+            this.textBoxMain_Mag2pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag2pve.TabIndex = 42;
+            // 
+            // textBoxMain_Mag2id
+            // 
+            this.textBoxMain_Mag2id.Location = new System.Drawing.Point(369, 212);
+            this.textBoxMain_Mag2id.Name = "textBoxMain_Mag2id";
+            this.textBoxMain_Mag2id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Mag2id.TabIndex = 41;
+            // 
+            // labelMain_Magpvp
+            // 
+            this.labelMain_Magpvp.Location = new System.Drawing.Point(626, 150);
+            this.labelMain_Magpvp.Name = "labelMain_Magpvp";
+            this.labelMain_Magpvp.Size = new System.Drawing.Size(50, 20);
+            this.labelMain_Magpvp.TabIndex = 40;
+            this.labelMain_Magpvp.Text = "PvP";
+            this.labelMain_Magpvp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelMain_Magpve
+            // 
+            this.labelMain_Magpve.Location = new System.Drawing.Point(570, 150);
+            this.labelMain_Magpve.Name = "labelMain_Magpve";
+            this.labelMain_Magpve.Size = new System.Drawing.Size(50, 20);
+            this.labelMain_Magpve.TabIndex = 39;
+            this.labelMain_Magpve.Text = "PvE";
+            this.labelMain_Magpve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBoxMain_Mag1pvp
+            // 
+            this.textBoxMain_Mag1pvp.Location = new System.Drawing.Point(626, 180);
+            this.textBoxMain_Mag1pvp.Name = "textBoxMain_Mag1pvp";
+            this.textBoxMain_Mag1pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag1pvp.TabIndex = 38;
+            // 
+            // textBoxMain_Mag1pve
+            // 
+            this.textBoxMain_Mag1pve.Location = new System.Drawing.Point(570, 180);
+            this.textBoxMain_Mag1pve.Name = "textBoxMain_Mag1pve";
+            this.textBoxMain_Mag1pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Mag1pve.TabIndex = 37;
+            // 
+            // textBoxMain_Mag1id
+            // 
+            this.textBoxMain_Mag1id.Location = new System.Drawing.Point(369, 180);
+            this.textBoxMain_Mag1id.Name = "textBoxMain_Mag1id";
+            this.textBoxMain_Mag1id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_Mag1id.TabIndex = 36;
+            // 
+            // labelMain_Mag
+            // 
+            this.labelMain_Mag.AutoSize = true;
+            this.labelMain_Mag.Location = new System.Drawing.Point(365, 150);
+            this.labelMain_Mag.Name = "labelMain_Mag";
+            this.labelMain_Mag.Size = new System.Drawing.Size(78, 20);
+            this.labelMain_Mag.TabIndex = 35;
+            this.labelMain_Mag.Text = "Magazine";
+            // 
+            // textBoxMain_PerkOne7pvp
+            // 
+            this.textBoxMain_PerkOne7pvp.Location = new System.Drawing.Point(976, 372);
+            this.textBoxMain_PerkOne7pvp.Name = "textBoxMain_PerkOne7pvp";
+            this.textBoxMain_PerkOne7pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne7pvp.TabIndex = 82;
+            // 
+            // textBoxMain_PerkOne7pve
+            // 
+            this.textBoxMain_PerkOne7pve.Location = new System.Drawing.Point(920, 372);
+            this.textBoxMain_PerkOne7pve.Name = "textBoxMain_PerkOne7pve";
+            this.textBoxMain_PerkOne7pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne7pve.TabIndex = 81;
+            // 
+            // textBoxMain_PerkOne7id
+            // 
+            this.textBoxMain_PerkOne7id.Location = new System.Drawing.Point(719, 372);
+            this.textBoxMain_PerkOne7id.Name = "textBoxMain_PerkOne7id";
+            this.textBoxMain_PerkOne7id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkOne7id.TabIndex = 80;
+            // 
+            // textBoxMain_PerkOne6pvp
+            // 
+            this.textBoxMain_PerkOne6pvp.Location = new System.Drawing.Point(976, 340);
+            this.textBoxMain_PerkOne6pvp.Name = "textBoxMain_PerkOne6pvp";
+            this.textBoxMain_PerkOne6pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne6pvp.TabIndex = 79;
+            // 
+            // textBoxMain_PerkOne6pve
+            // 
+            this.textBoxMain_PerkOne6pve.Location = new System.Drawing.Point(920, 340);
+            this.textBoxMain_PerkOne6pve.Name = "textBoxMain_PerkOne6pve";
+            this.textBoxMain_PerkOne6pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne6pve.TabIndex = 78;
+            // 
+            // textBoxMain_PerkOne6id
+            // 
+            this.textBoxMain_PerkOne6id.Location = new System.Drawing.Point(719, 340);
+            this.textBoxMain_PerkOne6id.Name = "textBoxMain_PerkOne6id";
+            this.textBoxMain_PerkOne6id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkOne6id.TabIndex = 77;
+            // 
+            // textBoxMain_PerkOne5pvp
+            // 
+            this.textBoxMain_PerkOne5pvp.Location = new System.Drawing.Point(976, 308);
+            this.textBoxMain_PerkOne5pvp.Name = "textBoxMain_PerkOne5pvp";
+            this.textBoxMain_PerkOne5pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne5pvp.TabIndex = 76;
+            // 
+            // textBoxMain_PerkOne5pve
+            // 
+            this.textBoxMain_PerkOne5pve.Location = new System.Drawing.Point(920, 308);
+            this.textBoxMain_PerkOne5pve.Name = "textBoxMain_PerkOne5pve";
+            this.textBoxMain_PerkOne5pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne5pve.TabIndex = 75;
+            // 
+            // textBoxMain_PerkOne5id
+            // 
+            this.textBoxMain_PerkOne5id.Location = new System.Drawing.Point(719, 308);
+            this.textBoxMain_PerkOne5id.Name = "textBoxMain_PerkOne5id";
+            this.textBoxMain_PerkOne5id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkOne5id.TabIndex = 74;
+            // 
+            // textBoxMain_PerkOne4pvp
+            // 
+            this.textBoxMain_PerkOne4pvp.Location = new System.Drawing.Point(976, 276);
+            this.textBoxMain_PerkOne4pvp.Name = "textBoxMain_PerkOne4pvp";
+            this.textBoxMain_PerkOne4pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne4pvp.TabIndex = 73;
+            // 
+            // textBoxMain_PerkOne4pve
+            // 
+            this.textBoxMain_PerkOne4pve.Location = new System.Drawing.Point(920, 276);
+            this.textBoxMain_PerkOne4pve.Name = "textBoxMain_PerkOne4pve";
+            this.textBoxMain_PerkOne4pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne4pve.TabIndex = 72;
+            // 
+            // textBoxMain_PerkOne4id
+            // 
+            this.textBoxMain_PerkOne4id.Location = new System.Drawing.Point(719, 276);
+            this.textBoxMain_PerkOne4id.Name = "textBoxMain_PerkOne4id";
+            this.textBoxMain_PerkOne4id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkOne4id.TabIndex = 71;
+            // 
+            // textBoxMain_PerkOne3pvp
+            // 
+            this.textBoxMain_PerkOne3pvp.Location = new System.Drawing.Point(976, 244);
+            this.textBoxMain_PerkOne3pvp.Name = "textBoxMain_PerkOne3pvp";
+            this.textBoxMain_PerkOne3pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne3pvp.TabIndex = 70;
+            // 
+            // textBoxMain_PerkOne3pve
+            // 
+            this.textBoxMain_PerkOne3pve.Location = new System.Drawing.Point(920, 244);
+            this.textBoxMain_PerkOne3pve.Name = "textBoxMain_PerkOne3pve";
+            this.textBoxMain_PerkOne3pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne3pve.TabIndex = 69;
+            // 
+            // textBoxMain_PerkOne3id
+            // 
+            this.textBoxMain_PerkOne3id.Location = new System.Drawing.Point(719, 244);
+            this.textBoxMain_PerkOne3id.Name = "textBoxMain_PerkOne3id";
+            this.textBoxMain_PerkOne3id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkOne3id.TabIndex = 68;
+            // 
+            // textBoxMain_PerkOne2pvp
+            // 
+            this.textBoxMain_PerkOne2pvp.Location = new System.Drawing.Point(976, 212);
+            this.textBoxMain_PerkOne2pvp.Name = "textBoxMain_PerkOne2pvp";
+            this.textBoxMain_PerkOne2pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne2pvp.TabIndex = 67;
+            // 
+            // textBoxMain_PerkOne2pve
+            // 
+            this.textBoxMain_PerkOne2pve.Location = new System.Drawing.Point(920, 212);
+            this.textBoxMain_PerkOne2pve.Name = "textBoxMain_PerkOne2pve";
+            this.textBoxMain_PerkOne2pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne2pve.TabIndex = 66;
+            // 
+            // textBoxMain_PerkOne2id
+            // 
+            this.textBoxMain_PerkOne2id.Location = new System.Drawing.Point(719, 212);
+            this.textBoxMain_PerkOne2id.Name = "textBoxMain_PerkOne2id";
+            this.textBoxMain_PerkOne2id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkOne2id.TabIndex = 65;
+            // 
+            // labelMain_Perk1pvp
+            // 
+            this.labelMain_Perk1pvp.Location = new System.Drawing.Point(976, 150);
+            this.labelMain_Perk1pvp.Name = "labelMain_Perk1pvp";
+            this.labelMain_Perk1pvp.Size = new System.Drawing.Size(50, 20);
+            this.labelMain_Perk1pvp.TabIndex = 64;
+            this.labelMain_Perk1pvp.Text = "PvP";
+            this.labelMain_Perk1pvp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelMain_Perk1pve
+            // 
+            this.labelMain_Perk1pve.Location = new System.Drawing.Point(920, 150);
+            this.labelMain_Perk1pve.Name = "labelMain_Perk1pve";
+            this.labelMain_Perk1pve.Size = new System.Drawing.Size(50, 20);
+            this.labelMain_Perk1pve.TabIndex = 63;
+            this.labelMain_Perk1pve.Text = "PvE";
+            this.labelMain_Perk1pve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBoxMain_PerkOne1pvp
+            // 
+            this.textBoxMain_PerkOne1pvp.Location = new System.Drawing.Point(976, 180);
+            this.textBoxMain_PerkOne1pvp.Name = "textBoxMain_PerkOne1pvp";
+            this.textBoxMain_PerkOne1pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne1pvp.TabIndex = 62;
+            // 
+            // textBoxMain_PerkOne1pve
+            // 
+            this.textBoxMain_PerkOne1pve.Location = new System.Drawing.Point(920, 180);
+            this.textBoxMain_PerkOne1pve.Name = "textBoxMain_PerkOne1pve";
+            this.textBoxMain_PerkOne1pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkOne1pve.TabIndex = 61;
+            // 
+            // textBoxMain_PerkOne1id
+            // 
+            this.textBoxMain_PerkOne1id.Location = new System.Drawing.Point(719, 180);
+            this.textBoxMain_PerkOne1id.Name = "textBoxMain_PerkOne1id";
+            this.textBoxMain_PerkOne1id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkOne1id.TabIndex = 60;
+            // 
+            // labelMain_Perk1
+            // 
+            this.labelMain_Perk1.AutoSize = true;
+            this.labelMain_Perk1.Location = new System.Drawing.Point(715, 150);
+            this.labelMain_Perk1.Name = "labelMain_Perk1";
+            this.labelMain_Perk1.Size = new System.Drawing.Size(54, 20);
+            this.labelMain_Perk1.TabIndex = 59;
+            this.labelMain_Perk1.Text = "Perk 1";
+            // 
+            // textBoxMain_PerkTwo7pvp
+            // 
+            this.textBoxMain_PerkTwo7pvp.Location = new System.Drawing.Point(1326, 372);
+            this.textBoxMain_PerkTwo7pvp.Name = "textBoxMain_PerkTwo7pvp";
+            this.textBoxMain_PerkTwo7pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo7pvp.TabIndex = 106;
+            // 
+            // textBoxMain_PerkTwo7pve
+            // 
+            this.textBoxMain_PerkTwo7pve.Location = new System.Drawing.Point(1270, 372);
+            this.textBoxMain_PerkTwo7pve.Name = "textBoxMain_PerkTwo7pve";
+            this.textBoxMain_PerkTwo7pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo7pve.TabIndex = 105;
+            // 
+            // textBoxMain_PerkTwo7id
+            // 
+            this.textBoxMain_PerkTwo7id.Location = new System.Drawing.Point(1069, 372);
+            this.textBoxMain_PerkTwo7id.Name = "textBoxMain_PerkTwo7id";
+            this.textBoxMain_PerkTwo7id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkTwo7id.TabIndex = 104;
+            // 
+            // textBoxMain_PerkTwo6pvp
+            // 
+            this.textBoxMain_PerkTwo6pvp.Location = new System.Drawing.Point(1326, 340);
+            this.textBoxMain_PerkTwo6pvp.Name = "textBoxMain_PerkTwo6pvp";
+            this.textBoxMain_PerkTwo6pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo6pvp.TabIndex = 103;
+            // 
+            // textBoxMain_PerkTwo6pve
+            // 
+            this.textBoxMain_PerkTwo6pve.Location = new System.Drawing.Point(1270, 340);
+            this.textBoxMain_PerkTwo6pve.Name = "textBoxMain_PerkTwo6pve";
+            this.textBoxMain_PerkTwo6pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo6pve.TabIndex = 102;
+            // 
+            // textBoxMain_PerkTwo6id
+            // 
+            this.textBoxMain_PerkTwo6id.Location = new System.Drawing.Point(1069, 340);
+            this.textBoxMain_PerkTwo6id.Name = "textBoxMain_PerkTwo6id";
+            this.textBoxMain_PerkTwo6id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkTwo6id.TabIndex = 101;
+            // 
+            // textBoxMain_PerkTwo5pvp
+            // 
+            this.textBoxMain_PerkTwo5pvp.Location = new System.Drawing.Point(1326, 308);
+            this.textBoxMain_PerkTwo5pvp.Name = "textBoxMain_PerkTwo5pvp";
+            this.textBoxMain_PerkTwo5pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo5pvp.TabIndex = 100;
+            // 
+            // textBoxMain_PerkTwo5pve
+            // 
+            this.textBoxMain_PerkTwo5pve.Location = new System.Drawing.Point(1270, 308);
+            this.textBoxMain_PerkTwo5pve.Name = "textBoxMain_PerkTwo5pve";
+            this.textBoxMain_PerkTwo5pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo5pve.TabIndex = 99;
+            // 
+            // textBoxMain_PerkTwo5id
+            // 
+            this.textBoxMain_PerkTwo5id.Location = new System.Drawing.Point(1069, 308);
+            this.textBoxMain_PerkTwo5id.Name = "textBoxMain_PerkTwo5id";
+            this.textBoxMain_PerkTwo5id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkTwo5id.TabIndex = 98;
+            // 
+            // textBoxMain_PerkTwo4pvp
+            // 
+            this.textBoxMain_PerkTwo4pvp.Location = new System.Drawing.Point(1326, 276);
+            this.textBoxMain_PerkTwo4pvp.Name = "textBoxMain_PerkTwo4pvp";
+            this.textBoxMain_PerkTwo4pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo4pvp.TabIndex = 97;
+            // 
+            // textBoxMain_PerkTwo4pve
+            // 
+            this.textBoxMain_PerkTwo4pve.Location = new System.Drawing.Point(1270, 276);
+            this.textBoxMain_PerkTwo4pve.Name = "textBoxMain_PerkTwo4pve";
+            this.textBoxMain_PerkTwo4pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo4pve.TabIndex = 96;
+            // 
+            // textBoxMain_PerkTwo4id
+            // 
+            this.textBoxMain_PerkTwo4id.Location = new System.Drawing.Point(1069, 276);
+            this.textBoxMain_PerkTwo4id.Name = "textBoxMain_PerkTwo4id";
+            this.textBoxMain_PerkTwo4id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkTwo4id.TabIndex = 95;
+            // 
+            // textBoxMain_PerkTwo3pvp
+            // 
+            this.textBoxMain_PerkTwo3pvp.Location = new System.Drawing.Point(1326, 244);
+            this.textBoxMain_PerkTwo3pvp.Name = "textBoxMain_PerkTwo3pvp";
+            this.textBoxMain_PerkTwo3pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo3pvp.TabIndex = 94;
+            // 
+            // textBoxMain_PerkTwo3pve
+            // 
+            this.textBoxMain_PerkTwo3pve.Location = new System.Drawing.Point(1270, 244);
+            this.textBoxMain_PerkTwo3pve.Name = "textBoxMain_PerkTwo3pve";
+            this.textBoxMain_PerkTwo3pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo3pve.TabIndex = 93;
+            // 
+            // textBoxMain_PerkTwo3id
+            // 
+            this.textBoxMain_PerkTwo3id.Location = new System.Drawing.Point(1069, 244);
+            this.textBoxMain_PerkTwo3id.Name = "textBoxMain_PerkTwo3id";
+            this.textBoxMain_PerkTwo3id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkTwo3id.TabIndex = 92;
+            // 
+            // textBoxMain_PerkTwo2pvp
+            // 
+            this.textBoxMain_PerkTwo2pvp.Location = new System.Drawing.Point(1326, 212);
+            this.textBoxMain_PerkTwo2pvp.Name = "textBoxMain_PerkTwo2pvp";
+            this.textBoxMain_PerkTwo2pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo2pvp.TabIndex = 91;
+            // 
+            // textBoxMain_PerkTwo2pve
+            // 
+            this.textBoxMain_PerkTwo2pve.Location = new System.Drawing.Point(1270, 212);
+            this.textBoxMain_PerkTwo2pve.Name = "textBoxMain_PerkTwo2pve";
+            this.textBoxMain_PerkTwo2pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo2pve.TabIndex = 90;
+            // 
+            // textBoxMain_PerkTwo2id
+            // 
+            this.textBoxMain_PerkTwo2id.Location = new System.Drawing.Point(1069, 212);
+            this.textBoxMain_PerkTwo2id.Name = "textBoxMain_PerkTwo2id";
+            this.textBoxMain_PerkTwo2id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkTwo2id.TabIndex = 89;
+            // 
+            // labelMain_Perk2pvp
+            // 
+            this.labelMain_Perk2pvp.Location = new System.Drawing.Point(1326, 150);
+            this.labelMain_Perk2pvp.Name = "labelMain_Perk2pvp";
+            this.labelMain_Perk2pvp.Size = new System.Drawing.Size(50, 20);
+            this.labelMain_Perk2pvp.TabIndex = 88;
+            this.labelMain_Perk2pvp.Text = "PvP";
+            this.labelMain_Perk2pvp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelMain_Perk2pve
+            // 
+            this.labelMain_Perk2pve.Location = new System.Drawing.Point(1270, 150);
+            this.labelMain_Perk2pve.Name = "labelMain_Perk2pve";
+            this.labelMain_Perk2pve.Size = new System.Drawing.Size(50, 20);
+            this.labelMain_Perk2pve.TabIndex = 87;
+            this.labelMain_Perk2pve.Text = "PvE";
+            this.labelMain_Perk2pve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBoxMain_PerkTwo1pvp
+            // 
+            this.textBoxMain_PerkTwo1pvp.Location = new System.Drawing.Point(1326, 180);
+            this.textBoxMain_PerkTwo1pvp.Name = "textBoxMain_PerkTwo1pvp";
+            this.textBoxMain_PerkTwo1pvp.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo1pvp.TabIndex = 86;
+            // 
+            // textBoxMain_PerkTwo1pve
+            // 
+            this.textBoxMain_PerkTwo1pve.Location = new System.Drawing.Point(1270, 180);
+            this.textBoxMain_PerkTwo1pve.Name = "textBoxMain_PerkTwo1pve";
+            this.textBoxMain_PerkTwo1pve.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_PerkTwo1pve.TabIndex = 85;
+            // 
+            // textBoxMain_PerkTwo1id
+            // 
+            this.textBoxMain_PerkTwo1id.Location = new System.Drawing.Point(1069, 180);
+            this.textBoxMain_PerkTwo1id.Name = "textBoxMain_PerkTwo1id";
+            this.textBoxMain_PerkTwo1id.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_PerkTwo1id.TabIndex = 84;
+            // 
+            // labelMain_Perk2
+            // 
+            this.labelMain_Perk2.AutoSize = true;
+            this.labelMain_Perk2.Location = new System.Drawing.Point(1065, 150);
+            this.labelMain_Perk2.Name = "labelMain_Perk2";
+            this.labelMain_Perk2.Size = new System.Drawing.Size(54, 20);
+            this.labelMain_Perk2.TabIndex = 83;
+            this.labelMain_Perk2.Text = "Perk 2";
             // 
             // Form1
             // 
@@ -317,6 +1327,112 @@
         private System.Windows.Forms.CheckBox checkBoxSettings_IncludeCharacterSeparator;
         private System.Windows.Forms.TextBox textBoxSettings_SampleOutput;
         private System.Windows.Forms.CheckBox checkBoxSettings_IncludeNameRating;
+        private System.Windows.Forms.Label labelMain_GameType;
+        private System.Windows.Forms.ComboBox comboBoxMain_GameType;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxSettings_GameType;
+        private System.Windows.Forms.Label labelMain_WeaponTier;
+        private System.Windows.Forms.TextBox textBoxMain_PvPmw;
+        private System.Windows.Forms.Label labelMain_PvPmw;
+        private System.Windows.Forms.TextBox textBoxMain_PvEmw;
+        private System.Windows.Forms.Label labelMain_PvEmw;
+        private System.Windows.Forms.ComboBox comboBoxMain_WeaponTier;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel1id;
+        private System.Windows.Forms.Label labelMain_Barrel;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel1pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel1pve;
+        private System.Windows.Forms.Label labelMain_Barrelpvp;
+        private System.Windows.Forms.Label labelMain_Barrelpve;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel7pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel7pve;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel7id;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel6pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel6pve;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel6id;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel5pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel5pve;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel5id;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel4pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel4pve;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel4id;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel3pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel3pve;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel3id;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel2pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel2pve;
+        private System.Windows.Forms.TextBox textBoxMain_Barrel2id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo7pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo7pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo7id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo6pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo6pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo6id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo5pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo5pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo5id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo4pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo4pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo4id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo3pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo3pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo3id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo2pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo2pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo2id;
+        private System.Windows.Forms.Label labelMain_Perk2pvp;
+        private System.Windows.Forms.Label labelMain_Perk2pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo1pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo1pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkTwo1id;
+        private System.Windows.Forms.Label labelMain_Perk2;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne7pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne7pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne7id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne6pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne6pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne6id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne5pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne5pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne5id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne4pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne4pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne4id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne3pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne3pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne3id;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne2pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne2pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne2id;
+        private System.Windows.Forms.Label labelMain_Perk1pvp;
+        private System.Windows.Forms.Label labelMain_Perk1pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne1pvp;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne1pve;
+        private System.Windows.Forms.TextBox textBoxMain_PerkOne1id;
+        private System.Windows.Forms.Label labelMain_Perk1;
+        private System.Windows.Forms.TextBox textBoxMain_Mag7pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Mag7pve;
+        private System.Windows.Forms.TextBox textBoxMain_Mag7id;
+        private System.Windows.Forms.TextBox textBoxMain_Mag6pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Mag6pve;
+        private System.Windows.Forms.TextBox textBoxMain_Mag6id;
+        private System.Windows.Forms.TextBox textBoxMain_Mag5pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Mag5pve;
+        private System.Windows.Forms.TextBox textBoxMain_Mag5id;
+        private System.Windows.Forms.TextBox textBoxMain_Mag4pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Mag4pve;
+        private System.Windows.Forms.TextBox textBoxMain_Mag4id;
+        private System.Windows.Forms.TextBox textBoxMain_Mag3pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Mag3pve;
+        private System.Windows.Forms.TextBox textBoxMain_Mag3id;
+        private System.Windows.Forms.TextBox textBoxMain_Mag2pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Mag2pve;
+        private System.Windows.Forms.TextBox textBoxMain_Mag2id;
+        private System.Windows.Forms.Label labelMain_Magpvp;
+        private System.Windows.Forms.Label labelMain_Magpve;
+        private System.Windows.Forms.TextBox textBoxMain_Mag1pvp;
+        private System.Windows.Forms.TextBox textBoxMain_Mag1pve;
+        private System.Windows.Forms.TextBox textBoxMain_Mag1id;
+        private System.Windows.Forms.Label labelMain_Mag;
     }
 }
 

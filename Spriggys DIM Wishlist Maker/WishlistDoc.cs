@@ -125,7 +125,6 @@ namespace Spriggys_DIM_Wishlist_Maker
             items = items.OrderBy(o => o.weaponNameSort).ToList();
             foreach (WishlistItem item in items)
             {
-                //TODO: Check for Letter separators, maybe sort?
                 output += item.toString() + Environment.NewLine + Environment.NewLine;
             }
             return output;
