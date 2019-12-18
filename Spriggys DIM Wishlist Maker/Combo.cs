@@ -23,6 +23,9 @@
 
         public float getComboRating(long id1, long id2, long id3, long id4, GameType t)
         {
+            if (t != type)
+                return 0;
+
             if (this.id1 != 0 && id1 != this.id1)
                 return 0;
 
@@ -40,7 +43,7 @@
 
         public string toString()
         {
-            return id1 + "," + id2 + "," + id3 + "," + id4 + ":" + rating;
+            return "//" + id1 + "," + id2 + "," + id3 + "," + id4 + ":" + rating.ToString("0.0"); ;
         }
 
     }
