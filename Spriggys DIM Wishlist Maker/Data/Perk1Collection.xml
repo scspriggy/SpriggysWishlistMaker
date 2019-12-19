@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<perk1>
+  <perkGroup>
+    <name>Standard Barrel</name>
+    <perk>
+      <name>Chambered Compensator</name>
+      <id>3661387068</id>
+      <stability>10</stability>
+      <range>0</range>
+      <recoilDirection>10</recoilDirection>
+      <handlingSpeed>-5</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Smallbore</name>
+      <id>1482024992</id>
+      <stability>7</stability>
+      <range>7</range>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Polygonal Rifling</name>
+      <id>1392496348</id>
+      <stability>10</stability>
+      <range>0</range>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Fluted Barrel</name>
+      <id>1840239774</id>
+      <stability>5</stability>
+      <range>0</range>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>15</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Corkscrew Rifling</name>
+      <id>4090651448</id>
+      <stability>5</stability>
+      <range>5</range>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>5</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Full Bore</name>
+      <id>202670084</id>
+      <stability>-10</stability>
+      <range>15</range>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>-5</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Arrowhead Brake</name>
+      <id>839105230</id>
+      <stability>0</stability>
+      <range>0</range>
+      <recoilDirection>30</recoilDirection>
+      <handlingSpeed>-10</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Extended Barrel</name>
+      <id>1467527085</id>
+      <stability>0</stability>
+      <range>10</range>
+      <recoilDirection>10</recoilDirection>
+      <handlingSpeed>-10</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Hammer-Forged Rifling</name>
+      <id>3250034553</id>
+      <stability>0</stability>
+      <range>10</range>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+  </perkGroup>
+  <perkGroup>
+    <name>Shotgun Barrel</name>
+    <perk>
+      <name>Full Choke</name>
+      <id>1047830412</id>
+      <pelletSpread>Reduced</pelletSpread>
+      <precisionDamage>Reduced</precisionDamage>
+      <stability>0</stability>
+      <range>0</range>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Rifled Barrel</name>
+      <id>1332244541</id>
+      <pelletSpread>0</pelletSpread>
+      <precisionDamage>0</precisionDamage>
+      <stability>0</stability>
+      <range>10</range>
+      <handlingSpeed>-15</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Smoothbore</name>
+      <id>466087222</id>
+      <pelletSpread>Increase</pelletSpread>
+      <precisionDamage>0</precisionDamage>
+      <stability>0</stability>
+      <range>15</range>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Smallbore</name>
+      <id>1482024992</id>
+      <pelletSpread>0</pelletSpread>
+      <precisionDamage>0</precisionDamage>
+      <stability>7</stability>
+      <range>7</range>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Barrel Shroud</name>
+      <id>1300023272</id>
+      <pelletSpread>0</pelletSpread>
+      <precisionDamage>0</precisionDamage>
+      <stability>10</stability>
+      <range>0</range>
+      <handlingSpeed>10</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Corkscrew Rifling</name>
+      <id>4090651448</id>
+      <pelletSpread>0</pelletSpread>
+      <precisionDamage>0</precisionDamage>
+      <stability>5</stability>
+      <range>5</range>
+      <handlingSpeed>5</handlingSpeed>
+    </perk>
+  </perkGroup>
+  <perkGroup>
+    <name>Launcher Tube</name>
+    <perk>
+      <name>Volatile Launch</name>
+      <id>1478423395</id>
+      <blastRadius>15</blastRadius>
+      <projectileSpeed>-5</projectileSpeed>
+      <stability>0</stability>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>-5</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Confined Launch</name>
+      <id>1844523823</id>
+      <blastRadius>10</blastRadius>
+      <projectileSpeed>-10</projectileSpeed>
+      <stability>15</stability>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Linear Compensator</name>
+      <id>1441682018</id>
+      <blastRadius>5</blastRadius>
+      <projectileSpeed>5</projectileSpeed>
+      <stability>5</stability>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Hard Launch</name>
+      <id>981914802</id>
+      <blastRadius>-5</blastRadius>
+      <projectileSpeed>15</projectileSpeed>
+      <stability>-10</stability>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Quick Launch</name>
+      <id>3525010810</id>
+      <blastRadius>0</blastRadius>
+      <projectileSpeed>10</projectileSpeed>
+      <stability>0</stability>
+      <recoilDirection>0</recoilDirection>
+      <handlingSpeed>15</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Smart Drift Control</name>
+      <id>3798852852</id>
+      <blastRadius>0</blastRadius>
+      <projectileSpeed>5</projectileSpeed>
+      <stability>10</stability>
+      <recoilDirection>15</recoilDirection>
+      <handlingSpeed>10</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Countermass</name>
+      <id>3809316345</id>
+      <blastRadius>0</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>10</stability>
+      <recoilDirection>30</recoilDirection>
+      <handlingSpeed>10</handlingSpeed>
+    </perk>
+  </perkGroup>
+  <perkGroup>
+    <name>Bow String</name>
+    <perk>
+      <name>Polymer String</name>
+      <id>852209214</id>
+      <accuracy>5</accuracy>
+      <handlingSpeed>0</handlingSpeed>
+      <stability>0</stability>
+      <drawTime>5</drawTime>
+    </perk>
+    <perk>
+      <name>Tactile String</name>
+      <id>1196733167</id>
+      <accuracy>5</accuracy>
+      <handlingSpeed>0</handlingSpeed>
+      <stability>10</stability>
+      <drawTime>0</drawTime>
+    </perk>
+    <perk>
+      <name>Natural String</name>
+      <id>1784898267</id>
+      <accuracy>5</accuracy>
+      <handlingSpeed>5</handlingSpeed>
+      <stability>5</stability>
+      <drawTime>0</drawTime>
+    </perk>
+    <perk>
+      <name>Elastic String</name>
+      <id>2801223209</id>
+      <accuracy>-10</accuracy>
+      <handlingSpeed>5</handlingSpeed>
+      <stability>0</stability>
+      <drawTime>10</drawTime>
+    </perk>
+    <perk>
+      <name>High Tension String</name>
+      <id>3371775011</id>
+      <accuracy>10</accuracy>
+      <handlingSpeed>0</handlingSpeed>
+      <stability>-5</stability>
+      <drawTime>-5</drawTime>
+    </perk>
+    <perk>
+      <name>Agile Bowstring</name>
+      <id>3768438372</id>
+      <accuracy>0</accuracy>
+      <handlingSpeed>15</handlingSpeed>
+      <stability>5</stability>
+      <drawTime>0</drawTime>
+    </perk>
+    <perk>
+      <name>Flexible String</name>
+      <id>4067834857</id>
+      <accuracy>-5</accuracy>
+      <handlingSpeed>10</handlingSpeed>
+      <stability>0</stability>
+      <drawTime>5</drawTime>
+    </perk>
+  </perkGroup>
+  <perkGroup>
+    <name>Tangled Shore Barrel</name>
+    <perk>
+      <name>Dusk Sight D1</name>
+      <id>1288081798</id>
+      <zoom>0</zoom>
+      <range>3</range>
+      <handlingSpeed>8</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Wolf Sight W1</name>
+      <id>1288081796</id>
+      <zoom>1</zoom>
+      <range>2</range>
+      <handlingSpeed>10</handlingSpeed>
+    </perk>
+    <perk>
+      <name>King Sight K1</name>
+      <id>1288081797</id>
+      <zoom>2</zoom>
+      <range>0</range>
+      <handlingSpeed>13</handlingSpeed>
+    </perk>
+    <perk>
+      <name>King Dot K2</name>
+      <id>1452368633</id>
+      <zoom>2</zoom>
+      <range>7</range>
+      <handlingSpeed>-4</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Dusk Dot D1</name>
+      <id>1452368634</id>
+      <zoom>3</zoom>
+      <range>7</range>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Wolf Dot W2</name>
+      <id>1452368632</id>
+      <zoom>4</zoom>
+      <range>9</range>
+      <handlingSpeed>-10</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Devil Scope D2</name>
+      <id>809345546</id>
+      <zoom>5</zoom>
+      <range>10</range>
+      <handlingSpeed>10</handlingSpeed>
+    </perk>
+    <perk>
+      <name>Dusk Scope D2</name>
+      <id>809345547</id>
+      <zoom>6</zoom>
+      <range>13</range>
+      <handlingSpeed>-6</handlingSpeed>
+    </perk>
+  </perkGroup>
+    <perkGroup>
+      <name>Hakke Barrel</name>
+      <perk>
+        <name>GA Post</name>
+        <id>87986589</id>
+        <zoom>0</zoom>
+        <range>2</range>
+        <handlingSpeed>13</handlingSpeed>
+        <other></other>
+      </perk>
+      <perk>
+        <name>GB Iron</name>
+        <id>87986588</id>
+        <zoom>0</zoom>
+        <range>5</range>
+        <handlingSpeed>10</handlingSpeed>
+        <other></other>
+      </perk>
+      <perk>
+        <name>SD Thermal</name>
+        <id>2054312701</id>
+        <zoom>3</zoom>
+        <range>10</range>
+        <handlingSpeed>0</handlingSpeed>
+        <other>Highlights enemy targets</other>
+      </perk>
+      <perk>
+        <name>SC Holo</name>
+        <id>2054312700</id>
+        <zoom>4</zoom>
+        <range>13</range>
+        <handlingSpeed>-5</handlingSpeed>
+        <other></other>
+      </perk>
+      <perk>
+        <name>LD Watchdog</name>
+        <id>1313805251</id>
+        <zoom>5</zoom>
+        <range>10</range>
+        <handlingSpeed>4</handlingSpeed>
+        <other>Highlights enemy targets</other>
+      </perk>
+      <perk>
+        <name>LB Assault</name>
+        <id>1313805250</id>
+        <zoom>5</zoom>
+        <range>10</range>
+        <handlingSpeed>-5</handlingSpeed>
+        <other></other>
+      </perk>
+      <perk>
+        <name>LC Ranged</name>
+        <id>1313805249</id>
+        <zoom>6</zoom>
+        <range>13</range>
+        <handlingSpeed>-10</handlingSpeed>
+        <other></other>
+      </perk>
+  </perkGroup>
+  <perkGroup>
+    <name>Omolon Sight</name>
+    <perk>
+      <name>Dusk</name>
+      <id>000000000000</id>
+      <zoom>0</zoom>
+      <range>0</range>
+      <handlingSpeed>0</handlingSpeed>
+    </perk>
+  </perkGroup>
+</perk1>

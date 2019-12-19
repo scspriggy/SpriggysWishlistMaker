@@ -16,6 +16,7 @@ namespace Spriggys_DIM_Wishlist_Maker
         public Form1()
         {
             InitializeComponent();
+            
             loadSettings();
         }
 

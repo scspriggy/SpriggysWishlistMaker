@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<perk2>
+  <perkGroup>
+    <name>Bow Arrow</name>
+    <perk>
+      <name>Compact Arrow Shaft</name>
+      <id>16392701</id>
+      <accuracy>0</accuracy>
+      <stability>0</stability>
+      <inventory>20</inventory>
+    </perk>
+    <perk>
+      <name>Carbon Arrow Shaft</name>
+      <id>2154191829</id>
+      <accuracy>0</accuracy>
+      <stability>10</stability>
+      <inventory>0</inventory>
+    </perk>
+    <perk>
+      <name>Fiberglass Arrow Shaft</name>
+      <id>3429800428</id>
+      <accuracy>15</accuracy>
+      <stability>-5</stability>
+      <inventory>0</inventory>
+    </perk>
+    <perk>
+      <name>Natural Fletching</name>
+      <id>1500996326</id>
+      <accuracy>-5</accuracy>
+      <stability>15</stability>
+      <inventory>0</inventory>
+    </perk>
+    <perk>
+      <name>Anti-Take Fletching</name>
+      <id>1992361643</id>
+      <accuracy>10</accuracy>
+      <stability>0</stability>
+      <inventory>0</inventory>
+    </perk>
+    <perk>
+      <name>Helical Fletching</name>
+      <id>3311977193</id>
+      <accuracy>5</accuracy>
+      <stability>5</stability>
+      <inventory>0</inventory>
+    </perk>
+    <perk>
+      <name>Straight Fletching</name>
+      <id>3827198035</id>
+      <accuracy>10</accuracy>
+      <stability>0</stability>
+      <inventory>0</inventory>
+    </perk>
+  </perkGroup>
+  <perkGroup>
+    <name>Fusion Rifle Magazine</name>
+    <perk>
+      <name>Accelerated Coils</name>
+      <id>689005463</id>
+      <chargeTime>10</chargeTime>
+      <impact>-10</impact>
+      <stability>0</stability>
+      <range>0</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+    </perk>
+    <perk>
+      <name>Liquid Coils</name>
+      <id>1687452232</id>
+      <chargeTime>-10</chargeTime>
+      <impact>10</impact>
+      <stability>0</stability>
+      <range>0</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+    </perk>
+    <perk>
+      <name>Enhanced Battery</name>
+      <id>2680121939</id>
+      <chargeTime>0</chargeTime>
+      <impact>0</impact>
+      <stability>0</stability>
+      <range>0</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>20</magazineSize>
+    </perk>
+    <perk>
+      <name>Ionized Battery</name>
+      <id>1483536627</id>
+      <chargeTime>0</chargeTime>
+      <impact>0</impact>
+      <stability>0</stability>
+      <range>0</range>
+      <reloadSpeed>-20</reloadSpeed>
+      <magazineSize>40</magazineSize>
+    </perk>
+    <perk>
+      <name>Particle Repeater</name>
+      <id>3868766766</id>
+      <chargeTime>0</chargeTime>
+      <impact>0</impact>
+      <stability>10</stability>
+      <range>0</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+    </perk>
+    <perk>
+      <name>Projection Fuse</name>
+      <id>2969185026</id>
+      <chargeTime>0</chargeTime>
+      <impact>0</impact>
+      <stability>0</stability>
+      <range>10</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+    </perk>
+  </perkGroup>
+</perk2>
