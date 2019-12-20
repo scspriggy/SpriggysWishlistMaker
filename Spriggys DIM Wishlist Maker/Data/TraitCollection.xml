@@ -1,1 +1,683 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<traits>
+  <trait>
+    <name>Assassin's Blade</name>
+    <id>354401740</id>
+    <desc>Sword Kills boost movement speed and damage.</desc>
+    <trigger>Powered sword kills</trigger>
+    <weapon>Sword</weapon>
+    <movementSpeed>1</movementSpeed>
+    <damage>1</damage>
+    <ammo>0</ammo>
+  </trait>
+  <trait>
+    <name>En Garde</name>
+    <id>1685431615</id>
+    <desc>Quick attacks immediately after swapping to this sword do additional damage.</desc>
+    <trigger>Quick attacks immediately after swapping</trigger>
+    <weapon>Sword</weapon>
+    <movementSpeed>0</movementSpeed>
+    <damage>1</damage>
+    <ammo>0</ammo>
+  </trait>
+  <trait>
+    <name>Whirlwind Blade</name>
+    <id>3913600130</id>
+    <desc>Consecutive rapid sword strikes increase this weapon's damage output.</desc>
+    <trigger>Consecutive rapid sword hits</trigger>
+    <weapon>Sword</weapon>
+    <movementSpeed>0</movementSpeed>
+    <damage>1</damage>
+    <ammo>0</ammo>
+  </trait>
+  <trait>
+    <name>Relentless Strikes</name>
+    <id>1749209109</id>
+    <desc>Landing three light attack  hits within a short time grants sword ammo.</desc>
+    <trigger>3 or more rapid light attack hits</trigger>
+    <weapon>Sword</weapon>
+    <movementSpeed>0</movementSpeed>
+    <damage>0</damage>
+    <ammo>1</ammo>
+  </trait>
+  <trait>
+    <name>Tireless Blade</name>
+    <id>2590710093</id>
+    <desc>Sword ammo granted for every other powered sword kill.</desc>
+    <trigger>Every other powered sword kill</trigger>
+    <weapon>Sword</weapon>
+    <movementSpeed>0</movementSpeed>
+    <damage>0</damage>
+    <ammo>1</ammo>
+  </trait>
+  <trait>
+    <name>Rampage</name>
+    <id>3425386926</id>
+    <desc>Kills with this weapon temporarily grant increased damage. Stacks 3x.</desc>
+    <trigger>Kills with weapon</trigger>
+    <damage>1</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Kill Clip</name>
+    <id>1015611457</id>
+    <desc>Reloading after a kill grants increased damage.</desc>
+    <trigger>Reloading quickly after kills with weapon</trigger>
+    <damage>1</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>High-Impact Reserves</name>
+    <id>2213355989</id>
+    <desc>Rounds at the end of the magazine deal more damage.</desc>
+    <trigger>Last rounds in the magazine</trigger>
+    <damage>1</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Headseeker</name>
+    <id>460017080</id>
+    <desc>Body shots landed with this weapon increase precision damage for a short time.</desc>
+    <trigger>Head shots in a burst following a body shot</trigger>
+    <weapon>Pulse Rifle</weapon>
+    <damage>1</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Cluster Bomb</name>
+    <id>1275731761</id>
+    <desc>Rockets spawn cluster bombs upon detonation.</desc>
+    <trigger>Initial detonation</trigger>
+    <weapon>Rocket Launcher</weapon>
+    <damage>1</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Tap the Trigger</name>
+    <id>1890422124</id>
+    <desc>Grants a short period of increased stability and accuracy on initial trigger pull.</desc>
+    <trigger>First shot/shots fired</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>1</accuracy>
+    <stability>1</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Under Pressure</name>
+    <id>1645158859</id>
+    <desc>Improved stability and accuracy as the magazine gets lower.</desc>
+    <trigger>Last 50% of rounds in the magazine</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>1</accuracy>
+    <stability>1</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Rapid Hit</name>
+    <id>247725512</id>
+    <desc>Rapid precision hits temporarily increase stability and reload speed.</desc>
+    <trigger>Precision hits</trigger>
+    <damage>0</damage>
+    <reloadSpeed>1</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>1</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Opening Shot</name>
+    <id>47981717</id>
+    <desc>Improved accuracy and range on the opening shot of attack.</desc>
+    <trigger>First shot/shots fired</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>1</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>1</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Dynamic Sway Reduction</name>
+    <id>1359896290</id>
+    <desc>When holding down the trigger, this weapon's sway-reduction system boosts accuracy over time.</desc>
+    <trigger>Continuous firing</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>1</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Hip-Fire Grip</name>
+    <id>1866048759</id>
+    <desc>Ergonomic grips that increase accuracy and stability when firing from the hip.</desc>
+    <trigger>Shooting when not ADS</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>1</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Firmly Planted</name>
+    <id>280464955</id>
+    <desc>Increased accuracy, stability, and handling when firing while crouched.</desc>
+    <trigger>Crouching</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>1</accuracy>
+    <stability>1</stability>
+    <equipSpeed>1</equipSpeed>
+    <adsSpeed>1</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Slideshot</name>
+    <id>3161816588</id>
+    <desc>Sliding partially reloads this weapon's magazine and temporarily boosts range and stability.</desc>
+    <trigger>Sliding</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>1</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>1</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Outlaw</name>
+    <id>1168162263</id>
+    <desc>Precision kills greatly decrease reload time.</desc>
+    <trigger>Reloading after a headshot kill</trigger>
+    <damage>0</damage>
+    <reloadSpeed>1</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Threat Detector</name>
+    <id>4071163871</id>
+    <desc>Increased reload, stability, and handling when enemies are in close proximity.</desc>
+    <trigger>Having 3 or more enemies in close proximity</trigger>
+    <damage>0</damage>
+    <reloadSpeed>1</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>1</stability>
+    <equipSpeed>1</equipSpeed>
+    <adsSpeed>1</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Zen Moment</name>
+    <id>2387244414</id>
+    <desc>Causing damage with this weapon increases its stability.</desc>
+    <trigger>Doing damage</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>1</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Quickdraw</name>
+    <id>706527188</id>
+    <desc>This weapon can be drawn unbelievably fast.</desc>
+    <trigger>Readying or stowing weapon, going ADS</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>1</equipSpeed>
+    <adsSpeed>1</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Snapshot Sights</name>
+    <id>957782887</id>
+    <desc>Faster time to aim down sights.</desc>
+    <trigger>Going ADS</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>1</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Field Prep</name>
+    <id>2869569095</id>
+    <desc>Increased ammo reserves. Faster reload, stow, and ready when you're crouching.</desc>
+    <trigger>Crouching</trigger>
+    <damage>0</damage>
+    <reloadSpeed>1</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>1</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Rangefinder</name>
+    <id>2846385770</id>
+    <desc>Aiming this weapon increases its effective range and zoom magnification. Increased projectile velocity while aiming Rocket Launchers and Grenade Launchers.</desc>
+    <trigger>Going ADS</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>1</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Moving Target</name>
+    <id>588594999</id>
+    <desc>Increased movement speed and target acquisition when moving while aiming down sights.</desc>
+    <trigger>Going ADS</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>1</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Ambitious Assassin</name>
+    <id>2010801679</id>
+    <desc>Overflows the magazine based on the number of rapid kills before reloading.</desc>
+    <trigger>Kills before reloading</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>1</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Grave Robber</name>
+    <id>1631667848</id>
+    <desc>Melee kills reload a portion of this weapon's magazine. Grants ammo for Primary ammo weapons; reloads from reserves for Special and Heavy ammo weapons.</desc>
+    <trigger>Melee kills</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>1</moreBullets>
+    <instantReload>1</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Triple Tap</name>
+    <id>3400784728</id>
+    <desc>Rapidly landing precision hits will return 1 round to the magazine.</desc>
+    <trigger>Three quick consecutive headshots</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>1</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Fourth Time's the Charm</name>
+    <id>1354429876</id>
+    <desc>Rapidly landing precision hits will return two rounds to the magazine.</desc>
+    <trigger>Four quick consecutive headshots</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>1</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Pulse Monitor</name>
+    <id>972757866</id>
+    <desc>Auto-reloads part of the magazine when wielder is critically wounded.</desc>
+    <trigger>Taking critical damage</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>1</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Auto-Loading Holster</name>
+    <id>3300816228</id>
+    <desc>The holstered weapon is automatically reloaded after a short period of time.</desc>
+    <trigger>Stowing weapon for 3+ seconds</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>1</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Genesis</name>
+    <id>3096702027</id>
+    <desc>Breaking a combatant's shield with this weapon fills its magazine from reserves. Energy weapons regenerate ammo on hit when matching the damage type to the combatant's shield.</desc>
+    <trigger>Breaking the shield of a target or matching damage type to shield</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>1</moreBullets>
+    <instantReload>1</instantReload>
+    <aoe>0</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Timed Payload</name>
+    <id>1954620775</id>
+    <desc>Projectiles attached to enemies explode after a short delay.</desc>
+    <trigger>Hitting a shot</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>1</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Explosive Payload</name>
+    <id>3038247973</id>
+    <desc>Projectiles create an area-of-effect detonation on impact.</desc>
+    <trigger>Hitting a shot</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>1</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Full Auto Trigger System</name>
+    <id>4267945040</id>
+    <desc>Holding down the trigger will fire this weapon at full auto.</desc>
+    <trigger>Holding down the trigger</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>Full auto</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Backup Plan</name>
+    <id>1600092898</id>
+    <desc>Grants reduced charge time and increased handling speed for a short time immediately after swapping to this weapon.</desc>
+    <trigger>Swapping to the weapon</trigger>
+    <weapon>Fusion Rifle</weapon>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>Faster charge rate</other>
+    <details>0</details>
+  </trait>
+  <trait>
+    <name>Dragonfly</name>
+    <id>2848615171</id>
+    <desc>Precision kills create an elemental damage explosion.</desc>
+    <trigger>Precision kills</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>1</aoe>
+    <other>0</other>
+    <details>0</details>
+  </trait>
+</traits>

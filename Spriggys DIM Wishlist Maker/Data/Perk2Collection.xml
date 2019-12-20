@@ -115,4 +115,297 @@
       <magazineSize>0</magazineSize>
     </perk>
   </perkGroup>
+  <perkGroup>
+    <name>Magazine</name>
+    <perk>
+      <name>Accurized Rounds</name>
+      <id>3142289711</id>
+      <stability>0</stability>
+      <range>10</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Ricochet Rounds</name>
+      <id>1885400500</id>
+      <stability>10</stability>
+      <range>5</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other>Rounds bounce off of hard surfaces</other>
+    </perk>
+    <perk>
+      <name>Light Mag</name>
+      <id>679225683</id>
+      <stability>0</stability>
+      <range>5</range>
+      <reloadSpeed>10</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Armor-Piercing Rounds</name>
+      <id>1968497646</id>
+      <stability>0</stability>
+      <range>5</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other>Rounds overpenetrate targets, deal more damage to shields in PvE</other>
+    </perk>
+    <perk>
+      <name>High-Caliber Rounds</name>
+      <id>1561002382</id>
+      <stability>0</stability>
+      <range>5</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other>Rounds cause more flinch</other>
+    </perk>
+    <perk>
+      <name>Flared Magwell</name>
+      <id>3230963543</id>
+      <stability>5</stability>
+      <range>0</range>
+      <reloadSpeed>15</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Tactical Mag</name>
+      <id>106909392</id>
+      <stability>5</stability>
+      <range>0</range>
+      <reloadSpeed>10</reloadSpeed>
+      <magazineSize>10</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Steady Rounds</name>
+      <id>3177308360</id>
+      <stability>15</stability>
+      <range>-5</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Extended Mag</name>
+      <id>2420895100</id>
+      <stability>0</stability>
+      <range>0</range>
+      <reloadSpeed>-20</reloadSpeed>
+      <magazineSize>30</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Appended Mag</name>
+      <id>1087426260</id>
+      <stability>0</stability>
+      <range>0</range>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>20</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Drop Mag</name>
+      <id>4134353779</id>
+      <stability>0</stability>
+      <range>0</range>
+      <reloadSpeed>30</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other>Any ammo left in mag is wasted on reload</other>
+    </perk>
+    <perk>
+      <name>Alloy Mag</name>
+      <id>1431678320</id>
+      <stability>0</stability>
+      <range>0</range>
+      <reloadSpeed>30</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other>Faster reload when magazine is empty</other>
+    </perk>
+    <perk>
+      <name>Assault Mag</name>
+      <id>791862061
+</id>
+      <rof>10</rof>
+      <stability>15</stability>
+      <other>Shotguns only</other>
+    </perk>
+  </perkGroup>
+  <perkGroup>
+    <name>Grenade Launcher Magazine</name>
+    <perk>
+      <name>Remote Detonation</name>
+      <id>3999527219</id>
+      <blastRadius>20</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>0</stability>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>-10</magazineSize>
+      <other>Detonates on trigger pull</other>
+    </perk>
+    <perk>
+      <name>Proximity Grenades</name>
+      <id>409831596</id>
+      <blastRadius>-20</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>0</stability>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other>Proximity detonation</other>
+    </perk>
+    <perk>
+      <name>Spike Grenades</name>
+      <id>3301904089</id>
+      <blastRadius>0</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>10</stability>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other>Increased direct hit damage</other>
+    </perk>
+    <perk>
+      <name>Black Powder</name>
+      <id>1996142143</id>
+      <blastRadius>5</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>-10</stability>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>High-Explosive Ordnance</name>
+      <id>1380253176</id>
+      <blastRadius>10</blastRadius>
+      <projectileSpeed>2</projectileSpeed>
+      <stability>0</stability>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>-15</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>High-Velocity Rounds</name>
+      <id>2822142346</id>
+      <blastRadius>0</blastRadius>
+      <projectileSpeed>10</projectileSpeed>
+      <stability>0</stability>
+      <reloadSpeed>10</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Mini Frags</name>
+      <id>332133599</id>
+      <blastRadius>-10</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>0</stability>
+      <reloadSpeed>10</reloadSpeed>
+      <magazineSize>20</magazineSize>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Sticky Grenades</name>
+      <id>3373736292</id>
+      <blastRadius>0</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>0</stability>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other>Sticks to surfaces</other>
+    </perk>
+    <perk>
+      <name>Concussion Grenades</name>
+      <id>1716000303</id>
+      <blastRadius>0</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>0</stability>
+      <reloadSpeed>0</reloadSpeed>
+      <magazineSize>0</magazineSize>
+      <other>Disorients target</other>
+    </perk>
+  </perkGroup>
+  <perkGroup>
+    <name>Rocket Launcher Magazine</name>
+    <perk>
+      <name>Black Powder</name>
+      <id>1996142143</id>
+      <blastRadius>5</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>-10</stability>
+      <reloadSpeed>0</reloadSpeed>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Implosion Rounds</name>
+      <id>3492396210</id>
+      <blastRadius>-10</blastRadius>
+      <projectileSpeed>10</projectileSpeed>
+      <stability>15</stability>
+      <reloadSpeed>0</reloadSpeed>
+      <other></other>
+    </perk>
+    <perk>
+      <name>High-Velocity Rounds</name>
+      <id>2822142346</id>
+      <blastRadius>0</blastRadius>
+      <projectileSpeed>10</projectileSpeed>
+      <stability>0</stability>
+      <reloadSpeed>10</reloadSpeed>
+      <other></other>
+    </perk>
+    <perk>
+      <name>Impact Casing</name>
+      <id>3796465595</id>
+      <blastRadius>0</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>10</stability>
+      <reloadSpeed>0</reloadSpeed>
+      <other>Increased direct hit damage</other>
+    </perk>
+    <perk>
+      <name>Alloy Casing</name>
+      <id>2985827016</id>
+      <blastRadius>20</blastRadius>
+      <projectileSpeed>0</projectileSpeed>
+      <stability>-10</stability>
+      <reloadSpeed>30</reloadSpeed>
+      <other></other>
+    </perk>
+  </perkGroup>
+  <perkGroup>
+    <name>Guard</name>
+    <perk>
+      <name>Heavy Guard</name>
+      <id>2349202967</id>
+      <defense>20</defense>
+      <efficiency>20</efficiency>
+    </perk>
+    <perk>
+      <name>Burst Guard</name>
+      <id>3625355092</id>
+      <defense>20</defense>
+      <efficiency>-30</efficiency>
+    </perk>
+    <perk>
+      <name>Enduring Guard</name>
+      <id>599007201</id>
+      <defense>-20</defense>
+      <efficiency>20</efficiency>
+    </perk>
+    <perk>
+      <name>Balanced Guard</name>
+      <id>52780822</id>
+      <defense>0</defense>
+      <efficiency>0</efficiency>
+    </perk>
+    <perk>
+      <name>Swordmaster's Guard</name>
+      <id>269888150</id>
+      <defense>-20</defense>
+      <efficiency>-20</efficiency>
+    </perk>
+  </perkGroup>
 </perk2>

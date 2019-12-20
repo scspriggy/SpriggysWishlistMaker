@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Spriggys_DIM_Wishlist_Maker
@@ -54,7 +55,8 @@ namespace Spriggys_DIM_Wishlist_Maker
             if (type == ItemType.Simple)
             {
                 weaponName = getWeaponName(wishlistText[0]);
-                weaponNameSort = weaponName.Replace("The ", "").Replace("the ", "").Replace("THE ", "");
+                weaponNameSort = Regex.Replace(weaponName, "^the ", "", RegexOptions.IgnoreCase);
+                weaponNameSort = Regex.Replace(weaponNameSort, "^a ", "", RegexOptions.IgnoreCase);
 
                 for(int i=0; i < wishlistText.Length; i++)
                 {
@@ -68,7 +70,8 @@ namespace Spriggys_DIM_Wishlist_Maker
             int lineNum = 0;
             weaponTier = getWeaponTier(text[lineNum]);
             weaponName = getWeaponName(text[lineNum]);
-            weaponNameSort = weaponName.Replace("The ", "").Replace("the ", "").Replace("THE ", "");
+            weaponNameSort = Regex.Replace(weaponName, "^the ", "", RegexOptions.IgnoreCase);
+            weaponNameSort = Regex.Replace(weaponNameSort, "^a ", "", RegexOptions.IgnoreCase);
             lineNum++;
 
             if (text[lineNum].Contains("============"))

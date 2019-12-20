@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<weapons>
+  <weapon>
+    <name>Abide the Return</name>
+    <id>1644160541</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded. Use to uppercut.</frameDesc>
+    <category>Sword</category>
+    <ammoType>Kinetic, Energy, Power</ammoType>
+    <perk1Group>Edge</perk1Group>
+    <perk2Group>Guard</perk2Group>
+    <season>4</season>
+    <element>Solar</element>
+    <curated>1261178282,52780822,354401740,2590710093</curated>
+  </weapon>
+  <weapon>
+    <name></name>
+    <id></id>
+    <frame></frame>
+    <frameDesc></frameDesc>
+    <category></category>
+    <ammoType></ammoType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season></season>
+    <element></element>
+    <curated></curated>
+  </weapon>
+  <weapon>
+    <name></name>
+    <id></id>
+    <frame></frame>
+    <frameDesc></frameDesc>
+    <category></category>
+    <ammoType>Kinetic, Energy, Power</ammoType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season></season>
+    <element>Kinetic, Arc, Solar, Void</element>
+    <curated></curated>
+  </weapon>
+</weapons>

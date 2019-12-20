@@ -91,6 +91,7 @@
     <Content Include="Data\Perk2Collection.xml" />
     <Content Include="Data\Perk1Collection.xml" />
     <Content Include="Data\TraitCollection.xml" />
+    <Content Include="Data\WeaponCollection.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
