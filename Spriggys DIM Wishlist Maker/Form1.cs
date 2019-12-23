@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,23 @@ namespace Spriggys_DIM_Wishlist_Maker
         public Form1()
         {
             InitializeComponent();
-            
+            loadDropdowns();
             loadSettings();
+        }
+
+        private void loadDropdowns()
+        {
+            //XmlReader xmlReader = XmlReader.Create(Path.Combine(Environment.CurrentDirectory, @"Data\", "Perk1Collection.xml"));
+            XmlReader xmlReader = XmlReader.Create("C:\\Users\\spragues\\source\\repos\\Spriggys DIM Wishlist Maker\\Spriggys DIM Wishlist Maker\\Data\\Perk1Collection.xml");
+
+            /*while (xmlReader.Read())
+            {
+                if ((xmlReader.NodeType == XmlNodeType.Element) && (xmlReader.Name == "perk"))
+                {
+                    if( xmlReader.)
+                    comboBoxMain_Barrel1id.Items.Add(xmlReader.GetAttribute("name"));
+                }
+            }*/
         }
 
         private void loadSettings()

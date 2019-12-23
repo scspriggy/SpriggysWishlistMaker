@@ -32,6 +32,44 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageForm = new System.Windows.Forms.TabPage();
+            this.textBoxMain_Combopvp5 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Combopve5 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboPerkTwo5 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboPerkOne5 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboMag5 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboBarrel5 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Combopvp4 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Combopve4 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboPerkTwo4 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboPerkOne4 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboMag4 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboBarrel4 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Combopvp3 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Combopve3 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboPerkTwo3 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboPerkOne3 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboMag3 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboBarrel3 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Combopvp2 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Combopve2 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboPerkTwo2 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboPerkOne2 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboMag2 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboBarrel2 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Combopvp1 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_Combopve1 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboPerkTwo1 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboPerkOne1 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboMag1 = new System.Windows.Forms.TextBox();
+            this.textBoxMain_ComboBarrel1 = new System.Windows.Forms.TextBox();
+            this.labelMain_combopvp = new System.Windows.Forms.Label();
+            this.labelMain_combopve = new System.Windows.Forms.Label();
+            this.labelMain_Perk22 = new System.Windows.Forms.Label();
+            this.labelMain_Perk12 = new System.Windows.Forms.Label();
+            this.labelMain_Mag2 = new System.Windows.Forms.Label();
+            this.labelMain_Barrel2 = new System.Windows.Forms.Label();
+            this.labelMain_Combo = new System.Windows.Forms.Label();
+            this.buttonMain_Submit = new System.Windows.Forms.Button();
             this.textBoxMain_PerkTwo7pvp = new System.Windows.Forms.TextBox();
             this.textBoxMain_PerkTwo7pve = new System.Windows.Forms.TextBox();
             this.textBoxMain_PerkTwo7id = new System.Windows.Forms.TextBox();
@@ -156,45 +194,10 @@
             this.buttonSettings_Save = new System.Windows.Forms.Button();
             this.labelSettings_RollInput = new System.Windows.Forms.Label();
             this.textBoxSettings_RollInput = new System.Windows.Forms.ComboBox();
-            this.buttonMain_Submit = new System.Windows.Forms.Button();
-            this.labelMain_Combo = new System.Windows.Forms.Label();
-            this.labelMain_Barrel2 = new System.Windows.Forms.Label();
-            this.labelMain_Mag2 = new System.Windows.Forms.Label();
-            this.labelMain_Perk12 = new System.Windows.Forms.Label();
-            this.labelMain_Perk22 = new System.Windows.Forms.Label();
-            this.labelMain_combopve = new System.Windows.Forms.Label();
-            this.labelMain_combopvp = new System.Windows.Forms.Label();
-            this.textBoxMain_ComboBarrel1 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboMag1 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboPerkOne1 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboPerkTwo1 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_Combopve1 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_Combopvp1 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_Combopvp2 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_Combopve2 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboPerkTwo2 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboPerkOne2 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboMag2 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboBarrel2 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_Combopvp3 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_Combopve3 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboPerkTwo3 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboPerkOne3 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboMag3 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboBarrel3 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_Combopvp4 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_Combopve4 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboPerkTwo4 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboPerkOne4 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboMag4 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboBarrel4 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_Combopvp5 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_Combopve5 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboPerkTwo5 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboPerkOne5 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboMag5 = new System.Windows.Forms.TextBox();
-            this.textBoxMain_ComboBarrel5 = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.labelMain_WeaponName = new System.Windows.Forms.Label();
+            this.textBoxMain_WeaponName = new System.Windows.Forms.TextBox();
+            this.comboBoxMain_Barrel1id = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPageForm.SuspendLayout();
             this.tabPageText.SuspendLayout();
@@ -217,6 +220,9 @@
             // 
             // tabPageForm
             // 
+            this.tabPageForm.Controls.Add(this.comboBoxMain_Barrel1id);
+            this.tabPageForm.Controls.Add(this.textBoxMain_WeaponName);
+            this.tabPageForm.Controls.Add(this.labelMain_WeaponName);
             this.tabPageForm.Controls.Add(this.textBoxMain_Combopvp5);
             this.tabPageForm.Controls.Add(this.textBoxMain_Combopve5);
             this.tabPageForm.Controls.Add(this.textBoxMain_ComboPerkTwo5);
@@ -369,6 +375,291 @@
             this.tabPageForm.TabIndex = 0;
             this.tabPageForm.Text = "Main";
             this.tabPageForm.UseVisualStyleBackColor = true;
+            // 
+            // textBoxMain_Combopvp5
+            // 
+            this.textBoxMain_Combopvp5.Location = new System.Drawing.Point(879, 621);
+            this.textBoxMain_Combopvp5.Name = "textBoxMain_Combopvp5";
+            this.textBoxMain_Combopvp5.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Combopvp5.TabIndex = 144;
+            // 
+            // textBoxMain_Combopve5
+            // 
+            this.textBoxMain_Combopve5.Location = new System.Drawing.Point(823, 621);
+            this.textBoxMain_Combopve5.Name = "textBoxMain_Combopve5";
+            this.textBoxMain_Combopve5.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Combopve5.TabIndex = 143;
+            // 
+            // textBoxMain_ComboPerkTwo5
+            // 
+            this.textBoxMain_ComboPerkTwo5.Location = new System.Drawing.Point(622, 621);
+            this.textBoxMain_ComboPerkTwo5.Name = "textBoxMain_ComboPerkTwo5";
+            this.textBoxMain_ComboPerkTwo5.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboPerkTwo5.TabIndex = 142;
+            // 
+            // textBoxMain_ComboPerkOne5
+            // 
+            this.textBoxMain_ComboPerkOne5.Location = new System.Drawing.Point(421, 621);
+            this.textBoxMain_ComboPerkOne5.Name = "textBoxMain_ComboPerkOne5";
+            this.textBoxMain_ComboPerkOne5.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboPerkOne5.TabIndex = 141;
+            // 
+            // textBoxMain_ComboMag5
+            // 
+            this.textBoxMain_ComboMag5.Location = new System.Drawing.Point(220, 621);
+            this.textBoxMain_ComboMag5.Name = "textBoxMain_ComboMag5";
+            this.textBoxMain_ComboMag5.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboMag5.TabIndex = 140;
+            // 
+            // textBoxMain_ComboBarrel5
+            // 
+            this.textBoxMain_ComboBarrel5.Location = new System.Drawing.Point(19, 621);
+            this.textBoxMain_ComboBarrel5.Name = "textBoxMain_ComboBarrel5";
+            this.textBoxMain_ComboBarrel5.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboBarrel5.TabIndex = 139;
+            // 
+            // textBoxMain_Combopvp4
+            // 
+            this.textBoxMain_Combopvp4.Location = new System.Drawing.Point(879, 589);
+            this.textBoxMain_Combopvp4.Name = "textBoxMain_Combopvp4";
+            this.textBoxMain_Combopvp4.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Combopvp4.TabIndex = 138;
+            // 
+            // textBoxMain_Combopve4
+            // 
+            this.textBoxMain_Combopve4.Location = new System.Drawing.Point(823, 589);
+            this.textBoxMain_Combopve4.Name = "textBoxMain_Combopve4";
+            this.textBoxMain_Combopve4.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Combopve4.TabIndex = 137;
+            // 
+            // textBoxMain_ComboPerkTwo4
+            // 
+            this.textBoxMain_ComboPerkTwo4.Location = new System.Drawing.Point(622, 589);
+            this.textBoxMain_ComboPerkTwo4.Name = "textBoxMain_ComboPerkTwo4";
+            this.textBoxMain_ComboPerkTwo4.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboPerkTwo4.TabIndex = 136;
+            // 
+            // textBoxMain_ComboPerkOne4
+            // 
+            this.textBoxMain_ComboPerkOne4.Location = new System.Drawing.Point(421, 589);
+            this.textBoxMain_ComboPerkOne4.Name = "textBoxMain_ComboPerkOne4";
+            this.textBoxMain_ComboPerkOne4.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboPerkOne4.TabIndex = 135;
+            // 
+            // textBoxMain_ComboMag4
+            // 
+            this.textBoxMain_ComboMag4.Location = new System.Drawing.Point(220, 589);
+            this.textBoxMain_ComboMag4.Name = "textBoxMain_ComboMag4";
+            this.textBoxMain_ComboMag4.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboMag4.TabIndex = 134;
+            // 
+            // textBoxMain_ComboBarrel4
+            // 
+            this.textBoxMain_ComboBarrel4.Location = new System.Drawing.Point(19, 589);
+            this.textBoxMain_ComboBarrel4.Name = "textBoxMain_ComboBarrel4";
+            this.textBoxMain_ComboBarrel4.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboBarrel4.TabIndex = 133;
+            // 
+            // textBoxMain_Combopvp3
+            // 
+            this.textBoxMain_Combopvp3.Location = new System.Drawing.Point(879, 557);
+            this.textBoxMain_Combopvp3.Name = "textBoxMain_Combopvp3";
+            this.textBoxMain_Combopvp3.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Combopvp3.TabIndex = 132;
+            // 
+            // textBoxMain_Combopve3
+            // 
+            this.textBoxMain_Combopve3.Location = new System.Drawing.Point(823, 557);
+            this.textBoxMain_Combopve3.Name = "textBoxMain_Combopve3";
+            this.textBoxMain_Combopve3.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Combopve3.TabIndex = 131;
+            // 
+            // textBoxMain_ComboPerkTwo3
+            // 
+            this.textBoxMain_ComboPerkTwo3.Location = new System.Drawing.Point(622, 557);
+            this.textBoxMain_ComboPerkTwo3.Name = "textBoxMain_ComboPerkTwo3";
+            this.textBoxMain_ComboPerkTwo3.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboPerkTwo3.TabIndex = 130;
+            // 
+            // textBoxMain_ComboPerkOne3
+            // 
+            this.textBoxMain_ComboPerkOne3.Location = new System.Drawing.Point(421, 557);
+            this.textBoxMain_ComboPerkOne3.Name = "textBoxMain_ComboPerkOne3";
+            this.textBoxMain_ComboPerkOne3.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboPerkOne3.TabIndex = 129;
+            // 
+            // textBoxMain_ComboMag3
+            // 
+            this.textBoxMain_ComboMag3.Location = new System.Drawing.Point(220, 557);
+            this.textBoxMain_ComboMag3.Name = "textBoxMain_ComboMag3";
+            this.textBoxMain_ComboMag3.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboMag3.TabIndex = 128;
+            // 
+            // textBoxMain_ComboBarrel3
+            // 
+            this.textBoxMain_ComboBarrel3.Location = new System.Drawing.Point(19, 557);
+            this.textBoxMain_ComboBarrel3.Name = "textBoxMain_ComboBarrel3";
+            this.textBoxMain_ComboBarrel3.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboBarrel3.TabIndex = 127;
+            // 
+            // textBoxMain_Combopvp2
+            // 
+            this.textBoxMain_Combopvp2.Location = new System.Drawing.Point(879, 525);
+            this.textBoxMain_Combopvp2.Name = "textBoxMain_Combopvp2";
+            this.textBoxMain_Combopvp2.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Combopvp2.TabIndex = 126;
+            // 
+            // textBoxMain_Combopve2
+            // 
+            this.textBoxMain_Combopve2.Location = new System.Drawing.Point(823, 525);
+            this.textBoxMain_Combopve2.Name = "textBoxMain_Combopve2";
+            this.textBoxMain_Combopve2.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Combopve2.TabIndex = 125;
+            // 
+            // textBoxMain_ComboPerkTwo2
+            // 
+            this.textBoxMain_ComboPerkTwo2.Location = new System.Drawing.Point(622, 525);
+            this.textBoxMain_ComboPerkTwo2.Name = "textBoxMain_ComboPerkTwo2";
+            this.textBoxMain_ComboPerkTwo2.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboPerkTwo2.TabIndex = 124;
+            // 
+            // textBoxMain_ComboPerkOne2
+            // 
+            this.textBoxMain_ComboPerkOne2.Location = new System.Drawing.Point(421, 525);
+            this.textBoxMain_ComboPerkOne2.Name = "textBoxMain_ComboPerkOne2";
+            this.textBoxMain_ComboPerkOne2.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboPerkOne2.TabIndex = 123;
+            // 
+            // textBoxMain_ComboMag2
+            // 
+            this.textBoxMain_ComboMag2.Location = new System.Drawing.Point(220, 525);
+            this.textBoxMain_ComboMag2.Name = "textBoxMain_ComboMag2";
+            this.textBoxMain_ComboMag2.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboMag2.TabIndex = 122;
+            // 
+            // textBoxMain_ComboBarrel2
+            // 
+            this.textBoxMain_ComboBarrel2.Location = new System.Drawing.Point(19, 525);
+            this.textBoxMain_ComboBarrel2.Name = "textBoxMain_ComboBarrel2";
+            this.textBoxMain_ComboBarrel2.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboBarrel2.TabIndex = 121;
+            // 
+            // textBoxMain_Combopvp1
+            // 
+            this.textBoxMain_Combopvp1.Location = new System.Drawing.Point(879, 493);
+            this.textBoxMain_Combopvp1.Name = "textBoxMain_Combopvp1";
+            this.textBoxMain_Combopvp1.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Combopvp1.TabIndex = 120;
+            // 
+            // textBoxMain_Combopve1
+            // 
+            this.textBoxMain_Combopve1.Location = new System.Drawing.Point(823, 493);
+            this.textBoxMain_Combopve1.Name = "textBoxMain_Combopve1";
+            this.textBoxMain_Combopve1.Size = new System.Drawing.Size(50, 26);
+            this.textBoxMain_Combopve1.TabIndex = 119;
+            // 
+            // textBoxMain_ComboPerkTwo1
+            // 
+            this.textBoxMain_ComboPerkTwo1.Location = new System.Drawing.Point(622, 493);
+            this.textBoxMain_ComboPerkTwo1.Name = "textBoxMain_ComboPerkTwo1";
+            this.textBoxMain_ComboPerkTwo1.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboPerkTwo1.TabIndex = 118;
+            // 
+            // textBoxMain_ComboPerkOne1
+            // 
+            this.textBoxMain_ComboPerkOne1.Location = new System.Drawing.Point(421, 493);
+            this.textBoxMain_ComboPerkOne1.Name = "textBoxMain_ComboPerkOne1";
+            this.textBoxMain_ComboPerkOne1.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboPerkOne1.TabIndex = 117;
+            // 
+            // textBoxMain_ComboMag1
+            // 
+            this.textBoxMain_ComboMag1.Location = new System.Drawing.Point(220, 493);
+            this.textBoxMain_ComboMag1.Name = "textBoxMain_ComboMag1";
+            this.textBoxMain_ComboMag1.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboMag1.TabIndex = 116;
+            // 
+            // textBoxMain_ComboBarrel1
+            // 
+            this.textBoxMain_ComboBarrel1.Location = new System.Drawing.Point(19, 493);
+            this.textBoxMain_ComboBarrel1.Name = "textBoxMain_ComboBarrel1";
+            this.textBoxMain_ComboBarrel1.Size = new System.Drawing.Size(195, 26);
+            this.textBoxMain_ComboBarrel1.TabIndex = 115;
+            // 
+            // labelMain_combopvp
+            // 
+            this.labelMain_combopvp.Location = new System.Drawing.Point(879, 470);
+            this.labelMain_combopvp.Name = "labelMain_combopvp";
+            this.labelMain_combopvp.Size = new System.Drawing.Size(50, 20);
+            this.labelMain_combopvp.TabIndex = 114;
+            this.labelMain_combopvp.Text = "PvP";
+            this.labelMain_combopvp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelMain_combopve
+            // 
+            this.labelMain_combopve.Location = new System.Drawing.Point(822, 470);
+            this.labelMain_combopve.Name = "labelMain_combopve";
+            this.labelMain_combopve.Size = new System.Drawing.Size(50, 20);
+            this.labelMain_combopve.TabIndex = 113;
+            this.labelMain_combopve.Text = "PvE";
+            this.labelMain_combopve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelMain_Perk22
+            // 
+            this.labelMain_Perk22.AutoSize = true;
+            this.labelMain_Perk22.Location = new System.Drawing.Point(618, 470);
+            this.labelMain_Perk22.Name = "labelMain_Perk22";
+            this.labelMain_Perk22.Size = new System.Drawing.Size(54, 20);
+            this.labelMain_Perk22.TabIndex = 112;
+            this.labelMain_Perk22.Text = "Perk 2";
+            // 
+            // labelMain_Perk12
+            // 
+            this.labelMain_Perk12.AutoSize = true;
+            this.labelMain_Perk12.Location = new System.Drawing.Point(421, 470);
+            this.labelMain_Perk12.Name = "labelMain_Perk12";
+            this.labelMain_Perk12.Size = new System.Drawing.Size(54, 20);
+            this.labelMain_Perk12.TabIndex = 111;
+            this.labelMain_Perk12.Text = "Perk 1";
+            // 
+            // labelMain_Mag2
+            // 
+            this.labelMain_Mag2.AutoSize = true;
+            this.labelMain_Mag2.Location = new System.Drawing.Point(216, 470);
+            this.labelMain_Mag2.Name = "labelMain_Mag2";
+            this.labelMain_Mag2.Size = new System.Drawing.Size(78, 20);
+            this.labelMain_Mag2.TabIndex = 110;
+            this.labelMain_Mag2.Text = "Magazine";
+            // 
+            // labelMain_Barrel2
+            // 
+            this.labelMain_Barrel2.AutoSize = true;
+            this.labelMain_Barrel2.Location = new System.Drawing.Point(15, 470);
+            this.labelMain_Barrel2.Name = "labelMain_Barrel2";
+            this.labelMain_Barrel2.Size = new System.Drawing.Size(51, 20);
+            this.labelMain_Barrel2.TabIndex = 109;
+            this.labelMain_Barrel2.Text = "Barrel";
+            // 
+            // labelMain_Combo
+            // 
+            this.labelMain_Combo.AutoSize = true;
+            this.labelMain_Combo.Location = new System.Drawing.Point(15, 436);
+            this.labelMain_Combo.Name = "labelMain_Combo";
+            this.labelMain_Combo.Size = new System.Drawing.Size(68, 20);
+            this.labelMain_Combo.TabIndex = 108;
+            this.labelMain_Combo.Text = "Combos";
+            this.toolTip1.SetToolTip(this.labelMain_Combo, "Combo score will be added to calcuated roll score.\r\nLeave empty or 0 for unrelate" +
+        "d rolls.");
+            // 
+            // buttonMain_Submit
+            // 
+            this.buttonMain_Submit.Location = new System.Drawing.Point(1267, 816);
+            this.buttonMain_Submit.Name = "buttonMain_Submit";
+            this.buttonMain_Submit.Size = new System.Drawing.Size(173, 65);
+            this.buttonMain_Submit.TabIndex = 107;
+            this.buttonMain_Submit.Text = "Submit";
+            this.buttonMain_Submit.UseVisualStyleBackColor = true;
+            this.buttonMain_Submit.Click += new System.EventHandler(this.buttonMain_Submit_Click);
             // 
             // textBoxMain_PerkTwo7pvp
             // 
@@ -1136,7 +1427,7 @@
             "PvE Only",
             "PvP Only",
             "PvE/PvP"});
-            this.comboBoxMain_GameType.Location = new System.Drawing.Point(112, 87);
+            this.comboBoxMain_GameType.Location = new System.Drawing.Point(518, 84);
             this.comboBoxMain_GameType.Name = "comboBoxMain_GameType";
             this.comboBoxMain_GameType.Size = new System.Drawing.Size(200, 28);
             this.comboBoxMain_GameType.TabIndex = 4;
@@ -1144,7 +1435,7 @@
             // labelMain_GameType
             // 
             this.labelMain_GameType.AutoSize = true;
-            this.labelMain_GameType.Location = new System.Drawing.Point(15, 90);
+            this.labelMain_GameType.Location = new System.Drawing.Point(421, 87);
             this.labelMain_GameType.Name = "labelMain_GameType";
             this.labelMain_GameType.Size = new System.Drawing.Size(91, 20);
             this.labelMain_GameType.TabIndex = 3;
@@ -1367,294 +1658,33 @@
             this.textBoxSettings_RollInput.Size = new System.Drawing.Size(161, 28);
             this.textBoxSettings_RollInput.TabIndex = 3;
             // 
-            // buttonMain_Submit
-            // 
-            this.buttonMain_Submit.Location = new System.Drawing.Point(1267, 816);
-            this.buttonMain_Submit.Name = "buttonMain_Submit";
-            this.buttonMain_Submit.Size = new System.Drawing.Size(173, 65);
-            this.buttonMain_Submit.TabIndex = 107;
-            this.buttonMain_Submit.Text = "Submit";
-            this.buttonMain_Submit.UseVisualStyleBackColor = true;
-            this.buttonMain_Submit.Click += new System.EventHandler(this.buttonMain_Submit_Click);
-            // 
-            // labelMain_Combo
-            // 
-            this.labelMain_Combo.AutoSize = true;
-            this.labelMain_Combo.Location = new System.Drawing.Point(15, 436);
-            this.labelMain_Combo.Name = "labelMain_Combo";
-            this.labelMain_Combo.Size = new System.Drawing.Size(68, 20);
-            this.labelMain_Combo.TabIndex = 108;
-            this.labelMain_Combo.Text = "Combos";
-            this.toolTip1.SetToolTip(this.labelMain_Combo, "Combo score will be added to calcuated roll score.\r\nLeave empty or 0 for unrelate" +
-        "d rolls.");
-            // 
-            // labelMain_Barrel2
-            // 
-            this.labelMain_Barrel2.AutoSize = true;
-            this.labelMain_Barrel2.Location = new System.Drawing.Point(15, 470);
-            this.labelMain_Barrel2.Name = "labelMain_Barrel2";
-            this.labelMain_Barrel2.Size = new System.Drawing.Size(51, 20);
-            this.labelMain_Barrel2.TabIndex = 109;
-            this.labelMain_Barrel2.Text = "Barrel";
-            // 
-            // labelMain_Mag2
-            // 
-            this.labelMain_Mag2.AutoSize = true;
-            this.labelMain_Mag2.Location = new System.Drawing.Point(216, 470);
-            this.labelMain_Mag2.Name = "labelMain_Mag2";
-            this.labelMain_Mag2.Size = new System.Drawing.Size(78, 20);
-            this.labelMain_Mag2.TabIndex = 110;
-            this.labelMain_Mag2.Text = "Magazine";
-            // 
-            // labelMain_Perk12
-            // 
-            this.labelMain_Perk12.AutoSize = true;
-            this.labelMain_Perk12.Location = new System.Drawing.Point(421, 470);
-            this.labelMain_Perk12.Name = "labelMain_Perk12";
-            this.labelMain_Perk12.Size = new System.Drawing.Size(54, 20);
-            this.labelMain_Perk12.TabIndex = 111;
-            this.labelMain_Perk12.Text = "Perk 1";
-            // 
-            // labelMain_Perk22
-            // 
-            this.labelMain_Perk22.AutoSize = true;
-            this.labelMain_Perk22.Location = new System.Drawing.Point(618, 470);
-            this.labelMain_Perk22.Name = "labelMain_Perk22";
-            this.labelMain_Perk22.Size = new System.Drawing.Size(54, 20);
-            this.labelMain_Perk22.TabIndex = 112;
-            this.labelMain_Perk22.Text = "Perk 2";
-            // 
-            // labelMain_combopve
-            // 
-            this.labelMain_combopve.Location = new System.Drawing.Point(822, 470);
-            this.labelMain_combopve.Name = "labelMain_combopve";
-            this.labelMain_combopve.Size = new System.Drawing.Size(50, 20);
-            this.labelMain_combopve.TabIndex = 113;
-            this.labelMain_combopve.Text = "PvE";
-            this.labelMain_combopve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // labelMain_combopvp
-            // 
-            this.labelMain_combopvp.Location = new System.Drawing.Point(879, 470);
-            this.labelMain_combopvp.Name = "labelMain_combopvp";
-            this.labelMain_combopvp.Size = new System.Drawing.Size(50, 20);
-            this.labelMain_combopvp.TabIndex = 114;
-            this.labelMain_combopvp.Text = "PvP";
-            this.labelMain_combopvp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBoxMain_ComboBarrel1
-            // 
-            this.textBoxMain_ComboBarrel1.Location = new System.Drawing.Point(19, 493);
-            this.textBoxMain_ComboBarrel1.Name = "textBoxMain_ComboBarrel1";
-            this.textBoxMain_ComboBarrel1.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboBarrel1.TabIndex = 115;
-            // 
-            // textBoxMain_ComboMag1
-            // 
-            this.textBoxMain_ComboMag1.Location = new System.Drawing.Point(220, 493);
-            this.textBoxMain_ComboMag1.Name = "textBoxMain_ComboMag1";
-            this.textBoxMain_ComboMag1.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboMag1.TabIndex = 116;
-            // 
-            // textBoxMain_ComboPerkOne1
-            // 
-            this.textBoxMain_ComboPerkOne1.Location = new System.Drawing.Point(421, 493);
-            this.textBoxMain_ComboPerkOne1.Name = "textBoxMain_ComboPerkOne1";
-            this.textBoxMain_ComboPerkOne1.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboPerkOne1.TabIndex = 117;
-            // 
-            // textBoxMain_ComboPerkTwo1
-            // 
-            this.textBoxMain_ComboPerkTwo1.Location = new System.Drawing.Point(622, 493);
-            this.textBoxMain_ComboPerkTwo1.Name = "textBoxMain_ComboPerkTwo1";
-            this.textBoxMain_ComboPerkTwo1.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboPerkTwo1.TabIndex = 118;
-            // 
-            // textBoxMain_Combopve1
-            // 
-            this.textBoxMain_Combopve1.Location = new System.Drawing.Point(823, 493);
-            this.textBoxMain_Combopve1.Name = "textBoxMain_Combopve1";
-            this.textBoxMain_Combopve1.Size = new System.Drawing.Size(50, 26);
-            this.textBoxMain_Combopve1.TabIndex = 119;
-            // 
-            // textBoxMain_Combopvp1
-            // 
-            this.textBoxMain_Combopvp1.Location = new System.Drawing.Point(879, 493);
-            this.textBoxMain_Combopvp1.Name = "textBoxMain_Combopvp1";
-            this.textBoxMain_Combopvp1.Size = new System.Drawing.Size(50, 26);
-            this.textBoxMain_Combopvp1.TabIndex = 120;
-            // 
-            // textBoxMain_Combopvp2
-            // 
-            this.textBoxMain_Combopvp2.Location = new System.Drawing.Point(879, 525);
-            this.textBoxMain_Combopvp2.Name = "textBoxMain_Combopvp2";
-            this.textBoxMain_Combopvp2.Size = new System.Drawing.Size(50, 26);
-            this.textBoxMain_Combopvp2.TabIndex = 126;
-            // 
-            // textBoxMain_Combopve2
-            // 
-            this.textBoxMain_Combopve2.Location = new System.Drawing.Point(823, 525);
-            this.textBoxMain_Combopve2.Name = "textBoxMain_Combopve2";
-            this.textBoxMain_Combopve2.Size = new System.Drawing.Size(50, 26);
-            this.textBoxMain_Combopve2.TabIndex = 125;
-            // 
-            // textBoxMain_ComboPerkTwo2
-            // 
-            this.textBoxMain_ComboPerkTwo2.Location = new System.Drawing.Point(622, 525);
-            this.textBoxMain_ComboPerkTwo2.Name = "textBoxMain_ComboPerkTwo2";
-            this.textBoxMain_ComboPerkTwo2.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboPerkTwo2.TabIndex = 124;
-            // 
-            // textBoxMain_ComboPerkOne2
-            // 
-            this.textBoxMain_ComboPerkOne2.Location = new System.Drawing.Point(421, 525);
-            this.textBoxMain_ComboPerkOne2.Name = "textBoxMain_ComboPerkOne2";
-            this.textBoxMain_ComboPerkOne2.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboPerkOne2.TabIndex = 123;
-            // 
-            // textBoxMain_ComboMag2
-            // 
-            this.textBoxMain_ComboMag2.Location = new System.Drawing.Point(220, 525);
-            this.textBoxMain_ComboMag2.Name = "textBoxMain_ComboMag2";
-            this.textBoxMain_ComboMag2.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboMag2.TabIndex = 122;
-            // 
-            // textBoxMain_ComboBarrel2
-            // 
-            this.textBoxMain_ComboBarrel2.Location = new System.Drawing.Point(19, 525);
-            this.textBoxMain_ComboBarrel2.Name = "textBoxMain_ComboBarrel2";
-            this.textBoxMain_ComboBarrel2.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboBarrel2.TabIndex = 121;
-            // 
-            // textBoxMain_Combopvp3
-            // 
-            this.textBoxMain_Combopvp3.Location = new System.Drawing.Point(879, 557);
-            this.textBoxMain_Combopvp3.Name = "textBoxMain_Combopvp3";
-            this.textBoxMain_Combopvp3.Size = new System.Drawing.Size(50, 26);
-            this.textBoxMain_Combopvp3.TabIndex = 132;
-            // 
-            // textBoxMain_Combopve3
-            // 
-            this.textBoxMain_Combopve3.Location = new System.Drawing.Point(823, 557);
-            this.textBoxMain_Combopve3.Name = "textBoxMain_Combopve3";
-            this.textBoxMain_Combopve3.Size = new System.Drawing.Size(50, 26);
-            this.textBoxMain_Combopve3.TabIndex = 131;
-            // 
-            // textBoxMain_ComboPerkTwo3
-            // 
-            this.textBoxMain_ComboPerkTwo3.Location = new System.Drawing.Point(622, 557);
-            this.textBoxMain_ComboPerkTwo3.Name = "textBoxMain_ComboPerkTwo3";
-            this.textBoxMain_ComboPerkTwo3.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboPerkTwo3.TabIndex = 130;
-            // 
-            // textBoxMain_ComboPerkOne3
-            // 
-            this.textBoxMain_ComboPerkOne3.Location = new System.Drawing.Point(421, 557);
-            this.textBoxMain_ComboPerkOne3.Name = "textBoxMain_ComboPerkOne3";
-            this.textBoxMain_ComboPerkOne3.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboPerkOne3.TabIndex = 129;
-            // 
-            // textBoxMain_ComboMag3
-            // 
-            this.textBoxMain_ComboMag3.Location = new System.Drawing.Point(220, 557);
-            this.textBoxMain_ComboMag3.Name = "textBoxMain_ComboMag3";
-            this.textBoxMain_ComboMag3.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboMag3.TabIndex = 128;
-            // 
-            // textBoxMain_ComboBarrel3
-            // 
-            this.textBoxMain_ComboBarrel3.Location = new System.Drawing.Point(19, 557);
-            this.textBoxMain_ComboBarrel3.Name = "textBoxMain_ComboBarrel3";
-            this.textBoxMain_ComboBarrel3.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboBarrel3.TabIndex = 127;
-            // 
-            // textBoxMain_Combopvp4
-            // 
-            this.textBoxMain_Combopvp4.Location = new System.Drawing.Point(879, 589);
-            this.textBoxMain_Combopvp4.Name = "textBoxMain_Combopvp4";
-            this.textBoxMain_Combopvp4.Size = new System.Drawing.Size(50, 26);
-            this.textBoxMain_Combopvp4.TabIndex = 138;
-            // 
-            // textBoxMain_Combopve4
-            // 
-            this.textBoxMain_Combopve4.Location = new System.Drawing.Point(823, 589);
-            this.textBoxMain_Combopve4.Name = "textBoxMain_Combopve4";
-            this.textBoxMain_Combopve4.Size = new System.Drawing.Size(50, 26);
-            this.textBoxMain_Combopve4.TabIndex = 137;
-            // 
-            // textBoxMain_ComboPerkTwo4
-            // 
-            this.textBoxMain_ComboPerkTwo4.Location = new System.Drawing.Point(622, 589);
-            this.textBoxMain_ComboPerkTwo4.Name = "textBoxMain_ComboPerkTwo4";
-            this.textBoxMain_ComboPerkTwo4.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboPerkTwo4.TabIndex = 136;
-            // 
-            // textBoxMain_ComboPerkOne4
-            // 
-            this.textBoxMain_ComboPerkOne4.Location = new System.Drawing.Point(421, 589);
-            this.textBoxMain_ComboPerkOne4.Name = "textBoxMain_ComboPerkOne4";
-            this.textBoxMain_ComboPerkOne4.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboPerkOne4.TabIndex = 135;
-            // 
-            // textBoxMain_ComboMag4
-            // 
-            this.textBoxMain_ComboMag4.Location = new System.Drawing.Point(220, 589);
-            this.textBoxMain_ComboMag4.Name = "textBoxMain_ComboMag4";
-            this.textBoxMain_ComboMag4.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboMag4.TabIndex = 134;
-            // 
-            // textBoxMain_ComboBarrel4
-            // 
-            this.textBoxMain_ComboBarrel4.Location = new System.Drawing.Point(19, 589);
-            this.textBoxMain_ComboBarrel4.Name = "textBoxMain_ComboBarrel4";
-            this.textBoxMain_ComboBarrel4.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboBarrel4.TabIndex = 133;
-            // 
-            // textBoxMain_Combopvp5
-            // 
-            this.textBoxMain_Combopvp5.Location = new System.Drawing.Point(879, 621);
-            this.textBoxMain_Combopvp5.Name = "textBoxMain_Combopvp5";
-            this.textBoxMain_Combopvp5.Size = new System.Drawing.Size(50, 26);
-            this.textBoxMain_Combopvp5.TabIndex = 144;
-            // 
-            // textBoxMain_Combopve5
-            // 
-            this.textBoxMain_Combopve5.Location = new System.Drawing.Point(823, 621);
-            this.textBoxMain_Combopve5.Name = "textBoxMain_Combopve5";
-            this.textBoxMain_Combopve5.Size = new System.Drawing.Size(50, 26);
-            this.textBoxMain_Combopve5.TabIndex = 143;
-            // 
-            // textBoxMain_ComboPerkTwo5
-            // 
-            this.textBoxMain_ComboPerkTwo5.Location = new System.Drawing.Point(622, 621);
-            this.textBoxMain_ComboPerkTwo5.Name = "textBoxMain_ComboPerkTwo5";
-            this.textBoxMain_ComboPerkTwo5.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboPerkTwo5.TabIndex = 142;
-            // 
-            // textBoxMain_ComboPerkOne5
-            // 
-            this.textBoxMain_ComboPerkOne5.Location = new System.Drawing.Point(421, 621);
-            this.textBoxMain_ComboPerkOne5.Name = "textBoxMain_ComboPerkOne5";
-            this.textBoxMain_ComboPerkOne5.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboPerkOne5.TabIndex = 141;
-            // 
-            // textBoxMain_ComboMag5
-            // 
-            this.textBoxMain_ComboMag5.Location = new System.Drawing.Point(220, 621);
-            this.textBoxMain_ComboMag5.Name = "textBoxMain_ComboMag5";
-            this.textBoxMain_ComboMag5.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboMag5.TabIndex = 140;
-            // 
-            // textBoxMain_ComboBarrel5
-            // 
-            this.textBoxMain_ComboBarrel5.Location = new System.Drawing.Point(19, 621);
-            this.textBoxMain_ComboBarrel5.Name = "textBoxMain_ComboBarrel5";
-            this.textBoxMain_ComboBarrel5.Size = new System.Drawing.Size(195, 26);
-            this.textBoxMain_ComboBarrel5.TabIndex = 139;
-            // 
             // toolTip1
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // labelMain_WeaponName
+            // 
+            this.labelMain_WeaponName.AutoSize = true;
+            this.labelMain_WeaponName.Location = new System.Drawing.Point(15, 87);
+            this.labelMain_WeaponName.Name = "labelMain_WeaponName";
+            this.labelMain_WeaponName.Size = new System.Drawing.Size(115, 20);
+            this.labelMain_WeaponName.TabIndex = 145;
+            this.labelMain_WeaponName.Text = "Weapon Name";
+            // 
+            // textBoxMain_WeaponName
+            // 
+            this.textBoxMain_WeaponName.Location = new System.Drawing.Point(136, 84);
+            this.textBoxMain_WeaponName.Name = "textBoxMain_WeaponName";
+            this.textBoxMain_WeaponName.Size = new System.Drawing.Size(154, 26);
+            this.textBoxMain_WeaponName.TabIndex = 146;
+            // 
+            // comboBoxMain_Barrel1id
+            // 
+            this.comboBoxMain_Barrel1id.FormattingEnabled = true;
+            this.comboBoxMain_Barrel1id.Location = new System.Drawing.Point(19, 180);
+            this.comboBoxMain_Barrel1id.Name = "comboBoxMain_Barrel1id";
+            this.comboBoxMain_Barrel1id.Size = new System.Drawing.Size(126, 28);
+            this.comboBoxMain_Barrel1id.TabIndex = 147;
             // 
             // Form1
             // 
@@ -1843,6 +1873,9 @@
         private System.Windows.Forms.TextBox textBoxMain_ComboBarrel2;
         private System.Windows.Forms.TextBox textBoxMain_ComboMag5;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox textBoxMain_WeaponName;
+        private System.Windows.Forms.Label labelMain_WeaponName;
+        private System.Windows.Forms.ComboBox comboBoxMain_Barrel1id;
     }
 }
 

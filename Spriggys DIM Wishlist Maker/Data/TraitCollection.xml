@@ -680,4 +680,109 @@
     <other>0</other>
     <details>0</details>
   </trait>
+  <trait>
+    <name>Air Assault</name>
+    <id>3722653512</id>
+    <desc>Gain increased handling while airborne.</desc>
+  </trait>
+  <trait>
+    <name>Box Breathing</name>
+    <id>2551157718</id>
+    <desc>Aiming this weapon for a short period without firing grants bonus range and precision damage that resets after firing or exiting zoom.</desc>
+  </trait>
+  <trait>
+    <name>Counterattack</name>
+    <id>3016987351</id>
+    <desc>Guarding while receiving damage grants a damage buff for 5 seconds.</desc>
+  </trait>
+  <trait>
+    <name>Demolitionist</name>
+    <id>3523296417</id>
+    <desc>Kills with this weapon generate grenade energy. Activating your grenade ability reloads this weapon from reserves.</desc>
+  </trait>
+  <trait>
+    <name>Eye of the Storm</name>
+    <id>699525795</id>
+    <desc>This weapon becomes more accurate and boosts handling as your health gets lower.</desc>
+  </trait>
+  <trait>
+    <name>Feeding Frenzy</name>
+    <id>2779035018</id>
+    <desc>Kills with this weapon increase reload speed for a short time.</desc>
+  </trait>
+  <trait>
+    <name>Firing Line</name>
+    <id>1771339417</id>
+    <desc>This weapon deals increased precision damage when near two or more allies.</desc>
+  </trait>
+  <trait>
+    <name>Full Court</name>
+    <id>2888557110</id>
+    <desc>Increases detonation damage as the projectile travels further before exploding.</desc>
+  </trait>
+  <trait>
+    <name>Mulligan</name>
+    <id>3513791699</id>
+    <desc>Missing a shot has a chance to return ammo directly to the magazine.</desc>
+  </trait>
+  <trait>
+    <name>Multikill Clip</name>
+    <id>2458213969</id>
+    <desc>Reloading grants increased damage based on the number of rapid kills made beforehand.</desc>
+  </trait>
+  <trait>
+    <name>No Distractions</name>
+    <id>2866798147</id>
+    <desc>Aiming this weapon for a short period reduces flinch.</desc>
+  </trait>
+  <trait>
+    <name>One-Two Punch</name>
+    <id>2679249093</id>
+    <desc>Hitting an enemy with every pellet in a shot increases melee damage for a short duration.</desc>
+  </trait>
+  <trait>
+    <name>Shattering Blade</name>
+    <id>818211479</id>
+    <desc>If your heavy attack consumes the last of your ammo, it deals significantly increased damage. Excludes aerial attacks.</desc>
+  </trait>
+  <trait>
+    <name>Shield Disorient</name>
+    <id>3275789089</id>
+    <desc>Energy matched shield explosion disorients nearby combatants.</desc>
+  </trait>
+  <trait>
+    <name>Slideways</name>
+    <id>2039302152</id>
+    <desc>Sliding partially reloads this weapon's magazine and temporarily boosts handling and stability.</desc>
+  </trait>
+  <trait>
+    <name>Subsistence</name>
+    <id>1820235745</id>
+    <desc>Kills partially reload the magazine from reserves, but reserve capacity is reduced.</desc>
+  </trait>
+  <trait>
+    <name>Surrounded</name>
+    <id>3708227201</id>
+    <desc>This weapon gains bonus damage when three or more enemies are in close proximity.</desc>
+  </trait>
+  <trait>
+    <name>Swashbuckler</name>
+    <id>4082225868</id>
+    <desc>This weapon gains increased damage from melee kills and kills with this weapon.</desc>
+  </trait>
+  <trait>
+    <name>Tracking Module</name>
+    <id>3977735242</id>
+    <desc>Adds tracking capability to rockets. Locks onto targets when aiming down sights.</desc>
+  </trait>
+  <trait>
+    <name>Trench Barrel</name>
+    <id>2360754333</id>
+    <desc>After a successful melee hit, this weapon gains increased damage, handling, and reload speed for a short duration—or until three shots are fired.</desc>
+  </trait>
+  <trait>
+    <name>Underdog</name>
+    <id>205890336</id>
+    <desc>This weapon gains a boost to reload speed as your health gets lower.</desc>
+  </trait>
 </traits>
