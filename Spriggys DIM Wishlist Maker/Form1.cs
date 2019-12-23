@@ -14,6 +14,11 @@ namespace Spriggys_DIM_Wishlist_Maker
 {
     public partial class Form1 : Form
     {
+        private Dictionary<string, long> perk1Pairs = new Dictionary<string, long>();
+        private Dictionary<string, long> perk2Pairs = new Dictionary<string, long>();
+        private Dictionary<string, long> traitPairs = new Dictionary<string, long>();
+
+
         public Form1()
         {
             InitializeComponent();
@@ -24,16 +29,71 @@ namespace Spriggys_DIM_Wishlist_Maker
         private void loadDropdowns()
         {
             //XmlReader xmlReader = XmlReader.Create(Path.Combine(Environment.CurrentDirectory, @"Data\", "Perk1Collection.xml"));
-            XmlReader xmlReader = XmlReader.Create("C:\\Users\\spragues\\source\\repos\\Spriggys DIM Wishlist Maker\\Spriggys DIM Wishlist Maker\\Data\\Perk1Collection.xml");
+            XmlDocument doc = new XmlDocument();
+            doc.Load("C:\\Users\\spragues\\source\\repos\\Spriggys DIM Wishlist Maker\\Spriggys DIM Wishlist Maker\\Data\\Perk1Collection.xml");
 
-            /*while (xmlReader.Read())
+            XmlNodeList perkNodes = doc.SelectNodes("perk1/perkGroup/perk");
+
+            foreach(XmlNode p in perkNodes)
             {
-                if ((xmlReader.NodeType == XmlNodeType.Element) && (xmlReader.Name == "perk"))
+                string name = p["name"].InnerText;
+                if (!comboBoxMain_Barrel1id.Items.Contains(name))
                 {
-                    if( xmlReader.)
-                    comboBoxMain_Barrel1id.Items.Add(xmlReader.GetAttribute("name"));
+                    comboBoxMain_Barrel1id.Items.Add(name);
+                    comboBoxMain_Barrel2id.Items.Add(name);
+                    comboBoxMain_Barrel3id.Items.Add(name);
+                    comboBoxMain_Barrel4id.Items.Add(name);
+                    comboBoxMain_Barrel5id.Items.Add(name);
+                    comboBoxMain_Barrel6id.Items.Add(name);
+                    comboBoxMain_Barrel7id.Items.Add(name);
+                    perk1Pairs.Add(name, Convert.ToInt64(p["id"].InnerText));
                 }
-            }*/
+            }
+
+            doc.Load("C:\\Users\\spragues\\source\\repos\\Spriggys DIM Wishlist Maker\\Spriggys DIM Wishlist Maker\\Data\\Perk2Collection.xml");
+            perkNodes = doc.SelectNodes("perk2/perkGroup/perk");
+
+            foreach (XmlNode p in perkNodes)
+            {
+                string name = p["name"].InnerText;
+                if (!comboBoxMain_Mag1id.Items.Contains(name))
+                {
+                    comboBoxMain_Mag1id.Items.Add(name);
+                    comboBoxMain_Mag2id.Items.Add(name);
+                    comboBoxMain_Mag3id.Items.Add(name);
+                    comboBoxMain_Mag4id.Items.Add(name);
+                    comboBoxMain_Mag5id.Items.Add(name);
+                    comboBoxMain_Mag6id.Items.Add(name);
+                    comboBoxMain_Mag7id.Items.Add(name);
+                    perk2Pairs.Add(name, Convert.ToInt64(p["id"].InnerText));
+                }
+            }
+
+            doc.Load("C:\\Users\\spragues\\source\\repos\\Spriggys DIM Wishlist Maker\\Spriggys DIM Wishlist Maker\\Data\\TraitCollection.xml");
+            perkNodes = doc.SelectNodes("traits/trait");
+
+            foreach (XmlNode p in perkNodes)
+            {
+                string name = p["name"].InnerText;
+                if (!comboBoxMain_PerkOne1id.Items.Contains(name))
+                {
+                    comboBoxMain_PerkOne1id.Items.Add(name);
+                    comboBoxMain_PerkOne2id.Items.Add(name);
+                    comboBoxMain_PerkOne3id.Items.Add(name);
+                    comboBoxMain_PerkOne4id.Items.Add(name);
+                    comboBoxMain_PerkOne5id.Items.Add(name);
+                    comboBoxMain_PerkOne6id.Items.Add(name);
+                    comboBoxMain_PerkOne7id.Items.Add(name);
+                    comboBoxMain_PerkTwo1id.Items.Add(name);
+                    comboBoxMain_PerkTwo2id.Items.Add(name);
+                    comboBoxMain_PerkTwo3id.Items.Add(name);
+                    comboBoxMain_PerkTwo4id.Items.Add(name);
+                    comboBoxMain_PerkTwo5id.Items.Add(name);
+                    comboBoxMain_PerkTwo6id.Items.Add(name);
+                    comboBoxMain_PerkTwo7id.Items.Add(name);
+                    traitPairs.Add(name, Convert.ToInt64(p["id"].InnerText));
+                }
+            }
         }
 
         private void loadSettings()
@@ -256,7 +316,9 @@ namespace Spriggys_DIM_Wishlist_Maker
             string tier = "U";
             if (comboBoxMain_WeaponTier.Text != "")
                 tier = comboBoxMain_WeaponTier.Text;
-            roll.Add("//Weapon Name - " + tier); //TODO: Weapon Name Lookup
+
+
+            roll.Add("//" + textBoxMain_WeaponName.Text + " - " + tier); //TODO: Weapon Name Lookup
 
             if(comboBoxMain_GameType.Text == "PvP Only")
             {
@@ -326,12 +388,14 @@ namespace Spriggys_DIM_Wishlist_Maker
 
         private void populateRolls(List<string> roll, int perkNum, string type)
         {
+
+            //Text input, combine with dropdowns later
             if (perkNum == 1) //Barrel
             {
                 if( type == "pvp")
                 {
                     //TODO: Barrel Lookup
-                    if (textBoxMain_Barrel1id.Text != "" && textBoxMain_Barrel1pvp.Text != "" && textBoxMain_Barrel1pvp.Text != "0")
+                    /*if (textBoxMain_Barrel1id.Text != "" && textBoxMain_Barrel1pvp.Text != "" && textBoxMain_Barrel1pvp.Text != "0")
                         roll.Add("//" + textBoxMain_Barrel1pvp.Text + ":" + textBoxMain_Barrel1id.Text + ":Unknown");
                     if (textBoxMain_Barrel2id.Text != "" && textBoxMain_Barrel2pvp.Text != "" && textBoxMain_Barrel2pvp.Text != "0")
                         roll.Add("//" + textBoxMain_Barrel2pvp.Text + ":" + textBoxMain_Barrel2id.Text + ":Unknown");
@@ -344,10 +408,26 @@ namespace Spriggys_DIM_Wishlist_Maker
                     if (textBoxMain_Barrel6id.Text != "" && textBoxMain_Barrel6pvp.Text != "" && textBoxMain_Barrel6pvp.Text != "0")
                         roll.Add("//" + textBoxMain_Barrel6pvp.Text + ":" + textBoxMain_Barrel6id.Text + ":Unknown");
                     if (textBoxMain_Barrel7id.Text != "" && textBoxMain_Barrel7pvp.Text != "" && textBoxMain_Barrel7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel7pvp.Text + ":" + textBoxMain_Barrel7id.Text + ":Unknown");
+                        roll.Add("//" + textBoxMain_Barrel7pvp.Text + ":" + textBoxMain_Barrel7id.Text + ":Unknown");*/
+
+                    if (comboBoxMain_Barrel1id.Text != "" && textBoxMain_Barrel1pvp.Text != "" && textBoxMain_Barrel1pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel1pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel1id.Text] + ":" + comboBoxMain_Barrel1id.Text);
+                    if (comboBoxMain_Barrel2id.Text != "" && textBoxMain_Barrel2pvp.Text != "" && textBoxMain_Barrel2pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel2pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel2id.Text] + ":" + comboBoxMain_Barrel2id.Text);
+                    if (comboBoxMain_Barrel3id.Text != "" && textBoxMain_Barrel3pvp.Text != "" && textBoxMain_Barrel3pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel3pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel3id.Text] + ":" + comboBoxMain_Barrel3id.Text);
+                    if (comboBoxMain_Barrel4id.Text != "" && textBoxMain_Barrel4pvp.Text != "" && textBoxMain_Barrel4pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel4pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel4id.Text] + ":" + comboBoxMain_Barrel4id.Text);
+                    if (comboBoxMain_Barrel5id.Text != "" && textBoxMain_Barrel5pvp.Text != "" && textBoxMain_Barrel5pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel5pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel5id.Text] + ":" + comboBoxMain_Barrel5id.Text);
+                    if (comboBoxMain_Barrel6id.Text != "" && textBoxMain_Barrel6pvp.Text != "" && textBoxMain_Barrel6pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel6pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel6id.Text] + ":" + comboBoxMain_Barrel6id.Text);
+                    if (comboBoxMain_Barrel7id.Text != "" && textBoxMain_Barrel7pvp.Text != "" && textBoxMain_Barrel7pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel7pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel7id.Text] + ":" + comboBoxMain_Barrel7id.Text);
                 }
                 else
                 {
+                    /*
                     if (textBoxMain_Barrel1id.Text != "" && textBoxMain_Barrel1pve.Text != "" && textBoxMain_Barrel1pve.Text != "0")
                         roll.Add("//" + textBoxMain_Barrel1pve.Text + ":" + textBoxMain_Barrel1id.Text + ":Unknown");
                     if (textBoxMain_Barrel2id.Text != "" && textBoxMain_Barrel2pve.Text != "" && textBoxMain_Barrel2pve.Text != "0")
@@ -361,13 +441,29 @@ namespace Spriggys_DIM_Wishlist_Maker
                     if (textBoxMain_Barrel6id.Text != "" && textBoxMain_Barrel6pve.Text != "" && textBoxMain_Barrel6pve.Text != "0")
                         roll.Add("//" + textBoxMain_Barrel6pve.Text + ":" + textBoxMain_Barrel6id.Text + ":Unknown");
                     if (textBoxMain_Barrel7id.Text != "" && textBoxMain_Barrel7pve.Text != "" && textBoxMain_Barrel7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel7pve.Text + ":" + textBoxMain_Barrel7id.Text + ":Unknown");
+                        roll.Add("//" + textBoxMain_Barrel7pve.Text + ":" + textBoxMain_Barrel7id.Text + ":Unknown");*/
+
+                    if (comboBoxMain_Barrel1id.Text != "" && textBoxMain_Barrel1pve.Text != "" && textBoxMain_Barrel1pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel1pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel1id.Text] + ":" + comboBoxMain_Barrel1id.Text);
+                    if (comboBoxMain_Barrel2id.Text != "" && textBoxMain_Barrel2pve.Text != "" && textBoxMain_Barrel2pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel2pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel2id.Text] + ":" + comboBoxMain_Barrel2id.Text);
+                    if (comboBoxMain_Barrel3id.Text != "" && textBoxMain_Barrel3pve.Text != "" && textBoxMain_Barrel3pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel3pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel3id.Text] + ":" + comboBoxMain_Barrel3id.Text);
+                    if (comboBoxMain_Barrel4id.Text != "" && textBoxMain_Barrel4pve.Text != "" && textBoxMain_Barrel4pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel4pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel4id.Text] + ":" + comboBoxMain_Barrel4id.Text);
+                    if (comboBoxMain_Barrel5id.Text != "" && textBoxMain_Barrel5pve.Text != "" && textBoxMain_Barrel5pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel5pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel5id.Text] + ":" + comboBoxMain_Barrel5id.Text);
+                    if (comboBoxMain_Barrel6id.Text != "" && textBoxMain_Barrel6pve.Text != "" && textBoxMain_Barrel6pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel6pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel6id.Text] + ":" + comboBoxMain_Barrel6id.Text);
+                    if (comboBoxMain_Barrel7id.Text != "" && textBoxMain_Barrel7pve.Text != "" && textBoxMain_Barrel7pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Barrel7pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel7id.Text] + ":" + comboBoxMain_Barrel7id.Text);
                 }
             }
             else if (perkNum == 2) //Magazine
             {
                 if (type == "pvp")
                 {
+                    /*
                     if (textBoxMain_Mag1id.Text != "" && textBoxMain_Mag1pvp.Text != "" && textBoxMain_Mag1pvp.Text != "0")
                         roll.Add("//" + textBoxMain_Mag1pvp.Text + ":" + textBoxMain_Mag1id.Text + ":Unknown");
                     if (textBoxMain_Mag2id.Text != "" && textBoxMain_Mag2pvp.Text != "" && textBoxMain_Mag2pvp.Text != "0")
@@ -381,10 +477,26 @@ namespace Spriggys_DIM_Wishlist_Maker
                     if (textBoxMain_Mag6id.Text != "" && textBoxMain_Mag6pvp.Text != "" && textBoxMain_Mag6pvp.Text != "0")
                         roll.Add("//" + textBoxMain_Mag6pvp.Text + ":" + textBoxMain_Mag6id.Text + ":Unknown");
                     if (textBoxMain_Mag7id.Text != "" && textBoxMain_Mag7pvp.Text != "" && textBoxMain_Mag7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag7pvp.Text + ":" + textBoxMain_Mag7id.Text + ":Unknown");
+                        roll.Add("//" + textBoxMain_Mag7pvp.Text + ":" + textBoxMain_Mag7id.Text + ":Unknown");*/
+
+                    if (comboBoxMain_Mag1id.Text != "" && textBoxMain_Mag1pvp.Text != "" && textBoxMain_Mag1pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag1pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag1id.Text] + ":" + comboBoxMain_Mag1id.Text);
+                    if (comboBoxMain_Mag2id.Text != "" && textBoxMain_Mag2pvp.Text != "" && textBoxMain_Mag2pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag2pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag2id.Text] + ":" + comboBoxMain_Mag2id.Text);
+                    if (comboBoxMain_Mag3id.Text != "" && textBoxMain_Mag3pvp.Text != "" && textBoxMain_Mag3pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag3pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag3id.Text] + ":" + comboBoxMain_Mag3id.Text);
+                    if (comboBoxMain_Mag4id.Text != "" && textBoxMain_Mag4pvp.Text != "" && textBoxMain_Mag4pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag4pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag4id.Text] + ":" + comboBoxMain_Mag4id.Text);
+                    if (comboBoxMain_Mag5id.Text != "" && textBoxMain_Mag5pvp.Text != "" && textBoxMain_Mag5pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag5pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag5id.Text] + ":" + comboBoxMain_Mag5id.Text);
+                    if (comboBoxMain_Mag6id.Text != "" && textBoxMain_Mag6pvp.Text != "" && textBoxMain_Mag6pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag6pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag6id.Text] + ":" + comboBoxMain_Mag6id.Text);
+                    if (comboBoxMain_Mag7id.Text != "" && textBoxMain_Mag7pvp.Text != "" && textBoxMain_Mag7pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag7pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag7id.Text] + ":" + comboBoxMain_Mag7id.Text);
                 }
                 else
                 {
+                    /*
                     if (textBoxMain_Mag1id.Text != "" && textBoxMain_Mag1pve.Text != "" && textBoxMain_Mag1pve.Text != "0")
                         roll.Add("//" + textBoxMain_Mag1pve.Text + ":" + textBoxMain_Mag1id.Text + ":Unknown");
                     if (textBoxMain_Mag2id.Text != "" && textBoxMain_Mag2pve.Text != "" && textBoxMain_Mag2pve.Text != "0")
@@ -398,13 +510,29 @@ namespace Spriggys_DIM_Wishlist_Maker
                     if (textBoxMain_Mag6id.Text != "" && textBoxMain_Mag6pve.Text != "" && textBoxMain_Mag6pve.Text != "0")
                         roll.Add("//" + textBoxMain_Mag6pve.Text + ":" + textBoxMain_Mag6id.Text + ":Unknown");
                     if (textBoxMain_Mag7id.Text != "" && textBoxMain_Mag7pve.Text != "" && textBoxMain_Mag7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag7pve.Text + ":" + textBoxMain_Mag7id.Text + ":Unknown");
+                        roll.Add("//" + textBoxMain_Mag7pve.Text + ":" + textBoxMain_Mag7id.Text + ":Unknown");*/
+
+                    if (comboBoxMain_Mag1id.Text != "" && textBoxMain_Mag1pve.Text != "" && textBoxMain_Mag1pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag1pve.Text + ":" + perk2Pairs[comboBoxMain_Mag1id.Text] + ":" + comboBoxMain_Mag1id.Text);
+                    if (comboBoxMain_Mag2id.Text != "" && textBoxMain_Mag2pve.Text != "" && textBoxMain_Mag2pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag2pve.Text + ":" + perk2Pairs[comboBoxMain_Mag2id.Text] + ":" + comboBoxMain_Mag2id.Text);
+                    if (comboBoxMain_Mag3id.Text != "" && textBoxMain_Mag3pve.Text != "" && textBoxMain_Mag3pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag3pve.Text + ":" + perk2Pairs[comboBoxMain_Mag3id.Text] + ":" + comboBoxMain_Mag3id.Text);
+                    if (comboBoxMain_Mag4id.Text != "" && textBoxMain_Mag4pve.Text != "" && textBoxMain_Mag4pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag4pve.Text + ":" + perk2Pairs[comboBoxMain_Mag4id.Text] + ":" + comboBoxMain_Mag4id.Text);
+                    if (comboBoxMain_Mag5id.Text != "" && textBoxMain_Mag5pve.Text != "" && textBoxMain_Mag5pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag5pve.Text + ":" + perk2Pairs[comboBoxMain_Mag5id.Text] + ":" + comboBoxMain_Mag5id.Text);
+                    if (comboBoxMain_Mag6id.Text != "" && textBoxMain_Mag6pve.Text != "" && textBoxMain_Mag6pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag6pve.Text + ":" + perk2Pairs[comboBoxMain_Mag6id.Text] + ":" + comboBoxMain_Mag6id.Text);
+                    if (comboBoxMain_Mag7id.Text != "" && textBoxMain_Mag7pve.Text != "" && textBoxMain_Mag7pve.Text != "0")
+                        roll.Add("//" + textBoxMain_Mag7pve.Text + ":" + perk2Pairs[comboBoxMain_Mag7id.Text] + ":" + comboBoxMain_Mag7id.Text);
                 }
             }
             else if (perkNum == 3) //Perk 1
             {
                 if (type == "pvp")
                 {
+                    /*
                     if (textBoxMain_PerkOne1id.Text != "" && textBoxMain_PerkOne1pvp.Text != "" && textBoxMain_PerkOne1pvp.Text != "0")
                         roll.Add("//" + textBoxMain_PerkOne1pvp.Text + ":" + textBoxMain_PerkOne1id.Text + ":Unknown");
                     if (textBoxMain_PerkOne2id.Text != "" && textBoxMain_PerkOne2pvp.Text != "" && textBoxMain_PerkOne2pvp.Text != "0")
@@ -418,10 +546,26 @@ namespace Spriggys_DIM_Wishlist_Maker
                     if (textBoxMain_PerkOne6id.Text != "" && textBoxMain_PerkOne6pvp.Text != "" && textBoxMain_PerkOne6pvp.Text != "0")
                         roll.Add("//" + textBoxMain_PerkOne6pvp.Text + ":" + textBoxMain_PerkOne6id.Text + ":Unknown");
                     if (textBoxMain_PerkOne7id.Text != "" && textBoxMain_PerkOne7pvp.Text != "" && textBoxMain_PerkOne7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne7pvp.Text + ":" + textBoxMain_PerkOne7id.Text + ":Unknown");
+                        roll.Add("//" + textBoxMain_PerkOne7pvp.Text + ":" + textBoxMain_PerkOne7id.Text + ":Unknown");*/
+
+                    if (comboBoxMain_PerkOne1id.Text != "" && textBoxMain_PerkOne1pvp.Text != "" && textBoxMain_PerkOne1pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne1pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne1id.Text] + ":" + comboBoxMain_PerkOne1id.Text);
+                    if (comboBoxMain_PerkOne2id.Text != "" && textBoxMain_PerkOne2pvp.Text != "" && textBoxMain_PerkOne2pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne2pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne2id.Text] + ":" + comboBoxMain_PerkOne2id.Text);
+                    if (comboBoxMain_PerkOne3id.Text != "" && textBoxMain_PerkOne3pvp.Text != "" && textBoxMain_PerkOne3pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne3pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne3id.Text] + ":" + comboBoxMain_PerkOne3id.Text);
+                    if (comboBoxMain_PerkOne4id.Text != "" && textBoxMain_PerkOne4pvp.Text != "" && textBoxMain_PerkOne4pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne4pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne4id.Text] + ":" + comboBoxMain_PerkOne4id.Text);
+                    if (comboBoxMain_PerkOne5id.Text != "" && textBoxMain_PerkOne5pvp.Text != "" && textBoxMain_PerkOne5pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne5pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne5id.Text] + ":" + comboBoxMain_PerkOne5id.Text);
+                    if (comboBoxMain_PerkOne6id.Text != "" && textBoxMain_PerkOne6pvp.Text != "" && textBoxMain_PerkOne6pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne6pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne6id.Text] + ":" + comboBoxMain_PerkOne6id.Text);
+                    if (comboBoxMain_PerkOne7id.Text != "" && textBoxMain_PerkOne7pvp.Text != "" && textBoxMain_PerkOne7pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne7pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne7id.Text] + ":" + comboBoxMain_PerkOne7id.Text);
                 }
                 else
                 {
+                    /*
                     if (textBoxMain_PerkOne1id.Text != "" && textBoxMain_PerkOne1pve.Text != "" && textBoxMain_PerkOne1pve.Text != "0")
                         roll.Add("//" + textBoxMain_PerkOne1pve.Text + ":" + textBoxMain_PerkOne1id.Text + ":Unknown");
                     if (textBoxMain_PerkOne2id.Text != "" && textBoxMain_PerkOne2pve.Text != "" && textBoxMain_PerkOne2pve.Text != "0")
@@ -436,12 +580,29 @@ namespace Spriggys_DIM_Wishlist_Maker
                         roll.Add("//" + textBoxMain_PerkOne6pve.Text + ":" + textBoxMain_PerkOne6id.Text + ":Unknown");
                     if (textBoxMain_PerkOne7id.Text != "" && textBoxMain_PerkOne7pve.Text != "" && textBoxMain_PerkOne7pve.Text != "0")
                         roll.Add("//" + textBoxMain_PerkOne7pve.Text + ":" + textBoxMain_PerkOne7id.Text + ":Unknown");
+                        */
+
+                    if (comboBoxMain_PerkOne1id.Text != "" && textBoxMain_PerkOne1pve.Text != "" && textBoxMain_PerkOne1pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne1pve.Text + ":" + traitPairs[comboBoxMain_PerkOne1id.Text] + ":" + comboBoxMain_PerkOne1id.Text);
+                    if (comboBoxMain_PerkOne2id.Text != "" && textBoxMain_PerkOne2pve.Text != "" && textBoxMain_PerkOne2pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne2pve.Text + ":" + traitPairs[comboBoxMain_PerkOne2id.Text] + ":" + comboBoxMain_PerkOne2id.Text);
+                    if (comboBoxMain_PerkOne3id.Text != "" && textBoxMain_PerkOne3pve.Text != "" && textBoxMain_PerkOne3pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne3pve.Text + ":" + traitPairs[comboBoxMain_PerkOne3id.Text] + ":" + comboBoxMain_PerkOne3id.Text);
+                    if (comboBoxMain_PerkOne4id.Text != "" && textBoxMain_PerkOne4pve.Text != "" && textBoxMain_PerkOne4pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne4pve.Text + ":" + traitPairs[comboBoxMain_PerkOne4id.Text] + ":" + comboBoxMain_PerkOne4id.Text);
+                    if (comboBoxMain_PerkOne5id.Text != "" && textBoxMain_PerkOne5pve.Text != "" && textBoxMain_PerkOne5pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne5pve.Text + ":" + traitPairs[comboBoxMain_PerkOne5id.Text] + ":" + comboBoxMain_PerkOne5id.Text);
+                    if (comboBoxMain_PerkOne6id.Text != "" && textBoxMain_PerkOne6pve.Text != "" && textBoxMain_PerkOne6pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne6pve.Text + ":" + traitPairs[comboBoxMain_PerkOne6id.Text] + ":" + comboBoxMain_PerkOne6id.Text);
+                    if (comboBoxMain_PerkOne7id.Text != "" && textBoxMain_PerkOne7pve.Text != "" && textBoxMain_PerkOne7pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkOne7pve.Text + ":" + traitPairs[comboBoxMain_PerkOne7id.Text] + ":" + comboBoxMain_PerkOne7id.Text);
                 }
             }
             else if (perkNum == 4) //Perk 2
             {
                 if (type == "pvp")
                 {
+                    /*
                     if (textBoxMain_PerkTwo1id.Text != "" && textBoxMain_PerkTwo1pvp.Text != "" && textBoxMain_PerkTwo1pvp.Text != "0")
                         roll.Add("//" + textBoxMain_PerkTwo1pvp.Text + ":" + textBoxMain_PerkTwo1id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo2id.Text != "" && textBoxMain_PerkTwo2pvp.Text != "" && textBoxMain_PerkTwo2pvp.Text != "0")
@@ -455,10 +616,26 @@ namespace Spriggys_DIM_Wishlist_Maker
                     if (textBoxMain_PerkTwo6id.Text != "" && textBoxMain_PerkTwo6pvp.Text != "" && textBoxMain_PerkTwo6pvp.Text != "0")
                         roll.Add("//" + textBoxMain_PerkTwo6pvp.Text + ":" + textBoxMain_PerkTwo6id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo7id.Text != "" && textBoxMain_PerkTwo7pvp.Text != "" && textBoxMain_PerkTwo7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo7pvp.Text + ":" + textBoxMain_PerkTwo7id.Text + ":Unknown");
+                        roll.Add("//" + textBoxMain_PerkTwo7pvp.Text + ":" + textBoxMain_PerkTwo7id.Text + ":Unknown");*/
+
+                    if (comboBoxMain_PerkTwo1id.Text != "" && textBoxMain_PerkTwo1pvp.Text != "" && textBoxMain_PerkTwo1pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo1pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo1id.Text] + ":" + comboBoxMain_PerkTwo1id.Text);
+                    if (comboBoxMain_PerkTwo2id.Text != "" && textBoxMain_PerkTwo2pvp.Text != "" && textBoxMain_PerkTwo2pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo2pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo2id.Text] + ":" + comboBoxMain_PerkTwo2id.Text);
+                    if (comboBoxMain_PerkTwo3id.Text != "" && textBoxMain_PerkTwo3pvp.Text != "" && textBoxMain_PerkTwo3pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo3pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo3id.Text] + ":" + comboBoxMain_PerkTwo3id.Text);
+                    if (comboBoxMain_PerkTwo4id.Text != "" && textBoxMain_PerkTwo4pvp.Text != "" && textBoxMain_PerkTwo4pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo4pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo4id.Text] + ":" + comboBoxMain_PerkTwo4id.Text);
+                    if (comboBoxMain_PerkTwo5id.Text != "" && textBoxMain_PerkTwo5pvp.Text != "" && textBoxMain_PerkTwo5pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo5pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo5id.Text] + ":" + comboBoxMain_PerkTwo5id.Text);
+                    if (comboBoxMain_PerkTwo6id.Text != "" && textBoxMain_PerkTwo6pvp.Text != "" && textBoxMain_PerkTwo6pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo6pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo6id.Text] + ":" + comboBoxMain_PerkTwo6id.Text);
+                    if (comboBoxMain_PerkTwo7id.Text != "" && textBoxMain_PerkTwo7pvp.Text != "" && textBoxMain_PerkTwo7pvp.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo7pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo7id.Text] + ":" + comboBoxMain_PerkTwo7id.Text);
                 }
                 else
                 {
+                    /*
                     if (textBoxMain_PerkTwo1id.Text != "" && textBoxMain_PerkTwo1pve.Text != "" && textBoxMain_PerkTwo1pve.Text != "0")
                         roll.Add("//" + textBoxMain_PerkTwo1pve.Text + ":" + textBoxMain_PerkTwo1id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo2id.Text != "" && textBoxMain_PerkTwo2pve.Text != "" && textBoxMain_PerkTwo2pve.Text != "0")
@@ -472,7 +649,22 @@ namespace Spriggys_DIM_Wishlist_Maker
                     if (textBoxMain_PerkTwo6id.Text != "" && textBoxMain_PerkTwo6pve.Text != "" && textBoxMain_PerkTwo6pve.Text != "0")
                         roll.Add("//" + textBoxMain_PerkTwo6pve.Text + ":" + textBoxMain_PerkTwo6id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo7id.Text != "" && textBoxMain_PerkTwo7pve.Text != "" && textBoxMain_PerkTwo7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo7pve.Text + ":" + textBoxMain_PerkTwo7id.Text + ":Unknown");
+                        roll.Add("//" + textBoxMain_PerkTwo7pve.Text + ":" + textBoxMain_PerkTwo7id.Text + ":Unknown");*/
+
+                    if (comboBoxMain_PerkTwo1id.Text != "" && textBoxMain_PerkTwo1pve.Text != "" && textBoxMain_PerkTwo1pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo1pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo1id.Text] + ":" + comboBoxMain_PerkTwo1id.Text);
+                    if (comboBoxMain_PerkTwo2id.Text != "" && textBoxMain_PerkTwo2pve.Text != "" && textBoxMain_PerkTwo2pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo2pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo2id.Text] + ":" + comboBoxMain_PerkTwo2id.Text);
+                    if (comboBoxMain_PerkTwo3id.Text != "" && textBoxMain_PerkTwo3pve.Text != "" && textBoxMain_PerkTwo3pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo3pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo3id.Text] + ":" + comboBoxMain_PerkTwo3id.Text);
+                    if (comboBoxMain_PerkTwo4id.Text != "" && textBoxMain_PerkTwo4pve.Text != "" && textBoxMain_PerkTwo4pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo4pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo4id.Text] + ":" + comboBoxMain_PerkTwo4id.Text);
+                    if (comboBoxMain_PerkTwo5id.Text != "" && textBoxMain_PerkTwo5pve.Text != "" && textBoxMain_PerkTwo5pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo5pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo5id.Text] + ":" + comboBoxMain_PerkTwo5id.Text);
+                    if (comboBoxMain_PerkTwo6id.Text != "" && textBoxMain_PerkTwo6pve.Text != "" && textBoxMain_PerkTwo6pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo6pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo6id.Text] + ":" + comboBoxMain_PerkTwo6id.Text);
+                    if (comboBoxMain_PerkTwo7id.Text != "" && textBoxMain_PerkTwo7pve.Text != "" && textBoxMain_PerkTwo7pve.Text != "0")
+                        roll.Add("//" + textBoxMain_PerkTwo7pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo7id.Text] + ":" + comboBoxMain_PerkTwo7id.Text);
                 }
             }
             else if (perkNum == 5) //Combos
@@ -527,6 +719,7 @@ namespace Spriggys_DIM_Wishlist_Maker
                     roll.Add("//MW " + textBoxMain_PvEmw.Text);
                 }
             }
+            
         }
 
         private string getValueOrZero(string s)
