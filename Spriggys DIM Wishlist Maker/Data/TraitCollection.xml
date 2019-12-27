@@ -785,4 +785,14 @@
     <id>205890336</id>
     <desc>This weapon gains a boost to reload speed as your health gets lower.</desc>
   </trait>
+  <trait>
+    <name>Osmosis</name>
+    <id>1774574192</id>
+    <desc>Using your grenade ability changes this weapon's damage type to match your subclass until you stow it.</desc>
+  </trait>
+  <trait>
+    <name>Vorpal Weapon</name>
+    <id>1546637391</id>
+    <desc>Increased damage against bosses, vehicles, and Guardians with their Super active.</desc>
+  </trait>
 </traits>

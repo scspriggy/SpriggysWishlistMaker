@@ -54,7 +54,7 @@ namespace Spriggys_DIM_Wishlist_Maker
 
             if (type == ItemType.Simple)
             {
-                weaponName = getWeaponName(wishlistText[0]);
+                weaponName = getWeaponName(wishlistText[0]).Trim();
                 weaponNameSort = Regex.Replace(weaponName, "^the ", "", RegexOptions.IgnoreCase);
                 weaponNameSort = Regex.Replace(weaponNameSort, "^a ", "", RegexOptions.IgnoreCase);
 
@@ -69,7 +69,7 @@ namespace Spriggys_DIM_Wishlist_Maker
         {
             int lineNum = 0;
             weaponTier = getWeaponTier(text[lineNum]);
-            weaponName = getWeaponName(text[lineNum]);
+            weaponName = getWeaponName(text[lineNum]).Trim();
             weaponNameSort = Regex.Replace(weaponName, "^the ", "", RegexOptions.IgnoreCase);
             weaponNameSort = Regex.Replace(weaponNameSort, "^a ", "", RegexOptions.IgnoreCase);
             lineNum++;

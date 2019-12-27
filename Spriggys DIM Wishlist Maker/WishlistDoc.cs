@@ -17,10 +17,7 @@ namespace Spriggys_DIM_Wishlist_Maker
         {
             this.input = input;
             populateWishlistItems();
-            List<string> list = new List<string>();
-            output = "";
-            
-            output += getWishlistItems();
+            output = getWishlistItems();
         }
 
         private void populateWishlistItems()
