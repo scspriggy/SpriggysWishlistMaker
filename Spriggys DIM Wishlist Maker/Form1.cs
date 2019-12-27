@@ -10,14 +10,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
+//TODO: fix issues with other game types printing wrong
+//TODO: hide/show based on game type
+//TODO: change loadSettings to include either text input or dropdown (default)
+//TODO: look up barrel, mag, perk name on text entry (like we're doing for weapon id to name)
+
 namespace Spriggys_DIM_Wishlist_Maker
 {
     public partial class Form1 : Form
     {
+        private Dictionary<string, long> weaponPairs = new Dictionary<string, long>();
         private Dictionary<string, long> perk1Pairs = new Dictionary<string, long>();
         private Dictionary<string, long> perk2Pairs = new Dictionary<string, long>();
         private Dictionary<string, long> traitPairs = new Dictionary<string, long>();
-
+        bool customDropdowns;
 
         public Form1()
         {
@@ -28,11 +34,23 @@ namespace Spriggys_DIM_Wishlist_Maker
 
         private void loadDropdowns()
         {
-            //XmlReader xmlReader = XmlReader.Create(Path.Combine(Environment.CurrentDirectory, @"Data\", "Perk1Collection.xml"));
             XmlDocument doc = new XmlDocument();
-            //doc.Load("C:\\Users\\spragues\\source\\repos\\Spriggys DIM Wishlist Maker\\Spriggys DIM Wishlist Maker\\Data\\Perk1Collection.xml");
-            doc.Load("C:\\Users\\scott\\Documents\\GitHub\\SpriggysWishlistMaker\\Spriggys DIM Wishlist Maker\\Data\\Perk1Collection.xml");
+            customDropdowns = false;
 
+            doc.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\WeaponCollection.xml");
+            XmlNodeList weaponNodes = doc.SelectNodes("weapons/weapon");
+
+            foreach (XmlNode w in weaponNodes)
+            {
+                string name = w["name"].InnerText;
+                if (name != null && name != "")
+                {
+                    comboBoxMain_Weapon.Items.Add(name);
+                    weaponPairs.Add(name, Convert.ToInt64(w["id"].InnerText));
+                }
+            }
+
+            doc.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\Perk1Collection.xml");
             XmlNodeList perkNodes = doc.SelectNodes("perk1/perkGroup/perk");
 
             comboBoxMain_Barrel1id.Items.Add("");
@@ -68,8 +86,7 @@ namespace Spriggys_DIM_Wishlist_Maker
                 }
             }
 
-            //doc.Load("C:\\Users\\spragues\\source\\repos\\Spriggys DIM Wishlist Maker\\Spriggys DIM Wishlist Maker\\Data\\Perk2Collection.xml");
-            doc.Load("C:\\Users\\scott\\Documents\\GitHub\\SpriggysWishlistMaker\\Spriggys DIM Wishlist Maker\\Data\\Perk2Collection.xml");
+            doc.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\Perk2Collection.xml");
             perkNodes = doc.SelectNodes("perk2/perkGroup/perk");
 
             comboBoxMain_Mag1id.Items.Add("");
@@ -105,8 +122,7 @@ namespace Spriggys_DIM_Wishlist_Maker
                 }
             }
 
-            //doc.Load("C:\\Users\\spragues\\source\\repos\\Spriggys DIM Wishlist Maker\\Spriggys DIM Wishlist Maker\\Data\\TraitCollection.xml");
-            doc.Load("C:\\Users\\scott\\Documents\\GitHub\\SpriggysWishlistMaker\\Spriggys DIM Wishlist Maker\\Data\\TraitCollection.xml");
+            doc.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\TraitCollection.xml");
             perkNodes = doc.SelectNodes("traits/trait");
 
             comboBoxMain_PerkOne1id.Items.Add("");
@@ -381,6 +397,15 @@ namespace Spriggys_DIM_Wishlist_Maker
 
         private void buttonMain_Submit_Click(object sender, EventArgs e)
         {
+            //Check valid input
+            if( textBoxMain_Weapon.Visible && (textBoxMain_Weapon.Text == null || textBoxMain_Weapon.Text == ""))
+            {
+                System.Windows.Forms.MessageBox.Show("Please enter a valid weapon id.");
+                return;
+            }
+
+
+
             List<string> roll = new List<string>();
 
             string tier = "U";
@@ -389,17 +414,20 @@ namespace Spriggys_DIM_Wishlist_Maker
 
             if( comboBoxMain_Weapon.Visible)
             {
-                //TODO: weapon lookup
+                roll.Add("//" + comboBoxMain_Weapon.Text + " - " + tier);
             }
             else
             {
-                string name = textBoxMain_WeaponName.Text.Trim();
-
-                if(name == null || name != "")
-                {
+                string name = "";
+                int n;
+                if (textBoxMain_WeaponName.Text != null && textBoxMain_WeaponName.Text != "")
+                    name = textBoxMain_WeaponName.Text;
+                else if (int.TryParse(textBoxMain_Weapon.Text, out n) && weaponPairs.ContainsValue(Convert.ToInt64(textBoxMain_Weapon.Text)))
+                    name = weaponPairs.FirstOrDefault(x => x.Value == Convert.ToInt64(textBoxMain_Weapon.Text)).Key;
+                else 
                     name = "Unknown";
-                }
-                roll.Add("//" + name + " - " + tier); //TODO: Weapon Name Lookup
+
+                roll.Add("//" + name + " - " + tier);
             }
             
 
@@ -481,201 +509,209 @@ namespace Spriggys_DIM_Wishlist_Maker
                 {
 
                     if (textBoxMain_Barrel1id.Visible && textBoxMain_Barrel1id.Text != "" && textBoxMain_Barrel1pvp.Text != "" && textBoxMain_Barrel1pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel1pvp.Text + ":" + textBoxMain_Barrel1id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel1pvp.Text).ToString("0.0") + ":" + textBoxMain_Barrel1id.Text + ":Unknown");
                     if (textBoxMain_Barrel2id.Visible && textBoxMain_Barrel2id.Text != "" && textBoxMain_Barrel2pvp.Text != "" && textBoxMain_Barrel2pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel2pvp.Text + ":" + textBoxMain_Barrel2id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel2pvp.Text).ToString("0.0") + ":" + textBoxMain_Barrel2id.Text + ":Unknown");
                     if (textBoxMain_Barrel3id.Visible && textBoxMain_Barrel3id.Text != "" && textBoxMain_Barrel3pvp.Text != "" && textBoxMain_Barrel3pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel3pvp.Text + ":" + textBoxMain_Barrel3id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel3pvp.Text).ToString("0.0") + ":" + textBoxMain_Barrel3id.Text + ":Unknown");
                     if (textBoxMain_Barrel4id.Visible && textBoxMain_Barrel4id.Text != "" && textBoxMain_Barrel4pvp.Text != "" && textBoxMain_Barrel4pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel4pvp.Text + ":" + textBoxMain_Barrel4id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel4pvp.Text).ToString("0.0") + ":" + textBoxMain_Barrel4id.Text + ":Unknown");
                     if (textBoxMain_Barrel5id.Visible && textBoxMain_Barrel5id.Text != "" && textBoxMain_Barrel5pvp.Text != "" && textBoxMain_Barrel5pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel5pvp.Text + ":" + textBoxMain_Barrel5id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel5pvp.Text).ToString("0.0") + ":" + textBoxMain_Barrel5id.Text + ":Unknown");
                     if (textBoxMain_Barrel6id.Visible && textBoxMain_Barrel6id.Text != "" && textBoxMain_Barrel6pvp.Text != "" && textBoxMain_Barrel6pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel6pvp.Text + ":" + textBoxMain_Barrel6id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel6pvp.Text).ToString("0.0") + ":" + textBoxMain_Barrel6id.Text + ":Unknown");
                     if (textBoxMain_Barrel7id.Visible && textBoxMain_Barrel7id.Text != "" && textBoxMain_Barrel7pvp.Text != "" && textBoxMain_Barrel7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel7pvp.Text + ":" + textBoxMain_Barrel7id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel7pvp.Text).ToString("0.0") + ":" + textBoxMain_Barrel7id.Text + ":Unknown");
 
                     if (comboBoxMain_Barrel1id.Visible && comboBoxMain_Barrel1id.Text != "" && textBoxMain_Barrel1pvp.Text != "" && textBoxMain_Barrel1pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel1pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel1id.Text] + ":" + comboBoxMain_Barrel1id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel1pvp.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel1id.Text] + ":" + comboBoxMain_Barrel1id.Text);
                     if (comboBoxMain_Barrel2id.Visible && comboBoxMain_Barrel2id.Text != "" && textBoxMain_Barrel2pvp.Text != "" && textBoxMain_Barrel2pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel2pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel2id.Text] + ":" + comboBoxMain_Barrel2id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel2pvp.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel2id.Text] + ":" + comboBoxMain_Barrel2id.Text);
                     if (comboBoxMain_Barrel3id.Visible && comboBoxMain_Barrel3id.Text != "" && textBoxMain_Barrel3pvp.Text != "" && textBoxMain_Barrel3pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel3pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel3id.Text] + ":" + comboBoxMain_Barrel3id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel3pvp.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel3id.Text] + ":" + comboBoxMain_Barrel3id.Text);
                     if (comboBoxMain_Barrel4id.Visible && comboBoxMain_Barrel4id.Text != "" && textBoxMain_Barrel4pvp.Text != "" && textBoxMain_Barrel4pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel4pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel4id.Text] + ":" + comboBoxMain_Barrel4id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel4pvp.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel4id.Text] + ":" + comboBoxMain_Barrel4id.Text);
                     if (comboBoxMain_Barrel5id.Visible && comboBoxMain_Barrel5id.Text != "" && textBoxMain_Barrel5pvp.Text != "" && textBoxMain_Barrel5pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel5pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel5id.Text] + ":" + comboBoxMain_Barrel5id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel5pvp.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel5id.Text] + ":" + comboBoxMain_Barrel5id.Text);
                     if (comboBoxMain_Barrel6id.Visible && comboBoxMain_Barrel6id.Text != "" && textBoxMain_Barrel6pvp.Text != "" && textBoxMain_Barrel6pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel6pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel6id.Text] + ":" + comboBoxMain_Barrel6id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel6pvp.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel6id.Text] + ":" + comboBoxMain_Barrel6id.Text);
                     if (comboBoxMain_Barrel7id.Visible && comboBoxMain_Barrel7id.Text != "" && textBoxMain_Barrel7pvp.Text != "" && textBoxMain_Barrel7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel7pvp.Text + ":" + perk1Pairs[comboBoxMain_Barrel7id.Text] + ":" + comboBoxMain_Barrel7id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel7pvp.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel7id.Text] + ":" + comboBoxMain_Barrel7id.Text);
                 }
                 else
                 {
                     
                     if (textBoxMain_Barrel1id.Visible && textBoxMain_Barrel1id.Text != "" && textBoxMain_Barrel1pve.Text != "" && textBoxMain_Barrel1pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel1pve.Text + ":" + textBoxMain_Barrel1id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel1pve.Text).ToString("0.0") + ":" + textBoxMain_Barrel1id.Text + ":Unknown");
                     if (textBoxMain_Barrel2id.Visible && textBoxMain_Barrel2id.Text != "" && textBoxMain_Barrel2pve.Text != "" && textBoxMain_Barrel2pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel2pve.Text + ":" + textBoxMain_Barrel2id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel2pve.Text).ToString("0.0") + ":" + textBoxMain_Barrel2id.Text + ":Unknown");
                     if (textBoxMain_Barrel3id.Visible && textBoxMain_Barrel3id.Text != "" && textBoxMain_Barrel3pve.Text != "" && textBoxMain_Barrel3pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel3pve.Text + ":" + textBoxMain_Barrel3id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel3pve.Text).ToString("0.0") + ":" + textBoxMain_Barrel3id.Text + ":Unknown");
                     if (textBoxMain_Barrel4id.Visible && textBoxMain_Barrel4id.Text != "" && textBoxMain_Barrel4pve.Text != "" && textBoxMain_Barrel4pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel4pve.Text + ":" + textBoxMain_Barrel4id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel4pve.Text).ToString("0.0") + ":" + textBoxMain_Barrel4id.Text + ":Unknown");
                     if (textBoxMain_Barrel5id.Visible && textBoxMain_Barrel5id.Text != "" && textBoxMain_Barrel5pve.Text != "" && textBoxMain_Barrel5pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel5pve.Text + ":" + textBoxMain_Barrel5id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel5pve.Text).ToString("0.0") + ":" + textBoxMain_Barrel5id.Text + ":Unknown");
                     if (textBoxMain_Barrel6id.Visible && textBoxMain_Barrel6id.Text != "" && textBoxMain_Barrel6pve.Text != "" && textBoxMain_Barrel6pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel6pve.Text + ":" + textBoxMain_Barrel6id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel6pve.Text).ToString("0.0") + ":" + textBoxMain_Barrel6id.Text + ":Unknown");
                     if (textBoxMain_Barrel7id.Visible && textBoxMain_Barrel7id.Text != "" && textBoxMain_Barrel7pve.Text != "" && textBoxMain_Barrel7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel7pve.Text + ":" + textBoxMain_Barrel7id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel7pve.Text).ToString("0.0") + ":" + textBoxMain_Barrel7id.Text + ":Unknown");
 
                     if (comboBoxMain_Barrel1id.Visible && comboBoxMain_Barrel1id.Text != "" && textBoxMain_Barrel1pve.Text != "" && textBoxMain_Barrel1pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel1pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel1id.Text] + ":" + comboBoxMain_Barrel1id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel1pve.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel1id.Text] + ":" + comboBoxMain_Barrel1id.Text);
                     if (comboBoxMain_Barrel2id.Visible && comboBoxMain_Barrel2id.Text != "" && textBoxMain_Barrel2pve.Text != "" && textBoxMain_Barrel2pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel2pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel2id.Text] + ":" + comboBoxMain_Barrel2id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel2pve.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel2id.Text] + ":" + comboBoxMain_Barrel2id.Text);
                     if (comboBoxMain_Barrel3id.Visible && comboBoxMain_Barrel3id.Text != "" && textBoxMain_Barrel3pve.Text != "" && textBoxMain_Barrel3pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel3pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel3id.Text] + ":" + comboBoxMain_Barrel3id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel3pve.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel3id.Text] + ":" + comboBoxMain_Barrel3id.Text);
                     if (comboBoxMain_Barrel4id.Visible && comboBoxMain_Barrel4id.Text != "" && textBoxMain_Barrel4pve.Text != "" && textBoxMain_Barrel4pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel4pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel4id.Text] + ":" + comboBoxMain_Barrel4id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel4pve.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel4id.Text] + ":" + comboBoxMain_Barrel4id.Text);
                     if (comboBoxMain_Barrel5id.Visible && comboBoxMain_Barrel5id.Text != "" && textBoxMain_Barrel5pve.Text != "" && textBoxMain_Barrel5pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel5pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel5id.Text] + ":" + comboBoxMain_Barrel5id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel5pve.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel5id.Text] + ":" + comboBoxMain_Barrel5id.Text);
                     if (comboBoxMain_Barrel6id.Visible && comboBoxMain_Barrel6id.Text != "" && textBoxMain_Barrel6pve.Text != "" && textBoxMain_Barrel6pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel6pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel6id.Text] + ":" + comboBoxMain_Barrel6id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel6pve.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel6id.Text] + ":" + comboBoxMain_Barrel6id.Text);
                     if (comboBoxMain_Barrel7id.Visible && comboBoxMain_Barrel7id.Text != "" && textBoxMain_Barrel7pve.Text != "" && textBoxMain_Barrel7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Barrel7pve.Text + ":" + perk1Pairs[comboBoxMain_Barrel7id.Text] + ":" + comboBoxMain_Barrel7id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Barrel7pve.Text).ToString("0.0") + ":" + perk1Pairs[comboBoxMain_Barrel7id.Text] + ":" + comboBoxMain_Barrel7id.Text);
                 }
             }
             else if (perkNum == 2) //Magazine
             {
                 if (type == "pvp")
                 {
+                    //Text Input
                     if (textBoxMain_Mag1id.Visible && textBoxMain_Mag1id.Text != "" && textBoxMain_Mag1pvp.Text != "" && textBoxMain_Mag1pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag1pvp.Text + ":" + textBoxMain_Mag1id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag1pvp.Text).ToString("0.0") + ":" + textBoxMain_Mag1id.Text + ":Unknown");
                     if (textBoxMain_Mag2id.Visible && textBoxMain_Mag2id.Text != "" && textBoxMain_Mag2pvp.Text != "" && textBoxMain_Mag2pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag2pvp.Text + ":" + textBoxMain_Mag2id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag2pvp.Text).ToString("0.0") + ":" + textBoxMain_Mag2id.Text + ":Unknown");
                     if (textBoxMain_Mag3id.Visible && textBoxMain_Mag3id.Text != "" && textBoxMain_Mag3pvp.Text != "" && textBoxMain_Mag3pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag3pvp.Text + ":" + textBoxMain_Mag3id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag3pvp.Text).ToString("0.0") + ":" + textBoxMain_Mag3id.Text + ":Unknown");
                     if (textBoxMain_Mag4id.Visible && textBoxMain_Mag4id.Text != "" && textBoxMain_Mag4pvp.Text != "" && textBoxMain_Mag4pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag4pvp.Text + ":" + textBoxMain_Mag4id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag4pvp.Text).ToString("0.0") + ":" + textBoxMain_Mag4id.Text + ":Unknown");
                     if (textBoxMain_Mag5id.Visible && textBoxMain_Mag5id.Text != "" && textBoxMain_Mag5pvp.Text != "" && textBoxMain_Mag5pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag5pvp.Text + ":" + textBoxMain_Mag5id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag5pvp.Text).ToString("0.0") + ":" + textBoxMain_Mag5id.Text + ":Unknown");
                     if (textBoxMain_Mag6id.Visible && textBoxMain_Mag6id.Text != "" && textBoxMain_Mag6pvp.Text != "" && textBoxMain_Mag6pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag6pvp.Text + ":" + textBoxMain_Mag6id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag6pvp.Text).ToString("0.0") + ":" + textBoxMain_Mag6id.Text + ":Unknown");
                     if (textBoxMain_Mag7id.Visible && textBoxMain_Mag7id.Text != "" && textBoxMain_Mag7pvp.Text != "" && textBoxMain_Mag7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag7pvp.Text + ":" + textBoxMain_Mag7id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag7pvp.Text).ToString("0.0") + ":" + textBoxMain_Mag7id.Text + ":Unknown");
 
+                    //Dropdown
                     if (comboBoxMain_Mag1id.Visible && comboBoxMain_Mag1id.Text != "" && textBoxMain_Mag1pvp.Text != "" && textBoxMain_Mag1pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag1pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag1id.Text] + ":" + comboBoxMain_Mag1id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag1pvp.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag1id.Text] + ":" + comboBoxMain_Mag1id.Text);
                     if (comboBoxMain_Mag2id.Visible && comboBoxMain_Mag2id.Text != "" && textBoxMain_Mag2pvp.Text != "" && textBoxMain_Mag2pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag2pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag2id.Text] + ":" + comboBoxMain_Mag2id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag2pvp.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag2id.Text] + ":" + comboBoxMain_Mag2id.Text);
                     if (comboBoxMain_Mag3id.Visible && comboBoxMain_Mag3id.Text != "" && textBoxMain_Mag3pvp.Text != "" && textBoxMain_Mag3pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag3pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag3id.Text] + ":" + comboBoxMain_Mag3id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag3pvp.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag3id.Text] + ":" + comboBoxMain_Mag3id.Text);
                     if (comboBoxMain_Mag4id.Visible && comboBoxMain_Mag4id.Text != "" && textBoxMain_Mag4pvp.Text != "" && textBoxMain_Mag4pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag4pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag4id.Text] + ":" + comboBoxMain_Mag4id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag4pvp.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag4id.Text] + ":" + comboBoxMain_Mag4id.Text);
                     if (comboBoxMain_Mag5id.Visible && comboBoxMain_Mag5id.Text != "" && textBoxMain_Mag5pvp.Text != "" && textBoxMain_Mag5pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag5pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag5id.Text] + ":" + comboBoxMain_Mag5id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag5pvp.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag5id.Text] + ":" + comboBoxMain_Mag5id.Text);
                     if (comboBoxMain_Mag6id.Visible && comboBoxMain_Mag6id.Text != "" && textBoxMain_Mag6pvp.Text != "" && textBoxMain_Mag6pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag6pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag6id.Text] + ":" + comboBoxMain_Mag6id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag6pvp.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag6id.Text] + ":" + comboBoxMain_Mag6id.Text);
                     if (comboBoxMain_Mag7id.Visible && comboBoxMain_Mag7id.Text != "" && textBoxMain_Mag7pvp.Text != "" && textBoxMain_Mag7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag7pvp.Text + ":" + perk2Pairs[comboBoxMain_Mag7id.Text] + ":" + comboBoxMain_Mag7id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag7pvp.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag7id.Text] + ":" + comboBoxMain_Mag7id.Text);
                 }
                 else
                 {
+                    //Text Input
                     if (textBoxMain_Mag1id.Visible && textBoxMain_Mag1id.Text != "" && textBoxMain_Mag1pve.Text != "" && textBoxMain_Mag1pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag1pve.Text + ":" + textBoxMain_Mag1id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag1pve.Text).ToString("0.0") + ":" + textBoxMain_Mag1id.Text + ":Unknown");
                     if (textBoxMain_Mag2id.Visible && textBoxMain_Mag2id.Text != "" && textBoxMain_Mag2pve.Text != "" && textBoxMain_Mag2pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag2pve.Text + ":" + textBoxMain_Mag2id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag2pve.Text).ToString("0.0") + ":" + textBoxMain_Mag2id.Text + ":Unknown");
                     if (textBoxMain_Mag3id.Visible && textBoxMain_Mag3id.Text != "" && textBoxMain_Mag3pve.Text != "" && textBoxMain_Mag3pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag3pve.Text + ":" + textBoxMain_Mag3id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag3pve.Text).ToString("0.0") + ":" + textBoxMain_Mag3id.Text + ":Unknown");
                     if (textBoxMain_Mag4id.Visible && textBoxMain_Mag4id.Text != "" && textBoxMain_Mag4pve.Text != "" && textBoxMain_Mag4pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag4pve.Text + ":" + textBoxMain_Mag4id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag4pve.Text).ToString("0.0") + ":" + textBoxMain_Mag4id.Text + ":Unknown");
                     if (textBoxMain_Mag5id.Visible && textBoxMain_Mag5id.Text != "" && textBoxMain_Mag5pve.Text != "" && textBoxMain_Mag5pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag5pve.Text + ":" + textBoxMain_Mag5id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag5pve.Text).ToString("0.0") + ":" + textBoxMain_Mag5id.Text + ":Unknown");
                     if (textBoxMain_Mag6id.Visible && textBoxMain_Mag6id.Text != "" && textBoxMain_Mag6pve.Text != "" && textBoxMain_Mag6pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag6pve.Text + ":" + textBoxMain_Mag6id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag6pve.Text).ToString("0.0") + ":" + textBoxMain_Mag6id.Text + ":Unknown");
                     if (textBoxMain_Mag7id.Visible && textBoxMain_Mag7id.Text != "" && textBoxMain_Mag7pve.Text != "" && textBoxMain_Mag7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag7pve.Text + ":" + textBoxMain_Mag7id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_Mag7pve.Text).ToString("0.0") + ":" + textBoxMain_Mag7id.Text + ":Unknown");
 
+                    //Dropdown
                     if (comboBoxMain_Mag1id.Visible && comboBoxMain_Mag1id.Text != "" && textBoxMain_Mag1pve.Text != "" && textBoxMain_Mag1pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag1pve.Text + ":" + perk2Pairs[comboBoxMain_Mag1id.Text] + ":" + comboBoxMain_Mag1id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag1pve.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag1id.Text] + ":" + comboBoxMain_Mag1id.Text);
                     if (comboBoxMain_Mag2id.Visible && comboBoxMain_Mag2id.Text != "" && textBoxMain_Mag2pve.Text != "" && textBoxMain_Mag2pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag2pve.Text + ":" + perk2Pairs[comboBoxMain_Mag2id.Text] + ":" + comboBoxMain_Mag2id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag2pve.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag2id.Text] + ":" + comboBoxMain_Mag2id.Text);
                     if (comboBoxMain_Mag3id.Visible && comboBoxMain_Mag3id.Text != "" && textBoxMain_Mag3pve.Text != "" && textBoxMain_Mag3pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag3pve.Text + ":" + perk2Pairs[comboBoxMain_Mag3id.Text] + ":" + comboBoxMain_Mag3id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag3pve.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag3id.Text] + ":" + comboBoxMain_Mag3id.Text);
                     if (comboBoxMain_Mag4id.Visible && comboBoxMain_Mag4id.Text != "" && textBoxMain_Mag4pve.Text != "" && textBoxMain_Mag4pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag4pve.Text + ":" + perk2Pairs[comboBoxMain_Mag4id.Text] + ":" + comboBoxMain_Mag4id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag4pve.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag4id.Text] + ":" + comboBoxMain_Mag4id.Text);
                     if (comboBoxMain_Mag5id.Visible && comboBoxMain_Mag5id.Text != "" && textBoxMain_Mag5pve.Text != "" && textBoxMain_Mag5pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag5pve.Text + ":" + perk2Pairs[comboBoxMain_Mag5id.Text] + ":" + comboBoxMain_Mag5id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag5pve.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag5id.Text] + ":" + comboBoxMain_Mag5id.Text);
                     if (comboBoxMain_Mag6id.Visible && comboBoxMain_Mag6id.Text != "" && textBoxMain_Mag6pve.Text != "" && textBoxMain_Mag6pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag6pve.Text + ":" + perk2Pairs[comboBoxMain_Mag6id.Text] + ":" + comboBoxMain_Mag6id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag6pve.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag6id.Text] + ":" + comboBoxMain_Mag6id.Text);
                     if (comboBoxMain_Mag7id.Visible && comboBoxMain_Mag7id.Text != "" && textBoxMain_Mag7pve.Text != "" && textBoxMain_Mag7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_Mag7pve.Text + ":" + perk2Pairs[comboBoxMain_Mag7id.Text] + ":" + comboBoxMain_Mag7id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_Mag7pve.Text).ToString("0.0") + ":" + perk2Pairs[comboBoxMain_Mag7id.Text] + ":" + comboBoxMain_Mag7id.Text);
                 }
             }
             else if (perkNum == 3) //Perk 1
             {
                 if (type == "pvp")
                 {
+                    //Text Input
                     if (textBoxMain_PerkOne1id.Visible && textBoxMain_PerkOne1id.Text != "" && textBoxMain_PerkOne1pvp.Text != "" && textBoxMain_PerkOne1pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne1pvp.Text + ":" + textBoxMain_PerkOne1id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne1pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkOne1id.Text + ":Unknown");
                     if (textBoxMain_PerkOne2id.Visible && textBoxMain_PerkOne2id.Text != "" && textBoxMain_PerkOne2pvp.Text != "" && textBoxMain_PerkOne2pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne2pvp.Text + ":" + textBoxMain_PerkOne2id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne2pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkOne2id.Text + ":Unknown");
                     if (textBoxMain_PerkOne3id.Visible && textBoxMain_PerkOne3id.Text != "" && textBoxMain_PerkOne3pvp.Text != "" && textBoxMain_PerkOne3pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne3pvp.Text + ":" + textBoxMain_PerkOne3id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne3pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkOne3id.Text + ":Unknown");
                     if (textBoxMain_PerkOne4id.Visible && textBoxMain_PerkOne4id.Text != "" && textBoxMain_PerkOne4pvp.Text != "" && textBoxMain_PerkOne4pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne4pvp.Text + ":" + textBoxMain_PerkOne4id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne4pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkOne4id.Text + ":Unknown");
                     if (textBoxMain_PerkOne5id.Visible && textBoxMain_PerkOne5id.Text != "" && textBoxMain_PerkOne5pvp.Text != "" && textBoxMain_PerkOne5pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne5pvp.Text + ":" + textBoxMain_PerkOne5id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne5pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkOne5id.Text + ":Unknown");
                     if (textBoxMain_PerkOne6id.Visible && textBoxMain_PerkOne6id.Text != "" && textBoxMain_PerkOne6pvp.Text != "" && textBoxMain_PerkOne6pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne6pvp.Text + ":" + textBoxMain_PerkOne6id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne6pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkOne6id.Text + ":Unknown");
                     if (textBoxMain_PerkOne7id.Visible && textBoxMain_PerkOne7id.Text != "" && textBoxMain_PerkOne7pvp.Text != "" && textBoxMain_PerkOne7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne7pvp.Text + ":" + textBoxMain_PerkOne7id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne7pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkOne7id.Text + ":Unknown");
 
+                    //Dropdown
                     if (comboBoxMain_PerkOne1id.Visible && comboBoxMain_PerkOne1id.Text != "" && textBoxMain_PerkOne1pvp.Text != "" && textBoxMain_PerkOne1pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne1pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne1id.Text] + ":" + comboBoxMain_PerkOne1id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne1pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne1id.Text] + ":" + comboBoxMain_PerkOne1id.Text);
                     if (comboBoxMain_PerkOne2id.Visible && comboBoxMain_PerkOne2id.Text != "" && textBoxMain_PerkOne2pvp.Text != "" && textBoxMain_PerkOne2pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne2pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne2id.Text] + ":" + comboBoxMain_PerkOne2id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne2pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne2id.Text] + ":" + comboBoxMain_PerkOne2id.Text);
                     if (comboBoxMain_PerkOne3id.Visible && comboBoxMain_PerkOne3id.Text != "" && textBoxMain_PerkOne3pvp.Text != "" && textBoxMain_PerkOne3pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne3pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne3id.Text] + ":" + comboBoxMain_PerkOne3id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne3pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne3id.Text] + ":" + comboBoxMain_PerkOne3id.Text);
                     if (comboBoxMain_PerkOne4id.Visible && comboBoxMain_PerkOne4id.Text != "" && textBoxMain_PerkOne4pvp.Text != "" && textBoxMain_PerkOne4pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne4pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne4id.Text] + ":" + comboBoxMain_PerkOne4id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne4pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne4id.Text] + ":" + comboBoxMain_PerkOne4id.Text);
                     if (comboBoxMain_PerkOne5id.Visible && comboBoxMain_PerkOne5id.Text != "" && textBoxMain_PerkOne5pvp.Text != "" && textBoxMain_PerkOne5pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne5pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne5id.Text] + ":" + comboBoxMain_PerkOne5id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne5pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne5id.Text] + ":" + comboBoxMain_PerkOne5id.Text);
                     if (comboBoxMain_PerkOne6id.Visible && comboBoxMain_PerkOne6id.Text != "" && textBoxMain_PerkOne6pvp.Text != "" && textBoxMain_PerkOne6pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne6pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne6id.Text] + ":" + comboBoxMain_PerkOne6id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne6pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne6id.Text] + ":" + comboBoxMain_PerkOne6id.Text);
                     if (comboBoxMain_PerkOne7id.Visible && comboBoxMain_PerkOne7id.Text != "" && textBoxMain_PerkOne7pvp.Text != "" && textBoxMain_PerkOne7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne7pvp.Text + ":" + traitPairs[comboBoxMain_PerkOne7id.Text] + ":" + comboBoxMain_PerkOne7id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne7pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne7id.Text] + ":" + comboBoxMain_PerkOne7id.Text);
                 }
                 else
                 {
+                    //Text Input
                     if (textBoxMain_PerkOne1id.Visible && textBoxMain_PerkOne1id.Text != "" && textBoxMain_PerkOne1pve.Text != "" && textBoxMain_PerkOne1pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne1pve.Text + ":" + textBoxMain_PerkOne1id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne1pve.Text).ToString("0.0") + ":" + textBoxMain_PerkOne1id.Text + ":Unknown");
                     if (textBoxMain_PerkOne2id.Visible && textBoxMain_PerkOne2id.Text != "" && textBoxMain_PerkOne2pve.Text != "" && textBoxMain_PerkOne2pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne2pve.Text + ":" + textBoxMain_PerkOne2id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne2pve.Text).ToString("0.0") + ":" + textBoxMain_PerkOne2id.Text + ":Unknown");
                     if (textBoxMain_PerkOne3id.Visible && textBoxMain_PerkOne3id.Text != "" && textBoxMain_PerkOne3pve.Text != "" && textBoxMain_PerkOne3pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne3pve.Text + ":" + textBoxMain_PerkOne3id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne3pve.Text).ToString("0.0") + ":" + textBoxMain_PerkOne3id.Text + ":Unknown");
                     if (textBoxMain_PerkOne4id.Visible && textBoxMain_PerkOne4id.Text != "" && textBoxMain_PerkOne4pve.Text != "" && textBoxMain_PerkOne4pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne4pve.Text + ":" + textBoxMain_PerkOne4id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne4pve.Text).ToString("0.0") + ":" + textBoxMain_PerkOne4id.Text + ":Unknown");
                     if (textBoxMain_PerkOne5id.Visible && textBoxMain_PerkOne5id.Text != "" && textBoxMain_PerkOne5pve.Text != "" && textBoxMain_PerkOne5pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne5pve.Text + ":" + textBoxMain_PerkOne5id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne5pve.Text).ToString("0.0") + ":" + textBoxMain_PerkOne5id.Text + ":Unknown");
                     if (textBoxMain_PerkOne6id.Visible && textBoxMain_PerkOne6id.Text != "" && textBoxMain_PerkOne6pve.Text != "" && textBoxMain_PerkOne6pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne6pve.Text + ":" + textBoxMain_PerkOne6id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne6pve.Text).ToString("0.0") + ":" + textBoxMain_PerkOne6id.Text + ":Unknown");
                     if (textBoxMain_PerkOne7id.Visible && textBoxMain_PerkOne7id.Text != "" && textBoxMain_PerkOne7pve.Text != "" && textBoxMain_PerkOne7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne7pve.Text + ":" + textBoxMain_PerkOne7id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne7pve.Text).ToString("0.0") + ":" + textBoxMain_PerkOne7id.Text + ":Unknown");
 
+                    //Dropdown
                     if (comboBoxMain_PerkOne1id.Visible && comboBoxMain_PerkOne1id.Text != "" && textBoxMain_PerkOne1pve.Text != "" && textBoxMain_PerkOne1pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne1pve.Text + ":" + traitPairs[comboBoxMain_PerkOne1id.Text] + ":" + comboBoxMain_PerkOne1id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne1pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne1id.Text] + ":" + comboBoxMain_PerkOne1id.Text);
                     if (comboBoxMain_PerkOne2id.Visible && comboBoxMain_PerkOne2id.Text != "" && textBoxMain_PerkOne2pve.Text != "" && textBoxMain_PerkOne2pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne2pve.Text + ":" + traitPairs[comboBoxMain_PerkOne2id.Text] + ":" + comboBoxMain_PerkOne2id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne2pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne2id.Text] + ":" + comboBoxMain_PerkOne2id.Text);
                     if (comboBoxMain_PerkOne3id.Visible && comboBoxMain_PerkOne3id.Text != "" && textBoxMain_PerkOne3pve.Text != "" && textBoxMain_PerkOne3pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne3pve.Text + ":" + traitPairs[comboBoxMain_PerkOne3id.Text] + ":" + comboBoxMain_PerkOne3id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne3pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne3id.Text] + ":" + comboBoxMain_PerkOne3id.Text);
                     if (comboBoxMain_PerkOne4id.Visible && comboBoxMain_PerkOne4id.Text != "" && textBoxMain_PerkOne4pve.Text != "" && textBoxMain_PerkOne4pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne4pve.Text + ":" + traitPairs[comboBoxMain_PerkOne4id.Text] + ":" + comboBoxMain_PerkOne4id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne4pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne4id.Text] + ":" + comboBoxMain_PerkOne4id.Text);
                     if (comboBoxMain_PerkOne5id.Visible && comboBoxMain_PerkOne5id.Text != "" && textBoxMain_PerkOne5pve.Text != "" && textBoxMain_PerkOne5pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne5pve.Text + ":" + traitPairs[comboBoxMain_PerkOne5id.Text] + ":" + comboBoxMain_PerkOne5id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne5pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne5id.Text] + ":" + comboBoxMain_PerkOne5id.Text);
                     if (comboBoxMain_PerkOne6id.Visible && comboBoxMain_PerkOne6id.Text != "" && textBoxMain_PerkOne6pve.Text != "" && textBoxMain_PerkOne6pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne6pve.Text + ":" + traitPairs[comboBoxMain_PerkOne6id.Text] + ":" + comboBoxMain_PerkOne6id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne6pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne6id.Text] + ":" + comboBoxMain_PerkOne6id.Text);
                     if (comboBoxMain_PerkOne7id.Visible && comboBoxMain_PerkOne7id.Text != "" && textBoxMain_PerkOne7pve.Text != "" && textBoxMain_PerkOne7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkOne7pve.Text + ":" + traitPairs[comboBoxMain_PerkOne7id.Text] + ":" + comboBoxMain_PerkOne7id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkOne7pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkOne7id.Text] + ":" + comboBoxMain_PerkOne7id.Text);
                 }
             }
             else if (perkNum == 4) //Perk 2
@@ -683,66 +719,66 @@ namespace Spriggys_DIM_Wishlist_Maker
                 if (type == "pvp")
                 {
                     if (textBoxMain_PerkTwo1id.Visible && textBoxMain_PerkTwo1id.Text != "" && textBoxMain_PerkTwo1pvp.Text != "" && textBoxMain_PerkTwo1pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo1pvp.Text + ":" + textBoxMain_PerkTwo1id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo1pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo1id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo2id.Visible && textBoxMain_PerkTwo2id.Text != "" && textBoxMain_PerkTwo2pvp.Text != "" && textBoxMain_PerkTwo2pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo2pvp.Text + ":" + textBoxMain_PerkTwo2id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo2pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo2id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo3id.Visible && textBoxMain_PerkTwo3id.Text != "" && textBoxMain_PerkTwo3pvp.Text != "" && textBoxMain_PerkTwo3pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo3pvp.Text + ":" + textBoxMain_PerkTwo3id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo3pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo3id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo4id.Visible && textBoxMain_PerkTwo4id.Text != "" && textBoxMain_PerkTwo4pvp.Text != "" && textBoxMain_PerkTwo4pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo4pvp.Text + ":" + textBoxMain_PerkTwo4id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo4pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo4id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo5id.Visible && textBoxMain_PerkTwo5id.Text != "" && textBoxMain_PerkTwo5pvp.Text != "" && textBoxMain_PerkTwo5pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo5pvp.Text + ":" + textBoxMain_PerkTwo5id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo5pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo5id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo6id.Visible && textBoxMain_PerkTwo6id.Text != "" && textBoxMain_PerkTwo6pvp.Text != "" && textBoxMain_PerkTwo6pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo6pvp.Text + ":" + textBoxMain_PerkTwo6id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo6pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo6id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo7id.Visible && textBoxMain_PerkTwo7id.Text != "" && textBoxMain_PerkTwo7pvp.Text != "" && textBoxMain_PerkTwo7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo7pvp.Text + ":" + textBoxMain_PerkTwo7id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo7pvp.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo7id.Text + ":Unknown");
 
                     if (comboBoxMain_PerkTwo1id.Visible && comboBoxMain_PerkTwo1id.Text != "" && textBoxMain_PerkTwo1pvp.Text != "" && textBoxMain_PerkTwo1pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo1pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo1id.Text] + ":" + comboBoxMain_PerkTwo1id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo1pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo1id.Text] + ":" + comboBoxMain_PerkTwo1id.Text);
                     if (comboBoxMain_PerkTwo2id.Visible && comboBoxMain_PerkTwo2id.Text != "" && textBoxMain_PerkTwo2pvp.Text != "" && textBoxMain_PerkTwo2pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo2pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo2id.Text] + ":" + comboBoxMain_PerkTwo2id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo2pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo2id.Text] + ":" + comboBoxMain_PerkTwo2id.Text);
                     if (comboBoxMain_PerkTwo3id.Visible && comboBoxMain_PerkTwo3id.Text != "" && textBoxMain_PerkTwo3pvp.Text != "" && textBoxMain_PerkTwo3pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo3pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo3id.Text] + ":" + comboBoxMain_PerkTwo3id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo3pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo3id.Text] + ":" + comboBoxMain_PerkTwo3id.Text);
                     if (comboBoxMain_PerkTwo4id.Visible && comboBoxMain_PerkTwo4id.Text != "" && textBoxMain_PerkTwo4pvp.Text != "" && textBoxMain_PerkTwo4pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo4pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo4id.Text] + ":" + comboBoxMain_PerkTwo4id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo4pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo4id.Text] + ":" + comboBoxMain_PerkTwo4id.Text);
                     if (comboBoxMain_PerkTwo5id.Visible && comboBoxMain_PerkTwo5id.Text != "" && textBoxMain_PerkTwo5pvp.Text != "" && textBoxMain_PerkTwo5pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo5pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo5id.Text] + ":" + comboBoxMain_PerkTwo5id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo5pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo5id.Text] + ":" + comboBoxMain_PerkTwo5id.Text);
                     if (comboBoxMain_PerkTwo6id.Visible && comboBoxMain_PerkTwo6id.Text != "" && textBoxMain_PerkTwo6pvp.Text != "" && textBoxMain_PerkTwo6pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo6pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo6id.Text] + ":" + comboBoxMain_PerkTwo6id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo6pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo6id.Text] + ":" + comboBoxMain_PerkTwo6id.Text);
                     if (comboBoxMain_PerkTwo7id.Visible && comboBoxMain_PerkTwo7id.Text != "" && textBoxMain_PerkTwo7pvp.Text != "" && textBoxMain_PerkTwo7pvp.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo7pvp.Text + ":" + traitPairs[comboBoxMain_PerkTwo7id.Text] + ":" + comboBoxMain_PerkTwo7id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo7pvp.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo7id.Text] + ":" + comboBoxMain_PerkTwo7id.Text);
                 }
                 else
                 {
                     if (textBoxMain_PerkTwo1id.Visible && textBoxMain_PerkTwo1id.Text != "" && textBoxMain_PerkTwo1pve.Text != "" && textBoxMain_PerkTwo1pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo1pve.Text + ":" + textBoxMain_PerkTwo1id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo1pve.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo1id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo2id.Visible && textBoxMain_PerkTwo2id.Text != "" && textBoxMain_PerkTwo2pve.Text != "" && textBoxMain_PerkTwo2pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo2pve.Text + ":" + textBoxMain_PerkTwo2id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo2pve.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo2id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo3id.Visible && textBoxMain_PerkTwo3id.Text != "" && textBoxMain_PerkTwo3pve.Text != "" && textBoxMain_PerkTwo3pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo3pve.Text + ":" + textBoxMain_PerkTwo3id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo3pve.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo3id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo4id.Visible && textBoxMain_PerkTwo4id.Text != "" && textBoxMain_PerkTwo4pve.Text != "" && textBoxMain_PerkTwo4pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo4pve.Text + ":" + textBoxMain_PerkTwo4id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo4pve.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo4id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo5id.Visible && textBoxMain_PerkTwo5id.Text != "" && textBoxMain_PerkTwo5pve.Text != "" && textBoxMain_PerkTwo5pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo5pve.Text + ":" + textBoxMain_PerkTwo5id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo5pve.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo5id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo6id.Visible && textBoxMain_PerkTwo6id.Text != "" && textBoxMain_PerkTwo6pve.Text != "" && textBoxMain_PerkTwo6pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo6pve.Text + ":" + textBoxMain_PerkTwo6id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo6pve.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo6id.Text + ":Unknown");
                     if (textBoxMain_PerkTwo7id.Visible && textBoxMain_PerkTwo7id.Text != "" && textBoxMain_PerkTwo7pve.Text != "" && textBoxMain_PerkTwo7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo7pve.Text + ":" + textBoxMain_PerkTwo7id.Text + ":Unknown");
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo7pve.Text).ToString("0.0") + ":" + textBoxMain_PerkTwo7id.Text + ":Unknown");
 
                     if (comboBoxMain_PerkTwo1id.Visible && comboBoxMain_PerkTwo1id.Text != "" && textBoxMain_PerkTwo1pve.Text != "" && textBoxMain_PerkTwo1pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo1pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo1id.Text] + ":" + comboBoxMain_PerkTwo1id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo1pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo1id.Text] + ":" + comboBoxMain_PerkTwo1id.Text);
                     if (comboBoxMain_PerkTwo2id.Visible && comboBoxMain_PerkTwo2id.Text != "" && textBoxMain_PerkTwo2pve.Text != "" && textBoxMain_PerkTwo2pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo2pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo2id.Text] + ":" + comboBoxMain_PerkTwo2id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo2pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo2id.Text] + ":" + comboBoxMain_PerkTwo2id.Text);
                     if (comboBoxMain_PerkTwo3id.Visible && comboBoxMain_PerkTwo3id.Text != "" && textBoxMain_PerkTwo3pve.Text != "" && textBoxMain_PerkTwo3pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo3pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo3id.Text] + ":" + comboBoxMain_PerkTwo3id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo3pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo3id.Text] + ":" + comboBoxMain_PerkTwo3id.Text);
                     if (comboBoxMain_PerkTwo4id.Visible && comboBoxMain_PerkTwo4id.Text != "" && textBoxMain_PerkTwo4pve.Text != "" && textBoxMain_PerkTwo4pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo4pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo4id.Text] + ":" + comboBoxMain_PerkTwo4id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo4pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo4id.Text] + ":" + comboBoxMain_PerkTwo4id.Text);
                     if (comboBoxMain_PerkTwo5id.Visible && comboBoxMain_PerkTwo5id.Text != "" && textBoxMain_PerkTwo5pve.Text != "" && textBoxMain_PerkTwo5pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo5pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo5id.Text] + ":" + comboBoxMain_PerkTwo5id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo5pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo5id.Text] + ":" + comboBoxMain_PerkTwo5id.Text);
                     if (comboBoxMain_PerkTwo6id.Visible && comboBoxMain_PerkTwo6id.Text != "" && textBoxMain_PerkTwo6pve.Text != "" && textBoxMain_PerkTwo6pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo6pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo6id.Text] + ":" + comboBoxMain_PerkTwo6id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo6pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo6id.Text] + ":" + comboBoxMain_PerkTwo6id.Text);
                     if (comboBoxMain_PerkTwo7id.Visible && comboBoxMain_PerkTwo7id.Text != "" && textBoxMain_PerkTwo7pve.Text != "" && textBoxMain_PerkTwo7pve.Text != "0")
-                        roll.Add("//" + textBoxMain_PerkTwo7pve.Text + ":" + traitPairs[comboBoxMain_PerkTwo7id.Text] + ":" + comboBoxMain_PerkTwo7id.Text);
+                        roll.Add("//" + float.Parse(textBoxMain_PerkTwo7pve.Text).ToString("0.0") + ":" + traitPairs[comboBoxMain_PerkTwo7id.Text] + ":" + comboBoxMain_PerkTwo7id.Text);
                 }
             }
             else if (perkNum == 5) //Combos
@@ -755,29 +791,140 @@ namespace Spriggys_DIM_Wishlist_Maker
                         roll.Add("//Combos");
                     }
 
-                    //Dropdowns
                     if (textBoxMain_Combopvp1.Text != "" && textBoxMain_Combopvp1.Text != "0")
-                        roll.Add("//" + getValueOrZero(comboBoxMain_ComboBarrel1.Text, perk1Pairs) + "," + getValueOrZero(textBoxMain_ComboMag1.Text, perk2Pairs) + "," + getValueOrZero(textBoxMain_ComboPerkOne1.Text, traitPairs) + "," + getValueOrZero(textBoxMain_ComboPerkTwo1.Text, traitPairs) + ":" + textBoxMain_Combopvp1.Text);
-                    if (textBoxMain_Combopvp2.Text != "" && textBoxMain_Combopvp2.Text != "0")
-                        roll.Add("//" + getValueOrZero(comboBoxMain_ComboBarrel2.Text, perk1Pairs) + "," + getValueOrZero(textBoxMain_ComboMag2.Text, perk2Pairs) + "," + getValueOrZero(textBoxMain_ComboPerkOne2.Text, traitPairs) + "," + getValueOrZero(textBoxMain_ComboPerkTwo2.Text, traitPairs) + ":" + textBoxMain_Combopvp2.Text);
-                    if (textBoxMain_Combopvp3.Text != "" && textBoxMain_Combopvp3.Text != "0")
-                        roll.Add("//" + getValueOrZero(comboBoxMain_ComboBarrel3.Text, perk1Pairs) + "," + getValueOrZero(textBoxMain_ComboMag3.Text, perk2Pairs) + "," + getValueOrZero(textBoxMain_ComboPerkOne3.Text, traitPairs) + "," + getValueOrZero(textBoxMain_ComboPerkTwo3.Text, traitPairs) + ":" + textBoxMain_Combopvp3.Text);
-                    if (textBoxMain_Combopvp4.Text != "" && textBoxMain_Combopvp4.Text != "0")
-                        roll.Add("//" + getValueOrZero(comboBoxMain_ComboBarrel4.Text, perk1Pairs) + "," + getValueOrZero(textBoxMain_ComboMag4.Text, perk2Pairs) + "," + getValueOrZero(textBoxMain_ComboPerkOne4.Text, traitPairs) + "," + getValueOrZero(textBoxMain_ComboPerkTwo4.Text, traitPairs) + ":" + textBoxMain_Combopvp4.Text);
-                    if (textBoxMain_Combopvp5.Text != "" && textBoxMain_Combopvp5.Text != "0")
-                        roll.Add("//" + getValueOrZero(comboBoxMain_ComboBarrel5.Text, perk1Pairs) + "," + getValueOrZero(textBoxMain_ComboMag5.Text, perk2Pairs) + "," + getValueOrZero(textBoxMain_ComboPerkOne5.Text, traitPairs) + "," + getValueOrZero(textBoxMain_ComboPerkTwo5.Text, traitPairs) + ":" + textBoxMain_Combopvp5.Text);
+                    {
+                        string s = "//";
 
-                    //Text Entry
-                    if (textBoxMain_Combopvp1.Text != "" && textBoxMain_Combopvp1.Text != "0")
-                        roll.Add("//" + getValueOrZero(textBoxMain_ComboBarrel1.Text) + "," + getValueOrZero(textBoxMain_ComboMag1.Text) + "," + getValueOrZero(textBoxMain_ComboPerkOne1.Text) + "," + getValueOrZero(textBoxMain_ComboPerkTwo1.Text) + ":" + textBoxMain_Combopvp1.Text);
+                        if (comboBoxMain_ComboBarrel1.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboBarrel1.Text, perk1Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboBarrel1.Text) + ",";
+
+                        if (comboBoxMain_ComboMag1.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboMag1.Text, perk2Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboMag1.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkOne1.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkOne1.Text, traitPairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkOne1.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkTwo1.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkTwo1.Text, traitPairs) + ":" + float.Parse(textBoxMain_Combopvp1.Text).ToString("0.0");
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkTwo1.Text) + ":" + float.Parse(textBoxMain_Combopvp1.Text).ToString("0.0");
+
+                        roll.Add(s);
+                    }
+
                     if (textBoxMain_Combopvp2.Text != "" && textBoxMain_Combopvp2.Text != "0")
-                        roll.Add("//" + getValueOrZero(textBoxMain_ComboBarrel2.Text) + "," + getValueOrZero(textBoxMain_ComboMag2.Text) + "," + getValueOrZero(textBoxMain_ComboPerkOne2.Text) + "," + getValueOrZero(textBoxMain_ComboPerkTwo2.Text) + ":" + textBoxMain_Combopvp2.Text);
+                    {
+                        string s = "//";
+
+                        if (comboBoxMain_ComboBarrel2.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboBarrel2.Text, perk1Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboBarrel2.Text) + ",";
+
+                        if (comboBoxMain_ComboMag2.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboMag2.Text, perk2Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboMag2.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkOne2.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkOne2.Text, traitPairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkOne2.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkTwo2.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkTwo2.Text, traitPairs) + ":" + float.Parse(textBoxMain_Combopvp2.Text).ToString("0.0");
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkTwo2.Text) + ":" + float.Parse(textBoxMain_Combopvp2.Text).ToString("0.0");
+
+                        roll.Add(s);
+                    }
+
                     if (textBoxMain_Combopvp3.Text != "" && textBoxMain_Combopvp3.Text != "0")
-                        roll.Add("//" + getValueOrZero(textBoxMain_ComboBarrel3.Text) + "," + getValueOrZero(textBoxMain_ComboMag3.Text) + "," + getValueOrZero(textBoxMain_ComboPerkOne3.Text) + "," + getValueOrZero(textBoxMain_ComboPerkTwo3.Text) + ":" + textBoxMain_Combopvp3.Text);
+                    {
+                        string s = "//";
+
+                        if (comboBoxMain_ComboBarrel3.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboBarrel3.Text, perk1Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboBarrel3.Text) + ",";
+
+                        if (comboBoxMain_ComboMag3.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboMag3.Text, perk2Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboMag3.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkOne3.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkOne3.Text, traitPairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkOne3.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkTwo3.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkTwo3.Text, traitPairs) + ":" + float.Parse(textBoxMain_Combopvp3.Text).ToString("0.0");
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkTwo3.Text) + ":" + float.Parse(textBoxMain_Combopvp3.Text).ToString("0.0");
+
+                        roll.Add(s);
+                    }
+
                     if (textBoxMain_Combopvp4.Text != "" && textBoxMain_Combopvp4.Text != "0")
-                        roll.Add("//" + getValueOrZero(textBoxMain_ComboBarrel4.Text) + "," + getValueOrZero(textBoxMain_ComboMag4.Text) + "," + getValueOrZero(textBoxMain_ComboPerkOne4.Text) + "," + getValueOrZero(textBoxMain_ComboPerkTwo4.Text) + ":" + textBoxMain_Combopvp4.Text);
+                    {
+                        string s = "//";
+
+                        if (comboBoxMain_ComboBarrel4.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboBarrel4.Text, perk1Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboBarrel4.Text) + ",";
+
+                        if (comboBoxMain_ComboMag4.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboMag4.Text, perk2Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboMag4.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkOne4.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkOne4.Text, traitPairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkOne4.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkTwo4.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkTwo4.Text, traitPairs) + ":" + float.Parse(textBoxMain_Combopvp4.Text).ToString("0.0");
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkTwo4.Text) + ":" + float.Parse(textBoxMain_Combopvp4.Text).ToString("0.0");
+
+                        roll.Add(s);
+                    }
+
                     if (textBoxMain_Combopvp5.Text != "" && textBoxMain_Combopvp5.Text != "0")
-                        roll.Add("//" + getValueOrZero(textBoxMain_ComboBarrel5.Text) + "," + getValueOrZero(textBoxMain_ComboMag5.Text) + "," + getValueOrZero(textBoxMain_ComboPerkOne5.Text) + "," + getValueOrZero(textBoxMain_ComboPerkTwo5.Text) + ":" + textBoxMain_Combopvp5.Text);
+                    {
+                        string s = "//";
+
+                        if (comboBoxMain_ComboBarrel5.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboBarrel5.Text, perk1Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboBarrel5.Text) + ",";
+
+                        if (comboBoxMain_ComboMag5.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboMag5.Text, perk2Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboMag5.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkOne5.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkOne5.Text, traitPairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkOne5.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkTwo5.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkTwo5.Text, traitPairs) + ":" + float.Parse(textBoxMain_Combopvp5.Text).ToString("0.0");
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkTwo5.Text) + ":" + float.Parse(textBoxMain_Combopvp5.Text).ToString("0.0");
+
+                        roll.Add(s);
+                    }    
                 }
                 else
                 {
@@ -787,29 +934,140 @@ namespace Spriggys_DIM_Wishlist_Maker
                         roll.Add("//Combos");
                     }
 
-                    //Dropdowns
-                    if (textBoxMain_Combopve1.Visible && textBoxMain_Combopve1.Text != "" && textBoxMain_Combopve1.Text != "0")
-                        roll.Add("//" + getValueOrZero(comboBoxMain_ComboBarrel1.Text, perk1Pairs) + "," + getValueOrZero(textBoxMain_ComboMag1.Text, perk2Pairs) + "," + getValueOrZero(textBoxMain_ComboPerkOne1.Text, traitPairs) + "," + getValueOrZero(textBoxMain_ComboPerkTwo1.Text, traitPairs) + ":" + textBoxMain_Combopve1.Text);
-                    if (textBoxMain_Combopve2.Visible && textBoxMain_Combopve2.Text != "" && textBoxMain_Combopve2.Text != "0")
-                        roll.Add("//" + getValueOrZero(comboBoxMain_ComboBarrel2.Text, perk1Pairs) + "," + getValueOrZero(textBoxMain_ComboMag2.Text, perk2Pairs) + "," + getValueOrZero(textBoxMain_ComboPerkOne2.Text, traitPairs) + "," + getValueOrZero(textBoxMain_ComboPerkTwo2.Text, traitPairs) + ":" + textBoxMain_Combopve2.Text);
-                    if (textBoxMain_Combopve3.Visible && textBoxMain_Combopve3.Text != "" && textBoxMain_Combopve3.Text != "0")
-                        roll.Add("//" + getValueOrZero(comboBoxMain_ComboBarrel3.Text, perk1Pairs) + "," + getValueOrZero(textBoxMain_ComboMag3.Text, perk2Pairs) + "," + getValueOrZero(textBoxMain_ComboPerkOne3.Text, traitPairs) + "," + getValueOrZero(textBoxMain_ComboPerkTwo3.Text, traitPairs) + ":" + textBoxMain_Combopve3.Text);
-                    if (textBoxMain_Combopve4.Visible && textBoxMain_Combopve4.Text != "" && textBoxMain_Combopve4.Text != "0")
-                        roll.Add("//" + getValueOrZero(comboBoxMain_ComboBarrel4.Text, perk1Pairs) + "," + getValueOrZero(textBoxMain_ComboMag4.Text, perk2Pairs) + "," + getValueOrZero(textBoxMain_ComboPerkOne4.Text, traitPairs) + "," + getValueOrZero(textBoxMain_ComboPerkTwo4.Text, traitPairs) + ":" + textBoxMain_Combopve4.Text);
-                    if (textBoxMain_Combopve5.Visible && textBoxMain_Combopve5.Text != "" && textBoxMain_Combopve5.Text != "0")
-                        roll.Add("//" + getValueOrZero(comboBoxMain_ComboBarrel5.Text, perk1Pairs) + "," + getValueOrZero(textBoxMain_ComboMag5.Text, perk2Pairs) + "," + getValueOrZero(textBoxMain_ComboPerkOne5.Text, traitPairs) + "," + getValueOrZero(textBoxMain_ComboPerkTwo5.Text, traitPairs) + ":" + textBoxMain_Combopve5.Text);
+                    if (textBoxMain_Combopve1.Text != "" && textBoxMain_Combopve1.Text != "0")
+                    {
+                        string s = "//";
 
-                    //Text Entry
-                    if (textBoxMain_Combopve1.Visible && textBoxMain_Combopve1.Text != "" && textBoxMain_Combopve1.Text != "0")
-                        roll.Add("//" + getValueOrZero(textBoxMain_ComboBarrel1.Text) + "," + getValueOrZero(textBoxMain_ComboMag1.Text) + "," + getValueOrZero(textBoxMain_ComboPerkOne1.Text) + "," + getValueOrZero(textBoxMain_ComboPerkTwo1.Text) + ":" + textBoxMain_Combopve1.Text);
-                    if (textBoxMain_Combopve2.Visible && textBoxMain_Combopve2.Text != "" && textBoxMain_Combopve2.Text != "0")
-                        roll.Add("//" + getValueOrZero(textBoxMain_ComboBarrel2.Text) + "," + getValueOrZero(textBoxMain_ComboMag2.Text) + "," + getValueOrZero(textBoxMain_ComboPerkOne2.Text) + "," + getValueOrZero(textBoxMain_ComboPerkTwo2.Text) + ":" + textBoxMain_Combopve2.Text);
-                    if (textBoxMain_Combopve3.Visible && textBoxMain_Combopve3.Text != "" && textBoxMain_Combopve3.Text != "0")
-                        roll.Add("//" + getValueOrZero(textBoxMain_ComboBarrel3.Text) + "," + getValueOrZero(textBoxMain_ComboMag3.Text) + "," + getValueOrZero(textBoxMain_ComboPerkOne3.Text) + "," + getValueOrZero(textBoxMain_ComboPerkTwo3.Text) + ":" + textBoxMain_Combopve3.Text);
-                    if (textBoxMain_Combopve4.Visible && textBoxMain_Combopve4.Text != "" && textBoxMain_Combopve4.Text != "0")
-                        roll.Add("//" + getValueOrZero(textBoxMain_ComboBarrel4.Text) + "," + getValueOrZero(textBoxMain_ComboMag4.Text) + "," + getValueOrZero(textBoxMain_ComboPerkOne4.Text) + "," + getValueOrZero(textBoxMain_ComboPerkTwo4.Text) + ":" + textBoxMain_Combopve4.Text);
-                    if (textBoxMain_Combopve5.Visible && textBoxMain_Combopve5.Text != "" && textBoxMain_Combopve5.Text != "0")
-                        roll.Add("//" + getValueOrZero(textBoxMain_ComboBarrel5.Text) + "," + getValueOrZero(textBoxMain_ComboMag5.Text) + "," + getValueOrZero(textBoxMain_ComboPerkOne5.Text) + "," + getValueOrZero(textBoxMain_ComboPerkTwo5.Text) + ":" + textBoxMain_Combopve5.Text);
+                        if (comboBoxMain_ComboBarrel1.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboBarrel1.Text, perk1Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboBarrel1.Text) + ",";
+
+                        if (comboBoxMain_ComboMag1.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboMag1.Text, perk2Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboMag1.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkOne1.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkOne1.Text, traitPairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkOne1.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkTwo1.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkTwo1.Text, traitPairs) + ":" + float.Parse(textBoxMain_Combopve1.Text).ToString("0.0");
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkTwo1.Text) + ":" + float.Parse(textBoxMain_Combopve1.Text).ToString("0.0");
+
+                        roll.Add(s);
+                    }
+
+                    if (textBoxMain_Combopve2.Text != "" && textBoxMain_Combopve2.Text != "0")
+                    {
+                        string s = "//";
+
+                        if (comboBoxMain_ComboBarrel2.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboBarrel2.Text, perk1Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboBarrel2.Text) + ",";
+
+                        if (comboBoxMain_ComboMag2.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboMag2.Text, perk2Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboMag2.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkOne2.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkOne2.Text, traitPairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkOne2.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkTwo2.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkTwo2.Text, traitPairs) + ":" + float.Parse(textBoxMain_Combopve2.Text).ToString("0.0");
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkTwo2.Text) + ":" + float.Parse(textBoxMain_Combopve2.Text).ToString("0.0");
+
+                        roll.Add(s);
+                    }
+
+                    if (textBoxMain_Combopve3.Text != "" && textBoxMain_Combopve3.Text != "0")
+                    {
+                        string s = "//";
+
+                        if (comboBoxMain_ComboBarrel3.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboBarrel3.Text, perk1Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboBarrel3.Text) + ",";
+
+                        if (comboBoxMain_ComboMag3.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboMag3.Text, perk2Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboMag3.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkOne3.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkOne3.Text, traitPairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkOne3.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkTwo3.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkTwo3.Text, traitPairs) + ":" + float.Parse(textBoxMain_Combopve3.Text).ToString("0.0");
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkTwo3.Text) + ":" + float.Parse(textBoxMain_Combopve3.Text).ToString("0.0");
+
+                        roll.Add(s);
+                    }
+
+                    if (textBoxMain_Combopve4.Text != "" && textBoxMain_Combopve4.Text != "0")
+                    {
+                        string s = "//";
+
+                        if (comboBoxMain_ComboBarrel4.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboBarrel4.Text, perk1Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboBarrel4.Text) + ",";
+
+                        if (comboBoxMain_ComboMag4.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboMag4.Text, perk2Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboMag4.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkOne4.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkOne4.Text, traitPairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkOne4.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkTwo4.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkTwo4.Text, traitPairs) + ":" + float.Parse(textBoxMain_Combopve4.Text).ToString("0.0");
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkTwo4.Text) + ":" + float.Parse(textBoxMain_Combopve4.Text).ToString("0.0");
+
+                        roll.Add(s);
+                    }
+
+                    if (textBoxMain_Combopve5.Text != "" && textBoxMain_Combopve5.Text != "0")
+                    {
+                        string s = "//";
+
+                        if (comboBoxMain_ComboBarrel5.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboBarrel5.Text, perk1Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboBarrel5.Text) + ",";
+
+                        if (comboBoxMain_ComboMag5.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboMag5.Text, perk2Pairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboMag5.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkOne5.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkOne5.Text, traitPairs) + ",";
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkOne5.Text) + ",";
+
+                        if (comboBoxMain_ComboPerkTwo5.Visible)
+                            s += getValueOrZero(comboBoxMain_ComboPerkTwo5.Text, traitPairs) + ":" + float.Parse(textBoxMain_Combopve5.Text).ToString("0.0");
+                        else
+                            s += getValueOrZero(textBoxMain_ComboPerkTwo5.Text) + ":" + float.Parse(textBoxMain_Combopve5.Text).ToString("0.0");
+
+                        roll.Add(s);
+                    }
                 }
             }
             else if (perkNum == 6) //Masterwork
@@ -823,7 +1081,6 @@ namespace Spriggys_DIM_Wishlist_Maker
                     roll.Add("//MW " + textBoxMain_PvEmw.Text);
                 }
             }
-            
         }
 
         private string getValueOrZero(string s, Dictionary<string, long> d)
@@ -1255,6 +1512,354 @@ namespace Spriggys_DIM_Wishlist_Maker
                 textBoxMain_WeaponName.Visible = true;
                 comboBoxMain_Weapon.Visible = false;
             }
+        }
+
+        private void pictureBox29_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboBarrel1.Visible)
+            {
+                textBoxMain_ComboBarrel1.Visible = false;
+                comboBoxMain_ComboBarrel1.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboBarrel1.Visible = false;
+                textBoxMain_ComboBarrel1.Visible = true;
+            }
+        }
+
+        private void pictureBox30_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboBarrel2.Visible)
+            {
+                textBoxMain_ComboBarrel2.Visible = false;
+                comboBoxMain_ComboBarrel2.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboBarrel2.Visible = false;
+                textBoxMain_ComboBarrel2.Visible = true;
+            }
+        }
+
+        private void pictureBox31_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboBarrel3.Visible)
+            {
+                textBoxMain_ComboBarrel3.Visible = false;
+                comboBoxMain_ComboBarrel3.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboBarrel3.Visible = false;
+                textBoxMain_ComboBarrel3.Visible = true;
+            }
+        }
+
+        private void pictureBox32_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboBarrel4.Visible)
+            {
+                textBoxMain_ComboBarrel4.Visible = false;
+                comboBoxMain_ComboBarrel4.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboBarrel4.Visible = false;
+                textBoxMain_ComboBarrel4.Visible = true;
+            }
+        }
+
+        private void pictureBox33_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboBarrel5.Visible)
+            {
+                textBoxMain_ComboBarrel5.Visible = false;
+                comboBoxMain_ComboBarrel5.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboBarrel5.Visible = false;
+                textBoxMain_ComboBarrel5.Visible = true;
+            }
+        }
+
+        private void pictureBox34_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboMag1.Visible)
+            {
+                textBoxMain_ComboMag1.Visible = false;
+                comboBoxMain_ComboMag1.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboMag1.Visible = false;
+                textBoxMain_ComboMag1.Visible = true;
+            }
+        }
+
+        private void pictureBox35_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboMag2.Visible)
+            {
+                textBoxMain_ComboMag2.Visible = false;
+                comboBoxMain_ComboMag2.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboMag2.Visible = false;
+                textBoxMain_ComboMag2.Visible = true;
+            }
+        }
+
+        private void pictureBox36_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboMag3.Visible)
+            {
+                textBoxMain_ComboMag3.Visible = false;
+                comboBoxMain_ComboMag3.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboMag3.Visible = false;
+                textBoxMain_ComboMag3.Visible = true;
+            }
+        }
+
+        private void pictureBox37_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboMag4.Visible)
+            {
+                textBoxMain_ComboMag4.Visible = false;
+                comboBoxMain_ComboMag4.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboMag4.Visible = false;
+                textBoxMain_ComboMag4.Visible = true;
+            }
+        }
+
+        private void pictureBox38_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboMag5.Visible)
+            {
+                textBoxMain_ComboMag5.Visible = false;
+                comboBoxMain_ComboMag5.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboMag5.Visible = false;
+                textBoxMain_ComboMag5.Visible = true;
+            }
+        }
+
+        private void pictureBox39_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboPerkOne1.Visible)
+            {
+                textBoxMain_ComboPerkOne1.Visible = false;
+                comboBoxMain_ComboPerkOne1.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboPerkOne1.Visible = false;
+                textBoxMain_ComboPerkOne1.Visible = true;
+            }
+        }
+
+        private void pictureBox40_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboPerkOne2.Visible)
+            {
+                textBoxMain_ComboPerkOne2.Visible = false;
+                comboBoxMain_ComboPerkOne2.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboPerkOne2.Visible = false;
+                textBoxMain_ComboPerkOne2.Visible = true;
+            }
+        }
+
+        private void pictureBox41_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboPerkOne3.Visible)
+            {
+                textBoxMain_ComboPerkOne3.Visible = false;
+                comboBoxMain_ComboPerkOne3.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboPerkOne3.Visible = false;
+                textBoxMain_ComboPerkOne3.Visible = true;
+            }
+        }
+
+        private void pictureBox42_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboPerkOne4.Visible)
+            {
+                textBoxMain_ComboPerkOne4.Visible = false;
+                comboBoxMain_ComboPerkOne4.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboPerkOne4.Visible = false;
+                textBoxMain_ComboPerkOne4.Visible = true;
+            }
+        }
+
+        private void pictureBox43_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboPerkOne5.Visible)
+            {
+                textBoxMain_ComboPerkOne5.Visible = false;
+                comboBoxMain_ComboPerkOne5.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboPerkOne5.Visible = false;
+                textBoxMain_ComboPerkOne5.Visible = true;
+            }
+        }
+
+        private void pictureBox44_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboPerkTwo1.Visible)
+            {
+                textBoxMain_ComboPerkTwo1.Visible = false;
+                comboBoxMain_ComboPerkTwo1.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboPerkTwo1.Visible = false;
+                textBoxMain_ComboPerkTwo1.Visible = true;
+            }
+        }
+
+        private void pictureBox45_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboPerkTwo2.Visible)
+            {
+                textBoxMain_ComboPerkTwo2.Visible = false;
+                comboBoxMain_ComboPerkTwo2.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboPerkTwo2.Visible = false;
+                textBoxMain_ComboPerkTwo2.Visible = true;
+            }
+        }
+
+        private void pictureBox46_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboPerkTwo3.Visible)
+            {
+                textBoxMain_ComboPerkTwo3.Visible = false;
+                comboBoxMain_ComboPerkTwo3.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboPerkTwo3.Visible = false;
+                textBoxMain_ComboPerkTwo3.Visible = true;
+            }
+        }
+
+        private void pictureBox47_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboPerkTwo4.Visible)
+            {
+                textBoxMain_ComboPerkTwo4.Visible = false;
+                comboBoxMain_ComboPerkTwo4.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboPerkTwo4.Visible = false;
+                textBoxMain_ComboPerkTwo4.Visible = true;
+            }
+        }
+
+        private void pictureBox48_Click(object sender, EventArgs e)
+        {
+            if (textBoxMain_ComboPerkTwo5.Visible)
+            {
+                textBoxMain_ComboPerkTwo5.Visible = false;
+                comboBoxMain_ComboPerkTwo5.Visible = true;
+            }
+            else
+            {
+                comboBoxMain_ComboPerkTwo5.Visible = false;
+                textBoxMain_ComboPerkTwo5.Visible = true;
+            }
+        }
+
+        private void textBoxMain_Weapon_TextChanged(object sender, EventArgs e)
+        {
+            int n;
+            if (int.TryParse(textBoxMain_Weapon.Text, out n) && weaponPairs.ContainsValue(Convert.ToInt64(textBoxMain_Weapon.Text)))
+                textBoxMain_WeaponName.Text = weaponPairs.FirstOrDefault(x => x.Value == Convert.ToInt64(textBoxMain_Weapon.Text)).Key;
+        }
+
+        private void comboBoxMain_Weapon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxMain_Weapon.Text == null || comboBoxMain_Weapon.Text == "")
+            {
+                if (customDropdowns)
+                    loadDropdowns();
+                return;
+            }
+                
+
+            XmlDocument doc = new XmlDocument();
+            string perk1Group = "";
+            string perk2Group = "";
+
+            doc.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\WeaponCollection.xml");
+            XmlNodeList weaponNodes = doc.SelectNodes("weapons/weapon");
+
+            foreach (XmlNode w in weaponNodes)
+            {
+                string name = w["name"].InnerText;
+                if (name == comboBoxMain_Weapon.Text)
+                {
+                    perk1Group = w["perk1Group"].InnerText;
+                    perk2Group = w["perk1Group"].InnerText;
+                }
+            }
+
+            if (perk1Group == "" && perk2Group == "")
+            {
+                if (customDropdowns)
+                    loadDropdowns();
+                return;
+            }
+
+            //Load Custom Dropdowns
+            doc.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\Perk1Collection.xml");
+            XmlNodeList perkNodes = doc.SelectNodes("perk1/perkGroup");
+
+            foreach (XmlNode p in perkNodes)
+            {
+                string name = p["name"].InnerText;
+                if (name == perk1Group)
+                {
+                    comboBoxMain_Barrel2id.Items.Clear();
+                    for(int i=0; i<p.ChildNodes.Count; i++)
+                    {
+                        if( p.ChildNodes[i].Name == "perk")
+                        {
+                            //TODO: add filter to rest of barrels
+                            comboBoxMain_Barrel2id.Items.Add(p.ChildNodes[i]["name"].InnerText);
+                        }
+                    }
+                    customDropdowns = true;
+                }
+            }
+
+            //TODO: add logic for mags
+
+            
         }
     }
 }

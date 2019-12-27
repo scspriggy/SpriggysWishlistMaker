@@ -6,7 +6,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded. Use to uppercut.</frameDesc>
     <category>Sword</category>
-    <ammoType>Kinetic, Energy, Power</ammoType>
+    <ammoType>Power</ammoType>
     <perk1Group>Edge</perk1Group>
     <perk2Group>Guard</perk2Group>
     <season>4</season>
@@ -14,17 +14,17 @@
     <curated>1261178282,52780822,354401740,2590710093</curated>
   </weapon>
   <weapon>
-    <name></name>
-    <id></id>
-    <frame></frame>
-    <frameDesc></frameDesc>
-    <category></category>
-    <ammoType></ammoType>
-    <perk1Group></perk1Group>
-    <perk2Group></perk2Group>
-    <season></season>
-    <element></element>
-    <curated></curated>
+    <name>Acantha-D XK8434</name>
+    <id>1757129747</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Grenade Launcher</category>
+    <ammoType>Power</ammoType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Grenade Launcher Magazine</perk2Group>
+    <season>5</season>
+    <element>Arc</element>
+    <curated>1478423395,332133599,972757866</curated>
   </weapon>
   <weapon>
     <name></name>
