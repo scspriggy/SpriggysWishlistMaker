@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<perk1>
-  <perkGroup>
-    <name>Barrel</name>
+<perks>
     <perk>
       <name>Chambered Compensator</name>
       <id>3661387068</id>
+      <perkGroup>Barrel</perkGroup>
       <stability>10</stability>
       <range>0</range>
       <recoilDirection>10</recoilDirection>
@@ -13,6 +12,7 @@
     <perk>
       <name>Smallbore</name>
       <id>1482024992</id>
+      <perkGroup>Barrel</perkGroup>
       <stability>7</stability>
       <range>7</range>
       <recoilDirection>0</recoilDirection>
@@ -21,6 +21,7 @@
     <perk>
       <name>Polygonal Rifling</name>
       <id>1392496348</id>
+      <perkGroup>Barrel</perkGroup>
       <stability>10</stability>
       <range>0</range>
       <recoilDirection>0</recoilDirection>
@@ -29,6 +30,7 @@
     <perk>
       <name>Fluted Barrel</name>
       <id>1840239774</id>
+      <perkGroup>Barrel</perkGroup>
       <stability>5</stability>
       <range>0</range>
       <recoilDirection>0</recoilDirection>
@@ -37,6 +39,7 @@
     <perk>
       <name>Corkscrew Rifling</name>
       <id>4090651448</id>
+      <perkGroup>Barrel</perkGroup>
       <stability>5</stability>
       <range>5</range>
       <recoilDirection>0</recoilDirection>
@@ -45,6 +48,7 @@
     <perk>
       <name>Full Bore</name>
       <id>202670084</id>
+      <perkGroup>Barrel</perkGroup>
       <stability>-10</stability>
       <range>15</range>
       <recoilDirection>0</recoilDirection>
@@ -53,6 +57,7 @@
     <perk>
       <name>Arrowhead Brake</name>
       <id>839105230</id>
+      <perkGroup>Barrel</perkGroup>
       <stability>0</stability>
       <range>0</range>
       <recoilDirection>30</recoilDirection>
@@ -61,6 +66,7 @@
     <perk>
       <name>Extended Barrel</name>
       <id>1467527085</id>
+      <perkGroup>Barrel</perkGroup>
       <stability>0</stability>
       <range>10</range>
       <recoilDirection>10</recoilDirection>
@@ -69,17 +75,16 @@
     <perk>
       <name>Hammer-Forged Rifling</name>
       <id>3250034553</id>
+      <perkGroup>Barrel</perkGroup>
       <stability>0</stability>
       <range>10</range>
       <recoilDirection>0</recoilDirection>
       <handlingSpeed>0</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Shotgun Barrel</name>
     <perk>
       <name>Full Choke</name>
       <id>1047830412</id>
+      <perkGroup>Shotgun Barrel</perkGroup>
       <pelletSpread>Reduced</pelletSpread>
       <precisionDamage>Reduced</precisionDamage>
       <stability>0</stability>
@@ -89,6 +94,7 @@
     <perk>
       <name>Rifled Barrel</name>
       <id>1332244541</id>
+      <perkGroup>Shotgun Barrel</perkGroup>
       <pelletSpread>0</pelletSpread>
       <precisionDamage>0</precisionDamage>
       <stability>0</stability>
@@ -98,6 +104,7 @@
     <perk>
       <name>Smoothbore</name>
       <id>466087222</id>
+      <perkGroup>Shotgun Barrel</perkGroup>
       <pelletSpread>Increase</pelletSpread>
       <precisionDamage>0</precisionDamage>
       <stability>0</stability>
@@ -107,6 +114,7 @@
     <perk>
       <name>Smallbore</name>
       <id>1482024992</id>
+      <perkGroup>Shotgun Barrel</perkGroup>
       <pelletSpread>0</pelletSpread>
       <precisionDamage>0</precisionDamage>
       <stability>7</stability>
@@ -116,6 +124,7 @@
     <perk>
       <name>Barrel Shroud</name>
       <id>1300023272</id>
+      <perkGroup>Shotgun Barrel</perkGroup>
       <pelletSpread>0</pelletSpread>
       <precisionDamage>0</precisionDamage>
       <stability>10</stability>
@@ -125,18 +134,17 @@
     <perk>
       <name>Corkscrew Rifling</name>
       <id>4090651448</id>
+      <perkGroup>Shotgun Barrel</perkGroup>
       <pelletSpread>0</pelletSpread>
       <precisionDamage>0</precisionDamage>
       <stability>5</stability>
       <range>5</range>
       <handlingSpeed>5</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Launcher Tube</name>
     <perk>
       <name>Volatile Launch</name>
       <id>1478423395</id>
+      <perkGroup>Launcher Tube</perkGroup>
       <blastRadius>15</blastRadius>
       <projectileSpeed>-5</projectileSpeed>
       <stability>0</stability>
@@ -146,6 +154,7 @@
     <perk>
       <name>Confined Launch</name>
       <id>1844523823</id>
+      <perkGroup>Launcher Tube</perkGroup>
       <blastRadius>10</blastRadius>
       <projectileSpeed>-10</projectileSpeed>
       <stability>15</stability>
@@ -155,6 +164,7 @@
     <perk>
       <name>Linear Compensator</name>
       <id>1441682018</id>
+      <perkGroup>Launcher Tube</perkGroup>
       <blastRadius>5</blastRadius>
       <projectileSpeed>5</projectileSpeed>
       <stability>5</stability>
@@ -164,6 +174,7 @@
     <perk>
       <name>Hard Launch</name>
       <id>981914802</id>
+      <perkGroup>Launcher Tube</perkGroup>
       <blastRadius>-5</blastRadius>
       <projectileSpeed>15</projectileSpeed>
       <stability>-10</stability>
@@ -173,6 +184,7 @@
     <perk>
       <name>Quick Launch</name>
       <id>3525010810</id>
+      <perkGroup>Launcher Tube</perkGroup>
       <blastRadius>0</blastRadius>
       <projectileSpeed>10</projectileSpeed>
       <stability>0</stability>
@@ -182,6 +194,7 @@
     <perk>
       <name>Smart Drift Control</name>
       <id>3798852852</id>
+      <perkGroup>Launcher Tube</perkGroup>
       <blastRadius>0</blastRadius>
       <projectileSpeed>5</projectileSpeed>
       <stability>10</stability>
@@ -191,18 +204,17 @@
     <perk>
       <name>Countermass</name>
       <id>3809316345</id>
+      <perkGroup>Launcher Tube</perkGroup>
       <blastRadius>0</blastRadius>
       <projectileSpeed>0</projectileSpeed>
       <stability>10</stability>
       <recoilDirection>30</recoilDirection>
       <handlingSpeed>10</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Bow String</name>
     <perk>
       <name>Polymer String</name>
       <id>852209214</id>
+      <perkGroup>Bow String</perkGroup>
       <accuracy>5</accuracy>
       <handlingSpeed>0</handlingSpeed>
       <stability>0</stability>
@@ -211,6 +223,7 @@
     <perk>
       <name>Tactile String</name>
       <id>1196733167</id>
+      <perkGroup>Bow String</perkGroup>
       <accuracy>5</accuracy>
       <handlingSpeed>0</handlingSpeed>
       <stability>10</stability>
@@ -219,6 +232,7 @@
     <perk>
       <name>Natural String</name>
       <id>1784898267</id>
+      <perkGroup>Bow String</perkGroup>
       <accuracy>5</accuracy>
       <handlingSpeed>5</handlingSpeed>
       <stability>5</stability>
@@ -227,6 +241,7 @@
     <perk>
       <name>Elastic String</name>
       <id>2801223209</id>
+      <perkGroup>Bow String</perkGroup>
       <accuracy>-10</accuracy>
       <handlingSpeed>5</handlingSpeed>
       <stability>0</stability>
@@ -235,6 +250,7 @@
     <perk>
       <name>High Tension String</name>
       <id>3371775011</id>
+      <perkGroup>Bow String</perkGroup>
       <accuracy>10</accuracy>
       <handlingSpeed>0</handlingSpeed>
       <stability>-5</stability>
@@ -243,6 +259,7 @@
     <perk>
       <name>Agile Bowstring</name>
       <id>3768438372</id>
+      <perkGroup>Bow String</perkGroup>
       <accuracy>0</accuracy>
       <handlingSpeed>15</handlingSpeed>
       <stability>5</stability>
@@ -251,17 +268,16 @@
     <perk>
       <name>Flexible String</name>
       <id>4067834857</id>
+      <perkGroup>Bow String</perkGroup>
       <accuracy>-5</accuracy>
       <handlingSpeed>10</handlingSpeed>
       <stability>0</stability>
       <drawTime>5</drawTime>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Tangled Shore Barrel</name>
     <perk>
       <name>Dusk Sight D1</name>
       <id>1288081798</id>
+      <perkGroup>Tangled Shore Barrel</perkGroup>
       <zoom>0</zoom>
       <range>3</range>
       <handlingSpeed>8</handlingSpeed>
@@ -269,6 +285,7 @@
     <perk>
       <name>Wolf Sight W1</name>
       <id>1288081796</id>
+      <perkGroup>Tangled Shore Barrel</perkGroup>
       <zoom>1</zoom>
       <range>2</range>
       <handlingSpeed>10</handlingSpeed>
@@ -276,6 +293,7 @@
     <perk>
       <name>King Sight K1</name>
       <id>1288081797</id>
+      <perkGroup>Tangled Shore Barrel</perkGroup>
       <zoom>2</zoom>
       <range>0</range>
       <handlingSpeed>13</handlingSpeed>
@@ -283,6 +301,7 @@
     <perk>
       <name>King Dot K2</name>
       <id>1452368633</id>
+      <perkGroup>Tangled Shore Barrel</perkGroup>
       <zoom>2</zoom>
       <range>7</range>
       <handlingSpeed>-4</handlingSpeed>
@@ -290,6 +309,7 @@
     <perk>
       <name>Dusk Dot D1</name>
       <id>1452368634</id>
+      <perkGroup>Tangled Shore Barrel</perkGroup>
       <zoom>3</zoom>
       <range>7</range>
       <handlingSpeed>0</handlingSpeed>
@@ -297,6 +317,7 @@
     <perk>
       <name>Wolf Dot W2</name>
       <id>1452368632</id>
+      <perkGroup>Tangled Shore Barrel</perkGroup>
       <zoom>4</zoom>
       <range>9</range>
       <handlingSpeed>-10</handlingSpeed>
@@ -304,6 +325,7 @@
     <perk>
       <name>Devil Scope D2</name>
       <id>809345546</id>
+      <perkGroup>Tangled Shore Barrel</perkGroup>
       <zoom>5</zoom>
       <range>10</range>
       <handlingSpeed>10</handlingSpeed>
@@ -311,16 +333,15 @@
     <perk>
       <name>Dusk Scope D2</name>
       <id>809345547</id>
+      <perkGroup>Tangled Shore Barrel</perkGroup>
       <zoom>6</zoom>
       <range>13</range>
       <handlingSpeed>-6</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-      <name>Hakke Barrel</name>
       <perk>
         <name>GA Post</name>
         <id>87986589</id>
+        <perkGroup>Hakke Barrel</perkGroup>
         <zoom>0</zoom>
         <range>2</range>
         <handlingSpeed>13</handlingSpeed>
@@ -329,6 +350,7 @@
       <perk>
         <name>GB Iron</name>
         <id>87986588</id>
+        <perkGroup>Hakke Barrel</perkGroup>
         <zoom>0</zoom>
         <range>5</range>
         <handlingSpeed>10</handlingSpeed>
@@ -337,6 +359,7 @@
       <perk>
         <name>SD Thermal</name>
         <id>2054312701</id>
+        <perkGroup>Hakke Barrel</perkGroup>
         <zoom>3</zoom>
         <range>10</range>
         <handlingSpeed>0</handlingSpeed>
@@ -345,6 +368,7 @@
       <perk>
         <name>SC Holo</name>
         <id>2054312700</id>
+        <perkGroup>Hakke Barrel</perkGroup>
         <zoom>4</zoom>
         <range>13</range>
         <handlingSpeed>-5</handlingSpeed>
@@ -353,6 +377,7 @@
       <perk>
         <name>LD Watchdog</name>
         <id>1313805251</id>
+        <perkGroup>Hakke Barrel</perkGroup>
         <zoom>5</zoom>
         <range>10</range>
         <handlingSpeed>4</handlingSpeed>
@@ -361,6 +386,7 @@
       <perk>
         <name>LB Assault</name>
         <id>1313805250</id>
+        <perkGroup>Hakke Barrel</perkGroup>
         <zoom>5</zoom>
         <range>10</range>
         <handlingSpeed>-5</handlingSpeed>
@@ -369,17 +395,16 @@
       <perk>
         <name>LC Ranged</name>
         <id>1313805249</id>
+        <perkGroup>Hakke Barrel</perkGroup>
         <zoom>6</zoom>
         <range>13</range>
         <handlingSpeed>-10</handlingSpeed>
         <other></other>
       </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Omolon Sight</name>
     <perk>
       <name>Candle PS</name>
       <id>1409978309</id>
+      <perkGroup>Omolon Sight</perkGroup>
       <zoom>0</zoom>
       <range>3</range>
       <handlingSpeed>13</handlingSpeed>
@@ -387,6 +412,7 @@
     <perk>
       <name>Spark PS</name>
       <id>1409978308</id>
+      <perkGroup>Omolon Sight</perkGroup>
       <zoom>0</zoom>
       <range>6</range>
       <handlingSpeed>9</handlingSpeed>
@@ -394,6 +420,7 @@
     <perk>
       <name>Jolt PS</name>
       <id>1409978311</id>
+      <perkGroup>Omolon Sight</perkGroup>
       <zoom>0</zoom>
       <range>9</range>
       <handlingSpeed>6</handlingSpeed>
@@ -401,6 +428,7 @@
     <perk>
       <name>Torch HS3</name>
       <id>1628165636</id>
+      <perkGroup>Omolon Sight</perkGroup>
       <zoom>3</zoom>
       <range>13</range>
       <handlingSpeed>-5</handlingSpeed>
@@ -408,6 +436,7 @@
     <perk>
       <name>Flash HS5</name>
       <id>1628165637</id>
+      <perkGroup>Omolon Sight</perkGroup>
       <zoom>4</zoom>
       <range>10</range>
       <handlingSpeed>3</handlingSpeed>
@@ -415,6 +444,7 @@
     <perk>
       <name>Signal MS5</name>
       <id>194952923</id>
+      <perkGroup>Omolon Sight</perkGroup>
       <zoom>5</zoom>
       <range>10</range>
       <handlingSpeed>-3</handlingSpeed>
@@ -422,6 +452,7 @@
     <perk>
       <name>Impulse MS3</name>
       <id>194952922</id>
+      <perkGroup>Omolon Sight</perkGroup>
       <zoom>6</zoom>
       <range>12</range>
       <handlingSpeed>-10</handlingSpeed>
@@ -429,16 +460,15 @@
     <perk>
       <name>Transmission MS7</name>
       <id>194952921</id>
+      <perkGroup>Omolon Sight</perkGroup>
       <zoom>5</zoom>
       <range>10</range>
       <handlingSpeed>-5</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Nadir Sight</name>
     <perk>
       <name>HitMark IS</name>
       <id>13792278</id>
+      <perkGroup>Nadir Sight</perkGroup>
       <zoom>0</zoom>
       <range>2</range>
       <handlingSpeed>15</handlingSpeed>
@@ -446,6 +476,7 @@
     <perk>
       <name>CleanShot IS</name>
       <id>13792279</id>
+      <perkGroup>Nadir Sight</perkGroup>
       <zoom>1</zoom>
       <range>5</range>
       <handlingSpeed>10</handlingSpeed>
@@ -453,6 +484,7 @@
     <perk>
       <name>Red Dot 2 MOA</name>
       <id>2405638015</id>
+      <perkGroup>Nadir Sight</perkGroup>
       <zoom>2</zoom>
       <range>6</range>
       <handlingSpeed>10</handlingSpeed>
@@ -460,6 +492,7 @@
     <perk>
       <name>Red Dot Micro</name>
       <id>2405638014</id>
+      <perkGroup>Nadir Sight</perkGroup>
       <zoom>2</zoom>
       <range>9</range>
       <handlingSpeed>7</handlingSpeed>
@@ -467,6 +500,7 @@
     <perk>
       <name>Rifle Scope SSF</name>
       <id>679077872</id>
+      <perkGroup>Nadir Sight</perkGroup>
       <zoom>5</zoom>
       <range>6</range>
       <handlingSpeed>-3</handlingSpeed>
@@ -474,16 +508,15 @@
     <perk>
       <name>Rifle Scope ST</name>
       <id>679077873</id>
+      <perkGroup>Nadir Sight</perkGroup>
       <zoom>6</zoom>
       <range>12</range>
       <handlingSpeed>-11</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>EDZ Sight</name>
     <perk>
       <name>IS 2 Classic</name>
       <id>2209280307</id>
+      <perkGroup>EDZ Sight</perkGroup>
       <zoom>0</zoom>
       <range>5</range>
       <handlingSpeed>10</handlingSpeed>
@@ -491,6 +524,7 @@
     <perk>
       <name>IS 5 Circle</name>
       <id>2209280306</id>
+      <perkGroup>EDZ Sight</perkGroup>
       <zoom>0</zoom>
       <range>0</range>
       <handlingSpeed>15</handlingSpeed>
@@ -498,6 +532,7 @@
     <perk>
       <name>Model 6 Loop</name>
       <id>663495155</id>
+      <perkGroup>EDZ Sight</perkGroup>
       <zoom>3</zoom>
       <range>9</range>
       <handlingSpeed>8</handlingSpeed>
@@ -505,16 +540,15 @@
     <perk>
       <name>Model 8 Red</name>
       <id>663495154</id>
+      <perkGroup>EDZ Sight</perkGroup>
       <zoom>4</zoom>
       <range>13</range>
       <handlingSpeed>0</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>SUROS Sight</name>
     <perk>
       <name>SLO-21 Post</name>
       <id>965619220</id>
+      <perkGroup>SUROS Sight</perkGroup>
       <zoom>0</zoom>
       <range>3</range>
       <handlingSpeed>12</handlingSpeed>
@@ -522,6 +556,7 @@
     <perk>
       <name>SLO-12 Post</name>
       <id>965619221</id>
+      <perkGroup>SUROS Sight</perkGroup>
       <zoom>0</zoom>
       <range>0</range>
       <handlingSpeed>15</handlingSpeed>
@@ -529,6 +564,7 @@
     <perk>
       <name>SLO-10 Post</name>
       <id>965619223</id>
+      <perkGroup>SUROS Sight</perkGroup>
       <zoom>0</zoom>
       <range>5</range>
       <handlingSpeed>10</handlingSpeed>
@@ -536,6 +572,7 @@
     <perk>
       <name>SPO-26 Front</name>
       <id>3151536503</id>
+      <perkGroup>SUROS Sight</perkGroup>
       <zoom>2</zoom>
       <range>7</range>
       <handlingSpeed>10</handlingSpeed>
@@ -543,6 +580,7 @@
     <perk>
       <name>SPO-28 Front</name>
       <id>3151536500</id>
+      <perkGroup>SUROS Sight</perkGroup>
       <zoom>3</zoom>
       <range>11</range>
       <handlingSpeed>5</handlingSpeed>
@@ -550,6 +588,7 @@
     <perk>
       <name>SPO-57 Front</name>
       <id>3151536501</id>
+      <perkGroup>SUROS Sight</perkGroup>
       <zoom>4</zoom>
       <range>15</range>
       <handlingSpeed>-5</handlingSpeed>
@@ -557,6 +596,7 @@
     <perk>
       <name>SRO-41 Ocular</name>
       <id>360593482</id>
+      <perkGroup>SUROS Sight</perkGroup>
       <zoom>5</zoom>
       <range>8</range>
       <handlingSpeed>0</handlingSpeed>
@@ -564,6 +604,7 @@
     <perk>
       <name>SRO-37 Ocular</name>
       <id>360593483</id>
+      <perkGroup>SUROS Sight</perkGroup>
       <zoom>5</zoom>
       <range>10</range>
       <handlingSpeed>-3</handlingSpeed>
@@ -571,16 +612,15 @@
     <perk>
       <name>SRO-52 Ocular</name>
       <id>360593481</id>
+      <perkGroup>SUROS Sight</perkGroup>
       <zoom>6</zoom>
       <range>13</range>
       <handlingSpeed>-7</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Black Armory Barrel</name>
     <perk>
       <name>Rasmussen ISA</name>
       <id>1096957638</id>
+      <perkGroup>Black Armory Barrel</perkGroup>
       <zoom>0</zoom>
       <range>2</range>
       <handlingSpeed>13</handlingSpeed>
@@ -588,6 +628,7 @@
     <perk>
       <name>Meyrin RDS</name>
       <id>3433396026</id>
+      <perkGroup>Black Armory Barrel</perkGroup>
       <zoom>2</zoom>
       <range>7</range>
       <handlingSpeed>10</handlingSpeed>
@@ -595,6 +636,7 @@
     <perk>
       <name>Meyrin RDL</name>
       <id>3433396027</id>
+      <perkGroup>Black Armory Barrel</perkGroup>
       <zoom>4</zoom>
       <range>9</range>
       <handlingSpeed>0</handlingSpeed>
@@ -602,6 +644,7 @@
     <perk>
       <name>Satou Focus Lens</name>
       <id>2414725840</id>
+      <perkGroup>Black Armory Barrel</perkGroup>
       <zoom>5</zoom>
       <range>10</range>
       <handlingSpeed>4</handlingSpeed>
@@ -609,16 +652,15 @@
     <perk>
       <name>Satou Precision Lens</name>
       <id>2414725841</id>
+      <perkGroup>Black Armory Barrel</perkGroup>
       <zoom>6</zoom>
       <range>13</range>
       <handlingSpeed>-7</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Hand Cannon Sight (HCS)</name>
     <perk>
       <name>SteadyHand HCS</name>
       <id>1926090095</id>
+      <perkGroup>Hand Cannon Sight (HCS)</perkGroup>
       <stability>10</stability>
       <range>0</range>
       <handlingSpeed>10</handlingSpeed>
@@ -626,6 +668,7 @@
     <perk>
       <name>FastDraw HCS</name>
       <id>1926090094</id>
+      <perkGroup>Hand Cannon Sight (HCS)</perkGroup>
       <stability>5</stability>
       <range>0</range>
       <handlingSpeed>15</handlingSpeed>
@@ -633,6 +676,7 @@
     <perk>
       <name>TrueSight HCS</name>
       <id>1926090092</id>
+      <perkGroup>Hand Cannon Sight (HCS)</perkGroup>
       <stability>3</stability>
       <range>3</range>
       <handlingSpeed>3</handlingSpeed>
@@ -640,6 +684,7 @@
     <perk>
       <name>CrossFire HCS</name>
       <id>1926090090</id>
+      <perkGroup>Hand Cannon Sight (HCS)</perkGroup>
       <stability>-5</stability>
       <range>7</range>
       <handlingSpeed>-5</handlingSpeed>
@@ -647,6 +692,7 @@
     <perk>
       <name>SureShot HCS</name>
       <id>1926090091</id>
+      <perkGroup>Hand Cannon Sight (HCS)</perkGroup>
       <stability>-10</stability>
       <range>10</range>
       <handlingSpeed>-10</handlingSpeed>
@@ -654,16 +700,15 @@
     <perk>
       <name>HitMark HCS</name>
       <id>1926090093</id>
+      <perkGroup>Hand Cannon Sight (HCS)</perkGroup>
       <stability>0</stability>
       <range>5</range>
       <handlingSpeed>0</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Sidearm Sight (SAS)</name>
     <perk>
       <name>Control SAS</name>
       <id>445755706</id>
+      <perkGroup>Sidearm Sight (SAS)</perkGroup>
       <stability>10</stability>
       <range>0</range>
       <handlingSpeed>10</handlingSpeed>
@@ -671,6 +716,7 @@
     <perk>
       <name>QuickDot SAS</name>
       <id>445755707</id>
+      <perkGroup>Sidearm Sight (SAS)</perkGroup>
       <stability>5</stability>
       <range>0</range>
       <handlingSpeed>15</handlingSpeed>
@@ -678,6 +724,7 @@
     <perk>
       <name>ShortSpec SAS</name>
       <id>445755705</id>
+      <perkGroup>Sidearm Sight (SAS)</perkGroup>
       <stability>3</stability>
       <range>3</range>
       <handlingSpeed>3</handlingSpeed>
@@ -685,6 +732,7 @@
     <perk>
       <name>Target SAS</name>
       <id>445755711</id>
+      <perkGroup>Sidearm Sight (SAS)</perkGroup>
       <stability>-5</stability>
       <range>8</range>
       <handlingSpeed>-5</handlingSpeed>
@@ -692,6 +740,7 @@
     <perk>
       <name>FarPoint SAS</name>
       <id>445755710</id>
+      <perkGroup>Sidearm Sight (SAS)</perkGroup>
       <stability>-10</stability>
       <range>13</range>
       <handlingSpeed>-10</handlingSpeed>
@@ -699,16 +748,15 @@
     <perk>
       <name>Tactic SAS</name>
       <id>445755704</id>
+      <perkGroup>Sidearm Sight (SAS)</perkGroup>
       <stability>0</stability>
       <range>5</range>
       <handlingSpeed>0</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Scope</name>
     <perk>
       <name>ATC Rex</name>
       <id>893526893</id>
+      <perkGroup>Scope</perkGroup>
       <foundry>Hakke</foundry>
       <zoom>10</zoom>
       <range>-5</range>
@@ -717,6 +765,7 @@
     <perk>
       <name>SSO-08 Sniper</name>
       <id>1617987572</id>
+      <perkGroup>Scope</perkGroup>
       <foundry>SUROS</foundry>
       <zoom>10</zoom>
       <range>5</range>
@@ -725,6 +774,7 @@
     <perk>
       <name>Zoom 10 Point</name>
       <id>554078785</id>
+      <perkGroup>Scope</perkGroup>
       <foundry>EDZ</foundry>
       <zoom>10</zoom>
       <range>5</range>
@@ -733,6 +783,7 @@
     <perk>
       <name>ATA Scout</name>
       <id>893526892</id>
+      <perkGroup>Scope</perkGroup>
       <foundry>Hakke</foundry>
       <zoom>11</zoom>
       <range>5</range>
@@ -741,6 +792,7 @@
     <perk>
       <name>SSO-07 Sniper</name>
       <id>1617987575</id>
+      <perkGroup>Scope</perkGroup>
       <foundry>SUROS</foundry>
       <zoom>12</zoom>
       <range>10</range>
@@ -749,6 +801,7 @@
     <perk>
       <name>ATD Raptor</name>
       <id>893526895</id>
+      <perkGroup>Scope</perkGroup>
       <foundry>Hakke</foundry>
       <zoom>12</zoom>
       <range>9</range>
@@ -757,6 +810,7 @@
     <perk>
       <name>SSO-05 Sniper</name>
       <id>1617987574</id>
+      <perkGroup>Scope</perkGroup>
       <foundry>SUROS</foundry>
       <zoom>15</zoom>
       <range>15</range>
@@ -765,6 +819,7 @@
     <perk>
       <name>ATB Long Range</name>
       <id>893526894</id>
+      <perkGroup>Scope</perkGroup>
       <foundry>Hakke</foundry>
       <zoom>16</zoom>
       <range>15</range>
@@ -773,17 +828,16 @@
     <perk>
       <name>Zoom 30 Focus</name>
       <id>554078784</id>
+      <perkGroup>Scope</perkGroup>
       <foundry>EDZ</foundry>
       <zoom>30</zoom>
       <range>15</range>
       <handlingSpeed>10</handlingSpeed>
     </perk>
-  </perkGroup>
-  <perkGroup>
-    <name>Edge</name>
     <perk>
       <name>Tempered Edge</name>
       <id>938542991</id>
+      <perkGroup>Edge</perkGroup>
       <damage>3</damage>
       <ammo>10</ammo>
       <magazine>10</magazine>
@@ -791,6 +845,7 @@
     <perk>
       <name>Honed Edge</name>
       <id>2827049491</id>
+      <perkGroup>Edge</perkGroup>
       <damage>5</damage>
       <ammo>0</ammo>
       <magazine>0</magazine>
@@ -798,6 +853,7 @@
     <perk>
       <name>Jagged Edge</name>
       <id>3666208348</id>
+      <perkGroup>Edge</perkGroup>
       <damage>10</damage>
       <ammo>-20</ammo>
       <magazine>-20</magazine>
@@ -805,6 +861,7 @@
     <perk>
       <name>Enduring Blade</name>
       <id>1261178282</id>
+      <perkGroup>Edge</perkGroup>
       <damage>-5</damage>
       <ammo>35</ammo>
       <magazine>35</magazine>
@@ -812,9 +869,9 @@
     <perk>
       <name>Hungry Edge</name>
       <id>436053704</id>
+      <perkGroup>Edge</perkGroup>
       <damage>0</damage>
       <ammo>20</ammo>
       <magazine>20</magazine>
     </perk>
-  </perkGroup>
-</perk1>
+</perks>

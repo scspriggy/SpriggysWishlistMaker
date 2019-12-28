@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<traits>
-  <trait>
+<perks>
+  <perk>
     <name>Assassin's Blade</name>
     <id>354401740</id>
     <desc>Sword Kills boost movement speed and damage.</desc>
@@ -9,8 +9,8 @@
     <movementSpeed>1</movementSpeed>
     <damage>1</damage>
     <ammo>0</ammo>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>En Garde</name>
     <id>1685431615</id>
     <desc>Quick attacks immediately after swapping to this sword do additional damage.</desc>
@@ -19,8 +19,8 @@
     <movementSpeed>0</movementSpeed>
     <damage>1</damage>
     <ammo>0</ammo>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Whirlwind Blade</name>
     <id>3913600130</id>
     <desc>Consecutive rapid sword strikes increase this weapon's damage output.</desc>
@@ -29,8 +29,8 @@
     <movementSpeed>0</movementSpeed>
     <damage>1</damage>
     <ammo>0</ammo>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Relentless Strikes</name>
     <id>1749209109</id>
     <desc>Landing three light attack  hits within a short time grants sword ammo.</desc>
@@ -39,8 +39,8 @@
     <movementSpeed>0</movementSpeed>
     <damage>0</damage>
     <ammo>1</ammo>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Tireless Blade</name>
     <id>2590710093</id>
     <desc>Sword ammo granted for every other powered sword kill.</desc>
@@ -49,8 +49,8 @@
     <movementSpeed>0</movementSpeed>
     <damage>0</damage>
     <ammo>1</ammo>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Rampage</name>
     <id>3425386926</id>
     <desc>Kills with this weapon temporarily grant increased damage. Stacks 3x.</desc>
@@ -68,8 +68,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Kill Clip</name>
     <id>1015611457</id>
     <desc>Reloading after a kill grants increased damage.</desc>
@@ -87,8 +87,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>High-Impact Reserves</name>
     <id>2213355989</id>
     <desc>Rounds at the end of the magazine deal more damage.</desc>
@@ -106,8 +106,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Headseeker</name>
     <id>460017080</id>
     <desc>Body shots landed with this weapon increase precision damage for a short time.</desc>
@@ -126,8 +126,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Cluster Bomb</name>
     <id>1275731761</id>
     <desc>Rockets spawn cluster bombs upon detonation.</desc>
@@ -146,8 +146,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Tap the Trigger</name>
     <id>1890422124</id>
     <desc>Grants a short period of increased stability and accuracy on initial trigger pull.</desc>
@@ -165,8 +165,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Under Pressure</name>
     <id>1645158859</id>
     <desc>Improved stability and accuracy as the magazine gets lower.</desc>
@@ -184,8 +184,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Rapid Hit</name>
     <id>247725512</id>
     <desc>Rapid precision hits temporarily increase stability and reload speed.</desc>
@@ -203,8 +203,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Opening Shot</name>
     <id>47981717</id>
     <desc>Improved accuracy and range on the opening shot of attack.</desc>
@@ -222,8 +222,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Dynamic Sway Reduction</name>
     <id>1359896290</id>
     <desc>When holding down the trigger, this weapon's sway-reduction system boosts accuracy over time.</desc>
@@ -241,8 +241,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Hip-Fire Grip</name>
     <id>1866048759</id>
     <desc>Ergonomic grips that increase accuracy and stability when firing from the hip.</desc>
@@ -260,8 +260,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Firmly Planted</name>
     <id>280464955</id>
     <desc>Increased accuracy, stability, and handling when firing while crouched.</desc>
@@ -279,8 +279,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Slideshot</name>
     <id>3161816588</id>
     <desc>Sliding partially reloads this weapon's magazine and temporarily boosts range and stability.</desc>
@@ -298,8 +298,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Outlaw</name>
     <id>1168162263</id>
     <desc>Precision kills greatly decrease reload time.</desc>
@@ -317,8 +317,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Threat Detector</name>
     <id>4071163871</id>
     <desc>Increased reload, stability, and handling when enemies are in close proximity.</desc>
@@ -336,8 +336,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Zen Moment</name>
     <id>2387244414</id>
     <desc>Causing damage with this weapon increases its stability.</desc>
@@ -355,8 +355,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Quickdraw</name>
     <id>706527188</id>
     <desc>This weapon can be drawn unbelievably fast.</desc>
@@ -374,8 +374,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Snapshot Sights</name>
     <id>957782887</id>
     <desc>Faster time to aim down sights.</desc>
@@ -393,8 +393,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Field Prep</name>
     <id>2869569095</id>
     <desc>Increased ammo reserves. Faster reload, stow, and ready when you're crouching.</desc>
@@ -412,8 +412,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Rangefinder</name>
     <id>2846385770</id>
     <desc>Aiming this weapon increases its effective range and zoom magnification. Increased projectile velocity while aiming Rocket Launchers and Grenade Launchers.</desc>
@@ -431,8 +431,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Moving Target</name>
     <id>588594999</id>
     <desc>Increased movement speed and target acquisition when moving while aiming down sights.</desc>
@@ -450,8 +450,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Ambitious Assassin</name>
     <id>2010801679</id>
     <desc>Overflows the magazine based on the number of rapid kills before reloading.</desc>
@@ -469,8 +469,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Grave Robber</name>
     <id>1631667848</id>
     <desc>Melee kills reload a portion of this weapon's magazine. Grants ammo for Primary ammo weapons; reloads from reserves for Special and Heavy ammo weapons.</desc>
@@ -488,8 +488,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Triple Tap</name>
     <id>3400784728</id>
     <desc>Rapidly landing precision hits will return 1 round to the magazine.</desc>
@@ -507,8 +507,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Fourth Time's the Charm</name>
     <id>1354429876</id>
     <desc>Rapidly landing precision hits will return two rounds to the magazine.</desc>
@@ -526,8 +526,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Pulse Monitor</name>
     <id>972757866</id>
     <desc>Auto-reloads part of the magazine when wielder is critically wounded.</desc>
@@ -545,8 +545,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Auto-Loading Holster</name>
     <id>3300816228</id>
     <desc>The holstered weapon is automatically reloaded after a short period of time.</desc>
@@ -564,8 +564,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Genesis</name>
     <id>3096702027</id>
     <desc>Breaking a combatant's shield with this weapon fills its magazine from reserves. Energy weapons regenerate ammo on hit when matching the damage type to the combatant's shield.</desc>
@@ -583,8 +583,8 @@
     <aoe>0</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Timed Payload</name>
     <id>1954620775</id>
     <desc>Projectiles attached to enemies explode after a short delay.</desc>
@@ -602,8 +602,8 @@
     <aoe>1</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Explosive Payload</name>
     <id>3038247973</id>
     <desc>Projectiles create an area-of-effect detonation on impact.</desc>
@@ -621,8 +621,8 @@
     <aoe>1</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Full Auto Trigger System</name>
     <id>4267945040</id>
     <desc>Holding down the trigger will fire this weapon at full auto.</desc>
@@ -640,8 +640,8 @@
     <aoe>0</aoe>
     <other>Full auto</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Backup Plan</name>
     <id>1600092898</id>
     <desc>Grants reduced charge time and increased handling speed for a short time immediately after swapping to this weapon.</desc>
@@ -660,8 +660,8 @@
     <aoe>0</aoe>
     <other>Faster charge rate</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Dragonfly</name>
     <id>2848615171</id>
     <desc>Precision kills create an elemental damage explosion.</desc>
@@ -679,120 +679,120 @@
     <aoe>1</aoe>
     <other>0</other>
     <details>0</details>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Air Assault</name>
     <id>3722653512</id>
     <desc>Gain increased handling while airborne.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Box Breathing</name>
     <id>2551157718</id>
     <desc>Aiming this weapon for a short period without firing grants bonus range and precision damage that resets after firing or exiting zoom.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Counterattack</name>
     <id>3016987351</id>
     <desc>Guarding while receiving damage grants a damage buff for 5 seconds.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Demolitionist</name>
     <id>3523296417</id>
     <desc>Kills with this weapon generate grenade energy. Activating your grenade ability reloads this weapon from reserves.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Eye of the Storm</name>
     <id>699525795</id>
     <desc>This weapon becomes more accurate and boosts handling as your health gets lower.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Feeding Frenzy</name>
     <id>2779035018</id>
     <desc>Kills with this weapon increase reload speed for a short time.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Firing Line</name>
     <id>1771339417</id>
     <desc>This weapon deals increased precision damage when near two or more allies.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Full Court</name>
     <id>2888557110</id>
     <desc>Increases detonation damage as the projectile travels further before exploding.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Mulligan</name>
     <id>3513791699</id>
     <desc>Missing a shot has a chance to return ammo directly to the magazine.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Multikill Clip</name>
     <id>2458213969</id>
     <desc>Reloading grants increased damage based on the number of rapid kills made beforehand.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>No Distractions</name>
     <id>2866798147</id>
     <desc>Aiming this weapon for a short period reduces flinch.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>One-Two Punch</name>
     <id>2679249093</id>
     <desc>Hitting an enemy with every pellet in a shot increases melee damage for a short duration.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Shattering Blade</name>
     <id>818211479</id>
     <desc>If your heavy attack consumes the last of your ammo, it deals significantly increased damage. Excludes aerial attacks.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Shield Disorient</name>
     <id>3275789089</id>
     <desc>Energy matched shield explosion disorients nearby combatants.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Slideways</name>
     <id>2039302152</id>
     <desc>Sliding partially reloads this weapon's magazine and temporarily boosts handling and stability.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Subsistence</name>
     <id>1820235745</id>
     <desc>Kills partially reload the magazine from reserves, but reserve capacity is reduced.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Surrounded</name>
     <id>3708227201</id>
     <desc>This weapon gains bonus damage when three or more enemies are in close proximity.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Swashbuckler</name>
     <id>4082225868</id>
     <desc>This weapon gains increased damage from melee kills and kills with this weapon.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Tracking Module</name>
     <id>3977735242</id>
     <desc>Adds tracking capability to rockets. Locks onto targets when aiming down sights.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Trench Barrel</name>
     <id>2360754333</id>
     <desc>After a successful melee hit, this weapon gains increased damage, handling, and reload speed for a short duration—or until three shots are fired.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Underdog</name>
     <id>205890336</id>
     <desc>This weapon gains a boost to reload speed as your health gets lower.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Osmosis</name>
     <id>1774574192</id>
     <desc>Using your grenade ability changes this weapon's damage type to match your subclass until you stow it.</desc>
-  </trait>
-  <trait>
+  </perk>
+  <perk>
     <name>Vorpal Weapon</name>
     <id>1546637391</id>
     <desc>Increased damage against bosses, vehicles, and Guardians with their Super active.</desc>
-  </trait>
-</traits>
+  </perk>
+</perks>
