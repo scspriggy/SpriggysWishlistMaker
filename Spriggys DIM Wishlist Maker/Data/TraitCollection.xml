@@ -642,6 +642,25 @@
     <details>0</details>
   </perk>
   <perk>
+    <name>Full Auto Trigger System (Shotguns)</name>
+    <id>2117683199</id>
+    <desc>Holding down the trigger will fire this weapon at full auto.</desc>
+    <trigger>Holding down the trigger</trigger>
+    <damage>0</damage>
+    <reloadSpeed>0</reloadSpeed>
+    <accuracy>0</accuracy>
+    <stability>0</stability>
+    <equipSpeed>0</equipSpeed>
+    <adsSpeed>0</adsSpeed>
+    <range>0</range>
+    <aimAssist>0</aimAssist>
+    <moreBullets>0</moreBullets>
+    <instantReload>0</instantReload>
+    <aoe>0</aoe>
+    <other>Full auto</other>
+    <details>0</details>
+  </perk>
+  <perk>
     <name>Backup Plan</name>
     <id>1600092898</id>
     <desc>Grants reduced charge time and increased handling speed for a short time immediately after swapping to this weapon.</desc>

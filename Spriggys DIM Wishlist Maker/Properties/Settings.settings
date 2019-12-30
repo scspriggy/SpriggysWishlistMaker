@@ -26,5 +26,8 @@
     <Setting Name="GameType" Type="System.String" Scope="User">
       <Value Profile="(Default)">Both</Value>
     </Setting>
+    <Setting Name="ClearEntries" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

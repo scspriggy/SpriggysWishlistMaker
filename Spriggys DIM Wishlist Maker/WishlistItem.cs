@@ -307,6 +307,7 @@ namespace Spriggys_DIM_Wishlist_Maker
                 perk4Rolls = perk4Rolls.OrderByDescending(o => o.pveRating).ToList();
             }
 
+
             output += "//" + perk1Name + Environment.NewLine;
             foreach (RollRating r in perk1Rolls)
             {
@@ -403,7 +404,9 @@ namespace Spriggys_DIM_Wishlist_Maker
             if (Properties.Settings.Default.CommentedRollInfo)
             {
                 output += getRollInfo(gameType1);
-                output += getRollInfo(gameType2);
+
+                if(gameType2 != GameType.Empty)
+                    output += getRollInfo(gameType2);
             }
 
             output += getWishlistItems();
