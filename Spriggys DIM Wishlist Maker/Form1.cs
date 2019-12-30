@@ -10,8 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-//TODO: Speed up loading when selecting weapon
-//TODO: Add Perks: +Lead from gold, +Disruption Break
+//TODO: P1 Figure out how to store barrel/mag that don't fit a group (ie: Martyr's Retribution)
+//TODO: P1 Add Perks: +Lead from gold, +Disruption Break
+//TODO: P2 Speed up loading when selecting weapon
+
+//TODO: P4 Add weapon details to main page when selected
+//TODO: P4 Add option to include curated rolls
+//TODO: P4 Filter perks based on weapon selection
 
 namespace Spriggys_DIM_Wishlist_Maker
 {
