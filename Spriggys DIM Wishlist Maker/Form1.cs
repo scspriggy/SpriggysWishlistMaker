@@ -11,7 +11,12 @@ using System.Windows.Forms;
 using System.Xml;
 
 //TODO: P1 Figure out how to store barrel/mag that don't fit a group (ie: Martyr's Retribution)
+/*
+ * maybe load perks into all perks object in main, then load weapons, adding perks based on either grouping or perk listing 
+ * (need to add barrel/mag to non-groupings and traits to all in weapon xml)
+ */
 //TODO: P1 Add Perks: +Lead from gold, +Disruption Break
+//TODO: P2 Add onhover descriptions of perks
 //TODO: P2 Speed up loading when selecting weapon
 
 //TODO: P4 Add weapon details to main page when selected
