@@ -13,6 +13,7 @@
       <name>Smallbore</name>
       <id>1482024992</id>
       <perkGroup>Barrel</perkGroup>
+      <perkGroup>Shotgun Barrel</perkGroup>
       <stability>7</stability>
       <range>7</range>
       <recoilDirection>0</recoilDirection>
@@ -40,6 +41,7 @@
       <name>Corkscrew Rifling</name>
       <id>4090651448</id>
       <perkGroup>Barrel</perkGroup>
+      <perkGroup>Shotgun Barrel</perkGroup>
       <stability>5</stability>
       <range>5</range>
       <recoilDirection>0</recoilDirection>
@@ -112,16 +114,6 @@
       <handlingSpeed>0</handlingSpeed>
     </perk>
     <perk>
-      <name>Smallbore</name>
-      <id>1482024992</id>
-      <perkGroup>Shotgun Barrel</perkGroup>
-      <pelletSpread>0</pelletSpread>
-      <precisionDamage>0</precisionDamage>
-      <stability>7</stability>
-      <range>7</range>
-      <handlingSpeed>0</handlingSpeed>
-    </perk>
-    <perk>
       <name>Barrel Shroud</name>
       <id>1300023272</id>
       <perkGroup>Shotgun Barrel</perkGroup>
@@ -130,16 +122,6 @@
       <stability>10</stability>
       <range>0</range>
       <handlingSpeed>10</handlingSpeed>
-    </perk>
-    <perk>
-      <name>Corkscrew Rifling</name>
-      <id>4090651448</id>
-      <perkGroup>Shotgun Barrel</perkGroup>
-      <pelletSpread>0</pelletSpread>
-      <precisionDamage>0</precisionDamage>
-      <stability>5</stability>
-      <range>5</range>
-      <handlingSpeed>5</handlingSpeed>
     </perk>
     <perk>
       <name>Volatile Launch</name>

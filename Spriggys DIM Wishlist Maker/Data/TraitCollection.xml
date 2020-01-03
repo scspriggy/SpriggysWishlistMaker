@@ -814,4 +814,20 @@
     <id>1546637391</id>
     <desc>Increased damage against bosses, vehicles, and Guardians with their Super active.</desc>
   </perk>
+  <perk>
+    <name>Lead from Gold</name>
+    <id>1556840489</id>
+    <desc>Picking up Heavy ammo also grants ammo to this weapon.</desc>
+  </perk>
+  <perk>
+    <name>Disruption Break</name>
+    <id>1683379515</id>
+    <desc>Breaking an enemy's shield with this weapon makes them more vulnerable to Kinetic damage for a brief period.</desc>
+  </perk>
+  <perk>
+    <name>Elemental Capacitor</name>
+    <id>3511092054</id>
+    <desc>Increased stats based on the currently equipped subclass. [Solar] increases reload speed [Arc] increases handling [Void] increases stability</desc>
+  </perk>
+  
 </perks>

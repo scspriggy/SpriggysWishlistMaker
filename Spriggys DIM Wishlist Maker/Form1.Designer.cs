@@ -280,6 +280,8 @@
             this.buttonGenerateText = new System.Windows.Forms.Button();
             this.textBoxRollInput = new System.Windows.Forms.TextBox();
             this.tabPageSettings = new System.Windows.Forms.TabPage();
+            this.checkBoxSettings_ClearEntries = new System.Windows.Forms.CheckBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxSettings_GameType = new System.Windows.Forms.ComboBox();
             this.checkBoxSettings_IncludeNameRating = new System.Windows.Forms.CheckBox();
@@ -294,8 +296,6 @@
             this.labelSettings_RollInput = new System.Windows.Forms.Label();
             this.textBoxSettings_RollInput = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.checkBoxSettings_ClearEntries = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPageForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
@@ -624,6 +624,7 @@
             // comboBoxMain_ComboPerkTwo5
             // 
             this.comboBoxMain_ComboPerkTwo5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboPerkTwo5.DropDownWidth = 200;
             this.comboBoxMain_ComboPerkTwo5.FormattingEnabled = true;
             this.comboBoxMain_ComboPerkTwo5.Location = new System.Drawing.Point(539, 474);
             this.comboBoxMain_ComboPerkTwo5.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -636,6 +637,7 @@
             // comboBoxMain_ComboPerkTwo4
             // 
             this.comboBoxMain_ComboPerkTwo4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboPerkTwo4.DropDownWidth = 200;
             this.comboBoxMain_ComboPerkTwo4.FormattingEnabled = true;
             this.comboBoxMain_ComboPerkTwo4.Location = new System.Drawing.Point(539, 446);
             this.comboBoxMain_ComboPerkTwo4.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -648,6 +650,7 @@
             // comboBoxMain_ComboPerkTwo3
             // 
             this.comboBoxMain_ComboPerkTwo3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboPerkTwo3.DropDownWidth = 200;
             this.comboBoxMain_ComboPerkTwo3.FormattingEnabled = true;
             this.comboBoxMain_ComboPerkTwo3.Location = new System.Drawing.Point(539, 418);
             this.comboBoxMain_ComboPerkTwo3.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -660,6 +663,7 @@
             // comboBoxMain_ComboPerkTwo2
             // 
             this.comboBoxMain_ComboPerkTwo2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboPerkTwo2.DropDownWidth = 200;
             this.comboBoxMain_ComboPerkTwo2.FormattingEnabled = true;
             this.comboBoxMain_ComboPerkTwo2.Location = new System.Drawing.Point(539, 390);
             this.comboBoxMain_ComboPerkTwo2.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -672,6 +676,7 @@
             // comboBoxMain_ComboPerkTwo1
             // 
             this.comboBoxMain_ComboPerkTwo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboPerkTwo1.DropDownWidth = 200;
             this.comboBoxMain_ComboPerkTwo1.FormattingEnabled = true;
             this.comboBoxMain_ComboPerkTwo1.Location = new System.Drawing.Point(539, 362);
             this.comboBoxMain_ComboPerkTwo1.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -684,6 +689,7 @@
             // comboBoxMain_ComboPerkOne5
             // 
             this.comboBoxMain_ComboPerkOne5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboPerkOne5.DropDownWidth = 200;
             this.comboBoxMain_ComboPerkOne5.FormattingEnabled = true;
             this.comboBoxMain_ComboPerkOne5.Location = new System.Drawing.Point(370, 474);
             this.comboBoxMain_ComboPerkOne5.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -696,6 +702,7 @@
             // comboBoxMain_ComboPerkOne4
             // 
             this.comboBoxMain_ComboPerkOne4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboPerkOne4.DropDownWidth = 200;
             this.comboBoxMain_ComboPerkOne4.FormattingEnabled = true;
             this.comboBoxMain_ComboPerkOne4.Location = new System.Drawing.Point(370, 446);
             this.comboBoxMain_ComboPerkOne4.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -708,6 +715,7 @@
             // comboBoxMain_ComboPerkOne3
             // 
             this.comboBoxMain_ComboPerkOne3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboPerkOne3.DropDownWidth = 200;
             this.comboBoxMain_ComboPerkOne3.FormattingEnabled = true;
             this.comboBoxMain_ComboPerkOne3.Location = new System.Drawing.Point(370, 418);
             this.comboBoxMain_ComboPerkOne3.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -720,6 +728,7 @@
             // comboBoxMain_ComboPerkOne2
             // 
             this.comboBoxMain_ComboPerkOne2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboPerkOne2.DropDownWidth = 200;
             this.comboBoxMain_ComboPerkOne2.FormattingEnabled = true;
             this.comboBoxMain_ComboPerkOne2.Location = new System.Drawing.Point(370, 390);
             this.comboBoxMain_ComboPerkOne2.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -732,6 +741,7 @@
             // comboBoxMain_ComboPerkOne1
             // 
             this.comboBoxMain_ComboPerkOne1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboPerkOne1.DropDownWidth = 200;
             this.comboBoxMain_ComboPerkOne1.FormattingEnabled = true;
             this.comboBoxMain_ComboPerkOne1.Location = new System.Drawing.Point(370, 362);
             this.comboBoxMain_ComboPerkOne1.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -744,6 +754,7 @@
             // comboBoxMain_ComboMag5
             // 
             this.comboBoxMain_ComboMag5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboMag5.DropDownWidth = 200;
             this.comboBoxMain_ComboMag5.FormattingEnabled = true;
             this.comboBoxMain_ComboMag5.Location = new System.Drawing.Point(194, 474);
             this.comboBoxMain_ComboMag5.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -756,6 +767,7 @@
             // comboBoxMain_ComboMag4
             // 
             this.comboBoxMain_ComboMag4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboMag4.DropDownWidth = 200;
             this.comboBoxMain_ComboMag4.FormattingEnabled = true;
             this.comboBoxMain_ComboMag4.Location = new System.Drawing.Point(194, 446);
             this.comboBoxMain_ComboMag4.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -768,6 +780,7 @@
             // comboBoxMain_ComboMag3
             // 
             this.comboBoxMain_ComboMag3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboMag3.DropDownWidth = 200;
             this.comboBoxMain_ComboMag3.FormattingEnabled = true;
             this.comboBoxMain_ComboMag3.Location = new System.Drawing.Point(194, 418);
             this.comboBoxMain_ComboMag3.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -780,6 +793,7 @@
             // comboBoxMain_ComboMag2
             // 
             this.comboBoxMain_ComboMag2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboMag2.DropDownWidth = 200;
             this.comboBoxMain_ComboMag2.FormattingEnabled = true;
             this.comboBoxMain_ComboMag2.Location = new System.Drawing.Point(194, 390);
             this.comboBoxMain_ComboMag2.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -792,6 +806,7 @@
             // comboBoxMain_ComboMag1
             // 
             this.comboBoxMain_ComboMag1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboMag1.DropDownWidth = 200;
             this.comboBoxMain_ComboMag1.FormattingEnabled = true;
             this.comboBoxMain_ComboMag1.Location = new System.Drawing.Point(194, 362);
             this.comboBoxMain_ComboMag1.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -804,6 +819,7 @@
             // comboBoxMain_ComboBarrel5
             // 
             this.comboBoxMain_ComboBarrel5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboBarrel5.DropDownWidth = 200;
             this.comboBoxMain_ComboBarrel5.FormattingEnabled = true;
             this.comboBoxMain_ComboBarrel5.Location = new System.Drawing.Point(23, 474);
             this.comboBoxMain_ComboBarrel5.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -816,6 +832,7 @@
             // comboBoxMain_ComboBarrel4
             // 
             this.comboBoxMain_ComboBarrel4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboBarrel4.DropDownWidth = 200;
             this.comboBoxMain_ComboBarrel4.FormattingEnabled = true;
             this.comboBoxMain_ComboBarrel4.Location = new System.Drawing.Point(23, 446);
             this.comboBoxMain_ComboBarrel4.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -828,6 +845,7 @@
             // comboBoxMain_ComboBarrel3
             // 
             this.comboBoxMain_ComboBarrel3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboBarrel3.DropDownWidth = 200;
             this.comboBoxMain_ComboBarrel3.FormattingEnabled = true;
             this.comboBoxMain_ComboBarrel3.Location = new System.Drawing.Point(23, 418);
             this.comboBoxMain_ComboBarrel3.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -840,6 +858,7 @@
             // comboBoxMain_ComboBarrel2
             // 
             this.comboBoxMain_ComboBarrel2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboBarrel2.DropDownWidth = 200;
             this.comboBoxMain_ComboBarrel2.FormattingEnabled = true;
             this.comboBoxMain_ComboBarrel2.Location = new System.Drawing.Point(23, 390);
             this.comboBoxMain_ComboBarrel2.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -852,6 +871,7 @@
             // comboBoxMain_ComboBarrel1
             // 
             this.comboBoxMain_ComboBarrel1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_ComboBarrel1.DropDownWidth = 200;
             this.comboBoxMain_ComboBarrel1.FormattingEnabled = true;
             this.comboBoxMain_ComboBarrel1.Location = new System.Drawing.Point(23, 362);
             this.comboBoxMain_ComboBarrel1.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1403,6 +1423,7 @@
             // comboBoxMain_Weapon
             // 
             this.comboBoxMain_Weapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Weapon.DropDownWidth = 200;
             this.comboBoxMain_Weapon.FormattingEnabled = true;
             this.comboBoxMain_Weapon.Location = new System.Drawing.Point(92, 19);
             this.comboBoxMain_Weapon.Margin = new System.Windows.Forms.Padding(2);
@@ -1414,6 +1435,7 @@
             // comboBoxMain_PerkTwo7id
             // 
             this.comboBoxMain_PerkTwo7id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkTwo7id.DropDownWidth = 200;
             this.comboBoxMain_PerkTwo7id.FormattingEnabled = true;
             this.comboBoxMain_PerkTwo7id.Location = new System.Drawing.Point(743, 278);
             this.comboBoxMain_PerkTwo7id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1426,6 +1448,7 @@
             // comboBoxMain_PerkTwo6id
             // 
             this.comboBoxMain_PerkTwo6id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkTwo6id.DropDownWidth = 200;
             this.comboBoxMain_PerkTwo6id.FormattingEnabled = true;
             this.comboBoxMain_PerkTwo6id.Location = new System.Drawing.Point(743, 252);
             this.comboBoxMain_PerkTwo6id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1438,6 +1461,7 @@
             // comboBoxMain_PerkTwo5id
             // 
             this.comboBoxMain_PerkTwo5id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkTwo5id.DropDownWidth = 200;
             this.comboBoxMain_PerkTwo5id.FormattingEnabled = true;
             this.comboBoxMain_PerkTwo5id.Location = new System.Drawing.Point(743, 223);
             this.comboBoxMain_PerkTwo5id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1450,6 +1474,7 @@
             // comboBoxMain_PerkTwo4id
             // 
             this.comboBoxMain_PerkTwo4id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkTwo4id.DropDownWidth = 200;
             this.comboBoxMain_PerkTwo4id.FormattingEnabled = true;
             this.comboBoxMain_PerkTwo4id.Location = new System.Drawing.Point(743, 197);
             this.comboBoxMain_PerkTwo4id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1462,6 +1487,7 @@
             // comboBoxMain_PerkTwo3id
             // 
             this.comboBoxMain_PerkTwo3id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkTwo3id.DropDownWidth = 200;
             this.comboBoxMain_PerkTwo3id.FormattingEnabled = true;
             this.comboBoxMain_PerkTwo3id.Location = new System.Drawing.Point(743, 172);
             this.comboBoxMain_PerkTwo3id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1474,6 +1500,7 @@
             // comboBoxMain_PerkTwo2id
             // 
             this.comboBoxMain_PerkTwo2id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkTwo2id.DropDownWidth = 200;
             this.comboBoxMain_PerkTwo2id.FormattingEnabled = true;
             this.comboBoxMain_PerkTwo2id.Location = new System.Drawing.Point(743, 144);
             this.comboBoxMain_PerkTwo2id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1486,6 +1513,7 @@
             // comboBoxMain_PerkTwo1id
             // 
             this.comboBoxMain_PerkTwo1id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkTwo1id.DropDownWidth = 200;
             this.comboBoxMain_PerkTwo1id.FormattingEnabled = true;
             this.comboBoxMain_PerkTwo1id.Location = new System.Drawing.Point(743, 117);
             this.comboBoxMain_PerkTwo1id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1498,6 +1526,7 @@
             // comboBoxMain_PerkOne7id
             // 
             this.comboBoxMain_PerkOne7id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkOne7id.DropDownWidth = 200;
             this.comboBoxMain_PerkOne7id.FormattingEnabled = true;
             this.comboBoxMain_PerkOne7id.Location = new System.Drawing.Point(503, 278);
             this.comboBoxMain_PerkOne7id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1510,6 +1539,7 @@
             // comboBoxMain_PerkOne6id
             // 
             this.comboBoxMain_PerkOne6id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkOne6id.DropDownWidth = 200;
             this.comboBoxMain_PerkOne6id.FormattingEnabled = true;
             this.comboBoxMain_PerkOne6id.Location = new System.Drawing.Point(503, 252);
             this.comboBoxMain_PerkOne6id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1522,6 +1552,7 @@
             // comboBoxMain_PerkOne5id
             // 
             this.comboBoxMain_PerkOne5id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkOne5id.DropDownWidth = 200;
             this.comboBoxMain_PerkOne5id.FormattingEnabled = true;
             this.comboBoxMain_PerkOne5id.Location = new System.Drawing.Point(503, 224);
             this.comboBoxMain_PerkOne5id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1534,6 +1565,7 @@
             // comboBoxMain_PerkOne4id
             // 
             this.comboBoxMain_PerkOne4id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkOne4id.DropDownWidth = 200;
             this.comboBoxMain_PerkOne4id.FormattingEnabled = true;
             this.comboBoxMain_PerkOne4id.Location = new System.Drawing.Point(503, 197);
             this.comboBoxMain_PerkOne4id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1546,6 +1578,7 @@
             // comboBoxMain_PerkOne3id
             // 
             this.comboBoxMain_PerkOne3id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkOne3id.DropDownWidth = 200;
             this.comboBoxMain_PerkOne3id.FormattingEnabled = true;
             this.comboBoxMain_PerkOne3id.Location = new System.Drawing.Point(503, 172);
             this.comboBoxMain_PerkOne3id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1558,6 +1591,7 @@
             // comboBoxMain_PerkOne2id
             // 
             this.comboBoxMain_PerkOne2id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkOne2id.DropDownWidth = 200;
             this.comboBoxMain_PerkOne2id.FormattingEnabled = true;
             this.comboBoxMain_PerkOne2id.Location = new System.Drawing.Point(503, 144);
             this.comboBoxMain_PerkOne2id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1570,6 +1604,7 @@
             // comboBoxMain_PerkOne1id
             // 
             this.comboBoxMain_PerkOne1id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_PerkOne1id.DropDownWidth = 200;
             this.comboBoxMain_PerkOne1id.FormattingEnabled = true;
             this.comboBoxMain_PerkOne1id.Location = new System.Drawing.Point(503, 117);
             this.comboBoxMain_PerkOne1id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1582,6 +1617,7 @@
             // comboBoxMain_Mag7id
             // 
             this.comboBoxMain_Mag7id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Mag7id.DropDownWidth = 200;
             this.comboBoxMain_Mag7id.FormattingEnabled = true;
             this.comboBoxMain_Mag7id.Location = new System.Drawing.Point(264, 279);
             this.comboBoxMain_Mag7id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1594,6 +1630,7 @@
             // comboBoxMain_Mag6id
             // 
             this.comboBoxMain_Mag6id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Mag6id.DropDownWidth = 200;
             this.comboBoxMain_Mag6id.FormattingEnabled = true;
             this.comboBoxMain_Mag6id.Location = new System.Drawing.Point(264, 252);
             this.comboBoxMain_Mag6id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1606,6 +1643,7 @@
             // comboBoxMain_Mag5id
             // 
             this.comboBoxMain_Mag5id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Mag5id.DropDownWidth = 200;
             this.comboBoxMain_Mag5id.FormattingEnabled = true;
             this.comboBoxMain_Mag5id.Location = new System.Drawing.Point(264, 224);
             this.comboBoxMain_Mag5id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1618,6 +1656,7 @@
             // comboBoxMain_Mag4id
             // 
             this.comboBoxMain_Mag4id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Mag4id.DropDownWidth = 200;
             this.comboBoxMain_Mag4id.FormattingEnabled = true;
             this.comboBoxMain_Mag4id.Location = new System.Drawing.Point(264, 197);
             this.comboBoxMain_Mag4id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1630,6 +1669,7 @@
             // comboBoxMain_Mag3id
             // 
             this.comboBoxMain_Mag3id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Mag3id.DropDownWidth = 200;
             this.comboBoxMain_Mag3id.FormattingEnabled = true;
             this.comboBoxMain_Mag3id.Location = new System.Drawing.Point(264, 172);
             this.comboBoxMain_Mag3id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1642,6 +1682,7 @@
             // comboBoxMain_Mag2id
             // 
             this.comboBoxMain_Mag2id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Mag2id.DropDownWidth = 200;
             this.comboBoxMain_Mag2id.FormattingEnabled = true;
             this.comboBoxMain_Mag2id.Location = new System.Drawing.Point(264, 144);
             this.comboBoxMain_Mag2id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1654,6 +1695,7 @@
             // comboBoxMain_Mag1id
             // 
             this.comboBoxMain_Mag1id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Mag1id.DropDownWidth = 200;
             this.comboBoxMain_Mag1id.FormattingEnabled = true;
             this.comboBoxMain_Mag1id.Location = new System.Drawing.Point(264, 117);
             this.comboBoxMain_Mag1id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1666,6 +1708,7 @@
             // comboBoxMain_Barrel7id
             // 
             this.comboBoxMain_Barrel7id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Barrel7id.DropDownWidth = 200;
             this.comboBoxMain_Barrel7id.FormattingEnabled = true;
             this.comboBoxMain_Barrel7id.Location = new System.Drawing.Point(23, 279);
             this.comboBoxMain_Barrel7id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1678,6 +1721,7 @@
             // comboBoxMain_Barrel6id
             // 
             this.comboBoxMain_Barrel6id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Barrel6id.DropDownWidth = 200;
             this.comboBoxMain_Barrel6id.FormattingEnabled = true;
             this.comboBoxMain_Barrel6id.Location = new System.Drawing.Point(23, 252);
             this.comboBoxMain_Barrel6id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1690,6 +1734,7 @@
             // comboBoxMain_Barrel5id
             // 
             this.comboBoxMain_Barrel5id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Barrel5id.DropDownWidth = 200;
             this.comboBoxMain_Barrel5id.FormattingEnabled = true;
             this.comboBoxMain_Barrel5id.Location = new System.Drawing.Point(23, 224);
             this.comboBoxMain_Barrel5id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1702,6 +1747,7 @@
             // comboBoxMain_Barrel4id
             // 
             this.comboBoxMain_Barrel4id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Barrel4id.DropDownWidth = 200;
             this.comboBoxMain_Barrel4id.FormattingEnabled = true;
             this.comboBoxMain_Barrel4id.Location = new System.Drawing.Point(23, 197);
             this.comboBoxMain_Barrel4id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1714,6 +1760,7 @@
             // comboBoxMain_Barrel3id
             // 
             this.comboBoxMain_Barrel3id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Barrel3id.DropDownWidth = 200;
             this.comboBoxMain_Barrel3id.FormattingEnabled = true;
             this.comboBoxMain_Barrel3id.Location = new System.Drawing.Point(23, 172);
             this.comboBoxMain_Barrel3id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1726,6 +1773,7 @@
             // comboBoxMain_Barrel2id
             // 
             this.comboBoxMain_Barrel2id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Barrel2id.DropDownWidth = 200;
             this.comboBoxMain_Barrel2id.FormattingEnabled = true;
             this.comboBoxMain_Barrel2id.Location = new System.Drawing.Point(23, 144);
             this.comboBoxMain_Barrel2id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -1738,6 +1786,7 @@
             // comboBoxMain_Barrel1id
             // 
             this.comboBoxMain_Barrel1id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMain_Barrel1id.DropDownWidth = 200;
             this.comboBoxMain_Barrel1id.FormattingEnabled = true;
             this.comboBoxMain_Barrel1id.Location = new System.Drawing.Point(23, 117);
             this.comboBoxMain_Barrel1id.Margin = new System.Windows.Forms.Padding(1, 4, 3, 4);
@@ -3054,7 +3103,7 @@
             this.tabPageText.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageText.Size = new System.Drawing.Size(961, 572);
             this.tabPageText.TabIndex = 1;
-            this.tabPageText.Text = "Text Input";
+            this.tabPageText.Text = "Text";
             this.tabPageText.UseVisualStyleBackColor = true;
             // 
             // buttonGenerateText
@@ -3103,6 +3152,29 @@
             this.tabPageSettings.TabIndex = 2;
             this.tabPageSettings.Text = "Settings";
             this.tabPageSettings.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSettings_ClearEntries
+            // 
+            this.checkBoxSettings_ClearEntries.AutoSize = true;
+            this.checkBoxSettings_ClearEntries.Location = new System.Drawing.Point(15, 99);
+            this.checkBoxSettings_ClearEntries.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBoxSettings_ClearEntries.Name = "checkBoxSettings_ClearEntries";
+            this.checkBoxSettings_ClearEntries.Size = new System.Drawing.Size(145, 17);
+            this.checkBoxSettings_ClearEntries.TabIndex = 15;
+            this.checkBoxSettings_ClearEntries.Text = "Clear Entries After Submit";
+            this.checkBoxSettings_ClearEntries.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 547);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(66, 13);
+            this.linkLabel1.TabIndex = 14;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Tag = "";
+            this.linkLabel1.Text = "Wishlist Doc";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label1
             // 
@@ -3259,29 +3331,6 @@
             // toolTip1
             // 
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 547);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(66, 13);
-            this.linkLabel1.TabIndex = 14;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Tag = "";
-            this.linkLabel1.Text = "Wishlist Doc";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // checkBoxSettings_ClearEntries
-            // 
-            this.checkBoxSettings_ClearEntries.AutoSize = true;
-            this.checkBoxSettings_ClearEntries.Location = new System.Drawing.Point(15, 99);
-            this.checkBoxSettings_ClearEntries.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBoxSettings_ClearEntries.Name = "checkBoxSettings_ClearEntries";
-            this.checkBoxSettings_ClearEntries.Size = new System.Drawing.Size(145, 17);
-            this.checkBoxSettings_ClearEntries.TabIndex = 15;
-            this.checkBoxSettings_ClearEntries.Text = "Clear Entries After Submit";
-            this.checkBoxSettings_ClearEntries.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

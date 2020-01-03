@@ -9,14 +9,16 @@ namespace Spriggys_DIM_Wishlist_Maker
     class Perk
     {
         public string name;
-        public string perkGroup;
+        public List<string> perkGroup;
         public long id;
+        public string desc;
 
         public Perk()
         {
             this.name = "";
-            this.perkGroup = "";
+            this.perkGroup = new List<string>();
             this.id = 0;
+            this.desc = "";
         }
     }
 }

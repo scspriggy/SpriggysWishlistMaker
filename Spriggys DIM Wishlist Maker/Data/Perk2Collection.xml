@@ -286,7 +286,8 @@
     <perk>
       <name>Black Powder</name>
       <id>1996142143</id>
-    <perkGroup>Grenade Launcher Magazine</perkGroup>
+      <perkGroup>Grenade Launcher Magazine</perkGroup>
+      <perkGroup>Rocket Launcher Magazine</perkGroup>
       <blastRadius>5</blastRadius>
       <projectileSpeed>0</projectileSpeed>
       <stability>-10</stability>
@@ -309,6 +310,7 @@
       <name>High-Velocity Rounds</name>
       <id>2822142346</id>
       <perkGroup>Grenade Launcher Magazine</perkGroup>
+      <perkGroup>Rocket Launcher Magazine</perkGroup>
       <blastRadius>0</blastRadius>
       <projectileSpeed>10</projectileSpeed>
       <stability>0</stability>
@@ -330,6 +332,7 @@
     <perk>
       <name>Sticky Grenades</name>
       <id>3373736292</id>
+      <desc>Grenades fired from this weapon attach on impact and detonate when enemies are in proximity.</desc>
       <perkGroup>Grenade Launcher Magazine</perkGroup>
       <blastRadius>0</blastRadius>
       <projectileSpeed>0</projectileSpeed>
@@ -350,16 +353,6 @@
       <other>Disorients target</other>
     </perk>
     <perk>
-      <name>Black Powder</name>
-      <id>1996142143</id>
-      <perkGroup>Rocket Launcher Magazine</perkGroup>
-      <blastRadius>5</blastRadius>
-      <projectileSpeed>0</projectileSpeed>
-      <stability>-10</stability>
-      <reloadSpeed>0</reloadSpeed>
-      <other></other>
-    </perk>
-    <perk>
       <name>Implosion Rounds</name>
       <id>3492396210</id>
       <perkGroup>Rocket Launcher Magazine</perkGroup>
@@ -367,16 +360,6 @@
       <projectileSpeed>10</projectileSpeed>
       <stability>15</stability>
       <reloadSpeed>0</reloadSpeed>
-      <other></other>
-    </perk>
-    <perk>
-      <name>High-Velocity Rounds</name>
-      <id>2822142346</id>
-      <perkGroup>Rocket Launcher Magazine</perkGroup>
-      <blastRadius>0</blastRadius>
-      <projectileSpeed>10</projectileSpeed>
-      <stability>0</stability>
-      <reloadSpeed>10</reloadSpeed>
       <other></other>
     </perk>
     <perk>

@@ -10,15 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-//TODO: P1 Figure out how to store barrel/mag that don't fit a group (ie: Martyr's Retribution)
-/*
- * maybe load perks into all perks object in main, then load weapons, adding perks based on either grouping or perk listing 
- * (need to add barrel/mag to non-groupings and traits to all in weapon xml)
- */
-//TODO: P1 Add Perks: +Lead from gold, +Disruption Break
+//TODO: P1 Fix martyr's retribution (specific perk rolls) on mag, and 2 traits
+//TODO: P2 Add desc on all perks and traits
+//TODO: P2 Add possible perks on all weapons
+//TODO: P2 Filter dropdown based on perks (not just perkGroups)
 //TODO: P2 Add onhover descriptions of perks
-//TODO: P2 Speed up loading when selecting weapon
 
+//TODO: P4 Speed up loading when selecting weapon
 //TODO: P4 Add weapon details to main page when selected
 //TODO: P4 Add option to include curated rolls
 //TODO: P4 Filter perks based on weapon selection
@@ -38,9 +36,9 @@ namespace Spriggys_DIM_Wishlist_Maker
             InitializeComponent();
             importData();
             loadWeaponDropdowns("");
-            loadBarrelDropdowns("");
-            loadMagDropdowns("");
-            loadTraitDropdowns("");
+            loadBarrelDropdowns(null);
+            loadMagDropdowns(null);
+            loadTraitDropdowns(null);
             loadSettings();
             loadGameMode();
         }
@@ -48,34 +46,6 @@ namespace Spriggys_DIM_Wishlist_Maker
         private void importData()
         {
             XmlDocument doc = new XmlDocument();
-
-            //Load Weapons
-            doc.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\WeaponCollection.xml");
-            XmlNodeList weaponNodes = doc.SelectNodes("weapons/weapon");
-
-            foreach (XmlNode n in weaponNodes)
-            {
-                if(n["id"].InnerText != null && n["id"].InnerText != "")
-                {
-                    Weapon w = new Weapon();
-                    string idText = n["id"].InnerText;
-                    w.id = Convert.ToInt64(idText);
-
-                    if (!n["name"].IsEmpty)
-                        w.name = n["name"].InnerText;
-
-                    if (!n["perk1Group"].IsEmpty)
-                        w.perk1Group = n["perk1Group"].InnerText;
-
-                    if (!n["perk2Group"].IsEmpty)
-                        w.perk2Group = n["perk2Group"].InnerText;
-
-                    if (!n["category"].IsEmpty)
-                        w.category = n["category"].InnerText;
-
-                    weapons.Add(w);
-                }
-            }
 
             //Load Barrels
             doc.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\Perk1Collection.xml");
@@ -88,11 +58,19 @@ namespace Spriggys_DIM_Wishlist_Maker
                     Perk p = new Perk();
                     p.id = Convert.ToInt64(n["id"].InnerText);
 
-                    if (!n["name"].IsEmpty)
+                    if (n["name"] != null && !n["name"].IsEmpty)
                         p.name = n["name"].InnerText;
 
-                    if (!n["perkGroup"].IsEmpty)
-                        p.perkGroup = n["perkGroup"].InnerText;
+                    if (n["desc"] != null && !n["desc"].IsEmpty)
+                        p.desc = n["desc"].InnerText;
+
+                    foreach (XmlNode child in n.SelectNodes("perkGroup"))
+                    {
+                        if (child.Name == "perkGroup")
+                        {
+                            p.perkGroup.Add(child.InnerText);
+                        }
+                    }
 
                     barrelPerks.Add(p);
                 }
@@ -109,11 +87,19 @@ namespace Spriggys_DIM_Wishlist_Maker
                     Perk p = new Perk();
                     p.id = Convert.ToInt64(n["id"].InnerText);
 
-                    if (!n["name"].IsEmpty)
+                    if (n["name"] != null && !n["name"].IsEmpty)
                         p.name = n["name"].InnerText;
 
-                    if (!n["perkGroup"].IsEmpty)
-                        p.perkGroup = n["perkGroup"].InnerText;
+                    if (n["desc"] != null && !n["desc"].IsEmpty)
+                        p.desc = n["desc"].InnerText;
+
+                    foreach (XmlNode child in n.SelectNodes("perkGroup"))
+                    {
+                        if (child.Name == "perkGroup")
+                        {
+                            p.perkGroup.Add(child.InnerText);
+                        }
+                    }
 
                     magPerks.Add(p);
                 }
@@ -130,10 +116,73 @@ namespace Spriggys_DIM_Wishlist_Maker
                     Perk p = new Perk();
                     p.id = Convert.ToInt64(n["id"].InnerText);
 
-                    if (!n["name"].IsEmpty)
+                    if (n["name"] != null && !n["name"].IsEmpty)
                         p.name = n["name"].InnerText;
 
+                    if (n["desc"] != null && !n["desc"].IsEmpty)
+                        p.desc = n["desc"].InnerText;
+
                     traitPerks.Add(p);
+                }
+            }
+
+            //Load Weapons
+            doc.Load(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\WeaponCollection.xml");
+            XmlNodeList weaponNodes = doc.SelectNodes("weapons/weapon");
+
+            foreach (XmlNode n in weaponNodes)
+            {
+                if (n["id"].InnerText != null && n["id"].InnerText != "")
+                {
+                    Weapon w = new Weapon();
+                    string idText = n["id"].InnerText;
+                    w.id = Convert.ToInt64(idText);
+
+                    if (n["name"] != null && !n["name"].IsEmpty)
+                        w.name = n["name"].InnerText;
+
+                    if (n["perk1Group"] != null && !n["perk1Group"].IsEmpty)
+                        w.perk1Group = n["perk1Group"].InnerText;
+
+                    if (n["perk2Group"] != null && !n["perk2Group"].IsEmpty)
+                        w.perk2Group = n["perk2Group"].InnerText;
+
+                    if (n["category"] != null && !n["category"].IsEmpty)
+                        w.category = n["category"].InnerText;
+
+                    foreach (XmlNode perk1 in n.SelectNodes("perk1"))
+                    {
+                        if (perk1.Name == "perk1")
+                        {
+                            w.perk1Options.Add(barrelPerks.Find(x => x.id == Convert.ToInt64(perk1.InnerText)));
+                        }
+                    }
+
+                    foreach (XmlNode perk2 in n.SelectNodes("perk2"))
+                    {
+                        if (perk2.Name == "perk2")
+                        {
+                            w.perk2Options.Add(magPerks.Find(x => x.id == Convert.ToInt64(perk2.InnerText)));
+                        }
+                    }
+
+                    foreach (XmlNode trait1 in n.SelectNodes("trait1"))
+                    {
+                        if (trait1.Name == "trait1")
+                        {
+                            w.perk3Options.Add(traitPerks.Find(x => x.id == Convert.ToInt64(trait1.InnerText)));
+                        }
+                    }
+
+                    foreach (XmlNode trait2 in n.SelectNodes("trait2"))
+                    {
+                        if (trait2.Name == "trait2")
+                        {
+                            w.perk4Options.Add(traitPerks.Find(x => x.id == Convert.ToInt64(trait2.InnerText)));
+                        }
+                    }
+
+                    weapons.Add(w);
                 }
             }
         }
@@ -173,19 +222,19 @@ namespace Spriggys_DIM_Wishlist_Maker
             comboBoxMain_ComboBarrel4.Items.Clear();
             comboBoxMain_ComboBarrel5.Items.Clear();
         }
-        private void loadBarrelDropdowns(string group)
+        private void loadBarrelDropdowns(Weapon w)
         {
             clearBarrelDropdowns();
 
-            if (group == "")
+            if (w == null)
             {
                 labelMain_Barrel.Text = "Barrel";
                 labelMain_Barrel2.Text = "Barrel";
             }
             else
             {
-                labelMain_Barrel.Text = group;
-                labelMain_Barrel2.Text = group;
+                labelMain_Barrel.Text = w.perk1Group;
+                labelMain_Barrel2.Text = w.perk1Group;
             }
 
             comboBoxMain_Barrel1id.Items.Add("");
@@ -203,9 +252,9 @@ namespace Spriggys_DIM_Wishlist_Maker
 
             foreach (Perk p in barrelPerks)
             {
-                if( group == "" || group == p.perkGroup)
+                if( w == null || p.perkGroup.Contains(w.perk1Group))
                 {
-                    if (!customDropdowns && group == p.perkGroup)
+                    if (!customDropdowns && w != null && p.perkGroup.Contains(w.perk1Group))
                         customDropdowns = true;
 
                     comboBoxMain_Barrel1id.Items.Add(p.name);
@@ -239,19 +288,19 @@ namespace Spriggys_DIM_Wishlist_Maker
             comboBoxMain_ComboMag4.Items.Clear();
             comboBoxMain_ComboMag5.Items.Clear();
         }
-        private void loadMagDropdowns(string group)
+        private void loadMagDropdowns(Weapon w)
         {
             clearMagDropdowns();
 
-            if(group == "")
+            if(w == null)
             {
                 labelMain_Mag.Text = "Magazine";
                 labelMain_Mag2.Text = "Magazine";
             }
             else
             {
-                labelMain_Mag.Text = group;
-                labelMain_Mag2.Text = group;
+                labelMain_Mag.Text = w.perk2Group;
+                labelMain_Mag2.Text = w.perk2Group;
             }
             
 
@@ -270,9 +319,9 @@ namespace Spriggys_DIM_Wishlist_Maker
 
             foreach (Perk p in magPerks)
             {
-                if (group == "" || group == p.perkGroup)
+                if (w == null || p.perkGroup.Contains(w.perk2Group))
                 {
-                    if (!customDropdowns && group == p.perkGroup)
+                    if (!customDropdowns && w != null && p.perkGroup.Contains(w.perk2Group))
                         customDropdowns = true;
 
                     comboBoxMain_Mag1id.Items.Add(p.name);
@@ -319,7 +368,7 @@ namespace Spriggys_DIM_Wishlist_Maker
             comboBoxMain_ComboPerkTwo4.Items.Clear();
             comboBoxMain_ComboPerkTwo5.Items.Clear();
         }
-        private void loadTraitDropdowns(string group)
+        private void loadTraitDropdowns(Weapon w)
         {
             clearTraitDropdowns();
 
@@ -349,40 +398,61 @@ namespace Spriggys_DIM_Wishlist_Maker
             comboBoxMain_ComboPerkTwo4.Items.Add("");
             comboBoxMain_ComboPerkTwo5.Items.Add("");
 
-            foreach (Perk p in traitPerks)
+            List<Perk> perks = new List<Perk>();
+
+            if (w == null || w.perk3Options.Count == 0)
             {
-                if (group == "" || group == p.perkGroup)
-                {
-                    if (!customDropdowns && group == p.perkGroup)
-                        customDropdowns = true;
-
-                    comboBoxMain_PerkOne1id.Items.Add(p.name);
-                    comboBoxMain_PerkOne2id.Items.Add(p.name);
-                    comboBoxMain_PerkOne3id.Items.Add(p.name);
-                    comboBoxMain_PerkOne4id.Items.Add(p.name);
-                    comboBoxMain_PerkOne5id.Items.Add(p.name);
-                    comboBoxMain_PerkOne6id.Items.Add(p.name);
-                    comboBoxMain_PerkOne7id.Items.Add(p.name);
-                    comboBoxMain_ComboPerkOne1.Items.Add(p.name);
-                    comboBoxMain_ComboPerkOne2.Items.Add(p.name);
-                    comboBoxMain_ComboPerkOne3.Items.Add(p.name);
-                    comboBoxMain_ComboPerkOne4.Items.Add(p.name);
-                    comboBoxMain_ComboPerkOne5.Items.Add(p.name);
-
-                    comboBoxMain_PerkTwo1id.Items.Add(p.name);
-                    comboBoxMain_PerkTwo2id.Items.Add(p.name);
-                    comboBoxMain_PerkTwo3id.Items.Add(p.name);
-                    comboBoxMain_PerkTwo4id.Items.Add(p.name);
-                    comboBoxMain_PerkTwo5id.Items.Add(p.name);
-                    comboBoxMain_PerkTwo6id.Items.Add(p.name);
-                    comboBoxMain_PerkTwo7id.Items.Add(p.name);
-                    comboBoxMain_ComboPerkTwo1.Items.Add(p.name);
-                    comboBoxMain_ComboPerkTwo2.Items.Add(p.name);
-                    comboBoxMain_ComboPerkTwo3.Items.Add(p.name);
-                    comboBoxMain_ComboPerkTwo4.Items.Add(p.name);
-                    comboBoxMain_ComboPerkTwo5.Items.Add(p.name);
-                }
+                perks = traitPerks;
             }
+            else
+            {
+                perks = w.perk3Options;
+                customDropdowns = true;
+            }
+
+            foreach (Perk p in perks)
+            {
+                comboBoxMain_PerkOne1id.Items.Add(p.name);
+                comboBoxMain_PerkOne2id.Items.Add(p.name);
+                comboBoxMain_PerkOne3id.Items.Add(p.name);
+                comboBoxMain_PerkOne4id.Items.Add(p.name);
+                comboBoxMain_PerkOne5id.Items.Add(p.name);
+                comboBoxMain_PerkOne6id.Items.Add(p.name);
+                comboBoxMain_PerkOne7id.Items.Add(p.name);
+                comboBoxMain_ComboPerkOne1.Items.Add(p.name);
+                comboBoxMain_ComboPerkOne2.Items.Add(p.name);
+                comboBoxMain_ComboPerkOne3.Items.Add(p.name);
+                comboBoxMain_ComboPerkOne4.Items.Add(p.name);
+                comboBoxMain_ComboPerkOne5.Items.Add(p.name);
+            }
+
+            perks = new List<Perk>();
+
+            if (w == null || w.perk4Options.Count == 0)
+            {
+                perks = traitPerks;
+            }
+            else
+            {
+                perks = w.perk4Options;
+                customDropdowns = true;
+            }
+
+            foreach (Perk p in perks)
+            {
+                comboBoxMain_PerkTwo1id.Items.Add(p.name);
+                comboBoxMain_PerkTwo2id.Items.Add(p.name);
+                comboBoxMain_PerkTwo3id.Items.Add(p.name);
+                comboBoxMain_PerkTwo4id.Items.Add(p.name);
+                comboBoxMain_PerkTwo5id.Items.Add(p.name);
+                comboBoxMain_PerkTwo6id.Items.Add(p.name);
+                comboBoxMain_PerkTwo7id.Items.Add(p.name);
+                comboBoxMain_ComboPerkTwo1.Items.Add(p.name);
+                comboBoxMain_ComboPerkTwo2.Items.Add(p.name);
+                comboBoxMain_ComboPerkTwo3.Items.Add(p.name);
+                comboBoxMain_ComboPerkTwo4.Items.Add(p.name);
+                comboBoxMain_ComboPerkTwo5.Items.Add(p.name);
+            }                
         }
 
         private void loadSettings()
@@ -808,9 +878,9 @@ namespace Spriggys_DIM_Wishlist_Maker
             if (Properties.Settings.Default.ClearEntries)
             {
                 loadWeaponDropdowns("");
-                loadBarrelDropdowns("");
-                loadMagDropdowns("");
-                loadTraitDropdowns("");
+                loadBarrelDropdowns(null);
+                loadMagDropdowns(null);
+                loadTraitDropdowns(null);
                 clearTextEntries();
             }
 
@@ -1916,9 +1986,9 @@ namespace Spriggys_DIM_Wishlist_Maker
 
                 if (customDropdowns)
                 {
-                    loadBarrelDropdowns("");
-                    loadMagDropdowns("");
-                    loadTraitDropdowns("");
+                    loadBarrelDropdowns(null);
+                    loadMagDropdowns(null);
+                    loadTraitDropdowns(null);
                     customDropdowns = false;
                 }
             }
@@ -2217,20 +2287,17 @@ namespace Spriggys_DIM_Wishlist_Maker
             {
                 if (customDropdowns)
                 {
-                    loadBarrelDropdowns("");
-                    loadMagDropdowns("");
-                    loadTraitDropdowns("");
+                    loadBarrelDropdowns(null);
+                    loadMagDropdowns(null);
+                    loadTraitDropdowns(null);
                     customDropdowns = false;
                 }
                 return;
             }
 
             //Load Custom Dropdowns
-            string perk1Group = weapons.Find(x => x.name == comboBoxMain_Weapon.Text).perk1Group;
-            string perk2Group = weapons.Find(x => x.name == comboBoxMain_Weapon.Text).perk2Group;
-
-             loadBarrelDropdowns(perk1Group);
-             loadMagDropdowns(perk2Group);
+             loadBarrelDropdowns(weapons.Find(x => x.name == comboBoxMain_Weapon.Text));
+             loadMagDropdowns(weapons.Find(x => x.name == comboBoxMain_Weapon.Text));
 
         }
 

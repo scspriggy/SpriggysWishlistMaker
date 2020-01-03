@@ -125,7 +125,18 @@
     <category>Grenade Launcher</category>
     <ammoType>Energy</ammoType>
     <perk1Group>Launcher Tube</perk1Group>
-    <perk2Group>Grenade Launcher Magazine</perk2Group>
+    <perk2>2822142346</perk2>
+    <perk2>3492396210</perk2>
+    <trait1>3300816228</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>3096702027</trait1>
+    <trait1>205890336</trait1>
+    <trait2>3511092054</trait2>
+    <trait2>588594999</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>1556840489</trait2>
     <season>9</season>
     <element>Solar</element>
     <curated></curated>
