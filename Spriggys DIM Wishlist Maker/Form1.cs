@@ -10,14 +10,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-//TODO: P2 Add desc on all perks and traits
-//TODO: P2 Add possible perks on all weapons in weaponsCollection
-//TODO: P2 Add onhover descriptions of perks
+//TODO: P2 Add more weapons (maybe weapon filter)
+//TODO: P3 Add link to updated versions
 
-//TODO: P4 Speed up loading when selecting weapon
-//TODO: P4 Add weapon details to main page when selected
+//TODO  P3 Change main if empty when setting defaults are changed
 //TODO: P4 Add option to include curated rolls
-//TODO: P4 Filter perks based on weapon selection
 
 namespace Spriggys_DIM_Wishlist_Maker
 {
@@ -42,6 +39,49 @@ namespace Spriggys_DIM_Wishlist_Maker
             loadTraitDropdowns(null);
             loadSettings();
             loadGameMode();
+            populateSampleTextInput();
+        }
+
+        private void populateSampleTextInput()
+        {
+            string s = "";
+
+            s += "//Spriggy's Gjallarhorn - S" + Environment.NewLine;
+            s += "//=================PvE=================" + Environment.NewLine;
+            s += "//Barrel" + Environment.NewLine;
+            s += "//2.0:1478423395:Volatile Launch" + Environment.NewLine;
+            s += "//1.5:1441682018:Linear Compensator" + Environment.NewLine;
+            s += "//Magazine" + Environment.NewLine;
+            s += "//2.0:2822142346:High-Velocity Rounds" + Environment.NewLine;
+            s += "//1.5:1996142143:Black Powder" + Environment.NewLine;
+            s += "//1.0:2985827016:Alloy Casing" + Environment.NewLine;
+            s += "//Perk 1" + Environment.NewLine;
+            s += "//3.0:3977735242:Tracking Module" + Environment.NewLine;
+            s += "//0.5:3300816228:Auto-Loading Holster" + Environment.NewLine;
+            s += "//Perk 2" + Environment.NewLine;
+            s += "//3.0:1275731761:Cluster Bomb" + Environment.NewLine;
+            s += "//1.0:3096702027:Genesis" + Environment.NewLine;
+            s += "//0.5:1015611457:Kill Clip" + Environment.NewLine;
+            s += "//MW Reload" + Environment.NewLine;
+            s += "//=================PvP=================" + Environment.NewLine;
+            s += "//Barrel" + Environment.NewLine;
+            s += "//2.0:1478423395:Volatile Launch" + Environment.NewLine;
+            s += "//1.5:1441682018:Linear Compensator" + Environment.NewLine;
+            s += "//Magazine" + Environment.NewLine;
+            s += "//2.0:2822142346:High-Velocity Rounds" + Environment.NewLine;
+            s += "//1.5:1996142143:Black Powder" + Environment.NewLine;
+            s += "//1.0:2985827016:Alloy Casing" + Environment.NewLine;
+            s += "//Perk 1" + Environment.NewLine;
+            s += "//3.0:3977735242:Tracking Module" + Environment.NewLine;
+            s += "//0.5:957782887:Snapshot Sights" + Environment.NewLine;
+            s += "//Perk 2" + Environment.NewLine;
+            s += "//3.0:1275731761:Cluster Bomb" + Environment.NewLine;
+            s += "//0.5:706527188:Quickdraw" + Environment.NewLine;
+            s += "//MW Blast Radius" + Environment.NewLine;
+            s += "//=================Wishlist=================" + Environment.NewLine;
+            s += "dimwishlist:item=133713371337";
+
+            textBoxRollInput.Text = s;
         }
 
         private void importData()
@@ -142,6 +182,25 @@ namespace Spriggys_DIM_Wishlist_Maker
                     if (n["name"] != null && !n["name"].IsEmpty)
                         w.name = n["name"].InnerText;
 
+                    if (n["category"] != null && !n["category"].IsEmpty)
+                        w.category = n["category"].InnerText;
+
+                    if (n["frame"] != null && !n["frame"].IsEmpty)
+                        w.frame = n["frame"].InnerText;
+
+                    if (n["frameDesc"] != null && !n["frameDesc"].IsEmpty)
+                        w.frameDesc = n["frameDesc"].InnerText;
+
+                    if (n["ammoType"] != null && !n["ammoType"].IsEmpty)
+                        w.ammoType = n["ammoType"].InnerText;
+
+                    if (n["season"] != null && !n["season"].IsEmpty)
+                        w.season = int.Parse(n["season"].InnerText);
+
+                    if (n["element"] != null && !n["element"].IsEmpty)
+                        w.element = n["element"].InnerText;
+
+                    //Get weapon perks based on groupings, then direct listings
                     if (n["perk1Group"] != null && !n["perk1Group"].IsEmpty)
                     {
                         w.perk1Group = n["perk1Group"].InnerText;
@@ -161,9 +220,6 @@ namespace Spriggys_DIM_Wishlist_Maker
                                 w.perk2Options.Add(magPerks[i]);
                         }
                     }
-
-                    if (n["category"] != null && !n["category"].IsEmpty)
-                        w.category = n["category"].InnerText;
 
                     foreach (XmlNode perk1 in n.SelectNodes("perk1"))
                     {
@@ -252,19 +308,6 @@ namespace Spriggys_DIM_Wishlist_Maker
                 labelMain_Barrel2.Text = w.perk1Group;
             }
 
-            comboBoxMain_Barrel1id.Items.Add("");
-            comboBoxMain_Barrel2id.Items.Add("");
-            comboBoxMain_Barrel3id.Items.Add("");
-            comboBoxMain_Barrel4id.Items.Add("");
-            comboBoxMain_Barrel5id.Items.Add("");
-            comboBoxMain_Barrel6id.Items.Add("");
-            comboBoxMain_Barrel7id.Items.Add("");
-            comboBoxMain_ComboBarrel1.Items.Add("");
-            comboBoxMain_ComboBarrel2.Items.Add("");
-            comboBoxMain_ComboBarrel3.Items.Add("");
-            comboBoxMain_ComboBarrel4.Items.Add("");
-            comboBoxMain_ComboBarrel5.Items.Add("");
-
             List<Perk> perks = new List<Perk>();
 
             if (w == null || w.perk1Options.Count == 0)
@@ -274,22 +317,27 @@ namespace Spriggys_DIM_Wishlist_Maker
                 perks = w.perk1Options;
                 customPerk1 = true;
             }
-                
-            foreach (Perk p in perks)
+
+            string[] names = new string[perks.Count + 1];
+            names[0] = "";
+
+            for (int i=1; i <perks.Count +1; i++)
             {
-                comboBoxMain_Barrel1id.Items.Add(p.name);
-                comboBoxMain_Barrel2id.Items.Add(p.name);
-                comboBoxMain_Barrel3id.Items.Add(p.name);
-                comboBoxMain_Barrel4id.Items.Add(p.name);
-                comboBoxMain_Barrel5id.Items.Add(p.name);
-                comboBoxMain_Barrel6id.Items.Add(p.name);
-                comboBoxMain_Barrel7id.Items.Add(p.name);
-                comboBoxMain_ComboBarrel1.Items.Add(p.name);
-                comboBoxMain_ComboBarrel2.Items.Add(p.name);
-                comboBoxMain_ComboBarrel3.Items.Add(p.name);
-                comboBoxMain_ComboBarrel4.Items.Add(p.name);
-                comboBoxMain_ComboBarrel5.Items.Add(p.name);
+                names[i] = perks[i-1].name;
             }
+
+            comboBoxMain_Barrel1id.Items.AddRange(names);
+            comboBoxMain_Barrel2id.Items.AddRange(names);
+            comboBoxMain_Barrel3id.Items.AddRange(names);
+            comboBoxMain_Barrel4id.Items.AddRange(names);
+            comboBoxMain_Barrel5id.Items.AddRange(names);
+            comboBoxMain_Barrel6id.Items.AddRange(names);
+            comboBoxMain_Barrel7id.Items.AddRange(names);
+            comboBoxMain_ComboBarrel1.Items.AddRange(names);
+            comboBoxMain_ComboBarrel2.Items.AddRange(names);
+            comboBoxMain_ComboBarrel3.Items.AddRange(names);
+            comboBoxMain_ComboBarrel4.Items.AddRange(names);
+            comboBoxMain_ComboBarrel5.Items.AddRange(names);
         }
 
         private void clearMagDropdowns()
@@ -320,47 +368,38 @@ namespace Spriggys_DIM_Wishlist_Maker
             {
                 labelMain_Mag.Text = w.perk2Group;
                 labelMain_Mag2.Text = w.perk2Group;
-            }
-            
-
-            comboBoxMain_Mag1id.Items.Add("");
-            comboBoxMain_Mag2id.Items.Add("");
-            comboBoxMain_Mag3id.Items.Add("");
-            comboBoxMain_Mag4id.Items.Add("");
-            comboBoxMain_Mag5id.Items.Add("");
-            comboBoxMain_Mag6id.Items.Add("");
-            comboBoxMain_Mag7id.Items.Add("");
-            comboBoxMain_ComboMag1.Items.Add("");
-            comboBoxMain_ComboMag2.Items.Add("");
-            comboBoxMain_ComboMag3.Items.Add("");
-            comboBoxMain_ComboMag4.Items.Add("");
-            comboBoxMain_ComboMag5.Items.Add("");
+            }           
 
             List<Perk> perks = new List<Perk>();
 
             if (w == null || w.perk2Options.Count == 0)
-                perks = barrelPerks;
+                perks = magPerks;
             else
             {
                 perks = w.perk2Options;
                 customPerk2 = true;
             }
 
-            foreach (Perk p in perks)
+            string[] names = new string[perks.Count + 1];
+            names[0] = "";
+            
+            for (int i = 1; i < perks.Count + 1; i++)
             {
-                comboBoxMain_Mag1id.Items.Add(p.name);
-                comboBoxMain_Mag2id.Items.Add(p.name);
-                comboBoxMain_Mag3id.Items.Add(p.name);
-                comboBoxMain_Mag4id.Items.Add(p.name);
-                comboBoxMain_Mag5id.Items.Add(p.name);
-                comboBoxMain_Mag6id.Items.Add(p.name);
-                comboBoxMain_Mag7id.Items.Add(p.name);
-                comboBoxMain_ComboMag1.Items.Add(p.name);
-                comboBoxMain_ComboMag2.Items.Add(p.name);
-                comboBoxMain_ComboMag3.Items.Add(p.name);
-                comboBoxMain_ComboMag4.Items.Add(p.name);
-                comboBoxMain_ComboMag5.Items.Add(p.name);
+                names[i] = perks[i-1].name;
             }
+
+            comboBoxMain_Mag1id.Items.AddRange(names);
+            comboBoxMain_Mag2id.Items.AddRange(names);
+            comboBoxMain_Mag3id.Items.AddRange(names);
+            comboBoxMain_Mag4id.Items.AddRange(names);
+            comboBoxMain_Mag5id.Items.AddRange(names);
+            comboBoxMain_Mag6id.Items.AddRange(names);
+            comboBoxMain_Mag7id.Items.AddRange(names);
+            comboBoxMain_ComboMag1.Items.AddRange(names);
+            comboBoxMain_ComboMag2.Items.AddRange(names);
+            comboBoxMain_ComboMag3.Items.AddRange(names);
+            comboBoxMain_ComboMag4.Items.AddRange(names);
+            comboBoxMain_ComboMag5.Items.AddRange(names);
         }
 
         private void clearTraitDropdowns()
@@ -395,32 +434,6 @@ namespace Spriggys_DIM_Wishlist_Maker
         {
             clearTraitDropdowns();
 
-            comboBoxMain_PerkOne1id.Items.Add("");
-            comboBoxMain_PerkOne2id.Items.Add("");
-            comboBoxMain_PerkOne3id.Items.Add("");
-            comboBoxMain_PerkOne4id.Items.Add("");
-            comboBoxMain_PerkOne5id.Items.Add("");
-            comboBoxMain_PerkOne6id.Items.Add("");
-            comboBoxMain_PerkOne7id.Items.Add("");
-            comboBoxMain_ComboPerkOne1.Items.Add("");
-            comboBoxMain_ComboPerkOne2.Items.Add("");
-            comboBoxMain_ComboPerkOne3.Items.Add("");
-            comboBoxMain_ComboPerkOne4.Items.Add("");
-            comboBoxMain_ComboPerkOne5.Items.Add("");
-
-            comboBoxMain_PerkTwo1id.Items.Add("");
-            comboBoxMain_PerkTwo2id.Items.Add("");
-            comboBoxMain_PerkTwo3id.Items.Add("");
-            comboBoxMain_PerkTwo4id.Items.Add("");
-            comboBoxMain_PerkTwo5id.Items.Add("");
-            comboBoxMain_PerkTwo6id.Items.Add("");
-            comboBoxMain_PerkTwo7id.Items.Add("");
-            comboBoxMain_ComboPerkTwo1.Items.Add("");
-            comboBoxMain_ComboPerkTwo2.Items.Add("");
-            comboBoxMain_ComboPerkTwo3.Items.Add("");
-            comboBoxMain_ComboPerkTwo4.Items.Add("");
-            comboBoxMain_ComboPerkTwo5.Items.Add("");
-
             List<Perk> perks = new List<Perk>();
 
             if (w == null || w.perk3Options.Count == 0)
@@ -433,21 +446,27 @@ namespace Spriggys_DIM_Wishlist_Maker
                 customPerk3 = true;
             }
 
-            foreach (Perk p in perks)
+            string[] names = new string[perks.Count + 1];
+            names[0] = "";
+
+            for (int i = 1; i < perks.Count + 1; i++)
             {
-                comboBoxMain_PerkOne1id.Items.Add(p.name);
-                comboBoxMain_PerkOne2id.Items.Add(p.name);
-                comboBoxMain_PerkOne3id.Items.Add(p.name);
-                comboBoxMain_PerkOne4id.Items.Add(p.name);
-                comboBoxMain_PerkOne5id.Items.Add(p.name);
-                comboBoxMain_PerkOne6id.Items.Add(p.name);
-                comboBoxMain_PerkOne7id.Items.Add(p.name);
-                comboBoxMain_ComboPerkOne1.Items.Add(p.name);
-                comboBoxMain_ComboPerkOne2.Items.Add(p.name);
-                comboBoxMain_ComboPerkOne3.Items.Add(p.name);
-                comboBoxMain_ComboPerkOne4.Items.Add(p.name);
-                comboBoxMain_ComboPerkOne5.Items.Add(p.name);
+                names[i] = perks[i-1].name;
             }
+
+            comboBoxMain_PerkOne1id.Items.AddRange(names);
+            comboBoxMain_PerkOne2id.Items.AddRange(names);
+            comboBoxMain_PerkOne3id.Items.AddRange(names);
+            comboBoxMain_PerkOne4id.Items.AddRange(names);
+            comboBoxMain_PerkOne5id.Items.AddRange(names);
+            comboBoxMain_PerkOne6id.Items.AddRange(names);
+            comboBoxMain_PerkOne7id.Items.AddRange(names);
+            comboBoxMain_ComboPerkOne1.Items.AddRange(names);
+            comboBoxMain_ComboPerkOne2.Items.AddRange(names);
+            comboBoxMain_ComboPerkOne3.Items.AddRange(names);
+            comboBoxMain_ComboPerkOne4.Items.AddRange(names);
+            comboBoxMain_ComboPerkOne5.Items.AddRange(names);
+
 
             perks = new List<Perk>();
 
@@ -461,21 +480,26 @@ namespace Spriggys_DIM_Wishlist_Maker
                 customPerk4 = true;
             }
 
-            foreach (Perk p in perks)
+            names = new string[perks.Count + 1];
+            names[0] = "";
+
+            for (int i = 1; i < perks.Count + 1; i++)
             {
-                comboBoxMain_PerkTwo1id.Items.Add(p.name);
-                comboBoxMain_PerkTwo2id.Items.Add(p.name);
-                comboBoxMain_PerkTwo3id.Items.Add(p.name);
-                comboBoxMain_PerkTwo4id.Items.Add(p.name);
-                comboBoxMain_PerkTwo5id.Items.Add(p.name);
-                comboBoxMain_PerkTwo6id.Items.Add(p.name);
-                comboBoxMain_PerkTwo7id.Items.Add(p.name);
-                comboBoxMain_ComboPerkTwo1.Items.Add(p.name);
-                comboBoxMain_ComboPerkTwo2.Items.Add(p.name);
-                comboBoxMain_ComboPerkTwo3.Items.Add(p.name);
-                comboBoxMain_ComboPerkTwo4.Items.Add(p.name);
-                comboBoxMain_ComboPerkTwo5.Items.Add(p.name);
-            }                
+                names[i] = perks[i-1].name;
+            }
+
+            comboBoxMain_PerkTwo1id.Items.AddRange(names);
+            comboBoxMain_PerkTwo2id.Items.AddRange(names);
+            comboBoxMain_PerkTwo3id.Items.AddRange(names);
+            comboBoxMain_PerkTwo4id.Items.AddRange(names);
+            comboBoxMain_PerkTwo5id.Items.AddRange(names);
+            comboBoxMain_PerkTwo6id.Items.AddRange(names);
+            comboBoxMain_PerkTwo7id.Items.AddRange(names);
+            comboBoxMain_ComboPerkTwo1.Items.AddRange(names);
+            comboBoxMain_ComboPerkTwo2.Items.AddRange(names);
+            comboBoxMain_ComboPerkTwo3.Items.AddRange(names);
+            comboBoxMain_ComboPerkTwo4.Items.AddRange(names);
+            comboBoxMain_ComboPerkTwo5.Items.AddRange(names);
         }
 
         private void loadSettings()
@@ -794,10 +818,10 @@ namespace Spriggys_DIM_Wishlist_Maker
 
         private void buttonMain_Submit_Click(object sender, EventArgs e)
         {
-            //Check valid input
-            if( textBoxMain_Weapon.Visible && (textBoxMain_Weapon.Text == null || textBoxMain_Weapon.Text == ""))
+            string error = validateMainInput();
+            if (error != "")
             {
-                System.Windows.Forms.MessageBox.Show("Please enter a valid weapon id.");
+                System.Windows.Forms.MessageBox.Show(error);
                 return;
             }
 
@@ -900,14 +924,226 @@ namespace Spriggys_DIM_Wishlist_Maker
 
             if (Properties.Settings.Default.ClearEntries)
             {
-                loadWeaponDropdowns("");
-                loadBarrelDropdowns(null);
-                loadMagDropdowns(null);
-                loadTraitDropdowns(null);
+                comboBoxMain_Weapon.SelectedIndex = 0;
                 clearTextEntries();
             }
 
             tabControl1.SelectTab("TabPageText");
+        }
+
+        private string validateMainInput()
+        {
+            //Check Text weapon
+            if (textBoxMain_Weapon.Visible && (textBoxMain_Weapon.Text == null || textBoxMain_Weapon.Text == ""))
+                return "Please enter a valid weapon id.";
+
+            //Check Ratings - Barrel
+            if (textBoxMain_Barrel1pvp.Text != "" && !float.TryParse(textBoxMain_Barrel1pvp.Text, out float f))
+                return "Please enter a valid numeric rating for barrel 1 pvp.";
+            if (textBoxMain_Barrel1pve.Text != "" && !float.TryParse(textBoxMain_Barrel1pve.Text, out f))
+                return "Please enter a valid numeric rating for barrel 1 pve.";
+            if (textBoxMain_Barrel2pvp.Text != "" && !float.TryParse(textBoxMain_Barrel2pvp.Text, out f))
+                return "Please enter a valid numeric rating for barrel 2 pvp.";
+            if (textBoxMain_Barrel2pve.Text != "" && !float.TryParse(textBoxMain_Barrel2pve.Text, out f))
+                return "Please enter a valid numeric rating for barrel 2 pve.";
+            if (textBoxMain_Barrel3pvp.Text != "" && !float.TryParse(textBoxMain_Barrel3pvp.Text, out f))
+                return "Please enter a valid numeric rating for barrel 3 pvp.";
+            if (textBoxMain_Barrel3pve.Text != "" && !float.TryParse(textBoxMain_Barrel3pve.Text, out f))
+                return "Please enter a valid numeric rating for barrel 3 pve.";
+            if (textBoxMain_Barrel4pvp.Text != "" && !float.TryParse(textBoxMain_Barrel4pvp.Text, out f))
+                return "Please enter a valid numeric rating for barrel 4 pvp.";
+            if (textBoxMain_Barrel4pve.Text != "" && !float.TryParse(textBoxMain_Barrel4pve.Text, out f))
+                return "Please enter a valid numeric rating for barrel 4 pve.";
+            if (textBoxMain_Barrel5pvp.Text != "" && !float.TryParse(textBoxMain_Barrel5pvp.Text, out f))
+                return "Please enter a valid numeric rating for barrel 5 pvp.";
+            if (textBoxMain_Barrel5pve.Text != "" && !float.TryParse(textBoxMain_Barrel5pve.Text, out f))
+                return "Please enter a valid numeric rating for barrel 5 pve.";
+            if (textBoxMain_Barrel6pvp.Text != "" && !float.TryParse(textBoxMain_Barrel6pvp.Text, out f))
+                return "Please enter a valid numeric rating for barrel 6 pvp.";
+            if (textBoxMain_Barrel6pve.Text != "" && !float.TryParse(textBoxMain_Barrel6pve.Text, out f))
+                return "Please enter a valid numeric rating for barrel 6 pve.";
+            if (textBoxMain_Barrel7pvp.Text != "" && !float.TryParse(textBoxMain_Barrel7pvp.Text, out f))
+                return "Please enter a valid numeric rating for barrel 7 pvp.";
+            if (textBoxMain_Barrel7pve.Text != "" && !float.TryParse(textBoxMain_Barrel7pve.Text, out f))
+                return "Please enter a valid numeric rating for barrel 7 pve.";
+
+            //Check Ratings - Mag
+            if (textBoxMain_Mag1pvp.Text != "" && !float.TryParse(textBoxMain_Mag1pvp.Text, out f))
+                return "Please enter a valid numeric rating for Mag 1 pvp.";
+            if (textBoxMain_Mag1pve.Text != "" && !float.TryParse(textBoxMain_Mag1pve.Text, out f))
+                return "Please enter a valid numeric rating for Mag 1 pve.";
+            if (textBoxMain_Mag2pvp.Text != "" && !float.TryParse(textBoxMain_Mag2pvp.Text, out f))
+                return "Please enter a valid numeric rating for Mag 2 pvp.";
+            if (textBoxMain_Mag2pve.Text != "" && !float.TryParse(textBoxMain_Mag2pve.Text, out f))
+                return "Please enter a valid numeric rating for Mag 2 pve.";
+            if (textBoxMain_Mag3pvp.Text != "" && !float.TryParse(textBoxMain_Mag3pvp.Text, out f))
+                return "Please enter a valid numeric rating for Mag 3 pvp.";
+            if (textBoxMain_Mag3pve.Text != "" && !float.TryParse(textBoxMain_Mag3pve.Text, out f))
+                return "Please enter a valid numeric rating for Mag 3 pve.";
+            if (textBoxMain_Mag4pvp.Text != "" && !float.TryParse(textBoxMain_Mag4pvp.Text, out f))
+                return "Please enter a valid numeric rating for Mag 4 pvp.";
+            if (textBoxMain_Mag4pve.Text != "" && !float.TryParse(textBoxMain_Mag4pve.Text, out f))
+                return "Please enter a valid numeric rating for Mag 4 pve.";
+            if (textBoxMain_Mag5pvp.Text != "" && !float.TryParse(textBoxMain_Mag5pvp.Text, out f))
+                return "Please enter a valid numeric rating for Mag 5 pvp.";
+            if (textBoxMain_Mag5pve.Text != "" && !float.TryParse(textBoxMain_Mag5pve.Text, out f))
+                return "Please enter a valid numeric rating for Mag 5 pve.";
+            if (textBoxMain_Mag6pvp.Text != "" && !float.TryParse(textBoxMain_Mag6pvp.Text, out f))
+                return "Please enter a valid numeric rating for Mag 6 pvp.";
+            if (textBoxMain_Mag6pve.Text != "" && !float.TryParse(textBoxMain_Mag6pve.Text, out f))
+                return "Please enter a valid numeric rating for Mag 6 pve.";
+            if (textBoxMain_Mag7pvp.Text != "" && !float.TryParse(textBoxMain_Mag7pvp.Text, out f))
+                return "Please enter a valid numeric rating for Mag 7 pvp.";
+            if (textBoxMain_Mag7pve.Text != "" && !float.TryParse(textBoxMain_Mag7pve.Text, out f))
+                return "Please enter a valid numeric rating for Mag 7 pve.";
+
+            //Check Ratings - Perk One
+            if (textBoxMain_PerkOne1pvp.Text != "" && !float.TryParse(textBoxMain_PerkOne1pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 1 pvp.";
+            if (textBoxMain_PerkOne1pve.Text != "" && !float.TryParse(textBoxMain_PerkOne1pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 1 pve.";
+            if (textBoxMain_PerkOne2pvp.Text != "" && !float.TryParse(textBoxMain_PerkOne2pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 2 pvp.";
+            if (textBoxMain_PerkOne2pve.Text != "" && !float.TryParse(textBoxMain_PerkOne2pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 2 pve.";
+            if (textBoxMain_PerkOne3pvp.Text != "" && !float.TryParse(textBoxMain_PerkOne3pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 3 pvp.";
+            if (textBoxMain_PerkOne3pve.Text != "" && !float.TryParse(textBoxMain_PerkOne3pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 3 pve.";
+            if (textBoxMain_PerkOne4pvp.Text != "" && !float.TryParse(textBoxMain_PerkOne4pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 4 pvp.";
+            if (textBoxMain_PerkOne4pve.Text != "" && !float.TryParse(textBoxMain_PerkOne4pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 4 pve.";
+            if (textBoxMain_PerkOne5pvp.Text != "" && !float.TryParse(textBoxMain_PerkOne5pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 5 pvp.";
+            if (textBoxMain_PerkOne5pve.Text != "" && !float.TryParse(textBoxMain_PerkOne5pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 5 pve.";
+            if (textBoxMain_PerkOne6pvp.Text != "" && !float.TryParse(textBoxMain_PerkOne6pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 6 pvp.";
+            if (textBoxMain_PerkOne6pve.Text != "" && !float.TryParse(textBoxMain_PerkOne6pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 6 pve.";
+            if (textBoxMain_PerkOne7pvp.Text != "" && !float.TryParse(textBoxMain_PerkOne7pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 7 pvp.";
+            if (textBoxMain_PerkOne7pve.Text != "" && !float.TryParse(textBoxMain_PerkOne7pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkOne 7 pve.";
+
+            //Check Ratings - Perk Two
+            if (textBoxMain_PerkTwo1pvp.Text != "" && !float.TryParse(textBoxMain_PerkTwo1pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 1 pvp.";
+            if (textBoxMain_PerkTwo1pve.Text != "" && !float.TryParse(textBoxMain_PerkTwo1pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 1 pve.";
+            if (textBoxMain_PerkTwo2pvp.Text != "" && !float.TryParse(textBoxMain_PerkTwo2pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 2 pvp.";
+            if (textBoxMain_PerkTwo2pve.Text != "" && !float.TryParse(textBoxMain_PerkTwo2pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 2 pve.";
+            if (textBoxMain_PerkTwo3pvp.Text != "" && !float.TryParse(textBoxMain_PerkTwo3pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 3 pvp.";
+            if (textBoxMain_PerkTwo3pve.Text != "" && !float.TryParse(textBoxMain_PerkTwo3pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 3 pve.";
+            if (textBoxMain_PerkTwo4pvp.Text != "" && !float.TryParse(textBoxMain_PerkTwo4pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 4 pvp.";
+            if (textBoxMain_PerkTwo4pve.Text != "" && !float.TryParse(textBoxMain_PerkTwo4pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 4 pve.";
+            if (textBoxMain_PerkTwo5pvp.Text != "" && !float.TryParse(textBoxMain_PerkTwo5pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 5 pvp.";
+            if (textBoxMain_PerkTwo5pve.Text != "" && !float.TryParse(textBoxMain_PerkTwo5pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 5 pve.";
+            if (textBoxMain_PerkTwo6pvp.Text != "" && !float.TryParse(textBoxMain_PerkTwo6pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 6 pvp.";
+            if (textBoxMain_PerkTwo6pve.Text != "" && !float.TryParse(textBoxMain_PerkTwo6pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 6 pve.";
+            if (textBoxMain_PerkTwo7pvp.Text != "" && !float.TryParse(textBoxMain_PerkTwo7pvp.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 7 pvp.";
+            if (textBoxMain_PerkTwo7pve.Text != "" && !float.TryParse(textBoxMain_PerkTwo7pve.Text, out f))
+                return "Please enter a valid numeric rating for PerkTwo 7 pve.";
+
+            //Check Ratings - Combos
+            if (textBoxMain_Combopvp1.Text != "" && !float.TryParse(textBoxMain_Combopvp1.Text, out f))
+                return "Please enter a valid numeric rating for combo 1 pvp.";
+            if (textBoxMain_Combopve1.Text != "" && !float.TryParse(textBoxMain_Combopve1.Text, out f))
+                return "Please enter a valid numeric rating for combo 1 pve.";
+            if (textBoxMain_Combopvp2.Text != "" && !float.TryParse(textBoxMain_Combopvp2.Text, out f))
+                return "Please enter a valid numeric rating for combo 2 pvp.";
+            if (textBoxMain_Combopve2.Text != "" && !float.TryParse(textBoxMain_Combopve2.Text, out f))
+                return "Please enter a valid numeric rating for combo 2 pve.";
+            if (textBoxMain_Combopvp3.Text != "" && !float.TryParse(textBoxMain_Combopvp3.Text, out f))
+                return "Please enter a valid numeric rating for combo 3 pvp.";
+            if (textBoxMain_Combopve3.Text != "" && !float.TryParse(textBoxMain_Combopve3.Text, out f))
+                return "Please enter a valid numeric rating for combo 3 pve.";
+            if (textBoxMain_Combopvp4.Text != "" && !float.TryParse(textBoxMain_Combopvp4.Text, out f))
+                return "Please enter a valid numeric rating for combo 4 pvp.";
+            if (textBoxMain_Combopve4.Text != "" && !float.TryParse(textBoxMain_Combopve4.Text, out f))
+                return "Please enter a valid numeric rating for combo 4 pve.";
+            if (textBoxMain_Combopvp5.Text != "" && !float.TryParse(textBoxMain_Combopvp5.Text, out f))
+                return "Please enter a valid numeric rating for combo 5 pvp.";
+            if (textBoxMain_Combopve5.Text != "" && !float.TryParse(textBoxMain_Combopve5.Text, out f))
+                return "Please enter a valid numeric rating for combo 5 pve.";
+
+            //Check Text Perk Ids - Barrel
+            if (textBoxMain_Barrel1id.Visible && (textBoxMain_Barrel1pvp.Text != "" || textBoxMain_Barrel1pve.Text != "") && !Int64.TryParse(textBoxMain_Barrel1id.Text, out long l))
+                return "Please enter a valid barrel id for Barrel1.";
+            if (textBoxMain_Barrel2id.Visible && (textBoxMain_Barrel2pvp.Text != "" || textBoxMain_Barrel2pve.Text != "") && !Int64.TryParse(textBoxMain_Barrel2id.Text, out l))
+                return "Please enter a valid barrel id for Barrel2.";
+            if (textBoxMain_Barrel3id.Visible && (textBoxMain_Barrel3pvp.Text != "" || textBoxMain_Barrel3pve.Text != "") && !Int64.TryParse(textBoxMain_Barrel3id.Text, out l))
+                return "Please enter a valid barrel id for Barrel3.";
+            if (textBoxMain_Barrel4id.Visible && (textBoxMain_Barrel4pvp.Text != "" || textBoxMain_Barrel4pve.Text != "") && !Int64.TryParse(textBoxMain_Barrel4id.Text, out l))
+                return "Please enter a valid barrel id for Barrel4.";
+            if (textBoxMain_Barrel5id.Visible && (textBoxMain_Barrel5pvp.Text != "" || textBoxMain_Barrel5pve.Text != "") && !Int64.TryParse(textBoxMain_Barrel5id.Text, out l))
+                return "Please enter a valid barrel id for Barrel5.";
+            if (textBoxMain_Barrel6id.Visible && (textBoxMain_Barrel6pvp.Text != "" || textBoxMain_Barrel6pve.Text != "") && !Int64.TryParse(textBoxMain_Barrel6id.Text, out l))
+                return "Please enter a valid barrel id for Barrel6.";
+            if (textBoxMain_Barrel7id.Visible && (textBoxMain_Barrel7pvp.Text != "" || textBoxMain_Barrel7pve.Text != "") && !Int64.TryParse(textBoxMain_Barrel7id.Text, out l))
+                return "Please enter a valid barrel id for Barrel7.";
+
+            //Check Text Perk Ids - Mag
+            if (textBoxMain_Mag1id.Visible && (textBoxMain_Mag1pvp.Text != "" || textBoxMain_Mag1pve.Text != "") && !Int64.TryParse(textBoxMain_Mag1id.Text, out l))
+                return "Please enter a valid Mag id for Mag1.";
+            if (textBoxMain_Mag2id.Visible && (textBoxMain_Mag2pvp.Text != "" || textBoxMain_Mag2pve.Text != "") && !Int64.TryParse(textBoxMain_Mag2id.Text, out l))
+                return "Please enter a valid Mag id for Mag2.";
+            if (textBoxMain_Mag3id.Visible && (textBoxMain_Mag3pvp.Text != "" || textBoxMain_Mag3pve.Text != "") && !Int64.TryParse(textBoxMain_Mag3id.Text, out l))
+                return "Please enter a valid Mag id for Mag3.";
+            if (textBoxMain_Mag4id.Visible && (textBoxMain_Mag4pvp.Text != "" || textBoxMain_Mag4pve.Text != "") && !Int64.TryParse(textBoxMain_Mag4id.Text, out l))
+                return "Please enter a valid Mag id for Mag4.";
+            if (textBoxMain_Mag5id.Visible && (textBoxMain_Mag5pvp.Text != "" || textBoxMain_Mag5pve.Text != "") && !Int64.TryParse(textBoxMain_Mag5id.Text, out l))
+                return "Please enter a valid Mag id for Mag5.";
+            if (textBoxMain_Mag6id.Visible && (textBoxMain_Mag6pvp.Text != "" || textBoxMain_Mag6pve.Text != "") && !Int64.TryParse(textBoxMain_Mag6id.Text, out l))
+                return "Please enter a valid Mag id for Mag6.";
+            if (textBoxMain_Mag7id.Visible && (textBoxMain_Mag7pvp.Text != "" || textBoxMain_Mag7pve.Text != "") && !Int64.TryParse(textBoxMain_Mag7id.Text, out l))
+                return "Please enter a valid Mag id for Mag7.";
+
+            //Check Text Perk Ids - Perk One
+            if (textBoxMain_PerkOne1id.Visible && (textBoxMain_PerkOne1pvp.Text != "" || textBoxMain_PerkOne1pve.Text != "") && !Int64.TryParse(textBoxMain_PerkOne1id.Text, out l))
+                return "Please enter a valid PerkOne id for PerkOne1.";
+            if (textBoxMain_PerkOne2id.Visible && (textBoxMain_PerkOne2pvp.Text != "" || textBoxMain_PerkOne2pve.Text != "") && !Int64.TryParse(textBoxMain_PerkOne2id.Text, out l))
+                return "Please enter a valid PerkOne id for PerkOne2.";
+            if (textBoxMain_PerkOne3id.Visible && (textBoxMain_PerkOne3pvp.Text != "" || textBoxMain_PerkOne3pve.Text != "") && !Int64.TryParse(textBoxMain_PerkOne3id.Text, out l))
+                return "Please enter a valid PerkOne id for PerkOne3.";
+            if (textBoxMain_PerkOne4id.Visible && (textBoxMain_PerkOne4pvp.Text != "" || textBoxMain_PerkOne4pve.Text != "") && !Int64.TryParse(textBoxMain_PerkOne4id.Text, out l))
+                return "Please enter a valid PerkOne id for PerkOne4.";
+            if (textBoxMain_PerkOne5id.Visible && (textBoxMain_PerkOne5pvp.Text != "" || textBoxMain_PerkOne5pve.Text != "") && !Int64.TryParse(textBoxMain_PerkOne5id.Text, out l))
+                return "Please enter a valid PerkOne id for PerkOne5.";
+            if (textBoxMain_PerkOne6id.Visible && (textBoxMain_PerkOne6pvp.Text != "" || textBoxMain_PerkOne6pve.Text != "") && !Int64.TryParse(textBoxMain_PerkOne6id.Text, out l))
+                return "Please enter a valid PerkOne id for PerkOne6.";
+            if (textBoxMain_PerkOne7id.Visible && (textBoxMain_PerkOne7pvp.Text != "" || textBoxMain_PerkOne7pve.Text != "") && !Int64.TryParse(textBoxMain_PerkOne7id.Text, out l))
+                return "Please enter a valid PerkOne id for PerkOne7.";
+
+            //Check Text Perk Ids - Perk Two
+            if (textBoxMain_PerkTwo1id.Visible && (textBoxMain_PerkTwo1pvp.Text != "" || textBoxMain_PerkTwo1pve.Text != "") && !Int64.TryParse(textBoxMain_PerkTwo1id.Text, out l))
+                return "Please enter a valid PerkTwo id for PerkTwo1.";
+            if (textBoxMain_PerkTwo2id.Visible && (textBoxMain_PerkTwo2pvp.Text != "" || textBoxMain_PerkTwo2pve.Text != "") && !Int64.TryParse(textBoxMain_PerkTwo2id.Text, out l))
+                return "Please enter a valid PerkTwo id for PerkTwo2.";
+            if (textBoxMain_PerkTwo3id.Visible && (textBoxMain_PerkTwo3pvp.Text != "" || textBoxMain_PerkTwo3pve.Text != "") && !Int64.TryParse(textBoxMain_PerkTwo3id.Text, out l))
+                return "Please enter a valid PerkTwo id for PerkTwo3.";
+            if (textBoxMain_PerkTwo4id.Visible && (textBoxMain_PerkTwo4pvp.Text != "" || textBoxMain_PerkTwo4pve.Text != "") && !Int64.TryParse(textBoxMain_PerkTwo4id.Text, out l))
+                return "Please enter a valid PerkTwo id for PerkTwo4.";
+            if (textBoxMain_PerkTwo5id.Visible && (textBoxMain_PerkTwo5pvp.Text != "" || textBoxMain_PerkTwo5pve.Text != "") && !Int64.TryParse(textBoxMain_PerkTwo5id.Text, out l))
+                return "Please enter a valid PerkTwo id for PerkTwo5.";
+            if (textBoxMain_PerkTwo6id.Visible && (textBoxMain_PerkTwo6pvp.Text != "" || textBoxMain_PerkTwo6pve.Text != "") && !Int64.TryParse(textBoxMain_PerkTwo6id.Text, out l))
+                return "Please enter a valid PerkTwo id for PerkTwo6.";
+            if (textBoxMain_PerkTwo7id.Visible && (textBoxMain_PerkTwo7pvp.Text != "" || textBoxMain_PerkTwo7pve.Text != "") && !Int64.TryParse(textBoxMain_PerkTwo7id.Text, out l))
+                return "Please enter a valid PerkTwo id for PerkTwo7.";
+
+            return "";
         }
 
         private void clearTextEntries()
@@ -2345,6 +2581,15 @@ namespace Spriggys_DIM_Wishlist_Maker
 
         private void comboBoxMain_GameType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(comboBoxMain_GameType.Text != "PvE/PvP" && labelMain_Barrelpve.Text != "PvE")
+            {
+                labelMain_Barrelpve.Text = "PvE";
+                labelMain_Magpve.Text = "PvE";
+                labelMain_Perk1pve.Text = "PvE";
+                labelMain_Perk2pve.Text = "PvE";
+                labelMain_combopve.Text = "PvE";
+            }
+
             if (comboBoxMain_GameType.Text == "Both")
             {
                 if (!textBoxMain_Barrel1pve.Visible)
@@ -2358,6 +2603,14 @@ namespace Spriggys_DIM_Wishlist_Maker
                     ShowPvE();
                 if (textBoxMain_Barrel1pvp.Visible)
                     HidePvP();
+                if(comboBoxMain_GameType.Text == "PvE/PvP")
+                {
+                    labelMain_Barrelpve.Text = "PvE/PvP";
+                    labelMain_Magpve.Text = "PvE/PvP";
+                    labelMain_Perk1pve.Text = "PvE/PvP";
+                    labelMain_Perk2pve.Text = "PvE/PvP";
+                    labelMain_combopve.Text = "PvE/PvP";
+                }
             }
             else if (comboBoxMain_GameType.Text == "PvP Only")
             {
@@ -2600,6 +2853,1045 @@ namespace Spriggys_DIM_Wishlist_Maker
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/scspriggy/Spriggys-Wishlist");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //Weapon
+            comboBoxMain_Weapon.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Weapon.DrawItem += comboBoxMain_Weapon_DrawItem;
+            comboBoxMain_Weapon.DropDownClosed += comboBoxMain_Weapon_DropDownClosed;
+
+            //Barrel
+            comboBoxMain_Barrel1id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Barrel1id.DrawItem += comboBoxMain_Barrel1id_DrawItem;
+            comboBoxMain_Barrel1id.DropDownClosed += comboBoxMain_Barrel1id_DropDownClosed;
+
+            comboBoxMain_Barrel2id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Barrel2id.DrawItem += comboBoxMain_Barrel2id_DrawItem;
+            comboBoxMain_Barrel2id.DropDownClosed += comboBoxMain_Barrel2id_DropDownClosed;
+
+            comboBoxMain_Barrel3id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Barrel3id.DrawItem += comboBoxMain_Barrel3id_DrawItem;
+            comboBoxMain_Barrel3id.DropDownClosed += comboBoxMain_Barrel3id_DropDownClosed;
+
+            comboBoxMain_Barrel4id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Barrel4id.DrawItem += comboBoxMain_Barrel4id_DrawItem;
+            comboBoxMain_Barrel4id.DropDownClosed += comboBoxMain_Barrel4id_DropDownClosed;
+
+            comboBoxMain_Barrel5id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Barrel5id.DrawItem += comboBoxMain_Barrel5id_DrawItem;
+            comboBoxMain_Barrel5id.DropDownClosed += comboBoxMain_Barrel5id_DropDownClosed;
+
+            comboBoxMain_Barrel6id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Barrel6id.DrawItem += comboBoxMain_Barrel6id_DrawItem;
+            comboBoxMain_Barrel6id.DropDownClosed += comboBoxMain_Barrel6id_DropDownClosed;
+
+            comboBoxMain_Barrel7id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Barrel7id.DrawItem += comboBoxMain_Barrel7id_DrawItem;
+            comboBoxMain_Barrel7id.DropDownClosed += comboBoxMain_Barrel7id_DropDownClosed;
+
+            comboBoxMain_ComboBarrel1.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboBarrel1.DrawItem += comboBoxMain_ComboBarrel1_DrawItem;
+            comboBoxMain_ComboBarrel1.DropDownClosed += comboBoxMain_ComboBarrel1_DropDownClosed;
+
+            comboBoxMain_ComboBarrel2.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboBarrel2.DrawItem += comboBoxMain_ComboBarrel2_DrawItem;
+            comboBoxMain_ComboBarrel2.DropDownClosed += comboBoxMain_ComboBarrel2_DropDownClosed;
+
+            comboBoxMain_ComboBarrel3.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboBarrel3.DrawItem += comboBoxMain_ComboBarrel3_DrawItem;
+            comboBoxMain_ComboBarrel3.DropDownClosed += comboBoxMain_ComboBarrel3_DropDownClosed;
+
+            comboBoxMain_ComboBarrel4.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboBarrel4.DrawItem += comboBoxMain_ComboBarrel4_DrawItem;
+            comboBoxMain_ComboBarrel4.DropDownClosed += comboBoxMain_ComboBarrel4_DropDownClosed;
+
+            comboBoxMain_ComboBarrel5.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboBarrel5.DrawItem += comboBoxMain_ComboBarrel5_DrawItem;
+            comboBoxMain_ComboBarrel5.DropDownClosed += comboBoxMain_ComboBarrel5_DropDownClosed;
+
+            //Mag
+            comboBoxMain_Mag1id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Mag1id.DrawItem += comboBoxMain_Mag1id_DrawItem;
+            comboBoxMain_Mag1id.DropDownClosed += comboBoxMain_Mag1id_DropDownClosed;
+
+            comboBoxMain_Mag2id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Mag2id.DrawItem += comboBoxMain_Mag2id_DrawItem;
+            comboBoxMain_Mag2id.DropDownClosed += comboBoxMain_Mag2id_DropDownClosed;
+
+            comboBoxMain_Mag3id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Mag3id.DrawItem += comboBoxMain_Mag3id_DrawItem;
+            comboBoxMain_Mag3id.DropDownClosed += comboBoxMain_Mag3id_DropDownClosed;
+
+            comboBoxMain_Mag4id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Mag4id.DrawItem += comboBoxMain_Mag4id_DrawItem;
+            comboBoxMain_Mag4id.DropDownClosed += comboBoxMain_Mag4id_DropDownClosed;
+
+            comboBoxMain_Mag5id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Mag5id.DrawItem += comboBoxMain_Mag5id_DrawItem;
+            comboBoxMain_Mag5id.DropDownClosed += comboBoxMain_Mag5id_DropDownClosed;
+
+            comboBoxMain_Mag6id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Mag6id.DrawItem += comboBoxMain_Mag6id_DrawItem;
+            comboBoxMain_Mag6id.DropDownClosed += comboBoxMain_Mag6id_DropDownClosed;
+
+            comboBoxMain_Mag7id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_Mag7id.DrawItem += comboBoxMain_Mag7id_DrawItem;
+            comboBoxMain_Mag7id.DropDownClosed += comboBoxMain_Mag7id_DropDownClosed;
+
+            comboBoxMain_ComboMag1.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboMag1.DrawItem += comboBoxMain_ComboMag1_DrawItem;
+            comboBoxMain_ComboMag1.DropDownClosed += comboBoxMain_ComboMag1_DropDownClosed;
+
+            comboBoxMain_ComboMag2.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboMag2.DrawItem += comboBoxMain_ComboMag2_DrawItem;
+            comboBoxMain_ComboMag2.DropDownClosed += comboBoxMain_ComboMag2_DropDownClosed;
+
+            comboBoxMain_ComboMag3.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboMag3.DrawItem += comboBoxMain_ComboMag3_DrawItem;
+            comboBoxMain_ComboMag3.DropDownClosed += comboBoxMain_ComboMag3_DropDownClosed;
+
+            comboBoxMain_ComboMag4.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboMag4.DrawItem += comboBoxMain_ComboMag4_DrawItem;
+            comboBoxMain_ComboMag4.DropDownClosed += comboBoxMain_ComboMag4_DropDownClosed;
+
+            comboBoxMain_ComboMag5.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboMag5.DrawItem += comboBoxMain_ComboMag5_DrawItem;
+            comboBoxMain_ComboMag5.DropDownClosed += comboBoxMain_ComboMag5_DropDownClosed;
+
+            //Perk 1
+            comboBoxMain_PerkOne1id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkOne1id.DrawItem += comboBoxMain_PerkOne1id_DrawItem;
+            comboBoxMain_PerkOne1id.DropDownClosed += comboBoxMain_PerkOne1id_DropDownClosed;
+
+            comboBoxMain_PerkOne2id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkOne2id.DrawItem += comboBoxMain_PerkOne2id_DrawItem;
+            comboBoxMain_PerkOne2id.DropDownClosed += comboBoxMain_PerkOne2id_DropDownClosed;
+
+            comboBoxMain_PerkOne3id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkOne3id.DrawItem += comboBoxMain_PerkOne3id_DrawItem;
+            comboBoxMain_PerkOne3id.DropDownClosed += comboBoxMain_PerkOne3id_DropDownClosed;
+
+            comboBoxMain_PerkOne4id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkOne4id.DrawItem += comboBoxMain_PerkOne4id_DrawItem;
+            comboBoxMain_PerkOne4id.DropDownClosed += comboBoxMain_PerkOne4id_DropDownClosed;
+
+            comboBoxMain_PerkOne5id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkOne5id.DrawItem += comboBoxMain_PerkOne5id_DrawItem;
+            comboBoxMain_PerkOne5id.DropDownClosed += comboBoxMain_PerkOne5id_DropDownClosed;
+
+            comboBoxMain_PerkOne6id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkOne6id.DrawItem += comboBoxMain_PerkOne6id_DrawItem;
+            comboBoxMain_PerkOne6id.DropDownClosed += comboBoxMain_PerkOne6id_DropDownClosed;
+
+            comboBoxMain_PerkOne7id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkOne7id.DrawItem += comboBoxMain_PerkOne7id_DrawItem;
+            comboBoxMain_PerkOne7id.DropDownClosed += comboBoxMain_PerkOne7id_DropDownClosed;
+
+            comboBoxMain_ComboPerkOne1.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboPerkOne1.DrawItem += comboBoxMain_ComboPerkOne1_DrawItem;
+            comboBoxMain_ComboPerkOne1.DropDownClosed += comboBoxMain_ComboPerkOne1_DropDownClosed;
+
+            comboBoxMain_ComboPerkOne2.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboPerkOne2.DrawItem += comboBoxMain_ComboPerkOne2_DrawItem;
+            comboBoxMain_ComboPerkOne2.DropDownClosed += comboBoxMain_ComboPerkOne2_DropDownClosed;
+
+            comboBoxMain_ComboPerkOne3.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboPerkOne3.DrawItem += comboBoxMain_ComboPerkOne3_DrawItem;
+            comboBoxMain_ComboPerkOne3.DropDownClosed += comboBoxMain_ComboPerkOne3_DropDownClosed;
+
+            comboBoxMain_ComboPerkOne4.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboPerkOne4.DrawItem += comboBoxMain_ComboPerkOne4_DrawItem;
+            comboBoxMain_ComboPerkOne4.DropDownClosed += comboBoxMain_ComboPerkOne4_DropDownClosed;
+
+            comboBoxMain_ComboPerkOne5.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboPerkOne5.DrawItem += comboBoxMain_ComboPerkOne5_DrawItem;
+            comboBoxMain_ComboPerkOne5.DropDownClosed += comboBoxMain_ComboPerkOne5_DropDownClosed;
+
+            //Perk 2
+            comboBoxMain_PerkTwo1id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkTwo1id.DrawItem += comboBoxMain_PerkTwo1id_DrawItem;
+            comboBoxMain_PerkTwo1id.DropDownClosed += comboBoxMain_PerkTwo1id_DropDownClosed;
+
+            comboBoxMain_PerkTwo2id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkTwo2id.DrawItem += comboBoxMain_PerkTwo2id_DrawItem;
+            comboBoxMain_PerkTwo2id.DropDownClosed += comboBoxMain_PerkTwo2id_DropDownClosed;
+
+            comboBoxMain_PerkTwo3id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkTwo3id.DrawItem += comboBoxMain_PerkTwo3id_DrawItem;
+            comboBoxMain_PerkTwo3id.DropDownClosed += comboBoxMain_PerkTwo3id_DropDownClosed;
+
+            comboBoxMain_PerkTwo4id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkTwo4id.DrawItem += comboBoxMain_PerkTwo4id_DrawItem;
+            comboBoxMain_PerkTwo4id.DropDownClosed += comboBoxMain_PerkTwo4id_DropDownClosed;
+
+            comboBoxMain_PerkTwo5id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkTwo5id.DrawItem += comboBoxMain_PerkTwo5id_DrawItem;
+            comboBoxMain_PerkTwo5id.DropDownClosed += comboBoxMain_PerkTwo5id_DropDownClosed;
+
+            comboBoxMain_PerkTwo6id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkTwo6id.DrawItem += comboBoxMain_PerkTwo6id_DrawItem;
+            comboBoxMain_PerkTwo6id.DropDownClosed += comboBoxMain_PerkTwo6id_DropDownClosed;
+
+            comboBoxMain_PerkTwo7id.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_PerkTwo7id.DrawItem += comboBoxMain_PerkTwo7id_DrawItem;
+            comboBoxMain_PerkTwo7id.DropDownClosed += comboBoxMain_PerkTwo7id_DropDownClosed;
+
+            comboBoxMain_ComboPerkTwo1.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboPerkTwo1.DrawItem += comboBoxMain_ComboPerkTwo1_DrawItem;
+            comboBoxMain_ComboPerkTwo1.DropDownClosed += comboBoxMain_ComboPerkTwo1_DropDownClosed;
+
+            comboBoxMain_ComboPerkTwo2.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboPerkTwo2.DrawItem += comboBoxMain_ComboPerkTwo2_DrawItem;
+            comboBoxMain_ComboPerkTwo2.DropDownClosed += comboBoxMain_ComboPerkTwo2_DropDownClosed;
+
+            comboBoxMain_ComboPerkTwo3.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboPerkTwo3.DrawItem += comboBoxMain_ComboPerkTwo3_DrawItem;
+            comboBoxMain_ComboPerkTwo3.DropDownClosed += comboBoxMain_ComboPerkTwo3_DropDownClosed;
+
+            comboBoxMain_ComboPerkTwo4.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboPerkTwo4.DrawItem += comboBoxMain_ComboPerkTwo4_DrawItem;
+            comboBoxMain_ComboPerkTwo4.DropDownClosed += comboBoxMain_ComboPerkTwo4_DropDownClosed;
+
+            comboBoxMain_ComboPerkTwo5.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxMain_ComboPerkTwo5.DrawItem += comboBoxMain_ComboPerkTwo5_DrawItem;
+            comboBoxMain_ComboPerkTwo5.DropDownClosed += comboBoxMain_ComboPerkTwo5_DropDownClosed;
+        }
+
+        private void comboBoxMain_Weapon_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Weapon);
+        }
+        private void comboBoxMain_Barrel1id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Barrel1id);
+        }
+        private void comboBoxMain_Barrel2id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Barrel2id);
+        }
+        private void comboBoxMain_Barrel3id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Barrel3id);
+        }
+        private void comboBoxMain_Barrel4id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Barrel4id);
+        }
+        private void comboBoxMain_Barrel5id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Barrel5id);
+        }
+        private void comboBoxMain_Barrel6id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Barrel6id);
+        }
+        private void comboBoxMain_Barrel7id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Barrel7id);
+        }
+        private void comboBoxMain_ComboBarrel1_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboBarrel1);
+        }
+        private void comboBoxMain_ComboBarrel2_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboBarrel2);
+        }
+        private void comboBoxMain_ComboBarrel3_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboBarrel3);
+        }
+        private void comboBoxMain_ComboBarrel4_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboBarrel4);
+        }
+        private void comboBoxMain_ComboBarrel5_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboBarrel5);
+        }
+        private void comboBoxMain_Mag1id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Mag1id);
+        }
+        private void comboBoxMain_Mag2id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Mag2id);
+        }
+        private void comboBoxMain_Mag3id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Mag3id);
+        }
+        private void comboBoxMain_Mag4id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Mag4id);
+        }
+        private void comboBoxMain_Mag5id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Mag5id);
+        }
+        private void comboBoxMain_Mag6id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Mag6id);
+        }
+        private void comboBoxMain_Mag7id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_Mag7id);
+        }
+        private void comboBoxMain_ComboMag1_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboMag1);
+        }
+        private void comboBoxMain_ComboMag2_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboMag2);
+        }
+        private void comboBoxMain_ComboMag3_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboMag3);
+        }
+        private void comboBoxMain_ComboMag4_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboMag4);
+        }
+        private void comboBoxMain_ComboMag5_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboMag5);
+        }
+        private void comboBoxMain_PerkOne1id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkOne1id);
+        }
+        private void comboBoxMain_PerkOne2id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkOne2id);
+        }
+        private void comboBoxMain_PerkOne3id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkOne3id);
+        }
+        private void comboBoxMain_PerkOne4id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkOne4id);
+        }
+        private void comboBoxMain_PerkOne5id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkOne5id);
+        }
+        private void comboBoxMain_PerkOne6id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkOne6id);
+        }
+        private void comboBoxMain_PerkOne7id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkOne7id);
+        }
+        private void comboBoxMain_ComboPerkOne1_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboPerkOne1);
+        }
+        private void comboBoxMain_ComboPerkOne2_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboPerkOne2);
+        }
+        private void comboBoxMain_ComboPerkOne3_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboPerkOne3);
+        }
+        private void comboBoxMain_ComboPerkOne4_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboPerkOne4);
+        }
+        private void comboBoxMain_ComboPerkOne5_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboPerkOne5);
+        }
+        private void comboBoxMain_PerkTwo1id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkTwo1id);
+        }
+        private void comboBoxMain_PerkTwo2id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkTwo2id);
+        }
+        private void comboBoxMain_PerkTwo3id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkTwo3id);
+        }
+        private void comboBoxMain_PerkTwo4id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkTwo4id);
+        }
+        private void comboBoxMain_PerkTwo5id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkTwo5id);
+        }
+        private void comboBoxMain_PerkTwo6id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkTwo6id);
+        }
+        private void comboBoxMain_PerkTwo7id_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_PerkTwo7id);
+        }
+        private void comboBoxMain_ComboPerkTwo1_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboPerkTwo1);
+        }
+        private void comboBoxMain_ComboPerkTwo2_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboPerkTwo2);
+        }
+        private void comboBoxMain_ComboPerkTwo3_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboPerkTwo3);
+        }
+        private void comboBoxMain_ComboPerkTwo4_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboPerkTwo4);
+        }
+        private void comboBoxMain_ComboPerkTwo5_DropDownClosed(object sender, EventArgs e)
+        {
+            toolTip1.Hide(comboBoxMain_ComboPerkTwo5);
+        }
+
+        private void comboBoxMain_Weapon_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Weapon.GetItemText(comboBoxMain_Weapon.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = weapons.Find(x => x.name == name).getInfo();
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Weapon, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Barrel1id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Barrel1id.GetItemText(comboBoxMain_Barrel1id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Barrel1id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Barrel2id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Barrel2id.GetItemText(comboBoxMain_Barrel2id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Barrel2id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Barrel3id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Barrel3id.GetItemText(comboBoxMain_Barrel3id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Barrel3id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Barrel4id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Barrel4id.GetItemText(comboBoxMain_Barrel4id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Barrel4id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Barrel5id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Barrel5id.GetItemText(comboBoxMain_Barrel5id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Barrel5id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Barrel6id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Barrel6id.GetItemText(comboBoxMain_Barrel6id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Barrel6id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Barrel7id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Barrel7id.GetItemText(comboBoxMain_Barrel7id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Barrel7id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboBarrel1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboBarrel1.GetItemText(comboBoxMain_ComboBarrel1.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboBarrel1, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboBarrel2_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboBarrel2.GetItemText(comboBoxMain_ComboBarrel2.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboBarrel2, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboBarrel3_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboBarrel3.GetItemText(comboBoxMain_ComboBarrel3.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboBarrel3, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboBarrel4_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboBarrel4.GetItemText(comboBoxMain_ComboBarrel4.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboBarrel4, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboBarrel5_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboBarrel5.GetItemText(comboBoxMain_ComboBarrel5.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = barrelPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboBarrel5, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Mag1id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Mag1id.GetItemText(comboBoxMain_Mag1id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Mag1id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Mag2id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Mag2id.GetItemText(comboBoxMain_Mag2id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Mag2id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Mag3id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Mag3id.GetItemText(comboBoxMain_Mag3id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Mag3id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Mag4id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Mag4id.GetItemText(comboBoxMain_Mag4id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Mag4id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Mag5id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Mag5id.GetItemText(comboBoxMain_Mag5id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Mag5id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Mag6id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Mag6id.GetItemText(comboBoxMain_Mag6id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Mag6id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_Mag7id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_Mag7id.GetItemText(comboBoxMain_Mag7id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_Mag7id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboMag1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboMag1.GetItemText(comboBoxMain_ComboMag1.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboMag1, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboMag2_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboMag2.GetItemText(comboBoxMain_ComboMag2.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboMag2, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboMag3_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboMag3.GetItemText(comboBoxMain_ComboMag3.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboMag3, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboMag4_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboMag4.GetItemText(comboBoxMain_ComboMag4.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboMag4, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboMag5_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboMag5.GetItemText(comboBoxMain_ComboMag5.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = magPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboMag5, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkOne1id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkOne1id.GetItemText(comboBoxMain_PerkOne1id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkOne1id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkOne2id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkOne2id.GetItemText(comboBoxMain_PerkOne2id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkOne2id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkOne3id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkOne3id.GetItemText(comboBoxMain_PerkOne3id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkOne3id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkOne4id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkOne4id.GetItemText(comboBoxMain_PerkOne4id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkOne4id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkOne5id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkOne5id.GetItemText(comboBoxMain_PerkOne5id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkOne5id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkOne6id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkOne6id.GetItemText(comboBoxMain_PerkOne6id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkOne6id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkOne7id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkOne7id.GetItemText(comboBoxMain_PerkOne7id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkOne7id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboPerkOne1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboPerkOne1.GetItemText(comboBoxMain_ComboPerkOne1.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboPerkOne1, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboPerkOne2_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboPerkOne2.GetItemText(comboBoxMain_ComboPerkOne2.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboPerkOne2, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboPerkOne3_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboPerkOne3.GetItemText(comboBoxMain_ComboPerkOne3.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboPerkOne3, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboPerkOne4_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboPerkOne4.GetItemText(comboBoxMain_ComboPerkOne4.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboPerkOne4, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboPerkOne5_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboPerkOne5.GetItemText(comboBoxMain_ComboPerkOne5.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboPerkOne5, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkTwo1id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkTwo1id.GetItemText(comboBoxMain_PerkTwo1id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkTwo1id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkTwo2id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkTwo2id.GetItemText(comboBoxMain_PerkTwo2id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkTwo2id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkTwo3id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkTwo3id.GetItemText(comboBoxMain_PerkTwo3id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkTwo3id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkTwo4id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkTwo4id.GetItemText(comboBoxMain_PerkTwo4id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkTwo4id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkTwo5id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkTwo5id.GetItemText(comboBoxMain_PerkTwo5id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkTwo5id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkTwo6id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkTwo6id.GetItemText(comboBoxMain_PerkTwo6id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkTwo6id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_PerkTwo7id_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_PerkTwo7id.GetItemText(comboBoxMain_PerkTwo7id.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_PerkTwo7id, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboPerkTwo1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboPerkTwo1.GetItemText(comboBoxMain_ComboPerkTwo1.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboPerkTwo1, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboPerkTwo2_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboPerkTwo2.GetItemText(comboBoxMain_ComboPerkTwo2.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboPerkTwo2, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboPerkTwo3_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboPerkTwo3.GetItemText(comboBoxMain_ComboPerkTwo3.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboPerkTwo3, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboPerkTwo4_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboPerkTwo4.GetItemText(comboBoxMain_ComboPerkTwo4.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboPerkTwo4, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
+        }
+        private void comboBoxMain_ComboPerkTwo5_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) { return; }
+            string name = comboBoxMain_ComboPerkTwo5.GetItemText(comboBoxMain_ComboPerkTwo5.Items[e.Index]);
+            if (name == "") { return; } //Check for empty selection
+            string desc = traitPerks.Find(x => x.name == name).desc;
+            e.DrawBackground();
+            using (SolidBrush br = new SolidBrush(e.ForeColor))
+            { e.Graphics.DrawString(name, e.Font, br, e.Bounds); }
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            { toolTip1.Show(desc, comboBoxMain_ComboPerkTwo5, e.Bounds.Right, e.Bounds.Bottom); }
+            e.DrawFocusRectangle();
         }
     }
 }

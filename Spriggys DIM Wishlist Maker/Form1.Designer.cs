@@ -2088,10 +2088,10 @@
             // 
             // labelMain_combopve
             // 
-            this.labelMain_combopve.Location = new System.Drawing.Point(672, 347);
+            this.labelMain_combopve.Location = new System.Drawing.Point(657, 347);
             this.labelMain_combopve.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_combopve.Name = "labelMain_combopve";
-            this.labelMain_combopve.Size = new System.Drawing.Size(33, 13);
+            this.labelMain_combopve.Size = new System.Drawing.Size(70, 13);
             this.labelMain_combopve.TabIndex = 113;
             this.labelMain_combopve.Text = "PvE";
             this.labelMain_combopve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2311,7 +2311,7 @@
             // 
             // labelMain_Perk2pvp
             // 
-            this.labelMain_Perk2pvp.Location = new System.Drawing.Point(914, 97);
+            this.labelMain_Perk2pvp.Location = new System.Drawing.Point(914, 102);
             this.labelMain_Perk2pvp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Perk2pvp.Name = "labelMain_Perk2pvp";
             this.labelMain_Perk2pvp.Size = new System.Drawing.Size(33, 13);
@@ -2321,10 +2321,10 @@
             // 
             // labelMain_Perk2pve
             // 
-            this.labelMain_Perk2pve.Location = new System.Drawing.Point(877, 97);
+            this.labelMain_Perk2pve.Location = new System.Drawing.Point(861, 102);
             this.labelMain_Perk2pve.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Perk2pve.Name = "labelMain_Perk2pve";
-            this.labelMain_Perk2pve.Size = new System.Drawing.Size(33, 13);
+            this.labelMain_Perk2pve.Size = new System.Drawing.Size(70, 13);
             this.labelMain_Perk2pve.TabIndex = 87;
             this.labelMain_Perk2pve.Text = "PvE";
             this.labelMain_Perk2pve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2357,7 +2357,7 @@
             // labelMain_Perk2
             // 
             this.labelMain_Perk2.AutoSize = true;
-            this.labelMain_Perk2.Location = new System.Drawing.Point(740, 97);
+            this.labelMain_Perk2.Location = new System.Drawing.Point(740, 102);
             this.labelMain_Perk2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Perk2.Name = "labelMain_Perk2";
             this.labelMain_Perk2.Size = new System.Drawing.Size(38, 13);
@@ -2516,7 +2516,7 @@
             // 
             // labelMain_Perk1pvp
             // 
-            this.labelMain_Perk1pvp.Location = new System.Drawing.Point(675, 97);
+            this.labelMain_Perk1pvp.Location = new System.Drawing.Point(675, 102);
             this.labelMain_Perk1pvp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Perk1pvp.Name = "labelMain_Perk1pvp";
             this.labelMain_Perk1pvp.Size = new System.Drawing.Size(33, 13);
@@ -2526,10 +2526,10 @@
             // 
             // labelMain_Perk1pve
             // 
-            this.labelMain_Perk1pve.Location = new System.Drawing.Point(637, 97);
+            this.labelMain_Perk1pve.Location = new System.Drawing.Point(621, 102);
             this.labelMain_Perk1pve.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Perk1pve.Name = "labelMain_Perk1pve";
-            this.labelMain_Perk1pve.Size = new System.Drawing.Size(33, 13);
+            this.labelMain_Perk1pve.Size = new System.Drawing.Size(70, 13);
             this.labelMain_Perk1pve.TabIndex = 63;
             this.labelMain_Perk1pve.Text = "PvE";
             this.labelMain_Perk1pve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2562,7 +2562,7 @@
             // labelMain_Perk1
             // 
             this.labelMain_Perk1.AutoSize = true;
-            this.labelMain_Perk1.Location = new System.Drawing.Point(501, 97);
+            this.labelMain_Perk1.Location = new System.Drawing.Point(501, 102);
             this.labelMain_Perk1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Perk1.Name = "labelMain_Perk1";
             this.labelMain_Perk1.Size = new System.Drawing.Size(38, 13);
@@ -2721,7 +2721,7 @@
             // 
             // labelMain_Magpvp
             // 
-            this.labelMain_Magpvp.Location = new System.Drawing.Point(435, 97);
+            this.labelMain_Magpvp.Location = new System.Drawing.Point(435, 102);
             this.labelMain_Magpvp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Magpvp.Name = "labelMain_Magpvp";
             this.labelMain_Magpvp.Size = new System.Drawing.Size(33, 13);
@@ -2731,10 +2731,10 @@
             // 
             // labelMain_Magpve
             // 
-            this.labelMain_Magpve.Location = new System.Drawing.Point(398, 97);
+            this.labelMain_Magpve.Location = new System.Drawing.Point(382, 102);
             this.labelMain_Magpve.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Magpve.Name = "labelMain_Magpve";
-            this.labelMain_Magpve.Size = new System.Drawing.Size(33, 13);
+            this.labelMain_Magpve.Size = new System.Drawing.Size(70, 13);
             this.labelMain_Magpve.TabIndex = 39;
             this.labelMain_Magpve.Text = "PvE";
             this.labelMain_Magpve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2767,7 +2767,7 @@
             // labelMain_Mag
             // 
             this.labelMain_Mag.AutoSize = true;
-            this.labelMain_Mag.Location = new System.Drawing.Point(261, 97);
+            this.labelMain_Mag.Location = new System.Drawing.Point(261, 102);
             this.labelMain_Mag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Mag.Name = "labelMain_Mag";
             this.labelMain_Mag.Size = new System.Drawing.Size(53, 13);
@@ -2926,7 +2926,7 @@
             // 
             // labelMain_Barrelpvp
             // 
-            this.labelMain_Barrelpvp.Location = new System.Drawing.Point(194, 97);
+            this.labelMain_Barrelpvp.Location = new System.Drawing.Point(194, 102);
             this.labelMain_Barrelpvp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Barrelpvp.Name = "labelMain_Barrelpvp";
             this.labelMain_Barrelpvp.Size = new System.Drawing.Size(33, 13);
@@ -2936,10 +2936,10 @@
             // 
             // labelMain_Barrelpve
             // 
-            this.labelMain_Barrelpve.Location = new System.Drawing.Point(157, 97);
+            this.labelMain_Barrelpve.Location = new System.Drawing.Point(141, 102);
             this.labelMain_Barrelpve.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Barrelpve.Name = "labelMain_Barrelpve";
-            this.labelMain_Barrelpve.Size = new System.Drawing.Size(33, 13);
+            this.labelMain_Barrelpve.Size = new System.Drawing.Size(70, 13);
             this.labelMain_Barrelpve.TabIndex = 15;
             this.labelMain_Barrelpve.Text = "PvE";
             this.labelMain_Barrelpve.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2972,7 +2972,7 @@
             // labelMain_Barrel
             // 
             this.labelMain_Barrel.AutoSize = true;
-            this.labelMain_Barrel.Location = new System.Drawing.Point(20, 97);
+            this.labelMain_Barrel.Location = new System.Drawing.Point(20, 102);
             this.labelMain_Barrel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMain_Barrel.Name = "labelMain_Barrel";
             this.labelMain_Barrel.Size = new System.Drawing.Size(34, 13);
@@ -3342,6 +3342,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Spriggy\'s DIM Wishlist Maker";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPageForm.ResumeLayout(false);
             this.tabPageForm.PerformLayout();
