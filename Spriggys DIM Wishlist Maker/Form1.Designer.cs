@@ -1429,6 +1429,7 @@
             this.comboBoxMain_Weapon.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxMain_Weapon.Name = "comboBoxMain_Weapon";
             this.comboBoxMain_Weapon.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxMain_Weapon.Sorted = true;
             this.comboBoxMain_Weapon.TabIndex = 0;
             this.comboBoxMain_Weapon.SelectedIndexChanged += new System.EventHandler(this.comboBoxMain_Weapon_SelectedIndexChanged);
             // 

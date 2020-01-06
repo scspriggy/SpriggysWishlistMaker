@@ -829,5 +829,63 @@
     <id>3511092054</id>
     <desc>Increased stats based on the currently equipped subclass. [Solar] increases reload speed [Arc] increases handling [Void] increases stability</desc>
   </perk>
+  <perk>
+    <name>Clown Cartridge</name>
+    <id>2284787283</id>
+    <desc>Reloading this weapon randomly overfills it from reserves.</desc>
+  </perk>
+  <perk>
+    <name>Archer's Tempo</name>
+    <id>201365942</id>
+    <desc>Draw time decreases after every precision hit.</desc>
+  </perk>
+  <perk>
+    <name>Explosive Head</name>
+    <id>3365897133</id>
+    <desc>Arrows explode after a short delay.</desc>
+  </perk>
+  <perk>
+    <name>Reversal of Fortune</name>
+    <id>136456835</id>
+    <desc>Missing a shot returns the bullet to the magazine after a short duration.</desc>
+  </perk>
+  <perk>
+    <name>Archer's Gambit</name>
+    <id>3414324643</id>
+    <desc>Hipfire precision hits grant a massive draw-speed bonus for a short duration.</desc>
+  </perk>
+  <perk>
+    <name>Explosive Light</name>
+    <id>3194351027</id>
+    <desc>Picking up an Orb of Light increases the next grenade's blast radius and damage.</desc>
+  </perk>
+  <perk>
+    <name>Energy Transfer</name>
+    <id>2030760728</id>
+    <desc>Guarding while receiving damage generates class ability energy.</desc>
+  </perk>
+  <perk>
+    <name>Meganeura</name>
+    <id>1941225610</id>
+    <desc>Dragonfly deals more damage based on the number of precision hits dealt beforehand.</desc>
+  </perk>
+  <perk>
+    <name>Master of Arms</name>
+    <id>3081867624</id>
+    <desc>Kills with any weapon improve this weapon's damage for a short time.</desc>
+  </perk>
+  <perk>
+    <name>Overflow</name>
+    <id>3643424744</id>
+    <desc>Picking up Special or Heavy ammo reloads this weapon to beyond normal capacity.</desc>
+  </perk>
+  <perk>
+    <name>Killing Tally</name>
+    <id>2782457288</id>
+    <desc>Kills increase this weapon's damage until it is stowed or reloaded.</desc>
+  </perk>
+
+
+
   
 </perks>

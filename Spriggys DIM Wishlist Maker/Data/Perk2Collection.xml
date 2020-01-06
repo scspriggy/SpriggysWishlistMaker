@@ -516,4 +516,32 @@
       <defense>-20</defense>
       <efficiency>-20</efficiency>
     </perk>
+  <perk>
+    <name>Thermoplastic Grenades</name>
+    <id>2870095399</id>
+    <desc>Grenades fired from this weapon bounce further.
+      •  Increases stability
+      •  Increases projectile speed</desc>
+    <perkGroup>Grenade Launcher Magazine</perkGroup>
+  </perk>
+  <perk>
+    <name>Augmented Drum</name>
+    <id>1771897777</id>
+    <desc>Heavy, high capacity drum.
+      •  Greatly increases magazine size
+      •  Greatly decreases reload speed</desc>
+  </perk>
+  <perk>
+    <name>Blinding Grenades</name>
+    <id>3032599245</id>
+    <desc>Grenade detonation has a brief blinding effect.
+      •  Greatly decreases blast radius.</desc>
+  </perk>
+  <perk>
+    <name>Infinite Guard</name>
+    <id>2363751990</id>
+    <desc>Sword Guard has very high efficiency and balanced defense.</desc>
+  </perk>
+
+  
 </perks>

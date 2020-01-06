@@ -12,9 +12,11 @@ using System.Xml;
 
 //TODO: P2 Add more weapons (maybe weapon filter)
 //TODO: P3 Add link to updated versions
+//TODO: P3 Add weapon other (like warlock only on sword)
 
 //TODO  P3 Change main if empty when setting defaults are changed
-//TODO: P4 Add option to include curated rolls
+//TODO: P3 Add Weapon Filters
+//TODO: P5 Add option to include curated rolls
 
 namespace Spriggys_DIM_Wishlist_Maker
 {
@@ -267,15 +269,15 @@ namespace Spriggys_DIM_Wishlist_Maker
         {
             clearWeaponDropdowns();
 
-            comboBoxMain_Weapon.Items.Add("");
+            string[] names = new string[weapons.Count + 1];
+            names[0] = "";
 
-            foreach (Weapon w in weapons)
+            for (int i = 1; i < weapons.Count + 1; i++)
             {
-                if (category == "" || category == w.category)
-                {
-                    comboBoxMain_Weapon.Items.Add(w.name);
-                }
+                names[i] = weapons[i - 1].name;
             }
+
+            comboBoxMain_Weapon.Items.AddRange(names);
         }
 
         private void clearBarrelDropdowns()
@@ -832,7 +834,7 @@ namespace Spriggys_DIM_Wishlist_Maker
             if (comboBoxMain_WeaponTier.Text != "")
                 tier = comboBoxMain_WeaponTier.Text;
 
-            if( comboBoxMain_Weapon.Visible)
+            if (comboBoxMain_Weapon.Visible)
             {
                 roll.Add("//" + comboBoxMain_Weapon.Text + " - " + tier);
             }
@@ -849,9 +851,9 @@ namespace Spriggys_DIM_Wishlist_Maker
 
                 roll.Add("//" + name + " - " + tier);
             }
-            
 
-            if(comboBoxMain_GameType.Text == "PvP Only")
+
+            if (comboBoxMain_GameType.Text == "PvP Only")
             {
                 roll.Add("//=================PvP=================");
 
@@ -870,7 +872,7 @@ namespace Spriggys_DIM_Wishlist_Maker
                 populateRolls(roll, 5, "pvp");
                 populateRolls(roll, 6, "pvp");
             }
-            else 
+            else
             {
                 if (comboBoxMain_GameType.Text == "PvE/PvP")
                     roll.Add("//=================PvE/PvP=================");
@@ -2588,6 +2590,7 @@ namespace Spriggys_DIM_Wishlist_Maker
                 labelMain_Perk1pve.Text = "PvE";
                 labelMain_Perk2pve.Text = "PvE";
                 labelMain_combopve.Text = "PvE";
+                labelMain_PvEmw.Text = "PvE Masterwork";
             }
 
             if (comboBoxMain_GameType.Text == "Both")
@@ -2610,6 +2613,7 @@ namespace Spriggys_DIM_Wishlist_Maker
                     labelMain_Perk1pve.Text = "PvE/PvP";
                     labelMain_Perk2pve.Text = "PvE/PvP";
                     labelMain_combopve.Text = "PvE/PvP";
+                    labelMain_PvEmw.Text = "Masterwork";
                 }
             }
             else if (comboBoxMain_GameType.Text == "PvP Only")
