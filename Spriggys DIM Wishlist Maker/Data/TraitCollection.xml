@@ -884,6 +884,16 @@
     <id>2782457288</id>
     <desc>Kills increase this weapon's damage until it is stowed or reloaded.</desc>
   </perk>
+  <perk>
+    <name>Onslaught</name>
+    <id>95528736</id>
+    <desc>This weapon's rate of fire increases as you stack Rampage.</desc>
+  </perk>
+  <perk>
+    <name>Micro-Missile</name>
+    <id>3713839994</id>
+    <desc>This weapon fires in a straight line and has a massively increased projectile speed.</desc>
+  </perk>
 
 
 
