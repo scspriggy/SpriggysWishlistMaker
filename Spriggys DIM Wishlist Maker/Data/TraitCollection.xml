@@ -894,7 +894,11 @@
     <id>3713839994</id>
     <desc>This weapon fires in a straight line and has a massively increased projectile speed.</desc>
   </perk>
-
+  <perk>
+    <name>Reservoir Burst</name>
+    <id>1427256713</id>
+    <desc>When the battery is full, your next burst deals additional damage and causes enemies to explode on death.</desc>
+  </perk>
 
 
   
