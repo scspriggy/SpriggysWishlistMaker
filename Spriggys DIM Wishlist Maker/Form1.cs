@@ -13,9 +13,11 @@ using System.Xml;
 //TODO: P2 Add more weapons (maybe weapon filter)
 //TODO: P3 Add link to updated versions
 //TODO: P3 Add weapon other (like warlock only on sword)
+//TODO: P3 Change Ammo type to weapon type or something like that.  Ammo can still be primary on an energy weapon.
 
 //TODO  P3 Change main if empty when setting defaults are changed
 //TODO: P3 Add Weapon Filters
+//TODO: P4 Remove all barrel/mag groups, replace with specific rolls
 //TODO: P5 Add option to include curated rolls
 
 namespace Spriggys_DIM_Wishlist_Maker
@@ -193,8 +195,8 @@ namespace Spriggys_DIM_Wishlist_Maker
                     if (n["frameDesc"] != null && !n["frameDesc"].IsEmpty)
                         w.frameDesc = n["frameDesc"].InnerText;
 
-                    if (n["ammoType"] != null && !n["ammoType"].IsEmpty)
-                        w.ammoType = n["ammoType"].InnerText;
+                    if (n["weaponType"] != null && !n["weaponType"].IsEmpty)
+                        w.weaponType = n["weaponType"].InnerText;
 
                     if (n["season"] != null && !n["season"].IsEmpty)
                         w.season = int.Parse(n["season"].InnerText);

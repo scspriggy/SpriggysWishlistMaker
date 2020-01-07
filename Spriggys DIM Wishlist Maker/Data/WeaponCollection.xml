@@ -6,7 +6,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded. Use to uppercut.</frameDesc>
     <category>Sword</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Edge</perk1Group>
     <perk2Group>Guard</perk2Group>
     <season>4</season>
@@ -26,7 +26,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>High damage, high recoil.</frameDesc>
     <category>Grenade Launcher</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Launcher Tube</perk1Group>
     <perk2Group>Grenade Launcher Magazine</perk2Group>
     <season>5</season>
@@ -49,7 +49,7 @@
     <frame>Aggressive Burst</frame>
     <frameDesc>Hard-hitting two-burst fire.</frameDesc>
     <category>Sidearm</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -74,7 +74,7 @@
     <frame>High-Impact Frame</frame>
     <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
     <category>Fusion Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Omolon Sight</perk1Group>
     <perk2Group>Fusion Rifle Magazine</perk2Group>
     <season>9</season>
@@ -99,7 +99,7 @@
     <frame>High-Impact Frame</frame>
     <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
     <category>Fusion Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Fusion Rifle Magazine</perk2Group>
     <season>9</season>
@@ -123,7 +123,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Superb handling. Move faster with this weapon equipped.</frameDesc>
     <category>Shotgun</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Shotgun Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -147,7 +147,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Superb handling. Move faster with this weapon equipped.</frameDesc>
     <category>Pulse Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -172,7 +172,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Superb handling. Move faster with this weapon equipped.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -197,7 +197,7 @@
     <frame>Omolon Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, fires a 3-round burst.</frameDesc>
     <category>Sidearm</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Sidearm Sight (SAS)</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -222,7 +222,7 @@
     <frame>Wave Frame</frame>
     <frameDesc>One-shot handheld Grenade Launcher. Projectiles release a wave of energy when they contact the ground.</frameDesc>
     <category>Grenade Launcher</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Launcher Tube</perk1Group>    
     <season>9</season>
     <element>Solar</element>
@@ -246,7 +246,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>High damage, high recoil.</frameDesc>
     <category>Rocket Launcher</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Launcher Tube</perk1Group>
     <perk2Group>Rocket Launcher Magazine</perk2Group>
     <season>9</season>
@@ -271,7 +271,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -296,7 +296,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Superb handling. Move faster with this weapon equipped.</frameDesc>
     <category>Scout Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -321,7 +321,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Fires full auto with deeper ammo reserves. Faster reload when weapon is empty.</frameDesc>
     <category>Shotgun</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Shotgun Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -346,7 +346,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Deeper ammo reserves. Slightly faster reload when magazine is empty.</frameDesc>
     <category>Auto Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -371,7 +371,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, fires a 3-round burst.</frameDesc>
     <category>Sidearm</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Sidearm Sight (SAS)</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -396,7 +396,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>This weapon's recoil pattern is more predictably vertical.</frameDesc>
     <category>Auto Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Omolon Sight</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -421,7 +421,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Fires a long-range precision energy bolt.</frameDesc>
     <category>Linear Fusion Rifle</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Fusion Rifle Magazine</perk2Group>
     <season>9</season>
@@ -446,7 +446,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>High damage, high recoil.</frameDesc>
     <category>Submachine Gun</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -469,7 +469,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>High damage, high recoil.</frameDesc>
     <category>Sniper Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>9</season>
@@ -490,7 +490,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>This weapon fires a small auto-tracking missile. Missiles lock onto targets when aimed.</frameDesc>
     <category>Rocket Launcher</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Launcher Tube</perk1Group>
     <perk2Group>Rocket Launcher Magazine</perk2Group>
     <season>9</season>
@@ -511,7 +511,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Compound bow. Longer draw time optimized for damage. Press  while drawn to cancel the shot.</frameDesc>
     <category>Combat Bow</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>9</season>
@@ -530,7 +530,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Sidearm</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>9</season>
@@ -549,7 +549,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>Hard-hitting, high recoil. Increases rate of fire after kill.</frameDesc>
     <category>Shotgun</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>9</season>
@@ -568,7 +568,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Fires a long-range precision energy bolt. This weapon's recoil pattern is more predictably vertical.</frameDesc>
     <category>Linear Fusion Rifle</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>9</season>
@@ -587,7 +587,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Fires a single-slug round. This weapon's recoil pattern is more predictably vertical.</frameDesc>
     <category>Shotgun</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Shotgun Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -611,7 +611,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Deeper ammo reserves. Slightly faster reload when magazine is empty.</frameDesc>
     <category>Sniper Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -634,7 +634,7 @@
     <frame>High-Impact Frame</frame>
     <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
     <category>Pulse Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -656,7 +656,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>High damage, high recoil.</frameDesc>
     <category>Rocket Launcher</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Launcher Tube</perk1Group>
     <perk2Group>Rocket Launcher Magazine</perk2Group>
     <season>8</season>
@@ -677,7 +677,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Compound bow. Longer draw time optimized for damage. Press  while drawn to cancel the shot.</frameDesc>
     <category>Combat Bow</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Bow String</perk1Group>
     <perk2Group>Bow Arrow</perk2Group>
     <season>8</season>
@@ -698,7 +698,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -719,7 +719,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Deeper ammo reserves. Slightly faster reload when magazine is empty.</frameDesc>
     <category>Sniper Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -740,7 +740,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>This weapon's recoil pattern is more predictably vertical.</frameDesc>
     <category>Shotgun</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Shotgun Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -762,7 +762,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Deeper ammo reserves. Slightly faster reload when magazine is empty.</frameDesc>
     <category>Auto Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -784,7 +784,7 @@
     <frame>Aggressive Burst</frame>
     <frameDesc>Hard-hitting four-burst fire.</frameDesc>
     <category>Pulse Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -806,7 +806,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Deeper ammo reserves. Slightly faster reload when magazine is empty.</frameDesc>
     <category>Fusion Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Fusion Rifle Magazine</perk2Group>
     <season>8</season>
@@ -827,7 +827,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Submachine Gun</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>8</season>
@@ -846,7 +846,7 @@
     <frame>High-Impact Frame</frame>
     <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
     <category>Scout Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -872,7 +872,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>High damage, high recoil.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -897,7 +897,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Fires full auto with deeper ammo reserves. Faster reload when weapon is empty.</frameDesc>
     <category>Shotgun</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Shotgun Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -924,7 +924,7 @@
     <frame>High-Impact Frame</frame>
     <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
     <category>Auto Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -949,7 +949,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Fires full auto with deeper ammo reserves. Faster reload when weapon is empty.</frameDesc>
     <category>Scout Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>8</season>
@@ -968,7 +968,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Sniper Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -995,7 +995,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Pulse Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -1021,7 +1021,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Auto Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -1046,7 +1046,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Fusion Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Fusion Rifle Magazine</perk2Group>
     <season>8</season>
@@ -1072,7 +1072,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>This weapon's recoil pattern is more predictably vertical.</frameDesc>
     <category>Submachine Gun</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -1098,7 +1098,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Recoil pattern on this weapon is more predictably vertical. Fires quickly with high accuracy.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -1123,7 +1123,7 @@
     <frame>High-Impact Frame</frame>
     <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
     <category>Pulse Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -1145,7 +1145,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Superb handling. Move faster with this weapon equipped.</frameDesc>
     <category>Submachine Gun</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -1170,7 +1170,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Machine Gun</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -1202,7 +1202,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Deeper ammo reserves. Slightly faster reload when magazine is empty.</frameDesc>
     <category>Machine Gun</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>8</season>
@@ -1221,7 +1221,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>High damage, high recoil.</frameDesc>
     <category>Grenade Launcher</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Launcher Tube</perk1Group>
     <perk2Group>Grenade Launcher Magazine</perk2Group>
     <season>8</season>
@@ -1245,7 +1245,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded and reliable. Use  to launch an uppercut attack.</frameDesc>
     <category>Sword</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Edge</perk1Group>
     <perk2Group>Guard</perk2Group>
     <season>8</season>
@@ -1264,7 +1264,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Deeper ammo reserves. Slightly faster reload when magazine is empty.</frameDesc>
     <category>Machine Gun</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>8</season>
@@ -1289,7 +1289,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>High damage, high recoil.</frameDesc>
     <category>Sniper Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>7</season>
@@ -1306,7 +1306,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Compound bow. Longer draw time optimized for damage. Press  while drawn to cancel the shot.</frameDesc>
     <category>Combat Bow</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>7</season>
@@ -1323,7 +1323,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Grenade Launcher</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>7</season>
@@ -1340,7 +1340,7 @@
     <frame>High-Impact Frame</frame>
     <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
     <category>Auto Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1366,7 +1366,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1391,7 +1391,7 @@
     <frame>High-Impact Frame</frame>
     <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
     <category>Scout Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1417,7 +1417,7 @@
     <frame>Together Forever</frame>
     <frameDesc>This weapon has a well-rounded adaptive grip, reliable and sturdy. Kills with this weapon reload Sturm and overflow a bonus damage round into it.</frameDesc>
     <category>Sidearm</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1442,7 +1442,7 @@
     <frame>MIDA Synergy</frame>
     <frameDesc>Superb handling. Move faster with this lightweight weapon equipped. This weapon grants additional speed benefits when MIDA Multi-Tool is also equipped.</frameDesc>
     <category>Submachine Gun</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1467,7 +1467,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>This weapon's recoil pattern is more predictably vertical.</frameDesc>
     <category>Fusion Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Fusion Rifle Magazine</perk2Group>
     <season>7</season>
@@ -1492,7 +1492,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>Hard-hitting, high recoil. Increases rate of fire after kill</frameDesc>
     <category>Shotgun</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Shotgun Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1517,7 +1517,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Superb handling. Move faster with this weapon equipped.</frameDesc>
     <category>Shotgun</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Shotgun Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1543,7 +1543,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Fires a single-slug round. This weapon's recoil pattern is more predictably vertical.</frameDesc>
     <category>Shotgun</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1571,7 +1571,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
     <category>Sniper Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1596,7 +1596,7 @@
     <frame>High-Impact Frame</frame>
     <frameDesc>Long range, slow firing, and high damage.</frameDesc>
     <category>Machine Gun</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1623,7 +1623,7 @@
     <frame>Machine Gun</frame>
     <frameDesc>High-Impact Frame</frameDesc>
     <category>Long range, slow firing, and high damage.</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>7</season>
@@ -1648,7 +1648,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
     <category>Rocket Launcher</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Launcher Tube</perk1Group>
     <perk2Group>Rocket Launcher Magazine</perk2Group>
     <season>7</season>
@@ -1669,7 +1669,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded. Use to uppercut.</frameDesc>
     <category>Sword</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Edge</perk1Group>
     <perk2Group></perk2Group>
     <season>7</season>
@@ -1690,7 +1690,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Fast movement. Use to dash-attack.</frameDesc>
     <category>Sword</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Edge</perk1Group>
     <perk2Group></perk2Group>
     <season>7</season>
@@ -1712,7 +1712,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>Powerful, heavy swings. Use to slam.</frameDesc>
     <category>Sword</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Edge</perk1Group>
     <perk2Group></perk2Group>
     <season>7</season>
@@ -1734,7 +1734,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Recoil pattern is more vertical.</frameDesc>
     <category>Scout Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>6</season>
@@ -1751,7 +1751,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Move faster with this weapon.</frameDesc>
     <category>Submachine Gun</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>6</season>
@@ -1768,7 +1768,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
     <category>Machine Gun</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>6</season>
@@ -1785,7 +1785,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
     <category>Auto Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>6</season>
@@ -1809,7 +1809,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Recoil pattern is more vertical.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>6</season>
@@ -1832,7 +1832,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Move faster with this weapon.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>6</season>
@@ -1862,7 +1862,7 @@
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
     <category>Pulse Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>6</season>
@@ -1886,7 +1886,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
     <category>Pulse Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>SUROS Sight</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>6</season>
@@ -1912,7 +1912,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Move faster with this weapon.</frameDesc>
     <category>Scout Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>6</season>
@@ -1936,7 +1936,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Recoil pattern is more vertical.</frameDesc>
     <category>Sidearm</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>6</season>
@@ -1961,7 +1961,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
     <category>Submachine Gun</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>6</season>
@@ -1986,7 +1986,7 @@
     <frame></frame>
     <frameDesc></frameDesc>
     <category>Fusion Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Nadir Sight</perk1Group>
     <perk2Group>Fusion Rifle Magazine</perk2Group>
     <season>6</season>
@@ -2009,7 +2009,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>One-shot, status effect grenades.</frameDesc>
     <category>Grenade Launcher</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Launcher Tube</perk1Group>
     <perk2Group>Grenade Launcher Magazine</perk2Group>
     <season>6</season>
@@ -2032,7 +2032,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>Increases rate of fire after kill.</frameDesc>
     <category>Shotgun</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Shotgun Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>6</season>
@@ -2056,7 +2056,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
     <category>Sniper Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>6</season>
@@ -2082,7 +2082,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
     <category>Grenade Launcher</category>
-    <ammoType>Kinetic, Energy, Power</ammoType>
+    <weaponType>Kinetic, Energy, Power</weaponType>
     <perk1Group>Launcher Tube</perk1Group>
     <perk2Group>Grenade Launcher Magazine</perk2Group>
     <season>6</season>
@@ -2105,7 +2105,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded. Use to uppercut.</frameDesc>
     <category>Sword</category>
-    <ammoType>Power</ammoType>
+    <weaponType>Power</weaponType>
     <perk1Group>Edge</perk1Group>
     <perk2Group>Guard</perk2Group>
     <season>6</season>
@@ -2125,7 +2125,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Recoil pattern is more vertical.</frameDesc>
     <category>Auto Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>5</season>
@@ -2142,7 +2142,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Move faster with this weapon.</frameDesc>
     <category>Grenade Launcher</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>5</season>
@@ -2161,7 +2161,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Move faster with this weapon.</frameDesc>
     <category>Fusion Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>
     <season>5</season>
@@ -2178,7 +2178,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
     <category>Auto Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>SUROS Sight</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
@@ -2206,7 +2206,7 @@
     <frame>Precision Frame</frame>
     <frameDesc>Recoil pattern is more vertical.</frameDesc>
     <category>Auto Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Black Armory Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
@@ -2231,7 +2231,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>High damage, high recoil.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
@@ -2258,7 +2258,7 @@
     <frame>Aggressive Frame</frame>
     <frameDesc>High damage, high recoil.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
@@ -2285,7 +2285,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
     <category>Hand Cannon</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
@@ -2311,7 +2311,7 @@
     <frame>Lightweight Frame</frame>
     <frameDesc>Move faster with this weapon.</frameDesc>
     <category>Pulse Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Nadir Sight</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
@@ -2338,7 +2338,7 @@
     <frame>Adaptive Frame</frame>
     <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
     <category>Pulse Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>SUROS Sight</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
@@ -2366,7 +2366,7 @@
     <frame>High-Impact Frame</frame>
     <frameDesc>Long range, slow firing, and high damage.</frameDesc>
     <category>Scout Rifle</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Nadir Sight</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
@@ -2393,12 +2393,12 @@
     <frame>Precision Frame</frame>
     <frameDesc>Recoil pattern is more vertical.</frameDesc>
     <category>Scout Rifle</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Black Armory Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
     <element>Arc</element>
-    <curated></curated>
+    <curated>3433396026,1087426260,4267945040,2387244414</curated>
     <trait1>1168162263</trait1>
     <trait1>247725512</trait1>
     <trait1>3400784728</trait1>
@@ -2418,12 +2418,12 @@
     <frame>Precision Frame</frame>
     <frameDesc>This weapon's recoil pattern is more predictably vertical.</frameDesc>
     <category>Scout Rifle</category>
-    <ammoType>Kinetic, Energy, Power</ammoType>
+    <weaponType>Kinetic, Energy, Power</weaponType>
     <perk1Group>SUROS Sight</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
     <element>Kinetic, Arc, Solar, Void</element>
-    <curated></curated>
+    <curated>965619221,1431678320,3400784728,0</curated>
     <trait1>1866048759</trait1>
     <trait1>1631667848</trait1>
     <trait1>3300816228</trait1>
@@ -2445,12 +2445,12 @@
     <frame>SUROS Rapid-Fire</frame>
     <frameDesc>Full auto. Faster reload on empty.</frameDesc>
     <category>Sidearm</category>
-    <ammoType>Energy</ammoType>
+    <weaponType>Energy</weaponType>
     <perk1Group>Sidearm Sight (SAS)</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
     <element>Solar</element>
-    <curated></curated>
+    <curated>445755705,2420895100,1645158859,0</curated>
     <trait1>588594999</trait1>
     <trait1>706527188</trait1>
     <trait1>4071163871</trait1>
@@ -2469,12 +2469,12 @@
     <frame>Precision Frame</frame>
     <frameDesc>Recoil pattern is more vertical.</frameDesc>
     <category>Submachine Gun</category>
-    <ammoType>Kinetic</ammoType>
+    <weaponType>Kinetic</weaponType>
     <perk1Group>Hakke Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
     <season>5</season>
     <element>Kinetic</element>
-    <curated></curated>
+    <curated>965619221,1087426260,588594999,1015611457</curated>
     <trait1>972757866</trait1>
     <trait1>1645158859</trait1>
     <trait1>2039302152</trait1>
@@ -2491,6 +2491,189 @@
     <trait2>3300816228</trait2>
     <trait2>4071163871</trait2>
   </weapon>
+  <weapon>
+    <name>The Hero's Burden</name>
+    <id>1865351684</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Submachine Gun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>SUROS Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Void</element>
+    <curated></curated>
+    <trait1>972757866</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>2039302152</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>957782887</trait1>
+    <trait1>588594999</trait1>
+    <trait2>1359896290</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>1631667848</trait2>
+    <trait2>1890422124</trait2>
+    <trait2>3096702027</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>1015611457</trait2>
+  </weapon>
+  <weapon>
+    <name>Tempered Dynamo</name>
+    <id>2753269585</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Fusion Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group>Fusion Rifle Magazine</perk2Group>
+    <season>5</season>
+    <element>Arc</element>
+    <curated>3433396027,3868766766,1600092898,3425386926</curated>
+    <perk1>1096957638</perk1>
+    <perk1>3433396026</perk1>
+    <perk1>3433396027</perk1>
+    <trait1>957782887</trait1>
+    <trait1>3275789089</trait1>
+    <trait1>3722653512</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>47981717</trait1>
+    <trait1>1600092898</trait1>
+    <trait2>1015611457</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>1683379515</trait2>
+    <trait2>1631667848</trait2>
+    <trait2>3425386926</trait2>
+  </weapon>
+  <weapon>
+    <name>Baligant XU7743</name>
+    <id>3461377698</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>Increases rate of fire after kill.</frameDesc>
+    <category>Shotgun Icon of the Kinetic damage type.</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>1047830412,3177308360,3722653512,0</curated>
+    <trait1>3161816588</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>2117683199</trait1>
+    <trait1>972757866</trait1>
+    <trait1>3722653512</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1168162263</trait2>
+    <trait2>957782887</trait2>
+    <trait2>588594999</trait2>
+    <trait2>3300816228</trait2>
+  </weapon>
+  <weapon>
+    <name>Threat Level</name>
+    <id>1664372054</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>1300023272,679225683,2360754333,1631667848</curated>
+    <trait1>3425386926</trait1>
+    <trait1>588594999</trait1>
+    <trait1>3161816588</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3708227201</trait1>
+    <trait1>2360754333</trait1>
+    <trait2>957782887</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>706527188</trait2>
+    <trait2>3096702027</trait2>
+    <trait2>3722653512</trait2>
+    <trait2>1631667848</trait2>
+  </weapon>
+  <weapon>
+    <name>Wishbringer</name>
+    <id>3356526253</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Solar</element>
+    <curated>1047830412,3142289711,3161816588,957782887</curated>
+    <trait1>4071163871</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>972757866</trait1>
+    <trait1>1866048759</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>3161816588</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>588594999</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>47981717</trait2>
+    <trait2>957782887</trait2>
+  </weapon>
+  <weapon>
+    <name>Show of Force XF4865</name>
+    <id>4148143418</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>893526894,1561002382,1168162263,0</curated>
+    <perk1>893526892</perk1>
+    <perk1>893526895</perk1>
+    <perk1>893526893</perk1>
+    <perk1>893526894</perk1>
+    <trait1>3513791699</trait1>
+    <trait1>280464955</trait1>
+    <trait1>957782887</trait1>
+    <trait1>247725512</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>1168162263</trait1>
+    <trait2>3400784728</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>3038247973</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>1168162263</trait2>
+    <trait2>588594999</trait2>
+  </weapon>
+  <weapon>
+    <name>Persuader</name>
+    <id>4083045006</id>
+    <frame></frame>
+    <frameDesc></frameDesc>
+    <category></category>
+    <weaponType>Kinetic, Energy, Power</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>5</season>
+    <element>Kinetic, Arc, Solar, Void</element>
+    <curated></curated>
+    <trait1></trait1>
+    <trait1></trait1>
+    <trait1></trait1>
+    <trait1></trait1>
+    <trait1></trait1>
+    <trait1></trait1>
+    <trait2></trait2>
+    <trait2></trait2>
+    <trait2></trait2>
+    <trait2></trait2>
+    <trait2></trait2>
+    <trait2></trait2>
+  </weapon>
   
   <weapon>
   <name></name>
@@ -2498,7 +2681,7 @@
   <frame></frame>
   <frameDesc></frameDesc>
   <category></category>
-  <ammoType>Kinetic, Energy, Power</ammoType>
+  <weaponType>Kinetic, Energy, Power</weaponType>
   <perk1Group></perk1Group>
   <perk2Group></perk2Group>
   <season>5</season>

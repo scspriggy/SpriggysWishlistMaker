@@ -12,7 +12,7 @@ namespace Spriggys_DIM_Wishlist_Maker
         public string category;
         public string frame;
         public string frameDesc;
-        public string ammoType;
+        public string weaponType;
         public int season;
         public string element;
         public long id;
@@ -29,7 +29,7 @@ namespace Spriggys_DIM_Wishlist_Maker
             this.category = "";
             this.frame = "";
             this.frameDesc = "";
-            this.ammoType = "";
+            this.weaponType = "";
             this.season = 0;
             this.element = "";
             this.id = 0;
@@ -50,8 +50,8 @@ namespace Spriggys_DIM_Wishlist_Maker
 
             if (category != "")
                 s += "Category: " + category + Environment.NewLine;
-            if (ammoType != "")
-                s += "Ammo Type: " + ammoType + Environment.NewLine;
+            if (weaponType != "")
+                s += "Weapon Type: " + weaponType + Environment.NewLine;
             if (element != "")
                 s += "Element: " + element + Environment.NewLine;
             if (season != 0)
