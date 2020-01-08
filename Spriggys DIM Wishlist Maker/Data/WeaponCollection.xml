@@ -2652,9 +2652,36 @@
   <weapon>
     <name>Persuader</name>
     <id>4083045006</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Void</element>
+    <curated>0,1431678320,957782887,588594999</curated>
+    <perk1>767484756</perk1>
+    <perk1>767484757</perk1>
+    <trait1>1866048759</trait1>
+    <trait1>280464955</trait1>
+    <trait1>247725512</trait1>
+    <trait1>3096702027</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>957782887</trait1>
+    <trait2>588594999</trait2>
+    <trait2>3400784728</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>3038247973</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>1168162263</trait2>
+  </weapon>
+  <weapon>
+    <name>Tatara Gaze</name>
+    <id>1449922174</id>
     <frame></frame>
     <frameDesc></frameDesc>
-    <category></category>
+    <category>Sniper Rifle</category>
     <weaponType>Kinetic, Energy, Power</weaponType>
     <perk1Group></perk1Group>
     <perk2Group></perk2Group>

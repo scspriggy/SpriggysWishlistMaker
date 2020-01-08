@@ -1149,4 +1149,18 @@
       <ammo>20</ammo>
       <magazine>20</magazine>
     </perk>
+  <perk>
+      <name>9RECT Telescopic</name>
+      <id>767484756</id>
+      <desc>Powerful scope. Long zoom.
+        •  Greatly increases range
+        •  Decreases handling speed</desc>
+    </perk>
+  <perk>
+    <name>50VAL Telescopic</name>
+    <id>767484757</id>
+    <desc>Agile, snappy scope. Short zoom.
+      •  Slightly increases range
+      •  Increases handling speed</desc>
+  </perk>
 </perks>
