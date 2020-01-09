@@ -15,10 +15,12 @@ using System.Xml;
 //TODO: P3 Add weapon other (like warlock only on sword)
 //TODO: P3 Change Ammo type to weapon type or something like that.  Ammo can still be primary on an energy weapon.
 
+//TODO: P3 Add somewhere future features, or updates
 //TODO  P3 Change main if empty when setting defaults are changed
 //TODO: P3 Add Weapon Filters
 //TODO: P4 Remove all barrel/mag groups, replace with specific rolls
-//TODO: P5 Add option to include curated rolls
+//TODO: P4 Add option to check for non-standard rolls
+//TODO: P5 Add option to include curated rolls, maybe highlight or diff color
 
 namespace Spriggys_DIM_Wishlist_Maker
 {
