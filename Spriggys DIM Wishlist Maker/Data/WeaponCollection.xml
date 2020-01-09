@@ -2679,27 +2679,245 @@
   <weapon>
     <name>Tatara Gaze</name>
     <id>1449922174</id>
-    <frame></frame>
-    <frameDesc></frameDesc>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
     <category>Sniper Rifle</category>
-    <weaponType>Kinetic, Energy, Power</weaponType>
-    <perk1Group></perk1Group>
-    <perk2Group></perk2Group>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
     <season>5</season>
-    <element>Kinetic, Arc, Solar, Void</element>
-    <curated></curated>
-    <trait1></trait1>
-    <trait1></trait1>
-    <trait1></trait1>
-    <trait1></trait1>
-    <trait1></trait1>
-    <trait1></trait1>
-    <trait2></trait2>
-    <trait2></trait2>
-    <trait2></trait2>
-    <trait2></trait2>
-    <trait2></trait2>
-    <trait2></trait2>
+    <element>Arc</element>
+    <curated>3661387068,3142289711,957782887,2551157718</curated>
+    <trait1>1168162263</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>247725512</trait1>
+    <trait1>3275789089</trait1>
+    <trait1>706527188</trait1>
+    <trait1>957782887</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2848615171</trait2>
+    <trait2>47981717</trait2>
+    <trait2>3096702027</trait2>
+    <trait2>2551157718</trait2>
+  </weapon>
+  <weapon>
+    <name>Acantha-D XK8434</name>
+    <id>1757129747</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Grenade Launcher Magazine</perk2Group>
+    <season>5</season>
+    <element>Arc</element>
+    <curated>1478423395,332133599,972757866,0</curated>
+    <trait1>2846385770</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>957782887</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>972757866</trait1>
+    <trait2>3096702027</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>706527188</trait2>
+  </weapon>
+  <weapon>
+    <name>Avalanche</name>
+    <id>66875353</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Machine Gun</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>SUROS Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Solar</element>
+    <curated>965619221,1431678320,1645158859,3425386926</curated>
+    <trait1>1359896290</trait1>
+    <trait1>2039302152</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>588594999</trait1>
+    <trait1>2779035018</trait1>
+    <trait1>1645158859</trait1>
+    <trait2>2213355989</trait2>
+    <trait2>706527188</trait2>
+    <trait2>280464955</trait2>
+    <trait2>957782887</trait2>
+    <trait2>1866048759</trait2>
+    <trait2>3425386926</trait2>
+  </weapon>
+  <weapon>
+    <name>Hammerhead</name>
+    <id>603242241</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Machine Gun</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Void</element>
+    <curated>3250034553,1968497646,2779035018,3425386926</curated>
+    <trait1>1359896290</trait1>
+    <trait1>1890422124</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>706527188</trait1>
+    <trait1>3275789089</trait1>
+    <trait1>2779035018</trait1>
+    <trait2>3708227201</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>3096702027</trait2>
+    <trait2>3513791699</trait2>
+    <trait2>3425386926</trait2>
+  </weapon>
+  <weapon>
+    <name>Bellowing Giant</name>
+    <id>2186258845</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Rocket Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Rocket Launcher Magazine</perk2Group>
+    <season>5</season>
+    <element>Void</element>
+    <curated>3809316345,3796465595,3977735242,1275731761</curated>
+    <trait1>706527188</trait1>
+    <trait1>3096702027</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>3977735242</trait1>
+    <trait2>2010801679</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>588594999</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>1275731761</trait2>
+  </weapon>
+  <weapon>
+    <name>Hoosegow XE5837</name>
+    <id>2817798849</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Rocket Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Rocket Launcher Magazine</perk2Group>
+    <season>5</season>
+    <element>Solar</element>
+    <curated>981914802,1996142143,957782887,0</curated>
+    <trait1>2846385770</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>957782887</trait1>
+    <trait2>1275731761</trait2>
+    <trait2>706527188</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>1015611457</trait2>
+  </weapon>
+  <weapon>
+    <name>Misfit</name>
+    <id>819441402</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Tangled Shore Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>4</season>
+    <element>Arc</element>
+    <curated>0,4134353779,2213355989,0</curated>
+    <trait1>1890422124</trait1>
+    <trait1>706527188</trait1>
+    <trait1>957782887</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>1359896290</trait1>
+    <trait1>2213355989</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>2039302152</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>1645158859</trait2>
+    <trait2>972757866</trait2>
+    <trait2>588594999</trait2>
+  </weapon>
+  <weapon>
+    <name>Ether Doctor</name>
+    <id>1839565992</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Tangled Shore Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>4</season>
+    <element>Kinetic</element>
+    <curated>0,2420895100,1359896290,0</curated>
+    <trait1>957782887</trait1>
+    <trait1>706527188</trait1>
+    <trait1>1890422124</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>1359896290</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>2039302152</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>1645158859</trait2>
+    <trait2>972757866</trait2>
+    <trait2>588594999</trait2>
+  </weapon>
+  <weapon>
+    <name>Hazard of the Cast</name>
+    <id>1789347249</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>4</season>
+    <element>Kinetic</element>
+    <curated>839105230,1561002382,2010801679,3425386926</curated>
+    <trait1>1890422124</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>2010801679</trait1>
+    <trait2>1015611457</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>706527188</trait2>
+    <trait2>1168162263</trait2>
+    <trait2>3425386926</trait2>
+  </weapon>
+  <weapon>
+    <name>Halfdan-D</name>
+    <id>1518042134</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Long range, slow firing, and high damage.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Hakke Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>4</season>
+    <element>Kinetic</element>
+    <curated>87986589,106909392,1168162263,0</curated>
+    <trait1>706527188</trait1>
+    <trait1>1890422124</trait1>
+    <trait1>957782887</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>1359896290</trait1>
+    <trait1>1168162263</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>972757866</trait2>
+    <trait2>588594999</trait2>
+    <trait2>1631667848</trait2>
   </weapon>
   
   <weapon>
@@ -2711,7 +2929,7 @@
   <weaponType>Kinetic, Energy, Power</weaponType>
   <perk1Group></perk1Group>
   <perk2Group></perk2Group>
-  <season>5</season>
+  <season>4</season>
   <element>Kinetic, Arc, Solar, Void</element>
   <curated></curated>
   <trait1></trait1>
