@@ -1126,28 +1126,6 @@
     <trait2>3523296417</trait2>
   </weapon>
   <weapon>
-    <name>Premonition</name>
-    <id>208088207</id>
-    <frame>High-Impact Frame</frame>
-    <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
-    <category>Pulse Rifle</category>
-    <weaponType>Energy</weaponType>
-    <perk1Group>Barrel</perk1Group>
-    <perk2Group>Magazine</perk2Group>
-    <season>8</season>
-    <element>Void</element>
-    <curated>0,1087426260,1015611457,0</curated>
-    <trait1>1015611457</trait1>
-    <trait1>280464955</trait1>
-    <trait1>1645158859</trait1>
-    <trait1>2846385770</trait1>
-    <trait1>1168162263</trait1>
-    <trait2>1015611457</trait2>
-    <trait2>460017080</trait2>
-    <trait2>3523296417</trait2>
-    <trait2>2848615171</trait2>
-  </weapon>
-  <weapon>
     <name>Subjunctive</name>
     <id>2663204025</id>
     <frame>Lightweight Frame</frame>
@@ -2710,29 +2688,6 @@
     <trait2>2551157718</trait2>
   </weapon>
   <weapon>
-    <name>Acantha-D XK8434</name>
-    <id>1757129747</id>
-    <frame>Aggressive Frame</frame>
-    <frameDesc>High damage, high recoil.</frameDesc>
-    <category>Grenade Launcher</category>
-    <weaponType>Power</weaponType>
-    <perk1Group>Launcher Tube</perk1Group>
-    <perk2Group>Grenade Launcher Magazine</perk2Group>
-    <season>5</season>
-    <element>Arc</element>
-    <curated>1478423395,332133599,972757866,0</curated>
-    <trait1>2846385770</trait1>
-    <trait1>2869569095</trait1>
-    <trait1>3300816228</trait1>
-    <trait1>957782887</trait1>
-    <trait1>4071163871</trait1>
-    <trait1>972757866</trait1>
-    <trait2>3096702027</trait2>
-    <trait2>2010801679</trait2>
-    <trait2>3425386926</trait2>
-    <trait2>706527188</trait2>
-  </weapon>
-  <weapon>
     <name>Avalanche</name>
     <id>66875353</id>
     <frame>Adaptive Frame</frame>
@@ -3077,7 +3032,7 @@
     <trait2>3300816228</trait2>
   </weapon>
   <weapon>
-    <name></name>
+    <name>Horror's Least</name>
     <id>1071542914</id>
     <frame>Rapid-Fire Frame</frame>
     <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
@@ -3804,31 +3759,140 @@
     <trait2>3096702027</trait2>
     <trait2>2551157718</trait2>
   </weapon>
-  
   <weapon>
-  <name></name>
-  <id></id>
-  <frame></frame>
-  <frameDesc></frameDesc>
-  <category></category>
-  <weaponType>Kinetic, Energy, Power</weaponType>
-  <perk1Group></perk1Group>
-  <perk2Group></perk2Group>
-  <season>4</season>
-  <element>Kinetic, Arc, Solar, Void</element>
-  <curated></curated>
-  <trait1></trait1>
-  <trait1></trait1>
-  <trait1></trait1>
-  <trait1></trait1>
-  <trait1></trait1>
-  <trait1></trait1>
-  <trait2></trait2>
-  <trait2></trait2>
-  <trait2></trait2>
-  <trait2></trait2>
-  <trait2></trait2>
-  <trait2></trait2>
-</weapon>
-  
+    <name>Zenobia-D</name>
+    <id>3776129137</id>
+    <frame>Häkke Precision Frame</frame>
+    <frameDesc>Fires small auto-tracking missiles.</frameDesc>
+    <category>Rocket Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Rocket Launcher Magazine</perk2Group>
+    <season>4</season>
+    <element>Arc</element>
+    <curated>1478423395,2822142346,706527188,0</curated>
+    <trait1>2846385770</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>957782887</trait1>
+    <trait1>706527188</trait1>
+    <trait2>1275731761</trait2>
+    <trait2>706527188</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>1015611457</trait2>
+  </weapon>
+  <weapon>
+    <name>Bad Omens</name>
+    <id>991314988</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Rocket Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Rocket Launcher Magazine</perk2Group>
+    <season>4</season>
+    <element>Void</element>
+    <curated>1478423395,3796465595,3977735242,1275731761</curated>
+    <trait1>2869569095</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>957782887</trait1>
+    <trait1>3977735242</trait1>
+    <trait2>706527188</trait2>
+    <trait2>3096702027</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>1275731761</trait2>
+  </weapon>
+  <weapon>
+    <name>Roar of the Bear</name>
+    <id>308332265</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Long range, slow firing, and high damage.</frameDesc>
+    <category>Rocket Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Rocket Launcher Magazine</perk2Group>
+    <season>4</season>
+    <element>Solar</element>
+    <curated>981914802,2822142346,957782887,3300816228</curated>
+    <trait1>3977735242</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>957782887</trait1>
+    <trait2>706527188</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>3300816228</trait2>
+  </weapon>
+  <weapon>
+    <name>The Militia's Birthright</name>
+    <id>3745974521</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>One-shot, status effect grenades.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group></perk2Group>
+    <season>4</season>
+    <element>Kinetic</element>
+    <curated>3809316345,3032599245,3096702027,4071163871</curated>
+    <perk2>409831596</perk2>
+    <perk2>3301904089</perk2>
+    <perk2>2822142346</perk2>
+    <perk2>3492396210</perk2>
+    <perk2>1716000303</perk2>
+    <perk2>3032599245</perk2>
+    <trait1>2010801679</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>706527188</trait1>
+    <trait1>3096702027</trait1>
+    <trait2>2846385770</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>957782887</trait2>
+    <trait2>588594999</trait2>
+    <trait2>4071163871</trait2>
+  </weapon>
+  <weapon>
+    <name>Edge Transit</name>
+    <id>218335759</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Grenade Launcher Magazine</perk2Group>
+    <season>4</season>
+    <element>Void</element>
+    <curated>1844523823,3373736292,3300816228,0</curated>
+    <trait1>2869569095</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>957782887</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>3300816228</trait1>
+    <trait2>3096702027</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>706527188</trait2>
+  </weapon>
+  <weapon>
+    <name>Outrageous Fortune</name>
+    <id>4146702548</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Grenade Launcher Magazine</perk2Group>
+    <season>4</season>
+    <element>Solar</element>
+    <curated>3525010810,409831596,2846385770,3425386926</curated>
+    <trait1>2869569095</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>957782887</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2846385770</trait1>
+    <trait2>3096702027</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>706527188</trait2>
+    <trait2>3425386926</trait2>
+  </weapon>
 </weapons>

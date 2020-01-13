@@ -15,6 +15,7 @@ namespace Spriggys_DIM_Wishlist_Maker
         public string weaponType;
         public int season;
         public string element;
+        public string other;
         public long id;
         public string perk1Group;
         public string perk2Group;
@@ -35,6 +36,7 @@ namespace Spriggys_DIM_Wishlist_Maker
             this.id = 0;
             this.perk1Group = "";
             this.perk2Group = "";
+            this.other = "";
             perk1Options = new List<Perk>();
             perk2Options = new List<Perk>();
             perk3Options = new List<Perk>();
@@ -54,6 +56,8 @@ namespace Spriggys_DIM_Wishlist_Maker
                 s += "Weapon Type: " + weaponType + Environment.NewLine;
             if (element != "")
                 s += "Element: " + element + Environment.NewLine;
+            if(other != "")
+                s += "Other: " + other + Environment.NewLine;
             if (season != 0)
                 s += "Season: " + season + Environment.NewLine;
 

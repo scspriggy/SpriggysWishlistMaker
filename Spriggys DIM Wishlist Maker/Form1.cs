@@ -10,15 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-//TODO: P2 Add more weapons (maybe weapon filter)
-//TODO: P3 Add link to updated versions
-//TODO: P3 Add weapon other (like warlock only on sword)
-//TODO: P3 Change Ammo type to weapon type or something like that.  Ammo can still be primary on an energy weapon.
-
 //TODO: P3 Add somewhere future features, or updates
 //TODO  P3 Change main if empty when setting defaults are changed
-//TODO: P3 Add Weapon Filters
-//TODO: P4 Remove all barrel/mag groups, replace with specific rolls
+//TODO: P4 Add Weapon Filters
+//TODO: P4 Remove all barrel/mag groups, replace with specific rolls (more accurate), add groupName on weapon for display
 //TODO: P4 Add option to check for non-standard rolls
 //TODO: P5 Add option to include curated rolls, maybe highlight or diff color
 
@@ -205,6 +200,9 @@ namespace Spriggys_DIM_Wishlist_Maker
 
                     if (n["element"] != null && !n["element"].IsEmpty)
                         w.element = n["element"].InnerText;
+
+                    if (n["other"] != null && !n["other"].IsEmpty)
+                        w.other = n["other"].InnerText;
 
                     //Get weapon perks based on groupings, then direct listings
                     if (n["perk1Group"] != null && !n["perk1Group"].IsEmpty)
@@ -3900,6 +3898,11 @@ namespace Spriggys_DIM_Wishlist_Maker
             if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
             { toolTip1.Show(desc, comboBoxMain_ComboPerkTwo5, e.Bounds.Right, e.Bounds.Bottom); }
             e.DrawFocusRectangle();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/scspriggy/SpriggysWishlistMaker");
         }
     }
 }

@@ -899,7 +899,14 @@
     <id>1427256713</id>
     <desc>When the battery is full, your next burst deals additional damage and causes enemies to explode on death.</desc>
   </perk>
-
-
-  
+  <perk>
+    <name>Dragonfly (Oxygen)</name>
+    <id>3865257976</id>
+    <desc>Precision kills create an elemental damage explosion.</desc>
+  </perk>
+  <perk>
+    <name>Sneak Bow</name>
+    <id>908147344</id>
+    <desc>Increases hold time and reload speed while crouched.</desc>
+  </perk>
 </perks>
