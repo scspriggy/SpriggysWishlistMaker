@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
+//TODO: P3 Add a lookup for text input rolls (like we did for weapons) so it's not always Unknown
 //TODO: P3 Add somewhere future features, or updates
 //TODO  P3 Change main if empty when setting defaults are changed
 //TODO: P4 Add Weapon Filters
