@@ -3895,4 +3895,159 @@
     <trait2>706527188</trait2>
     <trait2>3425386926</trait2>
   </weapon>
+  <weapon>
+    <name>Thin Line</name>
+    <id>1178886909</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Hand Cannon</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>4</season>
+    <element>Void</element>
+    <curated>0,106909392,1645158859,0</curated>
+    <trait1>2848615171</trait1>
+    <trait1>588594999</trait1>
+    <trait1>706527188</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>3161816588</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>1645158859</trait1>
+    <trait2>2848615171</trait2>
+    <trait2>1168162263</trait2>
+    <trait2>47981717</trait2>
+    <trait2>957782887</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>2387244414</trait2>
+  </weapon>
+  <weapon>
+    <name>Right Side of Wrong</name>
+    <id>3376406418</id>
+    <frame>Aggressive Burst</frame>
+    <frameDesc>Hard-hitting four-burst fire.</frameDesc>
+    <category>Pulse Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Tangled Shore Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>4</season>
+    <element>Solar</element>
+    <curated>0,3177308360,460017080,0</curated>
+    <trait1>2387244414</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>588594999</trait1>
+    <trait1>280464955</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>1866048759</trait1>
+    <trait1>460017080</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>4267945040</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>460017080</trait2>
+  </weapon>
+  <weapon>
+    <name>Claws of the Wolf</name>
+    <id>1280933460</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Pulse Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>4</season>
+    <element>Void</element>
+    <curated>839105230,1431678320,1168162263,4267945040</curated>
+    <trait1>957782887</trait1>
+    <trait1>460017080</trait1>
+    <trait1>3161816588</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>1168162263</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>1631667848</trait2>
+    <trait2>4267945040</trait2>
+  </weapon>
+  <weapon>
+    <name>Breath of the Dragon</name>
+    <id>1357080535</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Move faster with this weapon.</frameDesc>
+    <category>Submachine Gun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>4</season>
+    <element>Arc</element>
+    <curated>1392496348,1561002382,1168162263,1015611457</curated>
+    <trait1>1645158859</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>957782887</trait1>
+    <trait1>588594999</trait1>
+    <trait1>2039302152</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>1168162263</trait1>
+    <trait2>1359896290</trait2>
+    <trait2>1890422124</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>1015611457</trait2>
+  </weapon>
+  <weapon>
+    <name>Transfiguration</name>
+    <id>3799980700</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Long range, slow firing, and high damage.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>4</season>
+    <element>Kinetic</element>
+    <curated>1840239774,679225683,1168162263,3038247973</curated>
+    <trait1>3400784728</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>3425386926</trait1>
+    <trait1>1168162263</trait1>
+    <trait2>1015611457</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>47981717</trait2>
+    <trait2>588594999</trait2>
+    <trait2>3038247973</trait2>
+  </weapon>
+  <weapon>
+    <name>Pribina-D</name>
+    <id>4211534763</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Hand Cannon</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>4</season>
+    <element>Kinetic</element>
+    <curated>1926090092,3177308360,1866048759,0</curated>
+    <trait1>588594999</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>957782887</trait1>
+    <trait1>1866048759</trait1>
+    <trait2>1954620775</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2869569095</trait2>
+    <trait2>1866048759</trait2>
+    <trait2>2387244414</trait2>
+    <trait2>47981717</trait2>
+    <trait2>3038247973</trait2>
+  </weapon>
 </weapons>
