@@ -909,4 +909,18 @@
     <id>908147344</id>
     <desc>Increases hold time and reload speed while crouched.</desc>
   </perk>
+  <perk>
+    <name>Flash Counter</name>
+    <id>2244851822</id>
+    <desc>Melee blocked immediately after guarding disorients and weakens the attacker.</desc>
+  </perk>
+  <perk>
+    <name>Celerity</name>
+    <id>1264398905</id>
+    <desc>Gain the following effects while you are the last living member of your fireteam:
+      • Increased target acquisition
+      • Increased handling and reload speed
+      • Reduced flinch from incoming fire
+    </desc>
+  </perk>
 </perks>
