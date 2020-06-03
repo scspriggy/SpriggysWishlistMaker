@@ -8,6 +8,7 @@
         •  Moderately controls recoil
         •  Slightly decreases handling speed</desc>
       <perkGroup>Barrel</perkGroup>
+	  <perkGroup>Shotgun Barrel</perkGroup>
       <stability>10</stability>
       <range>0</range>
       <recoilDirection>10</recoilDirection>
@@ -32,6 +33,7 @@
       <desc>Barrel optimized for recoil reduction.
         •  Increases stability</desc>
       <perkGroup>Barrel</perkGroup>
+	  <perkGroup>Shotgun Barrel</perkGroup>
       <stability>10</stability>
       <range>0</range>
       <recoilDirection>0</recoilDirection>
@@ -44,6 +46,7 @@
         •  Greatly increases handling speed
         •  Slightly increases stability</desc>
       <perkGroup>Barrel</perkGroup>
+	  <perkGroup>Shotgun Barrel</perkGroup>
       <stability>5</stability>
       <range>0</range>
       <recoilDirection>0</recoilDirection>
@@ -70,6 +73,7 @@
         •  Decreases stability
         •  Slightly decreases handling speed</desc>
       <perkGroup>Barrel</perkGroup>
+	  <perkGroup>Shotgun Barrel</perkGroup>
       <stability>-10</stability>
       <range>15</range>
       <recoilDirection>0</recoilDirection>
@@ -82,6 +86,7 @@
         •  Greatly controls recoil
         •  Increases handling speed</desc>
       <perkGroup>Barrel</perkGroup>
+	  <perkGroup>Shotgun Barrel</perkGroup>
       <stability>0</stability>
       <range>0</range>
       <recoilDirection>30</recoilDirection>
@@ -95,6 +100,7 @@
         •  Decreases handling speed
         •  Moderately controls recoil</desc>
       <perkGroup>Barrel</perkGroup>
+	  <perkGroup>Shotgun Barrel</perkGroup>
       <stability>0</stability>
       <range>10</range>
       <recoilDirection>10</recoilDirection>
@@ -106,6 +112,7 @@
       <desc>Durable ranged barrel.
         •  Increases range</desc>
       <perkGroup>Barrel</perkGroup>
+	  <perkGroup>Shotgun Barrel</perkGroup>
       <stability>0</stability>
       <range>10</range>
       <recoilDirection>0</recoilDirection>

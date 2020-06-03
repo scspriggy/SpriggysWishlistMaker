@@ -1,0 +1,769 @@
+<weapon>
+    <name>Acantha-D XK8434</name> 
+    <id>1757129747</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Grenade Launcher Magazine</perk2Group>
+    <season>5</season>
+    <element>Arc</element>
+    <curated>1478423395,332133599,972757866,0</curated>
+    <trait1>972757866</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>957782887</trait1>
+    <trait1>4071163871</trait1>
+    <trait2>3096702027</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>706527188</trait2>
+  </weapon>
+  <weapon>
+    <name>Atalanta-D XG1992</name>
+    <id>2422664927</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Submachine Gun</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Hakke Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>965619221,1087426260,588594999,1015611457</curated>
+    <trait1>972757866</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>2039302152</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>957782887</trait1>
+    <trait1>588594999</trait1>
+    <trait1>1890422124</trait1>
+    <trait2>1359896290</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>1631667848</trait2>
+    <trait2>1890422124</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>4071163871</trait2>
+  </weapon>
+  <weapon>
+    <name>Avalanche</name>
+    <id>66875353</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Machine Gun</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>SUROS Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Solar</element>
+    <curated>965619221,1431678320,1645158859,3425386926</curated>
+    <trait1>1359896290</trait1>
+    <trait1>2039302152</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>588594999</trait1>
+    <trait1>2779035018</trait1>
+    <trait1>1645158859</trait1>
+    <trait2>2213355989</trait2>
+    <trait2>706527188</trait2>
+    <trait2>280464955</trait2>
+    <trait2>957782887</trait2>
+    <trait2>1866048759</trait2>
+    <trait2>3425386926</trait2>
+  </weapon>
+  <weapon>
+    <name>Bad News XF4354</name>
+    <id>2824241403</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Hand Cannon</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>1926090095,3230963543,588594999,0</curated>
+    <trait1>588594999</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>3722653512</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>3513791699</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>957782887</trait1>
+    <trait2>1954620775</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2869569095</trait2>
+    <trait2>1866048759</trait2>
+    <trait2>2387244414</trait2>
+    <trait2>47981717</trait2>
+    <trait2>3038247973</trait2>
+  </weapon>
+  <weapon>
+    <name>Baligant XU7743</name>
+    <id>3461377698</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>Increases rate of fire after kill.</frameDesc>
+    <category>Shotgun Icon of the Kinetic damage type.</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>1047830412,3177308360,3722653512,0</curated>
+    <trait1>3161816588</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>2117683199</trait1>
+    <trait1>972757866</trait1>
+    <trait1>3722653512</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1168162263</trait2>
+    <trait2>957782887</trait2>
+    <trait2>588594999</trait2>
+    <trait2>3300816228</trait2>
+  </weapon>
+  <weapon>
+    <name>Bellowing Giant</name>
+    <id>2186258845</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Rocket Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Rocket Launcher Magazine</perk2Group>
+    <season>5</season>
+    <element>Void</element>
+    <curated>3809316345,3796465595,3977735242,1275731761</curated>
+    <trait1>706527188</trait1>
+    <trait1>3096702027</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>3977735242</trait1>
+    <trait2>2010801679</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>588594999</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>1275731761</trait2>
+  </weapon>
+  <weapon>
+    <name>Blast Furnace</name>
+    <id>3843477312</id>
+    <frame>Aggressive Burst</frame>
+    <frameDesc>Hard-hitting four-burst fire.</frameDesc>
+    <category>Pulse Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Black Armory Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>0,0,0,0</curated>
+    <trait1>1168162263</trait1>
+    <trait1>2779035018</trait1>
+	<trait1>706527188</trait1>
+	<trait1>2387244414</trait1>
+	<trait1>3722653512</trait1>
+	<trait1>957782887</trait1>
+    <trait2>1015611457</trait2>
+    <trait2>3425386926</trait2>
+	<trait2>2213355989</trait2>
+	<trait2>460017080</trait2>
+	<trait2>2010801679</trait2>
+	<trait2>3161816588</trait2>
+  </weapon>
+  <weapon>
+    <name>Breakneck</name>
+    <id>324382200</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated></curated>
+    <perk1>1392496348</perk1>
+    <perk2>2420895100</perk2>
+    <trait1>3425386926</trait1>
+    <trait2>95528736</trait2>
+  </weapon>
+  <weapon>
+    <name>Crimil's Dagger</name>
+    <id>4292849692</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Hand Cannon</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>1926090094,4134353779,2846385770,47981717</curated>
+    <trait1>2846385770</trait1>
+    <trait1>588594999</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>957782887</trait1>
+    <trait2>47981717</trait2>
+    <trait2>1954620775</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2869569095</trait2>
+    <trait2>1866048759</trait2>
+    <trait2>2387244414</trait2>
+    <trait2>3038247973</trait2>
+  </weapon>
+  <weapon>
+    <name>Dead Man Walking XX7463</name>
+    <id>3751622019</id>
+    <frame>SUROS Rapid-Fire</frame>
+    <frameDesc>Full auto. Faster reload on empty.</frameDesc>
+    <category>Sidearm</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Sidearm Sight (SAS)</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Solar</element>
+    <curated>445755705,2420895100,1645158859,0</curated>
+    <trait1>588594999</trait1>
+    <trait1>706527188</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>1645158859</trait1>
+    <trait2>1015611457</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>1631667848</trait2>
+    <trait2>2387244414</trait2>
+    <trait2>47981717</trait2>
+  </weapon>
+  <weapon>
+    <name>Does Not Compute</name>
+    <id>2278995296</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Long range, slow firing, and high damage.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Nadir Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>0,106909392,2387244414,3038247973</curated>
+    <trait1>2387244414</trait1>
+    <trait1>1866048759</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>588594999</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>2213355989</trait1>
+    <trait2>3038247973</trait2>
+    <trait2>2846385770 </trait2>
+    <trait2>4071163871</trait2>
+    <trait2>47981717</trait2>
+    <trait2>1168162263</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>1015611457</trait2>
+  </weapon>
+  <weapon>
+    <name>Galliard-42 XN7568</name>
+    <id>1775804198</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>SUROS Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Solar</element>
+    <curated>965619221,1885400500,3425386926,0</curated>
+    <trait1>3425386926</trait1>
+    <trait1>706527188</trait1>
+    <trait1>1890422124</trait1>
+    <trait1>957782887</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>1359896290</trait1>
+    <trait1>1168162263</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>972757866</trait2>
+    <trait2>588594999</trait2>
+    <trait2>1631667848</trait2>
+  </weapon>
+  <weapon>
+    <name>Hammerhead</name>
+    <id>603242241</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Machine Gun</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Void</element>
+    <curated>3250034553,1968497646,2779035018,3425386926</curated>
+    <trait1>1359896290</trait1>
+    <trait1>1890422124</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>706527188</trait1>
+    <trait1>3275789089</trait1>
+    <trait1>2779035018</trait1>
+    <trait2>3708227201</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>3096702027</trait2>
+    <trait2>3513791699</trait2>
+    <trait2>3425386926</trait2>
+  </weapon>
+  <weapon>
+    <name>The Hero's Burden</name>
+    <id>1865351684</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Submachine Gun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>SUROS Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Void</element>
+    <curated></curated>
+    <trait1>972757866</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>2039302152</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>957782887</trait1>
+    <trait1>588594999</trait1>
+    <trait2>1359896290</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>1631667848</trait2>
+    <trait2>1890422124</trait2>
+    <trait2>3096702027</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>1015611457</trait2>
+  </weapon>
+  <weapon>
+    <name>Hoosegow XE5837</name>
+    <id>2817798849</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Rocket Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Rocket Launcher Magazine</perk2Group>
+    <season>5</season>
+    <element>Solar</element>
+    <curated>981914802,1996142143,957782887,0</curated>
+    <trait1>2846385770</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>957782887</trait1>
+    <trait2>1275731761</trait2>
+    <trait2>706527188</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>1015611457</trait2>
+  </weapon>
+  <weapon>
+    <name>Kindled Orchid</name>
+    <id>2575506895</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Hand Cannon</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Void</element>
+    <curated>4090651448,4134353779,1015611457,3425386926</curated>
+    <trait1>1015611457</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>706527188</trait1>
+    <trait1>3708227201</trait1>
+    <trait1>3275789089</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>247725512</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>3038247973</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>1683379515</trait2>
+  </weapon>
+  <weapon>
+    <name>Loaded Question</name>
+    <id>580961571</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Move faster with this weapon.</frameDesc>
+    <category>Fusion Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>5</season>
+    <element>Arc</element>
+    <curated></curated>
+    <perk1>2405638015</perk1>
+    <perk2>1483536627</perk2>
+    <trait1>3300816228</trait1>
+    <trait2>1427256713</trait2>
+  </weapon>
+  <weapon>
+    <name>The Mountaintop</name>
+    <id>3993415705</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Move faster with this weapon.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated></curated>
+    <perk1>981914802</perk1>
+    <perk1>1478423395</perk1>
+    <perk2>3301904089</perk2>
+    <perk2>3373736292</perk2>
+    <trait1>2846385770</trait1>
+    <trait2>3713839994</trait2>
+  </weapon>
+  <weapon>
+    <name>Nightshade</name>
+    <id>792755504</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Move faster with this weapon.</frameDesc>
+    <category>Pulse Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Nadir Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>2405638014,106909392,1645158859,1015611457</curated>
+    <trait1>1645158859</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>280464955</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>588594999</trait1>
+    <trait1>2010801679</trait1>
+    <trait2>1015611457</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>4267945040</trait2>
+    <trait2>957782887</trait2>
+    <trait2>460017080</trait2>
+    <trait2>2387244414</trait2>
+  </weapon>
+  <weapon>
+    <name>No Feelings</name>
+    <id>1931556011</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Black Armory Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Arc</element>
+    <curated>3433396026,1087426260,4267945040,2387244414</curated>
+    <trait1>1168162263</trait1>
+    <trait1>247725512</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>2010801679</trait1>
+    <trait1>3513791699</trait1>
+    <trait1>4267945040</trait1>
+    <trait2>3038247973</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>588594999</trait2>
+    <trait2>2551157718</trait2>
+    <trait2>2387244414</trait2>
+  </weapon>
+  <weapon>
+    <name>Persuader</name>
+    <id>4083045006</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Void</element>
+    <curated>0,1431678320,957782887,588594999</curated>
+    <perk1>767484756</perk1>
+    <perk1>767484757</perk1>
+    <trait1>1866048759</trait1>
+    <trait1>280464955</trait1>
+    <trait1>247725512</trait1>
+    <trait1>3096702027</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>957782887</trait1>
+    <trait2>588594999</trait2>
+    <trait2>3400784728</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>3038247973</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>1168162263</trait2>
+  </weapon>
+  <weapon>
+    <name>The Ringing Nail</name>
+    <id>93253474</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Black Armory Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Solar</element>
+    <curated>1096957638,1561002382,2848615171,3425386926</curated>
+    <trait1>2848615171</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>2010801679</trait1>
+    <trait1>3275789089</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>706527188</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>1890422124</trait2>
+    <trait2>1683379515</trait2>
+    <trait2>3513791699</trait2>
+  </weapon>
+  <weapon>
+    <name>Show of Force XF4865</name>
+    <id>4148143418</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>893526894,1561002382,1168162263,0</curated>
+    <perk1>893526892</perk1>
+    <perk1>893526895</perk1>
+    <perk1>893526893</perk1>
+    <perk1>893526894</perk1>
+    <trait1>3513791699</trait1>
+    <trait1>280464955</trait1>
+    <trait1>957782887</trait1>
+    <trait1>247725512</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>1168162263</trait1>
+    <trait2>3400784728</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>3038247973</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>1168162263</trait2>
+    <trait2>588594999</trait2>
+  </weapon>
+  <weapon>
+    <name>The Spiteful Fang</name>
+    <id>421573768</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Recurve bow. Draw quickly and move faster while this weapon is equipped. Press while drawn to cancel the shot.</frameDesc>
+    <category>Combat Bow</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Bow String</perk1Group>
+    <perk2Group>Bow Arrow</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>1784898267,3429800428,201365942,3365897133</curated>
+    <trait1>201365942</trait1>
+    <trait1>908147344</trait1>
+	<trait1>957782887</trait1>
+	<trait1>2846385770</trait1>
+	<trait1>588594999</trait1>
+	<trait1>3722653512</trait1>
+    <trait2>3365897133</trait2>
+    <trait2>3425386926</trait2>
+	<trait2>1866048759</trait2>
+	<trait2>706527188</trait2>
+	<trait2>4071163871</trait2>
+  </weapon>
+  <weapon>
+    <name>Stryker's Sure-Hand</name>
+    <id>3704653637</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Use to launch a heavy uppercut attack.
+Heavy attacks are stronger with full energy.
+Attacks partially bypass elemental shields.</frameDesc>
+    <category>Sword</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Edge</perk1Group>
+    <perk2Group>Guard</perk2Group>
+    <season>5</season>
+    <element>Arc</element>
+    <curated>938542991,52780822,354401740,3708227201</curated>
+    <trait1>2590710093</trait1>
+    <trait1>1749209109</trait1>
+	<trait1>354401740</trait1>
+    <trait2>3708227201</trait2>
+    <trait2>3913600130</trait2>
+	<trait2>1685431615</trait2>
+  </weapon>
+  <weapon>
+    <name>Swift Ride XE8375</name>
+    <id>1386601612</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Pulse Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>SUROS Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Arc</element>
+    <curated>3151536500,3142289711,460017080,0</curated>
+    <trait1>460017080</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>280464955</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>588594999</trait1>
+    <trait1>2010801679</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>4267945040</trait2>
+    <trait2>957782887</trait2>
+    <trait2>460017080</trait2>
+    <trait2>2387244414</trait2>
+  </weapon>
+  <weapon>
+    <name>Tango-45 XK5094</name>
+    <id>20025671</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>This weapon's recoil pattern is more predictably vertical.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Kinetic, Energy, Power</weaponType>
+    <perk1Group>SUROS Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Solar</element>
+    <curated>965619221,1431678320,3400784728,0</curated>
+    <trait1>1866048759</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>588594999</trait1>
+    <trait1>2213355989</trait1>
+    <trait1>3400784728</trait1>
+    <trait2>3038247973</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>3096702027</trait2>
+    <trait2>47981717</trait2>
+    <trait2>1168162263</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>2848615171</trait2>
+  </weapon>
+  <weapon>
+    <name>Tatara Gaze</name>
+    <id>1449922174</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Arc</element>
+    <curated>3661387068,3142289711,957782887,2551157718</curated>
+    <trait1>1168162263</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>247725512</trait1>
+    <trait1>3275789089</trait1>
+    <trait1>706527188</trait1>
+    <trait1>957782887</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2848615171</trait2>
+    <trait2>47981717</trait2>
+    <trait2>3096702027</trait2>
+    <trait2>2551157718</trait2>
+  </weapon>
+  <weapon>
+    <name>Tempered Dynamo</name>
+    <id>2753269585</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Fusion Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group>Fusion Rifle Magazine</perk2Group>
+    <season>5</season>
+    <element>Arc</element>
+    <curated>3433396027,3868766766,1600092898,3425386926</curated>
+    <perk1>1096957638</perk1>
+    <perk1>3433396026</perk1>
+    <perk1>3433396027</perk1>
+    <trait1>957782887</trait1>
+    <trait1>3275789089</trait1>
+    <trait1>3722653512</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>47981717</trait1>
+    <trait1>1600092898</trait1>
+    <trait2>1015611457</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>1683379515</trait2>
+    <trait2>1631667848</trait2>
+    <trait2>3425386926</trait2>
+  </weapon>
+  <weapon>
+    <name>Threat Level</name>
+    <id>1664372054</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Kinetic</element>
+    <curated>1300023272,679225683,2360754333,1631667848</curated>
+    <trait1>3425386926</trait1>
+    <trait1>588594999</trait1>
+    <trait1>3161816588</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3708227201</trait1>
+    <trait1>2360754333</trait1>
+    <trait2>957782887</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>706527188</trait2>
+    <trait2>3096702027</trait2>
+    <trait2>3722653512</trait2>
+    <trait2>1631667848</trait2>
+  </weapon>
+  <weapon>
+    <name>Wishbringer</name>
+    <id>3356526253</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>5</season>
+    <element>Solar</element>
+    <curated>1047830412,3142289711,3161816588,957782887</curated>
+    <trait1>4071163871</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>972757866</trait1>
+    <trait1>1866048759</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>3161816588</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>588594999</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>47981717</trait2>
+    <trait2>957782887</trait2>
+  </weapon>

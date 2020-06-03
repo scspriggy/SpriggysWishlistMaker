@@ -1,0 +1,391 @@
+<weapon>
+    <name>21% Delirium</name>
+    <id>1600633250</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Machine Gun</category>
+    <weaponType>Power</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>6</season>
+    <element>Arc</element>
+    <curated>1392496348,2420895100,3643424744,2782457288</curated>
+    <perk1>1392496348</perk1>
+    <perk2>2420895100</perk2>
+    <trait1>3643424744</trait1>
+    <trait2>2782457288</trait2>
+  </weapon>
+  <weapon>
+    <name>Bug-Out Bag</name>
+    <id>2744715540</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Submachine Gun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>6</season>
+    <element>Solar</element>
+    <curated>4090651448,1431678320,2039302152,2458213969</curated>
+    <trait1>2039302152</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>1820235745</trait1>
+    <trait2>2458213969</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>588594999</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>2039302152</trait2>
+    <trait2>4082225868</trait2>
+  </weapon>
+  <weapon>
+    <name>Doomsday</name>
+    <id>736901634</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Kinetic, Energy, Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Grenade Launcher Magazine</perk2Group>
+    <season>6</season>
+    <element>Arc</element>
+    <curated>981914802,409831596,3300816228,2888557110</curated>
+    <trait1>3300816228</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>957782887</trait1>
+    <trait1>4071163871</trait1>
+    <trait2>2888557110</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>706527188</trait2>
+    <trait2>972757866</trait2>
+  </weapon>
+  <weapon>
+    <name>Gnawing Hunger</name>
+    <id>821154603</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>6</season>
+    <element>Void</element>
+    <curated>839105230,1087426260,3643424744,3425386926</curated>
+    <trait1>3643424744</trait1>
+    <trait1>1890422124</trait1>
+    <trait1>1820235745</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3300816228</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2458213969</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>4082225868</trait2>
+  </weapon>
+  <weapon>
+    <name>Just in Case</name>
+    <id>715338174</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded. Use to uppercut.</frameDesc>
+    <category>Sword</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Edge</perk1Group>
+    <perk2Group>Guard</perk2Group>
+    <season>6</season>
+    <element>Solar</element>
+    <curated>2827049491,3625355092,354401740,818211479</curated>
+    <trait1>354401740</trait1>
+    <trait1>1749209109</trait1>
+    <trait1>2590710093</trait1>
+    <trait2>818211479</trait2>
+    <trait2>3913600130</trait2>
+    <trait2>1685431615</trait2>
+    <trait2>354401740</trait2>
+  </weapon>
+  <weapon>
+    <name>Last Man Standing</name>
+    <id>755130877</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>Increases rate of fire after kill.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>6</season>
+    <element>Solar</element>
+    <curated>466087222,791862061,3300816228,2117683199</curated>
+    <trait1>3300816228</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>47981717</trait1>
+    <trait1>2869569095</trait1>
+    <trait2>2117683199</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>2679249093</trait2>
+    <trait2>4082225868</trait2>
+    <trait2>1866048759</trait2>
+    <trait2>3523296417</trait2>
+  </weapon>
+  <weapon>
+    <name>Last Perdition</name>
+    <id>188882152</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Pulse Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>SUROS Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>6</season>
+    <element>Void</element>
+    <curated>965619220,3142289711,2846385770,3425386926</curated>
+    <trait1>2846385770</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>280464955</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>588594999</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>4267945040</trait2>
+    <trait2>957782887</trait2>
+    <trait2>460017080</trait2>
+    <trait2>2387244414</trait2>
+  </weapon>
+  <weapon>
+    <name>Lonesome</name>
+    <id>2199171672</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Sidearm</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>6</season>
+    <element>Kinetic</element>
+    <curated>1392496348,2420895100,3643424744,4082225868</curated>
+    <trait1>3643424744</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>4267945040</trait1>
+    <trait1>247725512</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>2387244414</trait1>
+    <trait2>4082225868</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>3161816588</trait2>
+    <trait2>47981717</trait2>
+    <trait2>2458213969</trait2>
+  </weapon>
+  <weapon>
+    <name>Night Watch</name>
+    <id>3504336176</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Move faster with this weapon.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>6</season>
+    <element>Kinetic</element>
+    <curated>4090651448,2420895100,3643424744,3038247973</curated>
+    <trait1>3643424744</trait1>
+    <trait1>1820235745</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>247725512</trait1>
+    <trait1>957782887</trait1>
+    <trait1>4071163871</trait1>
+    <trait2>3038247973</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>588594999</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>2458213969</trait2>
+  </weapon>
+  <weapon>
+    <name>Orewing's Maul</name>
+    <id>2108920981</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>One-shot, status effect grenades.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Grenade Launcher Magazine</perk2Group>
+    <season>6</season>
+    <element>Void</element>
+    <curated>1844523823,1996142143,2869569095,588594999</curated>
+    <trait1>2869569095</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>706527188</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>972757866</trait1>
+    <trait2>588594999</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>957782887</trait2>
+    <trait2>3523296417</trait2>
+  </weapon>
+  <weapon>
+    <name>Outlast</name>
+    <id>299665907</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Pulse Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>6</season>
+    <element>Solar</element>
+    <curated>3250034553,106909392,2387244414,1015611457</curated>
+    <trait1>2387244414</trait1>
+    <trait1>4267945040</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>2779035018</trait1>
+    <trait1>2846385770</trait1>
+    <trait2>1015611457</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>957782887</trait2>
+  </weapon>
+  <weapon>
+    <name>Oxygen SR3</name>
+    <id>3907337522</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>6</season>
+    <element>Solar</element>
+    <curated></curated>
+    <perk1>1392496348</perk1>
+    <perk2>3142289711</perk2>
+    <trait1>3865257976</trait1>
+    <trait2>1941225610</trait2>
+  </weapon>
+  <weapon>
+    <name>The Recluse</name>
+    <id>3354242550</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Move faster with this weapon.</frameDesc>
+    <category>Submachine Gun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>6</season>
+    <element>Void</element>
+    <curated></curated>
+    <perk1>1392496348</perk1>
+    <perk2>1885400500</perk2>
+    <trait1>2779035018</trait1>
+    <trait2>3081867624</trait2>
+  </weapon>
+  <weapon>
+    <name>Service Revolver</name>
+    <id>834081972</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Hand Cannon</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>6</season>
+    <element>Kinetic</element>
+    <curated>1926090092,1968497646,1168162263,2387244414</curated>
+    <trait1>1168162263</trait1>
+    <trait1>588594999</trait1>
+    <trait1>247725512</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>3400784728</trait1>
+    <trait2>2387244414</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>47981717</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>957782887</trait2>
+  </weapon>
+  <weapon>
+    <name>Sole Survivor</name>
+    <id>1115104187</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>6</season>
+    <element>Arc</element>
+    <curated>1467527085,3230963543,1168162263,957782887</curated>
+    <trait1>1168162263</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>2010801679</trait1>
+    <trait1>1354429876</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>247725512</trait1>
+    <trait1>957782887</trait1>
+    <trait2>957782887</trait2>
+    <trait2>1771339417</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>3161816588</trait2>
+    <trait2>47981717</trait2>
+    <trait2>3523296417</trait2>
+  </weapon>
+  <weapon>
+    <name>Spare Rations</name>
+    <id>3116356268</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Move faster with this weapon.</frameDesc>
+    <category>Hand Cannon</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>6</season>
+    <element>Kinetic</element>
+    <curated>3250034553,1087426260,3643424744,3038247973</curated>
+    <trait1>3643424744</trait1>
+    <trait1>1354429876</trait1>
+    <trait1>1820235745</trait1>
+    <trait1>247725512</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>957782887</trait1>
+    <trait1>3300816228</trait1>
+    <trait2>3038247973</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>4082225868</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>2458213969</trait2>
+    <trait2>3161816588</trait2>
+    <trait2>1866048759</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>588594999</trait2>
+  </weapon>
+  <weapon>
+    <name>The Wizened Rebuke</name>
+    <id>930590127</id>
+    <frame></frame>
+    <frameDesc></frameDesc>
+    <category>Fusion Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Nadir Sight</perk1Group>
+    <perk2Group>Fusion Rifle Magazine</perk2Group>
+    <season>6</season>
+    <element>Arc</element>
+    <curated>13792278,2680121939,588594999,3523296417</curated>
+    <trait1>588594999</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>280464955</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>4071163871</trait1>
+    <trait2>3523296417</trait2>
+    <trait2>1600092898</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>1890422124</trait2>
+  </weapon>

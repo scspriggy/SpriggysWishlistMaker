@@ -470,6 +470,7 @@
         •  Greatly increases reload speed
         •  Decreases stability</desc>
       <perkGroup>Rocket Launcher Magazine</perkGroup>
+	  <perkGroup>Grenade Launcher Magazine</perkGroup>
       <blastRadius>20</blastRadius>
       <projectileSpeed>0</projectileSpeed>
       <stability>-10</stability>

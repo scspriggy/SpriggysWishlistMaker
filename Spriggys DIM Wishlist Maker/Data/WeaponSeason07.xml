@@ -1,0 +1,445 @@
+<weapon>
+    <name>Austringer</name>
+    <id>2429822977</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
+    <category>Hand Cannon</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Kinetic</element>
+    <curated>4090651448,106909392,1168162263,2846385770</curated>
+    <trait1>1168162263</trait1>
+    <trait1>1820235745</trait1>
+    <trait1>3722653512</trait1>
+    <trait1>699525795</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>957782887</trait1>
+    <trait2>2846385770</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>205890336</trait2>
+    <trait2>2387244414</trait2>
+    <trait2>47981717</trait2>
+  </weapon>
+  <weapon>
+    <name>Bane of Sorrow</name>
+    <id>1496419775</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Long range, slow firing, and high damage.</frameDesc>
+    <category>Machine Gun</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Void</element>
+    <curated>4090651448,1561002382,1168162263,2848615171</curated>
+    <trait1>1168162263</trait1>
+    <trait1>1890422124</trait1>
+    <trait1>2779035018</trait1>
+    <trait1>3096702027</trait1>
+    <trait1>699525795</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>957782887</trait1>
+    <trait2>2848615171</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>205890336</trait2>
+    <trait2>3513791699</trait2>
+    <trait2>2213355989</trait2>
+  </weapon>
+  <weapon>
+    <name>Beloved</name>
+    <id>4190932264</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Solar</element>
+    <curated>3661387068,3142289711,2866798147,2551157718</curated>
+    <trait1>2866798147</trait1>
+    <trait1>3523296417</trait1>
+    <trait1>957782887</trait1>
+    <trait1>280464955</trait1>
+    <trait1>3513791699</trait1>
+    <trait1>2869569095</trait1>
+    <trait2>2551157718</trait2>
+    <trait2>706527188</trait2>
+    <trait2>1354429876</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>588594999</trait2>
+    <trait2>3425386926</trait2>
+  </weapon>
+  <weapon>
+    <name>CALUS Mini-Tool</name>
+    <id>174192097</id>
+    <frame>MIDA Synergy</frame>
+    <frameDesc>Superb handling. Move faster with this lightweight weapon equipped. This weapon grants additional speed benefits when MIDA Multi-Tool is also equipped.</frameDesc>
+    <category>Submachine Gun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Solar</element>
+    <curated>1840239774,679225683,699525795,205890336</curated>
+    <trait1>699525795</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>1359896290</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>588594999</trait1>
+    <trait1>2039302152</trait1>
+    <trait2>205890336</trait2>
+    <trait2>3708227201</trait2>
+    <trait2>1683379515</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>2779035018</trait2>
+    <trait2>1890422124</trait2>
+  </weapon>
+  <weapon>
+    <name>Calusea Noblesse</name>
+    <id>2338088853</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Void</element>
+    <curated>839105230,106909392,1354429876,4267945040</curated>
+    <trait1>1354429876</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>1820235745</trait1>
+    <trait1>1683379515</trait1>
+    <trait1>2010801679</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>588594999</trait1>
+    <trait2>4267945040</trait2>
+    <trait2>2458213969</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>3275789089</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>2848615171</trait2>
+  </weapon>
+  <weapon>
+    <name>Death's Razor</name>
+    <id>569799274</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded. Use to uppercut.</frameDesc>
+    <category>Sword</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Edge</perk1Group>
+    <perk2Group></perk2Group>
+    <season>7</season>
+    <element>Solar</element>
+    <other>Warlocks Only</other>
+    <curated>2827049491,2363751990,2030760728,3913600130</curated>
+    <perk2>2363751990</perk2>
+    <trait1>2030760728</trait1>
+    <trait1>1749209109</trait1>
+    <trait1>2590710093</trait1>
+    <trait2>3913600130</trait2>
+    <trait2>3016987351</trait2>
+    <trait2>354401740</trait2>
+  </weapon>
+  <weapon>
+    <name>Drang (Baroque)</name>
+    <id>79075821</id>
+    <frame>Together Forever</frame>
+    <frameDesc>This weapon has a well-rounded adaptive grip, reliable and sturdy. Kills with this weapon reload Sturm and overflow a bonus damage round into it.</frameDesc>
+    <category>Sidearm</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Solar</element>
+    <curated>202670084,3142289711,706527188,3425386926</curated>
+    <trait1>706527188</trait1>
+    <trait1>1683379515</trait1>
+    <trait1>4267945040</trait1>
+    <trait1>699525795</trait1>
+    <trait1>47981717</trait1>
+    <trait1>588594999</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>3275789089</trait2>
+    <trait2>4082225868</trait2>
+    <trait2>205890336</trait2>
+    <trait2>2387244414</trait2>
+    <trait2>957782887</trait2>
+  </weapon>
+  <weapon>
+    <name>Emperor's Courtesy</name>
+    <id>3861448240</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Superb handling. Move faster with this weapon equipped.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Arc</element>
+    <curated>1332244541,3142289711,1631667848,2679249093</curated>
+    <trait1>1631667848</trait1>
+    <trait1>706527188</trait1>
+    <trait1>957782887</trait1>
+    <trait1>972757866</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2869569095</trait1>
+    <trait2>2679249093</trait2>
+    <trait2>4082225868</trait2>
+    <trait2>3708227201</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>3161816588</trait2>
+    <trait2>205890336</trait2>
+    <trait2>47981717</trait2>
+  </weapon>
+  <weapon>
+    <name>The Epicurean</name>
+    <id>4124357815</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>This weapon's recoil pattern is more predictably vertical.</frameDesc>
+    <category>Fusion Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Fusion Rifle Magazine</perk2Group>
+    <season>7</season>
+    <element>Void</element>
+    <curated>3250034553,689005463,1890422124,1600092898</curated>
+    <trait1>1890422124</trait1>
+    <trait1>2779035018</trait1>
+    <trait1>706527188</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>957782887</trait1>
+    <trait1>4071163871</trait1>
+    <trait2>1600092898</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>4082225868</trait2>
+    <trait2>588594999</trait2>
+  </weapon>
+  <weapon>
+    <name>Fixed Odds</name>
+    <id>1642384931</id>
+    <frame>Machine Gun</frame>
+    <frameDesc>High-Impact Frame</frameDesc>
+    <category>Long range, slow firing, and high damage.</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Solar</element>
+    <curated>3250034553,1968497646,2779035018,3425386926</curated>
+    <trait1>2779035018</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>706527188</trait1>
+    <trait1>2866798147</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>2869569095</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>3708227201</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>205890336</trait2>
+    <trait2>1890422124</trait2>
+    <trait2>280464955</trait2>
+  </weapon>
+  <weapon>
+    <name>Gahlran's Right Hand</name>
+    <id>1286686760</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Slow-firing and high-damage. This weapon is more accurate when stationary and aiming down sights.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Kinetic</element>
+    <curated>839105230,3177308360,3643424744,3523296417</curated>
+    <trait1>3643424744</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>699525795</trait1>
+    <trait1>1890422124</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>1359896290</trait1>
+    <trait1>1168162263</trait1>
+    <trait2>3523296417</trait2>
+    <trait2>205890336</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>2458213969</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>2010801679</trait2>
+  </weapon>
+  <weapon>
+    <name>Goldtusk</name>
+    <id>569799275</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Fast movement. Use to dash-attack.</frameDesc>
+    <category>Sword</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Edge</perk1Group>
+    <perk2Group></perk2Group>
+    <season>7</season>
+    <element>Void</element>
+    <other>Hunters Only</other>
+    <curated>3666208348,269888150,2030760728,3913600130</curated>
+    <perk2>269888150</perk2>
+    <trait1>2030760728</trait1>
+    <trait1>1685431615</trait1>
+    <trait1>1749209109</trait1>
+    <trait1>2590710093</trait1>
+    <trait2>3913600130</trait2>
+    <trait2>354401740</trait2>
+    <trait2>3708227201</trait2>
+  </weapon>
+  <weapon>
+    <name>Gunnora's Axe</name>
+    <id>2326716489</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Fires a single-slug round. This weapon's recoil pattern is more predictably vertical.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Arc</element>
+    <curated>1840239774,3142289711,1168162263,47981717</curated>
+    <trait1>1168162263</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>2117683199</trait1>
+    <trait1>972757866</trait1>
+    <trait1>706527188</trait1>
+    <trait1>3300816228</trait1>
+    <trait2>47981717</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>3400784728</trait2>
+    <trait2>957782887</trait2>
+    <trait2>588594999</trait2>
+    <trait2>3161816588</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>4082225868</trait2>
+  </weapon>
+  <weapon>
+    <name>Hush</name>
+    <id>1584643826</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Compound bow. Longer draw time optimized for damage. Press  while drawn to cancel the shot.</frameDesc>
+    <category>Combat Bow</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>7</season>
+    <element>Solar</element>
+    <curated>,,,</curated>
+    <perk1>1784898267</perk1>
+    <perk2>3827198035</perk2>
+    <trait1>47981717</trait1>
+    <trait2>3414324643</trait2>
+  </weapon>
+  <weapon>
+    <name>Imperial Decree</name>
+    <id>2919334548</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>Hard-hitting, high recoil. Increases rate of fire after kill</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>7</season>
+    <element>Kinetic</element>
+    <curated>1300023272,3142289711,1631667848,2360754333</curated>
+    <trait1>1631667848</trait1>
+    <trait1>2117683199</trait1>
+    <trait1>3161816588</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2779035018</trait1>
+    <trait1>972757866</trait1>
+    <trait2>2360754333</trait2>
+    <trait2>4082225868</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>957782887</trait2>
+    <trait2>588594999</trait2>
+    <trait2>3300816228</trait2>
+  </weapon>
+  <weapon>
+    <name>Revoker</name>
+    <id>654608616</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>7</season>
+    <element>Kinetic</element>
+    <curated></curated>
+    <perk1>1467527085</perk1>
+    <perk2>3142289711</perk2>
+    <trait1>957782887</trait1>
+    <trait2>136456835</trait2>
+  </weapon>
+  <weapon>
+    <name>Shining Sphere</name>
+    <id>136525518</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Rocket Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Rocket Launcher Magazine</perk2Group>
+    <season>7</season>
+    <element>Arc</element>
+    <curated>1478423395,2822142346,957782887,706527188</curated>
+    <trait1>957782887</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3300816228</trait1>
+    <trait2>706527188</trait2>
+    <trait2>3977735242</trait2>
+    <trait2>2010801679</trait2>
+    <trait2>3523296417</trait2>
+  </weapon>
+  <weapon>
+    <name>Throne-Cleaver</name>
+    <id>569799273</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>Powerful, heavy swings. Use to slam.</frameDesc>
+    <category>Sword</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Edge</perk1Group>
+    <perk2Group></perk2Group>
+    <season>7</season>
+    <element>Void</element>
+    <other>Titans Only</other>
+    <curated>938542991,2349202967,818211479,3913600130</curated>
+    <perk2>2349202967</perk2>
+    <trait1>818211479</trait1>
+    <trait1>1749209109</trait1>
+    <trait1>2590710093</trait1>
+    <trait2>3913600130</trait2>
+    <trait2>3016987351</trait2>
+    <trait2>1685431615</trait2>
+    <trait2>354401740</trait2>
+  </weapon>
+  <weapon>
+    <name>Wendigo GL3</name>
+    <id>578459533</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>7</season>
+    <element>Arc</element>
+    <curated></curated>
+    <perk1>3798852852</perk1>
+    <perk2>3032599245</perk2>
+    <trait1>3300816228</trait1>
+    <trait2>3194351027</trait2>
+  </weapon>

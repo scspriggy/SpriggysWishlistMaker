@@ -923,4 +923,14 @@
       • Reduced flinch from incoming fire
     </desc>
   </perk>
+  <perk>
+    <name>Desperado</name>
+    <id>3047969693</id>
+    <desc>Reloading while Outlaw is active increases your rate of fire.</desc>
+  </perk>
+  <perk>
+    <name>Magnificent Howl</name>
+    <id>2720533289</id>
+    <desc>Rapidly landing two precision shots increases the next shot's damage and range for a short duration.</desc>
+  </perk>
 </perks>
