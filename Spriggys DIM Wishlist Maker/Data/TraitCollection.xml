@@ -933,4 +933,29 @@
     <id>2720533289</id>
     <desc>Rapidly landing two precision shots increases the next shot's damage and range for a short duration.</desc>
   </perk>
+  <perk>
+    <name>Killing Wind</name>
+    <id>2450788523</id>
+    <desc>Final blows grant increased mobility, weapon range, and handling for a short duration.</desc>
+  </perk>
+  <perk>
+    <name>Unrelenting </name>
+    <id>3108830275</id>
+    <desc>Rapidly defeating targets triggers health regeneration. Guardians and powerful combatants count as more than one kill.</desc>
+  </perk>
+  <perk>
+    <name>Sympathetic Arsenal</name>
+    <id>3350417888</id>
+    <desc>Reloading after a final blow also reloads stowed weapons.</desc>
+  </perk>
+  <perk>
+    <name>Iron Gaze</name>
+    <id>4152709778</id>
+    <desc>Massively improves weapon target acquisition at the cost of weapon range.</desc>
+  </perk>
+  <perk>
+    <name>Iron Grip</name>
+    <id>11551321</id>
+    <desc>Massively improves weapon stability at the cost of reload speed.</desc>
+  </perk>
 </perks>

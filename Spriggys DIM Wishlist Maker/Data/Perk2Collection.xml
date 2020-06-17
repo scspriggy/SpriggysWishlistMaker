@@ -543,6 +543,9 @@
     <id>2363751990</id>
     <desc>Sword Guard has very high efficiency and balanced defense.</desc>
   </perk>
-
-  
+  <perk>
+    <name>Seraph Rounds</name>
+    <id>1140096971</id>
+    <desc>Rounds overpenetrate targets and bounce off hard surfaces.</desc>
+  </perk>  
 </perks>

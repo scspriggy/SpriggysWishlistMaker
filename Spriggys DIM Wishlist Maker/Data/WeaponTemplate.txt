@@ -1,0 +1,25 @@
+<weapon>
+    <name>00000000</name>
+    <id>00000000</id>
+    <frame>00000000</frame>
+    <frameDesc>00000000</frameDesc>
+    <category>00000000</category>
+    <weaponType>Kinetic/Energy/Power</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>11</season>
+    <element>Kinetic/Arc/Solar/Void</element>
+    <curated></curated>
+    <trait1>00000000</trait1>
+    <trait1>00000000</trait1>
+    <trait1>00000000</trait1>
+    <trait1>00000000</trait1>
+    <trait1>00000000</trait1>
+	<trait1>00000000</trait1>
+    <trait2>00000000</trait2>
+    <trait2>00000000</trait2>
+    <trait2>00000000</trait2>
+    <trait2>00000000</trait2>
+    <trait2>00000000</trait2>
+	<trait2>00000000</trait2>
+  </weapon>
