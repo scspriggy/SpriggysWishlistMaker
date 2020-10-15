@@ -243,32 +243,6 @@
     <trait2>706527188</trait2>
   </weapon>
   <weapon>
-    <name>Horror Story</name>
-    <id>3829285960</id>
-    <frame>Precision Frame</frame>
-    <frameDesc>Recoil pattern is more vertical.</frameDesc>
-    <category>Auto Rifle</category>
-    <weaponType>Kinetic</weaponType>
-    <perk1Group>Nadir Sight</perk1Group>
-    <perk2Group>Magazine</perk2Group>
-    <season>11</season>
-    <element>Kinetic</element>
-    <curated>2405638014,3230963543,2387244414,3425386926</curated>
-    <trait1>1631667848</trait1>
-    <trait1>2450788523</trait1>
-	<trait1>280464955</trait1>
-	<trait1>1820235745</trait1>
-	<trait1>2010801679</trait1>
-	<trait1>2387244414</trait1>
-    <trait2>3350417888</trait2>
-    <trait2>3523296417</trait2>
-	<trait2>1774574192</trait2>
-	<trait2>588594999</trait2>
-	<trait2>957782887</trait2>
-	<trait2>2039302152</trait2>
-	<trait2>3425386926</trait2>
-  </weapon>
-  <weapon>
     <name>IKELOS_HC_v1.0.2</name>
     <id>1200824700</id>
     <frame>Precision Frame</frame>
