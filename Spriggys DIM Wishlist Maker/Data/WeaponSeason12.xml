@@ -1,0 +1,644 @@
+<weapon>
+    <name>Adored</name>
+    <id>4184808992</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group></perk1Group>
+    <perk2Group></perk2Group>
+    <season>12</season>
+    <element>Arc</element>
+    <curated></curated>
+	<perk1>3250034553</perk1>
+	<perk2>3142289711</perk2>
+    <trait1>2450788523</trait1>
+    <trait1>3400784728</trait1>
+    <trait2>957782887</trait2>
+    <trait2>1546637391</trait2>
+  </weapon>
+  <weapon>
+    <name>Arctic Haze</name>
+    <id>20935540</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Solar</element>
+    <curated>3250034553,1431678320,3096702027,3511092054</curated>
+    <trait1>3096702027</trait1>
+    <trait1>1820235745</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>3513791699</trait1>
+    <trait1>3400784728</trait1>
+	<trait1>2450788523</trait1>
+    <trait2>3511092054</trait2>
+    <trait2>699525795</trait2>
+    <trait2>2726471870</trait2>
+    <trait2>2848615171</trait2>
+    <trait2>1546637391</trait2>
+	<trait2>3108830275</trait2>
+  </weapon>
+  <weapon>
+    <name>Astral Horizon (Adept)</name>
+    <id>532746994</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>Increases rate of fire after kill.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>1482024992,106909392,4071163871,3511092054</curated>
+    <trait1>4071163871</trait1>
+    <trait1>706527188</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3161816588</trait1>
+    <trait2>3511092054</trait2>
+    <trait2>47981717</trait2>
+    <trait2>2679249093</trait2>
+    <trait2>4082225868</trait2>
+    <trait2>1264398905</trait2>
+  </weapon>
+  <weapon>
+    <name>Biting Winds</name>
+    <id>1621657423</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Compound. Optimized for damage.</frameDesc>
+    <category>Combat Bow</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Bow String</perk1Group>
+    <perk2Group>Bow Arrow</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>1784898267,3429800428,588594999,3365897133</curated>
+    <trait1>588594999</trait1>
+    <trait1>3436462433</trait1>
+    <trait1>706527188</trait1>
+    <trait1>247725512</trait1>
+    <trait1>2866798147</trait1>
+	<trait1>2450788523</trait1>
+    <trait2>3365897133</trait2>
+    <trait2>957782887</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>4082225868</trait2>
+    <trait2>3350417888</trait2>
+	<trait2>3108830275</trait2>
+  </weapon>
+  <weapon>
+    <name>Blast Battue</name>
+    <id>2453357042</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Grenade Launcher Magazine</perk2Group>
+    <season>12</season>
+    <element>Arc</element>
+    <curated>3525010810,2822142346,588594999,3425386926</curated>
+    <trait1>588594999</trait1>
+    <trait1>706527188</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>972757866</trait1>
+    <trait1>2450788523</trait1>
+	<trait1>2284787283</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>3592538738</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>2396489472</trait2>
+    <trait2>957782887</trait2>
+	<trait2>1683379515</trait2>
+  </weapon>
+  <weapon>
+    <name>Bonechiller</name>
+    <id>4037745684</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Fires a single-slug round.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Void</element>
+    <curated>202670084,2420895100,3436462433,47981717</curated>
+    <trait1>3436462433</trait1>
+    <trait1>3400784728</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>1556840489</trait1>
+    <trait1>25606670</trait1>
+	<trait1>280464955</trait1>
+    <trait2>47981717</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>4049631843</trait2>
+    <trait2>2039302152</trait2>
+    <trait2>3523296417</trait2>
+	<trait2>2848615171</trait2>
+  </weapon>
+  <weapon>
+    <name>Coriolis Force</name>
+    <id>3512349612</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, moderate charge time. Fires a horizontal volley.</frameDesc>
+    <category>Fusion Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Fusion Rifle Magazine</perk2Group>
+    <season>12</season>
+    <element>Void</element>
+    <curated>3250034553,1687452232,2450788523,2846385770</curated>
+    <trait1>2450788523</trait1>
+    <trait1>2779035018</trait1>
+    <trait1>588594999</trait1>
+    <trait1>1645158859</trait1>
+    <trait1>972757866</trait1>
+	<trait1>2010801679</trait1>
+    <trait2>2846385770</trait2>
+    <trait2>2726471870</trait2>
+    <trait2>4049631843</trait2>
+    <trait2>3108830275</trait2>
+    <trait2>699525795</trait2>
+	<trait2>2039302152</trait2>
+  </weapon>
+  <weapon>
+    <name>Corsair's Wrath</name>
+    <id>2714022207</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Fires a long-range precision energy bolt.</frameDesc>
+    <category>Linear Fusion Rifle</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Fusion Rifle Magazine</perk2Group>
+    <season>12</season>
+    <element>Solar</element>
+    <curated>1467527085,1483536627,2866798147,1015611457</curated>
+    <trait1>2866798147</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>588594999</trait1>
+    <trait1>972757866</trait1>
+    <trait1>2450788523</trait1>
+	<trait1>280464955</trait1>
+    <trait2>1015611457</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>2726471870</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>3108830275</trait2>
+	<trait2>706527188</trait2>
+  </weapon>
+  <weapon>
+    <name>Crowd Pleaser</name>
+    <id>3565520715</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Grenade Launcher Magazine</perk2Group>
+    <season>12</season>
+    <element>Void</element>
+    <curated>1478423395,332133599,3096702027,2726471870</curated>
+    <trait1>3096702027</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>972757866</trait1>
+    <trait1>2284787283</trait1>
+    <trait1>3436462433</trait1>
+	<trait1>2869569095</trait1>
+	<trait1>2450788523</trait1>
+    <trait1>2010801679</trait1>
+    <trait1>205890336</trait1>
+    <trait1>1631667848</trait1>
+    <trait2>2726471870</trait2>
+    <trait2>706527188</trait2>
+    <trait2>2396489472</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>957782887</trait2>
+	<trait2>3511092054</trait2>
+	<trait2>3108830275</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>588594999</trait2>
+  </weapon>
+  <weapon>
+    <name>Deafening Whisper</name>
+    <id>981718087</id>
+    <frame>Wave Frame</frame>
+    <frameDesc>One-shot handheld Grenade Launcher. Projectiles release a wave of energy when they contact the ground.</frameDesc>
+    <category>Grenade Launcher</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group></perk2Group>
+    <season>12</season>
+    <element>Void</element>
+    <curated>3798852852,409831596,2450788523,3425386926</curated>
+	<perk2>409831596</perk2>
+	<perk2>2822142346</perk2>
+	<perk2>3492396210</perk2>
+    <trait1>2450788523</trait1>
+    <trait1>3436462433</trait1>
+    <trait1>2010801679</trait1>
+    <trait1>588594999</trait1>
+    <trait1>1556840489</trait1>
+	<trait1>205890336</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>3300816228</trait2>
+    <trait2>957782887</trait2>
+    <trait2>3108830275</trait2>
+    <trait2>3592538738</trait2>
+	<trait2>4071163871</trait2>
+  </weapon>
+  <weapon>
+    <name>Exile's Curse (Adept)</name>
+    <id>276080079</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Long range, slow firing, and high damage.</frameDesc>
+    <category>Fusion Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Fusion Rifle Magazine</perk2Group>
+    <season>12</season>
+    <element>Arc</element>
+    <curated>4090651448,1687452232,280464955,2779035018</curated>
+    <trait1>280464955</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>2866798147</trait1>
+    <trait1>205890336</trait1>
+	<trait1>2869569095</trait1>
+    <trait2>2779035018</trait2>
+    <trait2>3511092054</trait2>
+    <trait2>1264398905</trait2>
+    <trait2>957782887</trait2>
+    <trait2>1683379515</trait2>
+	<trait2>2458213969</trait2>
+  </weapon>
+  <weapon>
+    <name>Eye of Sol (Adept)</name>
+    <id>3637570176</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>1482024992,1087426260,957782887,2551157718</curated>
+    <trait1>957782887</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>280464955</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>1866048759</trait1>
+    <trait2>2551157718</trait2>
+    <trait2>47981717</trait2>
+    <trait2>1264398905</trait2>
+    <trait2>1546637391</trait2>
+  </weapon>
+  <weapon>
+    <name>Friction Fire</name>
+    <id>1513993763</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Submachine Gun</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>202670084,2420895100,2869569095,3425386926</curated>
+    <trait1>2869569095</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>1820235745</trait1>
+	<trait1>2450788523</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>1546637391</trait2>
+    <trait2>3592538738</trait2>
+    <trait2>2039302152</trait2>
+    <trait2>3350417888</trait2>
+	<trait2>3108830275</trait2>
+  </weapon>
+  <weapon>
+    <name>The Guiding Sight</name>
+    <id>1641430382</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Long range, slow firing, and high damage.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Nadir Sight</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>13792279,106909392,3161816588,1546637391</curated>
+    <trait1>3161816588</trait1>
+    <trait1>1866048759</trait1>
+    <trait1>2010801679</trait1>
+    <trait1>3436462433</trait1>
+    <trait1>706527188</trait1>
+	<trait1>247725512</trait1>
+    <trait2>1546637391</trait2>
+    <trait2>2387244414</trait2>
+    <trait2>1774574192</trait2>
+    <trait2>4049631843</trait2>
+    <trait2>4152709778</trait2>
+	<trait2>11551321</trait2>
+  </weapon>
+  <weapon>
+    <name>Hailing Confusion</name>
+    <id>2870169846</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>A well-rounded grip, reliable and sturdy.</frameDesc>
+    <category>Pulse Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>1392496348,2420895100,2039302152,3523296417</curated>
+    <trait1>2039302152</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>3436462433</trait1>
+    <trait1>972757866</trait1>
+    <trait1>280464955</trait1>
+	<trait1>1168162263</trait1>
+    <trait2>3523296417</trait2>
+    <trait2>706527188</trait2>
+    <trait2>3592538738</trait2>
+    <trait2>4267945040</trait2>
+    <trait2>3108830275</trait2>
+	<trait2>3511092054</trait2>
+  </weapon>
+  <weapon>
+    <name>High Albedo</name>
+    <id>1197486957</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, fires a 3-round burst.</frameDesc>
+    <category>Sidearm</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>4090651448,3177308360,4267945040,3108830275</curated>
+    <trait1>4267945040</trait1>
+    <trait1>2450788523</trait1>
+    <trait1>3436462433</trait1>
+    <trait1>4071163871</trait1>
+    <trait1>2039302152</trait1>
+	<trait1>2010801679</trait1>
+    <trait2>3108830275</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>460017080</trait2>
+    <trait2>3523296417</trait2>
+    <trait2>3592538738</trait2>
+	<trait2>957782887</trait2>
+  </weapon>
+  <weapon>
+    <name>Royal Chase</name>
+    <id>2776503072</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Void</element>
+    <curated>839105230,3230963543,3300816228,2848615171</curated>
+    <trait1>3300816228</trait1>
+    <trait1>2039302152</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>2866798147</trait1>
+	<trait1>4267945040</trait1>
+    <trait2>2848615171</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>706527188</trait2>
+    <trait2>2726471870</trait2>
+    <trait2>2458213969</trait2>
+  </weapon>
+  <weapon>
+    <name>The Scholar (Adept)</name>
+    <id>2386979999</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Long range, slow firing, and high damage.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>1482024992,1885400500,706527188,957782887</curated>
+    <trait1>706527188</trait1>
+    <trait1>2039302152</trait1>
+    <trait1>4267945040</trait1>
+    <trait1>47981717</trait1>
+    <trait1>205890336</trait1>
+    <trait2>957782887</trait2>
+    <trait2>1264398905</trait2>
+    <trait2>3511092054</trait2>
+    <trait2>1546637391</trait2>
+    <trait2>2866798147</trait2>
+  </weapon>
+  <weapon>
+    <name>Stars in Shadow</name>
+    <id>2050789284</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Long range, slow firing, and high damage.</frameDesc>
+    <category>Pulse Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Solar</element>
+    <curated>1482024992,1431678320,1168162263,2726471870</curated>
+    <trait1>1168162263</trait1>
+    <trait1>1631667848</trait1>
+    <trait1>972757866</trait1>
+    <trait1>2779035018</trait1>
+    <trait1>2450788523</trait1>
+	<trait1>3436462433</trait1>
+	<trait1>706527188</trait1>
+    <trait1>280464955</trait1>
+    <trait1>205890336</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3096702027</trait1>
+	<trait1>4071163871</trait1>
+    <trait2>2726471870</trait2>
+    <trait2>3511092054</trait2>
+    <trait2>1546637391</trait2>
+    <trait2>3350417888</trait2>
+    <trait2>2848615171</trait2>
+	<trait2>3523296417</trait2>
+	<trait2>588594999</trait2>
+    <trait2>460017080</trait2>
+    <trait2>957782887</trait2>
+    <trait2>1015611457</trait2>
+    <trait2>699525795</trait2>
+	<trait2>1683379515</trait2>
+  </weapon>
+  <weapon>
+    <name>The Steady Hand</name>
+    <id>2220884262</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Hand Cannon</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Hand Cannon Sight (HCS)</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>1926090092,3230963543,3161816588,3513791699</curated>
+    <trait1>3161816588</trait1>
+    <trait1>588594999</trait1>
+    <trait1>706527188</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>2387244414</trait1>
+	<trait1>2450788523</trait1>
+    <trait2>3513791699</trait2>
+    <trait2>957782887</trait2>
+    <trait2>3592538738</trait2>
+    <trait2>4082225868</trait2>
+    <trait2>4152709778</trait2>
+	<trait2>11551321</trait2>
+  </weapon>
+  <weapon>
+    <name>Subzero Salvo</name>
+    <id>42351395</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Fires small auto-tracking missiles.</frameDesc>
+    <category>Rocket Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Rocket Launcher Magazine</perk2Group>
+    <season>12</season>
+    <element>Arc</element>
+    <curated>981914802,3796465595,2010801679,3523296417</curated>
+    <trait1>2010801679</trait1>
+    <trait1>706527188</trait1>
+    <trait1>3436462433</trait1>
+    <trait1>205890336</trait1>
+    <trait1>588594999</trait1>
+	<trait1>2450788523</trait1>
+    <trait2>3523296417</trait2>
+    <trait2>957782887</trait2>
+    <trait2>2726471870</trait2>
+    <trait2>1275731761</trait2>
+    <trait2>3108830275</trait2>
+	<trait2>2396489472</trait2>
+  </weapon>
+  <weapon>
+    <name>The Summoner (Adept)</name>
+    <id>3514144928</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Auto Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Solar</element>
+    <curated></curated>
+    <trait1>205890336</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>3643424744</trait1>
+    <trait1>588594999</trait1>
+    <trait1>1359896290</trait1>
+    <trait2>3425386926</trait2>
+    <trait2>3511092054</trait2>
+    <trait2>2848615171</trait2>
+    <trait2>2846385770</trait2>
+    <trait2>1264398905</trait2>
+  </weapon>
+  <weapon>
+    <name>Thermal Erosion</name>
+    <id>1766088024</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Machine Gun</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Solar</element>
+    <curated>1482024992,679225683,1866048759,3523296417</curated>
+    <trait1>1866048759</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>205890336</trait1>
+    <trait1>2387244414</trait1>
+    <trait1>706527188</trait1>
+	<trait1>2450788523</trait1>
+    <trait2>3523296417</trait2>
+    <trait2>1890422124</trait2>
+    <trait2>957782887</trait2>
+    <trait2>3592538738</trait2>
+    <trait2>1359896290</trait2>
+	<trait2>2848615171</trait2>
+  </weapon>
+  <weapon>
+    <name>Tomorrow's Answer (Adept)</name>
+    <id>1366917989</id>
+    <frame>High-Impact Frame</frame>
+    <frameDesc>Long range, slow firing, and high damage.</frameDesc>
+    <category>Rocket Launcher</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Launcher Tube</perk1Group>
+    <perk2Group>Rocket Launcher Magazine</perk2Group>
+    <season>12</season>
+    <element>Void</element>
+    <curated></curated>
+    <trait1>205890336</trait1>
+    <trait1>588594999</trait1>
+    <trait1>3096702027</trait1>
+    <trait1>2846385770</trait1>
+    <trait1>3977735242</trait1>
+    <trait1>2869569095</trait1>
+    <trait2>1683379515</trait2>
+    <trait2>957782887</trait2>
+    <trait2>3275789089</trait2>
+    <trait2>1275731761</trait2>
+    <trait2>4071163871</trait2>
+    <trait2>2284787283</trait2>
+  </weapon>
+  <weapon>
+    <name>Xenoclast IV</name>
+    <id>2891672170</id>
+    <frame>Lightweight Frame</frame>
+    <frameDesc>Move faster with this weapon.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Arc</element>
+    <curated>1482024992,3177308360,2284787283,3108830275</curated>
+    <trait1>2284787283</trait1>
+    <trait1>3300816228</trait1>
+    <trait1>2869569095</trait1>
+    <trait1>3096702027</trait1>
+    <trait1>1866048759</trait1>
+	<trait1>3161816588</trait1>
+	<trait1>3436462433</trait1>
+    <trait1>25606670</trait1>
+    <trait1>205890336</trait1>
+    <trait1>972757866</trait1>
+    <trait1>1631667848</trait1>
+	<trait1>2039302152</trait1>
+	<trait1>1556840489</trait1>
+    <trait2>3108830275</trait2>
+    <trait2>1683379515</trait2>
+    <trait2>699525795</trait2>
+    <trait2>4082225868</trait2>
+    <trait2>3708227201</trait2>
+	<trait2>1546637391</trait2>
+	<trait2>2450788523</trait2>
+    <trait2>2726471870</trait2>
+    <trait2>2360754333</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>2679249093</trait2>
+	<trait2>3523296417</trait2>
+  </weapon>

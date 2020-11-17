@@ -7,7 +7,7 @@
     <weaponType>Kinetic/Energy/Power</weaponType>
     <perk1Group>Barrel</perk1Group>
     <perk2Group>Magazine</perk2Group>
-    <season>11</season>
+    <season>12</season>
     <element>Kinetic/Arc/Solar/Void</element>
     <curated></curated>
     <trait1>00000000</trait1>

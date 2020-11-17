@@ -958,4 +958,49 @@
     <id>11551321</id>
     <desc>Massively improves weapon stability at the cost of reload speed.</desc>
   </perk>
+  <perk>
+    <name>Surplus</name>
+    <id>3436462433</id>
+    <desc>Increases handling, reload speed, and stability for each fully charged ability.</desc>
+  </perk>
+  <perk>
+    <name>Wellspring</name>
+    <id>3592538738</id>
+    <desc>Kills with this weapon generate ability energy. This energy is divided between your uncharged abilities.</desc>
+  </perk>
+  <perk>
+    <name>Thresh</name>
+    <id>2726471870</id>
+    <desc>Killing combatants with this weapon generates a small amount of Super energy.</desc>
+  </perk>
+  <perk>
+    <name>Dual Loader</name>
+    <id>25606670</id>
+    <desc>Reloads two shells at a time, but reduces reload speed.</desc>
+  </perk>
+  <perk>
+    <name>One for All</name>
+    <id>4049631843</id>
+    <desc>Hitting three separate targets increases damage for a moderate duration.</desc>
+  </perk>
+  <perk>
+    <name>Chain Reaction</name>
+    <id>2396489472</id>
+    <desc>Each final blow with this weapon creates an elemental damage explosion.</desc>
+  </perk>
+  <perk>
+    <name>Iron</name>
+    <id>0000000000000</id>
+    <desc>Desc</desc>
+  </perk>
+  <perk>
+    <name>Iron</name>
+    <id>0000000000000</id>
+    <desc>Desc</desc>
+  </perk>
+  <perk>
+    <name>Iron</name>
+    <id>0000000000000</id>
+    <desc>Desc</desc>
+  </perk>
 </perks>
