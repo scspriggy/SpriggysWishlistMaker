@@ -5934,6 +5934,28 @@ Attacks partially bypass elemental shields.</frameDesc>
     <trait2>1264398905</trait2>
   </weapon>
   <weapon>
+    <name>Bequest</name>
+    <id>3366545721</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded. : Uppercut.</frameDesc>
+    <category>Sword</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Edge</perk1Group>
+    <perk2Group>Guard</perk2Group>
+    <season>12</season>
+    <element>Arc</element>
+    <curated>436053704,52780822,2450788523,354401740</curated>
+    <trait1>2450788523</trait1>
+    <trait1>2726471870</trait1>
+    <trait1>1749209109</trait1>
+    <trait1>2590710093</trait1>
+    <trait1>2030760728</trait1>
+    <trait2>354401740</trait2>
+    <trait2>3708227201</trait2>
+    <trait2>1685431615</trait2>
+    <trait2>2244851822</trait2>
+  </weapon>
+  <weapon>
     <name>Biting Winds</name>
     <id>1621657423</id>
     <frame>Precision Frame</frame>
@@ -6007,6 +6029,31 @@ Attacks partially bypass elemental shields.</frameDesc>
     <trait2>2039302152</trait2>
     <trait2>3523296417</trait2>
 	<trait2>2848615171</trait2>
+  </weapon>
+  <weapon>
+    <name>Commemoration</name>
+    <id>4230965989</id>
+    <frame>Adaptive Frame</frame>
+    <frameDesc>Well-rounded, reliable, and sturdy.</frameDesc>
+    <category>Machine Gun</category>
+    <weaponType>Power</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Void</element>
+    <curated>202670084,106909392,2779035018,1645158859</curated>
+    <trait1>2779035018</trait1>
+    <trait1>2866798147</trait1>
+    <trait1>1523832109</trait1>
+    <trait1>3436462433</trait1>
+    <trait1>1359896290</trait1>
+	<trait1>2387244414</trait1>
+    <trait2>1645158859</trait2>
+    <trait2>588594999</trait2>
+    <trait2>2848615171</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>3108830275</trait2>
+	<trait2>699525795</trait2>
   </weapon>
   <weapon>
     <name>Coriolis Force</name>
@@ -6241,6 +6288,31 @@ Attacks partially bypass elemental shields.</frameDesc>
 	<trait2>3511092054</trait2>
   </weapon>
   <weapon>
+    <name>Heritage</name>
+    <id>4248569242</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Fires a single-slug round.</frameDesc>
+    <category>Shotgun</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Shotgun Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>4090651448,791862061,1523832109,469285294</curated>
+    <trait1>1523832109</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>3161816588</trait1>
+    <trait1>25606670</trait1>
+    <trait1>3300816228</trait1>
+	<trait1>1866048759</trait1>
+    <trait2>469285294</trait2>
+    <trait2>588594999</trait2>
+    <trait2>957782887</trait2>
+    <trait2>3108830275</trait2>
+    <trait2>2726471870</trait2>
+	<trait2>2450788523</trait2>
+  </weapon>
+  <weapon>
     <name>High Albedo</name>
     <id>1197486957</id>
     <frame>Adaptive Frame</frame>
@@ -6264,6 +6336,32 @@ Attacks partially bypass elemental shields.</frameDesc>
     <trait2>3523296417</trait2>
     <trait2>3592538738</trait2>
 	<trait2>957782887</trait2>
+  </weapon>
+  <weapon>
+    <name>Posterity</name>
+    <id>3281285075</id>
+    <frame>Precision Frame</frame>
+    <frameDesc>Recoil pattern is more vertical.</frameDesc>
+    <category>Hand Cannon</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Arc</element>
+    <curated>1392496348,2420895100,3096702027,4049631843</curated>
+    <trait1>3096702027</trait1>
+    <trait1>2450788523</trait1>
+    <trait1>1523832109</trait1>
+    <trait1>3436462433</trait1>
+    <trait1>1354429876</trait1>
+	<trait1>2779035018</trait1>
+	<trait1>247725512</trait1>
+    <trait2>4049631843</trait2>
+    <trait2>3201496230</trait2>
+    <trait2>47981717</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>3108830275</trait2>
+	<trait2>3523296417</trait2>
   </weapon>
   <weapon>
     <name>Royal Chase</name>
@@ -6375,6 +6473,31 @@ Attacks partially bypass elemental shields.</frameDesc>
 	<trait2>11551321</trait2>
   </weapon>
   <weapon>
+    <name>Succession</name>
+    <id>2990047042</id>
+    <frame>Aggressive Frame</frame>
+    <frameDesc>High damage, high recoil.</frameDesc>
+    <category>Sniper Rifle</category>
+    <weaponType>Kinetic</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Kinetic</element>
+    <curated>1840239774,106909392,2866798147,1546637391</curated>
+    <trait1>2866798147</trait1>
+    <trait1>1523832109</trait1>
+    <trait1>1556840489</trait1>
+    <trait1>2039302152</trait1>
+    <trait1>2450788523</trait1>
+	<trait1>588594999</trait1>
+    <trait2>1546637391</trait2>
+    <trait2>3425386926</trait2>
+    <trait2>469285294</trait2>
+    <trait2>2726471870</trait2>
+    <trait2>1774574192</trait2>
+	<trait2>957782887</trait2>
+  </weapon>
+  <weapon>
     <name>Subzero Salvo</name>
     <id>42351395</id>
     <frame>Precision Frame</frame>
@@ -6471,6 +6594,31 @@ Attacks partially bypass elemental shields.</frameDesc>
     <trait2>1275731761</trait2>
     <trait2>4071163871</trait2>
     <trait2>2284787283</trait2>
+  </weapon>
+  <weapon>
+    <name>Trustee</name>
+    <id>1392919471</id>
+    <frame>Rapid-Fire Frame</frame>
+    <frameDesc>Deep ammo reserves. Fast reload when empty.</frameDesc>
+    <category>Scout Rifle</category>
+    <weaponType>Energy</weaponType>
+    <perk1Group>Barrel</perk1Group>
+    <perk2Group>Magazine</perk2Group>
+    <season>12</season>
+    <element>Solar</element>
+    <curated>1392496348,4134353779,1645158859,3201496230</curated>
+    <trait1>1645158859</trait1>
+    <trait1>1168162263</trait1>
+    <trait1>3436462433</trait1>
+    <trait1>1523832109</trait1>
+    <trait1>2387244414</trait1>
+	<trait1>2450788523</trait1>
+    <trait2>3201496230</trait2>
+    <trait2>699525795</trait2>
+    <trait2>3592538738</trait2>
+    <trait2>2213355989</trait2>
+    <trait2>47981717</trait2>
+	<trait2>3350417888</trait2>
   </weapon>
   <weapon>
     <name>Xenoclast IV</name>

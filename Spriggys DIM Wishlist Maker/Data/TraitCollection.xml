@@ -989,18 +989,18 @@
     <desc>Each final blow with this weapon creates an elemental damage explosion.</desc>
   </perk>
   <perk>
-    <name>Iron</name>
-    <id>0000000000000</id>
-    <desc>Desc</desc>
+    <name>Reconstruction</name>
+    <id>1523832109</id>
+    <desc> This weapon slowly reloads itself over time, up to double capacity.</desc>
   </perk>
   <perk>
-    <name>Iron</name>
-    <id>0000000000000</id>
-    <desc>Desc</desc>
+    <name>Recombination</name>
+    <id>469285294</id>
+    <desc>Elemental final blows increase the damage of this weapon's next shot. </desc>
   </perk>
   <perk>
-    <name>Iron</name>
-    <id>0000000000000</id>
-    <desc>Desc</desc>
+    <name>Redirection</name>
+    <id>3201496230</id>
+    <desc>Damaging rank-and-file combatants increases damage against more powerful ones. </desc>
   </perk>
 </perks>
